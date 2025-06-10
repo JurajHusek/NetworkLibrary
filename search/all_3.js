@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['databuffer_0',['DataBuffer',['../class_packet.html#a39236052ba84debffe99f8bcdbea4a9c',1,'Packet']]],
+  ['datalength_1',['DataLength',['../class_packet.html#a4350f8d19ce8152d7024104ad81cf6d6',1,'Packet']]],
+  ['defaultbuffersize_2',['DefaultBufferSize',['../class_client.html#aec6e28aaa6ae6e65f66ea258d947ab1d',1,'Client']]],
+  ['defaultnetworksettings_3',['DefaultNetworkSettings',['../class_default_network_settings.html',1,'']]],
+  ['defaultnetworksettings_4',['defaultNetworkSettings',['../class_client.html#aeb2cbab91ed3b3c6d18b52a5f73cbc4c',1,'Client']]],
+  ['defaultnetworksettings_2ecs_5',['DefaultNetworkSettings.cs',['../_default_network_settings_8cs.html',1,'']]],
+  ['defaultsettings_6',['DefaultSettings',['../class_server_logic.html#acdb357ce61331fe2ef641699adafac3c',1,'ServerLogic.DefaultSettings'],['../class_server_side_client.html#a947f610bef120daa053b37778cc150a1',1,'ServerSideClient.DefaultSettings']]],
+  ['defaultsettings_7',['defaultSettings',['../class_network_server.html#a3f0df0c89ff059dd3e289e03d2dbc28a',1,'NetworkServer']]],
+  ['disconnect_8',['Disconnect',['../class_client_1_1_t_c_p.html#a0bf46ee66dfea6fff92a83f71b603c3a',1,'Client.TCP.Disconnect()'],['../class_client_1_1_u_d_p.html#a6a22f681f1b99838a5e45dede38b25ea',1,'Client.UDP.Disconnect()'],['../class_client.html#a932bb70c89457128564d9189c72301d3',1,'Client.Disconnect()'],['../class_server_side_client.html#a26d7e4517ca39d2a2bb7d2a262ca4ebd',1,'ServerSideClient.Disconnect()'],['../class_server_side_client_1_1_t_c_p.html#a4563e0c5b2aaff1f7599435ac2c7b655',1,'ServerSideClient.TCP.Disconnect()'],['../class_server_side_client_1_1_u_d_p.html#a90c7e371c0b8e8de48a8b7967784c34b',1,'ServerSideClient.UDP.Disconnect()']]],
+  ['disconnecteduser_9',['DisconnectedUser',['../class_server_send_handler.html#a37a8955aa18562630130e332c3d94961',1,'ServerSendHandler']]],
+  ['disconnectforeignuser_10',['DisconnectForeignUser',['../class_network_manager.html#aa8cf3eae77423bdd88fd851de6f3b376',1,'NetworkManager']]],
+  ['disconnectfromserver_11',['DisconnectFromServer',['../class_network_manager.html#aef471d6ae283a0327040340acc81db99',1,'NetworkManager']]],
+  ['disconnectother_12',['DisconnectOther',['../class_client.html#a33e525fb5a7b3f45f985aded5f8f7e28',1,'Client']]],
+  ['disconnectrequest_13',['DisconnectRequest',['../class_client_send_handler.html#a9c7964b2878dc69307ca94b88f67452a',1,'ClientSendHandler.DisconnectRequest()'],['../class_server_side_client.html#af742bca7e881ad61f899882887d56cc5',1,'ServerSideClient.DisconnectRequest()'],['../class_packet.html#ab51148f7134cedf405521073cae0cb09a52fb4e36e591f0956890b264a031f215',1,'Packet.DisconnectRequest']]],
+  ['disconnectrequested_14',['DisconnectRequested',['../class_client.html#a5a2613e50d2685b83a0775b3765e5681',1,'Client']]],
+  ['disconnectrequestreceived_15',['DisconnectRequestReceived',['../class_server_receive_handler.html#a67343ef2d66c53271e974515785d985b',1,'ServerReceiveHandler']]],
+  ['disconnectuser_16',['DisconnectUser',['../class_client_receive_handler.html#a3174c93978d492e3dc795d33d344fa62',1,'ClientReceiveHandler.DisconnectUser()'],['../class_packet.html#af5da800782dec1cfe8f3b8dcf7b0b0d7ab811029a1ee7b6015ced55a46f0d958a',1,'Packet.DisconnectUser']]]
+];
