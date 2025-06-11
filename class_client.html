@@ -91,6 +91,9 @@ $(function(){initNavTree('class_client.html','','class_client-members'); });
   <div class="headertitle"><div class="title">Client Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Main MonoBehaviour singleton class handling the client-side networking logic (<a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a>, <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a>) in Unity.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Client:</div>
 <div class="dyncontent">
@@ -101,86 +104,147 @@ Inheritance diagram for Client:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:TCP" id="r_TCP"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_client_1_1_t_c_p.html">TCP</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles <a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a> connection.  <a href="class_client_1_1_t_c_p.html#details">More...</a><br /></td></tr>
 <tr class="memitem:UDP" id="r_UDP"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_client_1_1_u_d_p.html">UDP</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a> connection and communication for the client.  <a href="class_client_1_1_u_d_p.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a888e2cc06543ebb160b905f137e77403" id="r_a888e2cc06543ebb160b905f137e77403"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a888e2cc06543ebb160b905f137e77403">IsLocal</a> (int id)</td></tr>
+<tr class="memitem:a71a330c2f45f1eeb773c7355db850701" id="r_a71a330c2f45f1eeb773c7355db850701"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71a330c2f45f1eeb773c7355db850701">IsLocal</a> (int checkId)</td></tr>
+<tr class="memdesc:a71a330c2f45f1eeb773c7355db850701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the specified ID belongs to this local client.  <br /></td></tr>
 <tr class="memitem:a575dc349bb76ad8b844d084df7ed5657" id="r_a575dc349bb76ad8b844d084df7ed5657"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a575dc349bb76ad8b844d084df7ed5657">SetToken</a> (string token)</td></tr>
+<tr class="memdesc:a575dc349bb76ad8b844d084df7ed5657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the authentication token.  <br /></td></tr>
 <tr class="memitem:a900ad6ec9923c8688efef085e792c5f8" id="r_a900ad6ec9923c8688efef085e792c5f8"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a900ad6ec9923c8688efef085e792c5f8">GetToken</a> ()</td></tr>
+<tr class="memdesc:a900ad6ec9923c8688efef085e792c5f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the authentication token.  <br /></td></tr>
 <tr class="memitem:aea47d7c648a4365da5818d1f7df76e47" id="r_aea47d7c648a4365da5818d1f7df76e47"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea47d7c648a4365da5818d1f7df76e47">GetHmacKey</a> ()</td></tr>
-<tr class="memitem:a441d9a977770b1195cf2962ad70268cd" id="r_a441d9a977770b1195cf2962ad70268cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a441d9a977770b1195cf2962ad70268cd">SetHmacKey</a> (byte[] hmacKey)</td></tr>
+<tr class="memdesc:aea47d7c648a4365da5818d1f7df76e47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the HMAC key used for secure communication.  <br /></td></tr>
+<tr class="memitem:a63d0cec34bfc440c468329363e95f16c" id="r_a63d0cec34bfc440c468329363e95f16c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63d0cec34bfc440c468329363e95f16c">SetHmacKey</a> (byte[] newHmacKey)</td></tr>
+<tr class="memdesc:a63d0cec34bfc440c468329363e95f16c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the HMAC key for secure communication.  <br /></td></tr>
 <tr class="memitem:af37eeda044394ff9ba3755ca8bc79e1a" id="r_af37eeda044394ff9ba3755ca8bc79e1a"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af37eeda044394ff9ba3755ca8bc79e1a">GetUsername</a> ()</td></tr>
-<tr class="memitem:a988b99f6ea6a386b4b958c1d57166b09" id="r_a988b99f6ea6a386b4b958c1d57166b09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a988b99f6ea6a386b4b958c1d57166b09">SetUsername</a> (string username)</td></tr>
-<tr class="memitem:a926a2e79f79fe0231a51988756cfedde" id="r_a926a2e79f79fe0231a51988756cfedde"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a926a2e79f79fe0231a51988756cfedde">GetMID</a> ()</td></tr>
-<tr class="memitem:a5e7be7ab8870455292b5c94e16b14a77" id="r_a5e7be7ab8870455292b5c94e16b14a77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e7be7ab8870455292b5c94e16b14a77">SetMID</a> (int mid)</td></tr>
+<tr class="memdesc:af37eeda044394ff9ba3755ca8bc79e1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current username.  <br /></td></tr>
+<tr class="memitem:a03cffdee65368f69bd35673e34bb3297" id="r_a03cffdee65368f69bd35673e34bb3297"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03cffdee65368f69bd35673e34bb3297">SetUsername</a> (string newUsername)</td></tr>
+<tr class="memdesc:a03cffdee65368f69bd35673e34bb3297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current username.  <br /></td></tr>
+<tr class="memitem:adad7913402acd7e9edf78f5c64b041a4" id="r_adad7913402acd7e9edf78f5c64b041a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adad7913402acd7e9edf78f5c64b041a4">GetId</a> ()</td></tr>
+<tr class="memdesc:adad7913402acd7e9edf78f5c64b041a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current client ID.  <br /></td></tr>
+<tr class="memitem:a720fe9c3b3f846e22dafecf84034b338" id="r_a720fe9c3b3f846e22dafecf84034b338"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a720fe9c3b3f846e22dafecf84034b338">SetId</a> (int newId)</td></tr>
+<tr class="memdesc:a720fe9c3b3f846e22dafecf84034b338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the client ID.  <br /></td></tr>
 <tr class="memitem:ac6db4ebee35cde768bc72fa72ac9857e" id="r_ac6db4ebee35cde768bc72fa72ac9857e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_default_network_settings.html">DefaultNetworkSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6db4ebee35cde768bc72fa72ac9857e">GetDefaultSettings</a> ()</td></tr>
+<tr class="memdesc:ac6db4ebee35cde768bc72fa72ac9857e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets default network settings used for connection.  <br /></td></tr>
 <tr class="memitem:a315137008ad04591c2dd6ecaa66beb18" id="r_a315137008ad04591c2dd6ecaa66beb18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a315137008ad04591c2dd6ecaa66beb18">ConnectToServer</a> ()</td></tr>
+<tr class="memdesc:a315137008ad04591c2dd6ecaa66beb18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the connection process to the server.  <br /></td></tr>
 <tr class="memitem:a932bb70c89457128564d9189c72301d3" id="r_a932bb70c89457128564d9189c72301d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a932bb70c89457128564d9189c72301d3">Disconnect</a> ()</td></tr>
+<tr class="memdesc:a932bb70c89457128564d9189c72301d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnects the client from the server.  <br /></td></tr>
 <tr class="memitem:ad1b322c63b6e7044e080a02c6ab4612c" id="r_ad1b322c63b6e7044e080a02c6ab4612c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1b322c63b6e7044e080a02c6ab4612c">ResetNetwork</a> ()</td></tr>
+<tr class="memdesc:ad1b322c63b6e7044e080a02c6ab4612c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets client network components and reloads the initial scene.  <br /></td></tr>
 <tr class="memitem:a6f5d9487be831b82301c183ec2670c2f" id="r_a6f5d9487be831b82301c183ec2670c2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f5d9487be831b82301c183ec2670c2f">MeassureRequest</a> (int pcktId)</td></tr>
+<tr class="memdesc:a6f5d9487be831b82301c183ec2670c2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a ping measurement request to the server.  <br /></td></tr>
 <tr class="memitem:a804f36910abca6782d410b386d118f45" id="r_a804f36910abca6782d410b386d118f45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a804f36910abca6782d410b386d118f45">MeassureAnswer</a> (int pcktId)</td></tr>
+<tr class="memdesc:a804f36910abca6782d410b386d118f45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the server’s ping reply and triggers the ping event.  <br /></td></tr>
 <tr class="memitem:a5a2613e50d2685b83a0775b3765e5681" id="r_a5a2613e50d2685b83a0775b3765e5681"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a2613e50d2685b83a0775b3765e5681">DisconnectRequested</a> ()</td></tr>
-<tr class="memitem:a33e525fb5a7b3f45f985aded5f8f7e28" id="r_a33e525fb5a7b3f45f985aded5f8f7e28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33e525fb5a7b3f45f985aded5f8f7e28">DisconnectOther</a> (int id)</td></tr>
-<tr class="memitem:a6da1ba0370f93a67ff6e95f6e491f74c" id="r_a6da1ba0370f93a67ff6e95f6e491f74c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6da1ba0370f93a67ff6e95f6e491f74c">MessageToUserRequest</a> (string Message, int toId)</td></tr>
-<tr class="memitem:a10438dc8b5cac6039e879227c2ddfe31" id="r_a10438dc8b5cac6039e879227c2ddfe31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10438dc8b5cac6039e879227c2ddfe31">MessageToAllRequest</a> (string Message)</td></tr>
-<tr class="memitem:acc68e05fc420ddff5f5213a9f88bb049" id="r_acc68e05fc420ddff5f5213a9f88bb049"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc68e05fc420ddff5f5213a9f88bb049">SpawnUserPrefab</a> (int id, string username)</td></tr>
+<tr class="memdesc:a5a2613e50d2685b83a0775b3765e5681"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a disconnect request to the server.  <br /></td></tr>
+<tr class="memitem:a88198b76b5cd514f6d126e3e9c97c323" id="r_a88198b76b5cd514f6d126e3e9c97c323"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88198b76b5cd514f6d126e3e9c97c323">DisconnectOther</a> (int clientid)</td></tr>
+<tr class="memdesc:a88198b76b5cd514f6d126e3e9c97c323"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnects another user with the given ID from the scene.  <br /></td></tr>
+<tr class="memitem:a81b4c970682c127a56ecda44970d1542" id="r_a81b4c970682c127a56ecda44970d1542"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81b4c970682c127a56ecda44970d1542">MessageToUserRequest</a> (string message, int clientId)</td></tr>
+<tr class="memdesc:a81b4c970682c127a56ecda44970d1542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a message to a specific user.  <br /></td></tr>
+<tr class="memitem:a823f35d413ef54e21c0c5d874586b543" id="r_a823f35d413ef54e21c0c5d874586b543"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a823f35d413ef54e21c0c5d874586b543">MessageToAllRequest</a> (string message)</td></tr>
+<tr class="memdesc:a823f35d413ef54e21c0c5d874586b543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a message to all users in the session.  <br /></td></tr>
+<tr class="memitem:acc68e05fc420ddff5f5213a9f88bb049" id="r_acc68e05fc420ddff5f5213a9f88bb049"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc68e05fc420ddff5f5213a9f88bb049">SpawnUserPrefab</a> (int <a class="el" href="#a845b09c860f41f3b43dc7a34268bb400">id</a>, string <a class="el" href="#aedf64c95ba1148f63235e43a87ac9d89">username</a>)</td></tr>
+<tr class="memdesc:acc68e05fc420ddff5f5213a9f88bb049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns the user prefab locally or remotely.  <br /></td></tr>
 <tr class="memitem:a7b13cba7d871f1dd35bfb99a1bf10148" id="r_a7b13cba7d871f1dd35bfb99a1bf10148"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b13cba7d871f1dd35bfb99a1bf10148">ReceivedMessage</a> (string message)</td></tr>
+<tr class="memdesc:a7b13cba7d871f1dd35bfb99a1bf10148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers message-received event with the given message.  <br /></td></tr>
 <tr class="memitem:af41997eff86f882c953c5b1880682142" id="r_af41997eff86f882c953c5b1880682142"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af41997eff86f882c953c5b1880682142">UpdateTransform</a> (Transform objectTransform)</td></tr>
-<tr class="memitem:a3f32352b2a52cb23919fb2e2a2c7faf1" id="r_a3f32352b2a52cb23919fb2e2a2c7faf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f32352b2a52cb23919fb2e2a2c7faf1">ChangeTransform</a> (int id, Vector3 pos, Quaternion rot)</td></tr>
+<tr class="memdesc:af41997eff86f882c953c5b1880682142"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends current transform of a game object to the server.  <br /></td></tr>
+<tr class="memitem:a3f32352b2a52cb23919fb2e2a2c7faf1" id="r_a3f32352b2a52cb23919fb2e2a2c7faf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f32352b2a52cb23919fb2e2a2c7faf1">ChangeTransform</a> (int <a class="el" href="#a845b09c860f41f3b43dc7a34268bb400">id</a>, Vector3 pos, Quaternion rot)</td></tr>
+<tr class="memdesc:a3f32352b2a52cb23919fb2e2a2c7faf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the transform of a remote player.  <br /></td></tr>
 <tr class="memitem:a71c7ae56f6f0caa9aac8b515e972f446" id="r_a71c7ae56f6f0caa9aac8b515e972f446"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71c7ae56f6f0caa9aac8b515e972f446">AnimationUpdate</a> (int type, string name, float value)</td></tr>
-<tr class="memitem:a6cbf6e58ffe73211b5aefa2a19560af1" id="r_a6cbf6e58ffe73211b5aefa2a19560af1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cbf6e58ffe73211b5aefa2a19560af1">ChangeAnimatorState</a> (int id, int type, string name, float value)</td></tr>
+<tr class="memdesc:a71c7ae56f6f0caa9aac8b515e972f446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends animation update to the server.  <br /></td></tr>
+<tr class="memitem:a6cbf6e58ffe73211b5aefa2a19560af1" id="r_a6cbf6e58ffe73211b5aefa2a19560af1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cbf6e58ffe73211b5aefa2a19560af1">ChangeAnimatorState</a> (int <a class="el" href="#a845b09c860f41f3b43dc7a34268bb400">id</a>, int type, string name, float value)</td></tr>
+<tr class="memdesc:a6cbf6e58ffe73211b5aefa2a19560af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies received animation state from the server.  <br /></td></tr>
 <tr class="memitem:ac7ffc00682f098ade4d7d5f64d53d9ed" id="r_ac7ffc00682f098ade4d7d5f64d53d9ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7ffc00682f098ade4d7d5f64d53d9ed">BandwidthRequest</a> (byte[] data)</td></tr>
+<tr class="memdesc:ac7ffc00682f098ade4d7d5f64d53d9ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends request to measure bandwidth to the server.  <br /></td></tr>
 <tr class="memitem:a0193bd153028953ce781ff500dcdedfd" id="r_a0193bd153028953ce781ff500dcdedfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0193bd153028953ce781ff500dcdedfd">SendThroughputData</a> (int pcktId, byte[] data)</td></tr>
+<tr class="memdesc:a0193bd153028953ce781ff500dcdedfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a packet of data to test throughput.  <br /></td></tr>
 <tr class="memitem:a8fd458174d51c4e65cc45d0b6c7c32c3" id="r_a8fd458174d51c4e65cc45d0b6c7c32c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fd458174d51c4e65cc45d0b6c7c32c3">ReceivedBandwidth</a> ()</td></tr>
-<tr class="memitem:af81c21b9059eda6c215505f8995f56af" id="r_af81c21b9059eda6c215505f8995f56af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af81c21b9059eda6c215505f8995f56af">ReceivedThroughput</a> (int pcktId, int DataSize)</td></tr>
+<tr class="memdesc:a8fd458174d51c4e65cc45d0b6c7c32c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when bandwidth reply is received from the server.  <br /></td></tr>
+<tr class="memitem:a7aed9e4aa45b39a7b5823b3eaeaa5041" id="r_a7aed9e4aa45b39a7b5823b3eaeaa5041"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7aed9e4aa45b39a7b5823b3eaeaa5041">ReceivedThroughput</a> (int pcktId, int dataSize)</td></tr>
+<tr class="memdesc:a7aed9e4aa45b39a7b5823b3eaeaa5041"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when throughput test result is received.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a98eeb732c160e101b19e567fe4eb0489" id="r_a98eeb732c160e101b19e567fe4eb0489"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98eeb732c160e101b19e567fe4eb0489">PacketAction</a> (int packetId, <a class="el" href="class_packet.html">Packet</a> packet)</td></tr>
+<tr class="memdesc:a98eeb732c160e101b19e567fe4eb0489"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the received packet by type by calling methods in <a class="el" href="class_client_receive_handler.html" title="Handles incoming packets from the server and performs client-side actions accordingly.">ClientReceiveHandler</a>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a52e523db6422023cf2f92b3da48c2e90" id="r_a52e523db6422023cf2f92b3da48c2e90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_client_1_1_t_c_p.html">TCP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52e523db6422023cf2f92b3da48c2e90">tcp</a></td></tr>
+<tr class="memdesc:a52e523db6422023cf2f92b3da48c2e90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles <a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a> communication with the server.  <br /></td></tr>
 <tr class="memitem:abb0223b6db6bfccf7913d870ce6bae95" id="r_abb0223b6db6bfccf7913d870ce6bae95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_client_1_1_u_d_p.html">UDP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb0223b6db6bfccf7913d870ce6bae95">udp</a></td></tr>
+<tr class="memdesc:abb0223b6db6bfccf7913d870ce6bae95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a> communication with the server.  <br /></td></tr>
 <tr class="memitem:ad575863aaa279deecc05945af5659b4f" id="r_ad575863aaa279deecc05945af5659b4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad575863aaa279deecc05945af5659b4f">isConnected</a> = false</td></tr>
+<tr class="memdesc:ad575863aaa279deecc05945af5659b4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the client is currently connected to the server.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a5ccc991d6e9c7cccc6bd9a6e7ed0eb15" id="r_a5ccc991d6e9c7cccc6bd9a6e7ed0eb15"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_client.html">Client</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ccc991d6e9c7cccc6bd9a6e7ed0eb15">instance</a></td></tr>
+<tr class="memdesc:a5ccc991d6e9c7cccc6bd9a6e7ed0eb15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Singleton instance of the client.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-events" class="groupheader"><a id="events" name="events"></a>
 Events</h2></td></tr>
 <tr class="memitem:ab319920ae855d6418e889b8c67dea863" id="r_ab319920ae855d6418e889b8c67dea863"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab319920ae855d6418e889b8c67dea863">OnConnected</a></td></tr>
+<tr class="memdesc:ab319920ae855d6418e889b8c67dea863"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event triggered when the client successfully connects to the server.  <br /></td></tr>
 <tr class="memitem:abfacb2b5b9f29952345658da7d49bd3f" id="r_abfacb2b5b9f29952345658da7d49bd3f"><td class="memItemLeft" align="right" valign="top">Action&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfacb2b5b9f29952345658da7d49bd3f">OnConnectionFailed</a></td></tr>
+<tr class="memdesc:abfacb2b5b9f29952345658da7d49bd3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event triggered when the client fails to connect, providing an error message.  <br /></td></tr>
 <tr class="memitem:a7c7560be6febeee300097f4dbd756a55" id="r_a7c7560be6febeee300097f4dbd756a55"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c7560be6febeee300097f4dbd756a55">OnDisconnected</a></td></tr>
+<tr class="memdesc:a7c7560be6febeee300097f4dbd756a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event triggered when the client is disconnected from the server.  <br /></td></tr>
 <tr class="memitem:a22c917712ed3287414b96bb87a7d983d" id="r_a22c917712ed3287414b96bb87a7d983d"><td class="memItemLeft" align="right" valign="top">Action&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22c917712ed3287414b96bb87a7d983d">OnMessageReceived</a></td></tr>
+<tr class="memdesc:a22c917712ed3287414b96bb87a7d983d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event triggered when a text message is received from the server.  <br /></td></tr>
 <tr class="memitem:a10bd08ee9ffb61daab89c83bd02bc0d8" id="r_a10bd08ee9ffb61daab89c83bd02bc0d8"><td class="memItemLeft" align="right" valign="top">Action&lt; int, Vector3, Quaternion &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10bd08ee9ffb61daab89c83bd02bc0d8">OnTransformReceived</a></td></tr>
+<tr class="memdesc:a10bd08ee9ffb61daab89c83bd02bc0d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event triggered when a transform update is received.  <br /></td></tr>
 <tr class="memitem:a6bd37856c773ba8830bfac727726aacd" id="r_a6bd37856c773ba8830bfac727726aacd"><td class="memItemLeft" align="right" valign="top">Action&lt; int, int, string, float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bd37856c773ba8830bfac727726aacd">OnAnimationChangeReceived</a></td></tr>
+<tr class="memdesc:a6bd37856c773ba8830bfac727726aacd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event triggered when an animation update is received.  <br /></td></tr>
 <tr class="memitem:abae122b5ea5aeb006c114132793095ff" id="r_abae122b5ea5aeb006c114132793095ff"><td class="memItemLeft" align="right" valign="top">Action&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abae122b5ea5aeb006c114132793095ff">OnPingReply</a></td></tr>
+<tr class="memdesc:abae122b5ea5aeb006c114132793095ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event triggered when a ping response is received.  <br /></td></tr>
 <tr class="memitem:a6a84960d98a382876a1bd9531ec0147a" id="r_a6a84960d98a382876a1bd9531ec0147a"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a84960d98a382876a1bd9531ec0147a">OnBandwidthReply</a></td></tr>
+<tr class="memdesc:a6a84960d98a382876a1bd9531ec0147a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event triggered when the bandwidth test result is received.  <br /></td></tr>
 <tr class="memitem:a2a9aa6cce8384bddb7d5dc3463a69ca5" id="r_a2a9aa6cce8384bddb7d5dc3463a69ca5"><td class="memItemLeft" align="right" valign="top">Action&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a9aa6cce8384bddb7d5dc3463a69ca5">OnThroughputReply</a></td></tr>
+<tr class="memdesc:a2a9aa6cce8384bddb7d5dc3463a69ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event triggered when throughput test results are received.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a043418424768b59437af25dd49b84c09" id="r_a043418424768b59437af25dd49b84c09"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a043418424768b59437af25dd49b84c09">PacketController</a> (<a class="el" href="class_packet.html">Packet</a> ControlledPacket)</td></tr>
 <tr class="memitem:a8c2937c0558456fb83b6aadada5795a2" id="r_a8c2937c0558456fb83b6aadada5795a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c2937c0558456fb83b6aadada5795a2">Awake</a> ()</td></tr>
-<tr class="memitem:a4d27949eb305b5b84772396a3dac9c76" id="r_a4d27949eb305b5b84772396a3dac9c76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d27949eb305b5b84772396a3dac9c76">Start</a> ()</td></tr>
+<tr class="memdesc:a8c2937c0558456fb83b6aadada5795a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures only one instance of the client exists (Singleton pattern).  <br /></td></tr>
 <tr class="memitem:a4370e952577ad3ece37ff2f986115df5" id="r_a4370e952577ad3ece37ff2f986115df5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4370e952577ad3ece37ff2f986115df5">OnApplicationQuit</a> ()</td></tr>
+<tr class="memdesc:a4370e952577ad3ece37ff2f986115df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnects the client when the application quits.  <br /></td></tr>
 <tr class="memitem:a975ed8be94bcdacf4fa3febf009abf71" id="r_a975ed8be94bcdacf4fa3febf009abf71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a975ed8be94bcdacf4fa3febf009abf71">SetClient</a> ()</td></tr>
+<tr class="memdesc:a975ed8be94bcdacf4fa3febf009abf71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes <a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a> and <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a> communication handlers for this client.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:aeb2cbab91ed3b3c6d18b52a5f73cbc4c" id="r_aeb2cbab91ed3b3c6d18b52a5f73cbc4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_default_network_settings.html">DefaultNetworkSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb2cbab91ed3b3c6d18b52a5f73cbc4c">defaultNetworkSettings</a></td></tr>
+<tr class="memdesc:aeb2cbab91ed3b3c6d18b52a5f73cbc4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Network settings shared between client and server (IP, port, security, ...).  <br /></td></tr>
 <tr class="memitem:a3ea518c66e68be8d4bb1efe02f54ebdc" id="r_a3ea518c66e68be8d4bb1efe02f54ebdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_client_settings.html">ClientSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ea518c66e68be8d4bb1efe02f54ebdc">ClientSettings</a></td></tr>
-<tr class="memitem:a872de865b20100449439b8d4ff6521ad" id="r_a872de865b20100449439b8d4ff6521ad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a872de865b20100449439b8d4ff6521ad">MID</a> = 0</td></tr>
-<tr class="memitem:ac9dc22560e4ed8b137c30f337a5c709f" id="r_ac9dc22560e4ed8b137c30f337a5c709f"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9dc22560e4ed8b137c30f337a5c709f">Username</a> = &quot;&quot;</td></tr>
+<tr class="memdesc:a3ea518c66e68be8d4bb1efe02f54ebdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Client-specific configuration used during runtime.  <br /></td></tr>
+<tr class="memitem:a845b09c860f41f3b43dc7a34268bb400" id="r_a845b09c860f41f3b43dc7a34268bb400"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a845b09c860f41f3b43dc7a34268bb400">id</a> = 0</td></tr>
+<tr class="memdesc:a845b09c860f41f3b43dc7a34268bb400"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unique client id assigned by the server.  <br /></td></tr>
+<tr class="memitem:aedf64c95ba1148f63235e43a87ac9d89" id="r_aedf64c95ba1148f63235e43a87ac9d89"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedf64c95ba1148f63235e43a87ac9d89">username</a> = &quot;&quot;</td></tr>
+<tr class="memdesc:aedf64c95ba1148f63235e43a87ac9d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current username of the client.  <br /></td></tr>
 <tr class="memitem:a862178b1d4f4f236016354574f9b13be" id="r_a862178b1d4f4f236016354574f9b13be"><td class="memItemLeft" align="right" valign="top">Coroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a862178b1d4f4f236016354574f9b13be">latencyMeassure</a></td></tr>
-<tr class="memitem:a984ee64f626f162f2315690b29b4d040" id="r_a984ee64f626f162f2315690b29b4d040"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a984ee64f626f162f2315690b29b4d040">HmacKey</a></td></tr>
+<tr class="memdesc:a862178b1d4f4f236016354574f9b13be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the coroutine responsible for measuring latency.  <br /></td></tr>
+<tr class="memitem:a5ca3a6d3534bbf4d0891b566131c6699" id="r_a5ca3a6d3534bbf4d0891b566131c6699"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ca3a6d3534bbf4d0891b566131c6699">hmacKey</a></td></tr>
+<tr class="memdesc:a5ca3a6d3534bbf4d0891b566131c6699"><td class="mdescLeft">&#160;</td><td class="mdescRight">HMAC key used for message authentication.  <br /></td></tr>
 <tr class="memitem:a38db86c8ff1977fb139cbba24a7b908e" id="r_a38db86c8ff1977fb139cbba24a7b908e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38db86c8ff1977fb139cbba24a7b908e">authToken</a></td></tr>
+<tr class="memdesc:a38db86c8ff1977fb139cbba24a7b908e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Authentication token used to verify client identity.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:aec6e28aaa6ae6e65f66ea258d947ab1d" id="r_aec6e28aaa6ae6e65f66ea258d947ab1d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec6e28aaa6ae6e65f66ea258d947ab1d">DefaultBufferSize</a> = 4096</td></tr>
-<tr class="memitem:a56093e9cf5926f6e72489548f8132823" id="r_a56093e9cf5926f6e72489548f8132823"><td class="memItemLeft" align="right" valign="top">static Dictionary&lt; int, <a class="el" href="#a043418424768b59437af25dd49b84c09">PacketController</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56093e9cf5926f6e72489548f8132823">PacketControllers</a></td></tr>
+<tr class="memdesc:aec6e28aaa6ae6e65f66ea258d947ab1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default buffer size used for sending and receiving data (in bytes).  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Main MonoBehaviour singleton class handling the client-side networking logic (<a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a>, <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a>) in Unity. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00015">15</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a71c7ae56f6f0caa9aac8b515e972f446" name="a71c7ae56f6f0caa9aac8b515e972f446"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a71c7ae56f6f0caa9aac8b515e972f446">&#9670;&#160;</a></span>AnimationUpdate()</h2>
 
@@ -205,6 +269,13 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sends animation update to the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00677">677</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  678</span>    {</div>
+<div class="line"><span class="lineno">  679</span>        ClientSendHandler.SendAnimationUpdate(type, name, value);</div>
+<div class="line"><span class="lineno">  680</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8c2937c0558456fb83b6aadada5795a2" name="a8c2937c0558456fb83b6aadada5795a2"></a>
@@ -230,6 +301,21 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Ensures only one instance of the client exists (Singleton pattern). </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00104">104</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>    {</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a5ccc991d6e9c7cccc6bd9a6e7ed0eb15">instance</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  107</span>        {</div>
+<div class="line"><span class="lineno">  108</span>            <a class="code hl_variable" href="#a5ccc991d6e9c7cccc6bd9a6e7ed0eb15">instance</a> = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  109</span>        } </div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a5ccc991d6e9c7cccc6bd9a6e7ed0eb15">instance</a> != <span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">  111</span>        {</div>
+<div class="line"><span class="lineno">  112</span>            Destroy(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  113</span>        }</div>
+<div class="line"><span class="lineno">  114</span>    }</div>
+<div class="ttc" id="aclass_client_html_a5ccc991d6e9c7cccc6bd9a6e7ed0eb15"><div class="ttname"><a href="#a5ccc991d6e9c7cccc6bd9a6e7ed0eb15">Client.instance</a></div><div class="ttdeci">static Client instance</div><div class="ttdoc">Singleton instance of the client.</div><div class="ttdef"><b>Definition</b> <a href="_client_8cs_source.html#l00020">Client.cs:20</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac7ffc00682f098ade4d7d5f64d53d9ed" name="ac7ffc00682f098ade4d7d5f64d53d9ed"></a>
@@ -247,6 +333,13 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sends request to measure bandwidth to the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00691">691</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  692</span>    {</div>
+<div class="line"><span class="lineno">  693</span>        ClientSendHandler.SendBandwidthRequest(data);</div>
+<div class="line"><span class="lineno">  694</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6cbf6e58ffe73211b5aefa2a19560af1" name="a6cbf6e58ffe73211b5aefa2a19560af1"></a>
@@ -278,6 +371,13 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Applies received animation state from the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00684">684</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  685</span>    {</div>
+<div class="line"><span class="lineno">  686</span>        <a class="code hl_variable" href="#a5ccc991d6e9c7cccc6bd9a6e7ed0eb15">instance</a>.OnAnimationChangeReceived?.Invoke(<span class="keywordtype">id</span>, type, name, value);</div>
+<div class="line"><span class="lineno">  687</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3f32352b2a52cb23919fb2e2a2c7faf1" name="a3f32352b2a52cb23919fb2e2a2c7faf1"></a>
@@ -304,6 +404,13 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Updates the transform of a remote player. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00670">670</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  671</span>    {</div>
+<div class="line"><span class="lineno">  672</span>        <a class="code hl_variable" href="#a5ccc991d6e9c7cccc6bd9a6e7ed0eb15">instance</a>.OnTransformReceived?.Invoke(<span class="keywordtype">id</span>, pos, rot);</div>
+<div class="line"><span class="lineno">  673</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a315137008ad04591c2dd6ecaa66beb18" name="a315137008ad04591c2dd6ecaa66beb18"></a>
@@ -321,6 +428,16 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Starts the connection process to the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00283">283</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  284</span>    {</div>
+<div class="line"><span class="lineno">  285</span>        <a class="code hl_function" href="#a975ed8be94bcdacf4fa3febf009abf71">SetClient</a>();</div>
+<div class="line"><span class="lineno">  286</span>        <a class="code hl_variable" href="#a52e523db6422023cf2f92b3da48c2e90">tcp</a>.Connect();</div>
+<div class="line"><span class="lineno">  287</span>    }</div>
+<div class="ttc" id="aclass_client_html_a52e523db6422023cf2f92b3da48c2e90"><div class="ttname"><a href="#a52e523db6422023cf2f92b3da48c2e90">Client.tcp</a></div><div class="ttdeci">TCP tcp</div><div class="ttdoc">Handles TCP communication with the server.</div><div class="ttdef"><b>Definition</b> <a href="_client_8cs_source.html#l00044">Client.cs:44</a></div></div>
+<div class="ttc" id="aclass_client_html_a975ed8be94bcdacf4fa3febf009abf71"><div class="ttname"><a href="#a975ed8be94bcdacf4fa3febf009abf71">Client.SetClient</a></div><div class="ttdeci">void SetClient()</div><div class="ttdoc">Initializes TCP and UDP communication handlers for this client.</div><div class="ttdef"><b>Definition</b> <a href="_client_8cs_source.html#l00199">Client.cs:199</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a932bb70c89457128564d9189c72301d3" name="a932bb70c89457128564d9189c72301d3"></a>
@@ -338,10 +455,30 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Disconnects the client from the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00555">555</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  556</span>    {</div>
+<div class="line"><span class="lineno">  557</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ad575863aaa279deecc05945af5659b4f">isConnected</a> == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  558</span>        {</div>
+<div class="line"><span class="lineno">  559</span>            <a class="code hl_variable" href="#ad575863aaa279deecc05945af5659b4f">isConnected</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  560</span>            <a class="code hl_variable" href="#a52e523db6422023cf2f92b3da48c2e90">tcp</a>.Socket.Close();</div>
+<div class="line"><span class="lineno">  561</span>            <a class="code hl_variable" href="#abb0223b6db6bfccf7913d870ce6bae95">udp</a>.Socket.Close();</div>
+<div class="line"><span class="lineno">  562</span>            ThreadsController.StartOnMainThread(() =&gt;</div>
+<div class="line"><span class="lineno">  563</span>            {</div>
+<div class="line"><span class="lineno">  564</span>                <a class="code hl_function" href="#ad1b322c63b6e7044e080a02c6ab4612c">ResetNetwork</a>();</div>
+<div class="line"><span class="lineno">  565</span>            });</div>
+<div class="line"><span class="lineno">  566</span>            <a class="code hl_variable" href="#a5ccc991d6e9c7cccc6bd9a6e7ed0eb15">instance</a>.OnDisconnected?.Invoke();</div>
+<div class="line"><span class="lineno">  567</span>        }</div>
+<div class="line"><span class="lineno">  568</span>    }</div>
+<div class="ttc" id="aclass_client_html_abb0223b6db6bfccf7913d870ce6bae95"><div class="ttname"><a href="#abb0223b6db6bfccf7913d870ce6bae95">Client.udp</a></div><div class="ttdeci">UDP udp</div><div class="ttdoc">Handles UDP communication with the server.</div><div class="ttdef"><b>Definition</b> <a href="_client_8cs_source.html#l00048">Client.cs:48</a></div></div>
+<div class="ttc" id="aclass_client_html_ad1b322c63b6e7044e080a02c6ab4612c"><div class="ttname"><a href="#ad1b322c63b6e7044e080a02c6ab4612c">Client.ResetNetwork</a></div><div class="ttdeci">void ResetNetwork()</div><div class="ttdoc">Resets client network components and reloads the initial scene.</div><div class="ttdef"><b>Definition</b> <a href="_client_8cs_source.html#l00572">Client.cs:572</a></div></div>
+<div class="ttc" id="aclass_client_html_ad575863aaa279deecc05945af5659b4f"><div class="ttname"><a href="#ad575863aaa279deecc05945af5659b4f">Client.isConnected</a></div><div class="ttdeci">bool isConnected</div><div class="ttdoc">Indicates whether the client is currently connected to the server.</div><div class="ttdef"><b>Definition</b> <a href="_client_8cs_source.html#l00052">Client.cs:52</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a33e525fb5a7b3f45f985aded5f8f7e28" name="a33e525fb5a7b3f45f985aded5f8f7e28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33e525fb5a7b3f45f985aded5f8f7e28">&#9670;&#160;</a></span>DisconnectOther()</h2>
+<a id="a88198b76b5cd514f6d126e3e9c97c323" name="a88198b76b5cd514f6d126e3e9c97c323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88198b76b5cd514f6d126e3e9c97c323">&#9670;&#160;</a></span>DisconnectOther()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -349,12 +486,19 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Client.DisconnectOther </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>clientid</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Disconnects another user with the given ID from the scene. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00616">616</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  617</span>    {</div>
+<div class="line"><span class="lineno">  618</span>        NetworkManager.networkManager.DisconnectForeignUser(clientid);</div>
+<div class="line"><span class="lineno">  619</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5a2613e50d2685b83a0775b3765e5681" name="a5a2613e50d2685b83a0775b3765e5681"></a>
@@ -372,6 +516,16 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sends a disconnect request to the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00606">606</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  607</span>    {</div>
+<div class="line"><span class="lineno">  608</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#ad575863aaa279deecc05945af5659b4f">isConnected</a> == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  609</span>        {</div>
+<div class="line"><span class="lineno">  610</span>            ClientSendHandler.DisconnectRequest();</div>
+<div class="line"><span class="lineno">  611</span>        }</div>
+<div class="line"><span class="lineno">  612</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac6db4ebee35cde768bc72fa72ac9857e" name="ac6db4ebee35cde768bc72fa72ac9857e"></a>
@@ -389,6 +543,14 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets default network settings used for connection. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00185">185</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>    {</div>
+<div class="line"><span class="lineno">  187</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#aeb2cbab91ed3b3c6d18b52a5f73cbc4c">defaultNetworkSettings</a>;</div>
+<div class="line"><span class="lineno">  188</span>    }</div>
+<div class="ttc" id="aclass_client_html_aeb2cbab91ed3b3c6d18b52a5f73cbc4c"><div class="ttname"><a href="#aeb2cbab91ed3b3c6d18b52a5f73cbc4c">Client.defaultNetworkSettings</a></div><div class="ttdeci">DefaultNetworkSettings defaultNetworkSettings</div><div class="ttdoc">Network settings shared between client and server (IP, port, security, ...).</div><div class="ttdef"><b>Definition</b> <a href="_client_8cs_source.html#l00028">Client.cs:28</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aea47d7c648a4365da5818d1f7df76e47" name="aea47d7c648a4365da5818d1f7df76e47"></a>
@@ -406,16 +568,24 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets the HMAC key used for secure communication. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00143">143</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  144</span>    {</div>
+<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a5ca3a6d3534bbf4d0891b566131c6699">hmacKey</a>;</div>
+<div class="line"><span class="lineno">  146</span>    }</div>
+<div class="ttc" id="aclass_client_html_a5ca3a6d3534bbf4d0891b566131c6699"><div class="ttname"><a href="#a5ca3a6d3534bbf4d0891b566131c6699">Client.hmacKey</a></div><div class="ttdeci">byte[] hmacKey</div><div class="ttdoc">HMAC key used for message authentication.</div><div class="ttdef"><b>Definition</b> <a href="_client_8cs_source.html#l00060">Client.cs:60</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a926a2e79f79fe0231a51988756cfedde" name="a926a2e79f79fe0231a51988756cfedde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a926a2e79f79fe0231a51988756cfedde">&#9670;&#160;</a></span>GetMID()</h2>
+<a id="adad7913402acd7e9edf78f5c64b041a4" name="adad7913402acd7e9edf78f5c64b041a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adad7913402acd7e9edf78f5c64b041a4">&#9670;&#160;</a></span>GetId()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Client.GetMID </td>
+          <td class="memname">int Client.GetId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -423,6 +593,14 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets the current client ID. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00171">171</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  172</span>    {</div>
+<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a845b09c860f41f3b43dc7a34268bb400">id</a>;</div>
+<div class="line"><span class="lineno">  174</span>    }</div>
+<div class="ttc" id="aclass_client_html_a845b09c860f41f3b43dc7a34268bb400"><div class="ttname"><a href="#a845b09c860f41f3b43dc7a34268bb400">Client.id</a></div><div class="ttdeci">int id</div><div class="ttdoc">The unique client id assigned by the server.</div><div class="ttdef"><b>Definition</b> <a href="_client_8cs_source.html#l00036">Client.cs:36</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a900ad6ec9923c8688efef085e792c5f8" name="a900ad6ec9923c8688efef085e792c5f8"></a>
@@ -440,6 +618,14 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets the authentication token. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00136">136</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  137</span>    {</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a38db86c8ff1977fb139cbba24a7b908e">authToken</a>;</div>
+<div class="line"><span class="lineno">  139</span>    }</div>
+<div class="ttc" id="aclass_client_html_a38db86c8ff1977fb139cbba24a7b908e"><div class="ttname"><a href="#a38db86c8ff1977fb139cbba24a7b908e">Client.authToken</a></div><div class="ttdeci">string authToken</div><div class="ttdoc">Authentication token used to verify client identity.</div><div class="ttdef"><b>Definition</b> <a href="_client_8cs_source.html#l00064">Client.cs:64</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af37eeda044394ff9ba3755ca8bc79e1a" name="af37eeda044394ff9ba3755ca8bc79e1a"></a>
@@ -457,10 +643,18 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets the current username. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00157">157</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  158</span>    {</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#aedf64c95ba1148f63235e43a87ac9d89">username</a>;</div>
+<div class="line"><span class="lineno">  160</span>    }</div>
+<div class="ttc" id="aclass_client_html_aedf64c95ba1148f63235e43a87ac9d89"><div class="ttname"><a href="#aedf64c95ba1148f63235e43a87ac9d89">Client.username</a></div><div class="ttdeci">string username</div><div class="ttdoc">The current username of the client.</div><div class="ttdef"><b>Definition</b> <a href="_client_8cs_source.html#l00040">Client.cs:40</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a888e2cc06543ebb160b905f137e77403" name="a888e2cc06543ebb160b905f137e77403"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a888e2cc06543ebb160b905f137e77403">&#9670;&#160;</a></span>IsLocal()</h2>
+<a id="a71a330c2f45f1eeb773c7355db850701" name="a71a330c2f45f1eeb773c7355db850701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71a330c2f45f1eeb773c7355db850701">&#9670;&#160;</a></span>IsLocal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -468,12 +662,23 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">bool Client.IsLocal </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>checkId</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Checks if the specified ID belongs to this local client. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00118">118</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>    {</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">if</span>(<span class="keywordtype">id</span> == checkId) {</div>
+<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  122</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  124</span>        }</div>
+<div class="line"><span class="lineno">  125</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a804f36910abca6782d410b386d118f45" name="a804f36910abca6782d410b386d118f45"></a>
@@ -491,6 +696,13 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Handles the server’s ping reply and triggers the ping event. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00599">599</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  600</span>    {</div>
+<div class="line"><span class="lineno">  601</span>        <a class="code hl_variable" href="#a5ccc991d6e9c7cccc6bd9a6e7ed0eb15">instance</a>.OnPingReply?.Invoke(pcktId);</div>
+<div class="line"><span class="lineno">  602</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6f5d9487be831b82301c183ec2670c2f" name="a6f5d9487be831b82301c183ec2670c2f"></a>
@@ -508,10 +720,20 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sends a ping measurement request to the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00589">589</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  590</span>    {</div>
+<div class="line"><span class="lineno">  591</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#ad575863aaa279deecc05945af5659b4f">isConnected</a> == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  592</span>        {</div>
+<div class="line"><span class="lineno">  593</span>            ClientSendHandler.MeassureRequest(pcktId);</div>
+<div class="line"><span class="lineno">  594</span>        } </div>
+<div class="line"><span class="lineno">  595</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a10438dc8b5cac6039e879227c2ddfe31" name="a10438dc8b5cac6039e879227c2ddfe31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10438dc8b5cac6039e879227c2ddfe31">&#9670;&#160;</a></span>MessageToAllRequest()</h2>
+<a id="a823f35d413ef54e21c0c5d874586b543" name="a823f35d413ef54e21c0c5d874586b543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a823f35d413ef54e21c0c5d874586b543">&#9670;&#160;</a></span>MessageToAllRequest()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -519,16 +741,26 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Client.MessageToAllRequest </td>
           <td>(</td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>Message</em></span></td><td>)</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sends a message to all users in the session. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00633">633</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  634</span>    {</div>
+<div class="line"><span class="lineno">  635</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#ad575863aaa279deecc05945af5659b4f">isConnected</a> == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  636</span>        {</div>
+<div class="line"><span class="lineno">  637</span>            ClientSendHandler.MessageToAllRequest(message);</div>
+<div class="line"><span class="lineno">  638</span>        }</div>
+<div class="line"><span class="lineno">  639</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a6da1ba0370f93a67ff6e95f6e491f74c" name="a6da1ba0370f93a67ff6e95f6e491f74c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6da1ba0370f93a67ff6e95f6e491f74c">&#9670;&#160;</a></span>MessageToUserRequest()</h2>
+<a id="a81b4c970682c127a56ecda44970d1542" name="a81b4c970682c127a56ecda44970d1542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81b4c970682c127a56ecda44970d1542">&#9670;&#160;</a></span>MessageToUserRequest()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -536,16 +768,26 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Client.MessageToUserRequest </td>
           <td>(</td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>Message</em></span>, </td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>message</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>toId</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>clientId</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sends a message to a specific user. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00623">623</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  624</span>    {</div>
+<div class="line"><span class="lineno">  625</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#ad575863aaa279deecc05945af5659b4f">isConnected</a> == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  626</span>        {</div>
+<div class="line"><span class="lineno">  627</span>            ClientSendHandler.MessageToUserRequest(message, clientId);</div>
+<div class="line"><span class="lineno">  628</span>        }</div>
+<div class="line"><span class="lineno">  629</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4370e952577ad3ece37ff2f986115df5" name="a4370e952577ad3ece37ff2f986115df5"></a>
@@ -571,10 +813,18 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Disconnects the client when the application quits. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00192">192</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  193</span>    {</div>
+<div class="line"><span class="lineno">  194</span>        <a class="code hl_function" href="#a932bb70c89457128564d9189c72301d3">Disconnect</a>();</div>
+<div class="line"><span class="lineno">  195</span>    }</div>
+<div class="ttc" id="aclass_client_html_a932bb70c89457128564d9189c72301d3"><div class="ttname"><a href="#a932bb70c89457128564d9189c72301d3">Client.Disconnect</a></div><div class="ttdeci">void Disconnect()</div><div class="ttdoc">Disconnects the client from the server.</div><div class="ttdef"><b>Definition</b> <a href="_client_8cs_source.html#l00555">Client.cs:555</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a043418424768b59437af25dd49b84c09" name="a043418424768b59437af25dd49b84c09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a043418424768b59437af25dd49b84c09">&#9670;&#160;</a></span>PacketController()</h2>
+<a id="a98eeb732c160e101b19e567fe4eb0489" name="a98eeb732c160e101b19e567fe4eb0489"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98eeb732c160e101b19e567fe4eb0489">&#9670;&#160;</a></span>PacketAction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -583,19 +833,91 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">delegate void Client.PacketController </td>
+          <td class="memname">void Client.PacketAction </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>ControlledPacket</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>packetId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>packet</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Handles the received packet by type by calling methods in <a class="el" href="class_client_receive_handler.html" title="Handles incoming packets from the server and performs client-side actions accordingly.">ClientReceiveHandler</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00215">215</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  216</span>    {</div>
+<div class="line"><span class="lineno">  217</span>        <span class="keywordflow">if</span> (!Enum.IsDefined(typeof(Packet.ServerPackets), packetId))</div>
+<div class="line"><span class="lineno">  218</span>        {</div>
+<div class="line"><span class="lineno">  219</span>            Debug.LogWarning($<span class="stringliteral">&quot;Unknown packet ID: {packetId}&quot;</span>);</div>
+<div class="line"><span class="lineno">  220</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  221</span>        }</div>
+<div class="line"><span class="lineno">  222</span> </div>
+<div class="line"><span class="lineno">  223</span>        Packet.ServerPackets packetType = (Packet.ServerPackets)packetId;</div>
+<div class="line"><span class="lineno">  224</span> </div>
+<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">switch</span> (packetType)</div>
+<div class="line"><span class="lineno">  226</span>        {</div>
+<div class="line"><span class="lineno">  227</span>            <span class="keywordflow">case</span> Packet.ServerPackets.welcome:</div>
+<div class="line"><span class="lineno">  228</span>                ClientReceiveHandler.Welcome(packet);</div>
+<div class="line"><span class="lineno">  229</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  230</span> </div>
+<div class="line"><span class="lineno">  231</span>            <span class="keywordflow">case</span> Packet.ServerPackets.SpawnUser:</div>
+<div class="line"><span class="lineno">  232</span>                ClientReceiveHandler.SpawnUser(packet);</div>
+<div class="line"><span class="lineno">  233</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  234</span> </div>
+<div class="line"><span class="lineno">  235</span>            <span class="keywordflow">case</span> Packet.ServerPackets.DisconnectUser:</div>
+<div class="line"><span class="lineno">  236</span>                ClientReceiveHandler.DisconnectUser(packet);</div>
+<div class="line"><span class="lineno">  237</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  238</span> </div>
+<div class="line"><span class="lineno">  239</span>            <span class="keywordflow">case</span> Packet.ServerPackets.Latency:</div>
+<div class="line"><span class="lineno">  240</span>                ClientReceiveHandler.Latency(packet);</div>
+<div class="line"><span class="lineno">  241</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  242</span> </div>
+<div class="line"><span class="lineno">  243</span>            <span class="keywordflow">case</span> Packet.ServerPackets.Message:</div>
+<div class="line"><span class="lineno">  244</span>                ClientReceiveHandler.ReceiveMessage(packet);</div>
+<div class="line"><span class="lineno">  245</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  246</span> </div>
+<div class="line"><span class="lineno">  247</span>            <span class="keywordflow">case</span> Packet.ServerPackets.HmacKey:</div>
+<div class="line"><span class="lineno">  248</span>                ClientReceiveHandler.ReceiveHmacKey(packet);</div>
+<div class="line"><span class="lineno">  249</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  250</span> </div>
+<div class="line"><span class="lineno">  251</span>            <span class="keywordflow">case</span> Packet.ServerPackets.AuthToken:</div>
+<div class="line"><span class="lineno">  252</span>                ClientReceiveHandler.ReceiveToken(packet);</div>
+<div class="line"><span class="lineno">  253</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  254</span> </div>
+<div class="line"><span class="lineno">  255</span>            <span class="keywordflow">case</span> Packet.ServerPackets.MessageAll:</div>
+<div class="line"><span class="lineno">  256</span>                ClientReceiveHandler.ReceiveMessageAll(packet);</div>
+<div class="line"><span class="lineno">  257</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  258</span> </div>
+<div class="line"><span class="lineno">  259</span>            <span class="keywordflow">case</span> Packet.ServerPackets.TransformUpdate:</div>
+<div class="line"><span class="lineno">  260</span>                ClientReceiveHandler.TransformUpdate(packet);</div>
+<div class="line"><span class="lineno">  261</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  262</span> </div>
+<div class="line"><span class="lineno">  263</span>            <span class="keywordflow">case</span> Packet.ServerPackets.AnimationUpdate:</div>
+<div class="line"><span class="lineno">  264</span>                ClientReceiveHandler.AnimationUpdate(packet);</div>
+<div class="line"><span class="lineno">  265</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  266</span> </div>
+<div class="line"><span class="lineno">  267</span>            <span class="keywordflow">case</span> Packet.ServerPackets.BandwidthReply:</div>
+<div class="line"><span class="lineno">  268</span>                ClientReceiveHandler.BandwidthReply(packet);</div>
+<div class="line"><span class="lineno">  269</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  270</span> </div>
+<div class="line"><span class="lineno">  271</span>            <span class="keywordflow">case</span> Packet.ServerPackets.ThroughputReply:</div>
+<div class="line"><span class="lineno">  272</span>                ClientReceiveHandler.ThroughputReply(packet);</div>
+<div class="line"><span class="lineno">  273</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  274</span> </div>
+<div class="line"><span class="lineno">  275</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  276</span>                Debug.LogWarning($<span class="stringliteral">&quot;Unhandled packet type: {packetType}&quot;</span>);</div>
+<div class="line"><span class="lineno">  277</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  278</span>        }</div>
+<div class="line"><span class="lineno">  279</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8fd458174d51c4e65cc45d0b6c7c32c3" name="a8fd458174d51c4e65cc45d0b6c7c32c3"></a>
@@ -613,6 +935,13 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Called when bandwidth reply is received from the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00705">705</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  706</span>    {</div>
+<div class="line"><span class="lineno">  707</span>        <a class="code hl_variable" href="#a5ccc991d6e9c7cccc6bd9a6e7ed0eb15">instance</a>.OnBandwidthReply?.Invoke();</div>
+<div class="line"><span class="lineno">  708</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7b13cba7d871f1dd35bfb99a1bf10148" name="a7b13cba7d871f1dd35bfb99a1bf10148"></a>
@@ -630,10 +959,17 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Triggers message-received event with the given message. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00656">656</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  657</span>    {</div>
+<div class="line"><span class="lineno">  658</span>        <a class="code hl_variable" href="#a5ccc991d6e9c7cccc6bd9a6e7ed0eb15">instance</a>.OnMessageReceived?.Invoke(message);</div>
+<div class="line"><span class="lineno">  659</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="af81c21b9059eda6c215505f8995f56af" name="af81c21b9059eda6c215505f8995f56af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af81c21b9059eda6c215505f8995f56af">&#9670;&#160;</a></span>ReceivedThroughput()</h2>
+<a id="a7aed9e4aa45b39a7b5823b3eaeaa5041" name="a7aed9e4aa45b39a7b5823b3eaeaa5041"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aed9e4aa45b39a7b5823b3eaeaa5041">&#9670;&#160;</a></span>ReceivedThroughput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -646,11 +982,18 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>DataSize</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dataSize</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Called when throughput test result is received. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00712">712</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  713</span>    {</div>
+<div class="line"><span class="lineno">  714</span>        <a class="code hl_variable" href="#a5ccc991d6e9c7cccc6bd9a6e7ed0eb15">instance</a>.OnThroughputReply?.Invoke(pcktId, dataSize);</div>
+<div class="line"><span class="lineno">  715</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad1b322c63b6e7044e080a02c6ab4612c" name="ad1b322c63b6e7044e080a02c6ab4612c"></a>
@@ -668,6 +1011,22 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Resets client network components and reloads the initial scene. </p>
+<p>This can be changed.</p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00572">572</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  573</span>    {</div>
+<div class="line"><span class="lineno">  574</span>        <a class="code hl_function" href="#a932bb70c89457128564d9189c72301d3">Disconnect</a>();</div>
+<div class="line"><span class="lineno">  575</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a862178b1d4f4f236016354574f9b13be">latencyMeassure</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  576</span>        {</div>
+<div class="line"><span class="lineno">  577</span>            StopCoroutine(<a class="code hl_variable" href="#a862178b1d4f4f236016354574f9b13be">latencyMeassure</a>);</div>
+<div class="line"><span class="lineno">  578</span>            <a class="code hl_variable" href="#a862178b1d4f4f236016354574f9b13be">latencyMeassure</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  579</span>        }</div>
+<div class="line"><span class="lineno">  580</span>        <a class="code hl_function" href="#a975ed8be94bcdacf4fa3febf009abf71">SetClient</a>();</div>
+<div class="line"><span class="lineno">  584</span>        SceneManager.LoadScene(0);</div>
+<div class="line"><span class="lineno">  585</span>    }</div>
+<div class="ttc" id="aclass_client_html_a862178b1d4f4f236016354574f9b13be"><div class="ttname"><a href="#a862178b1d4f4f236016354574f9b13be">Client.latencyMeassure</a></div><div class="ttdeci">Coroutine latencyMeassure</div><div class="ttdoc">Reference to the coroutine responsible for measuring latency.</div><div class="ttdef"><b>Definition</b> <a href="_client_8cs_source.html#l00056">Client.cs:56</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0193bd153028953ce781ff500dcdedfd" name="a0193bd153028953ce781ff500dcdedfd"></a>
@@ -689,6 +1048,13 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sends a packet of data to test throughput. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00698">698</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  699</span>    {</div>
+<div class="line"><span class="lineno">  700</span>        ClientSendHandler.SendThroughputRequest(pcktId, data);</div>
+<div class="line"><span class="lineno">  701</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a975ed8be94bcdacf4fa3febf009abf71" name="a975ed8be94bcdacf4fa3febf009abf71"></a>
@@ -714,10 +1080,28 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initializes <a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a> and <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a> communication handlers for this client. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00199">199</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  200</span>    {</div>
+<div class="line"><span class="lineno">  201</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a52e523db6422023cf2f92b3da48c2e90">tcp</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  202</span>        {</div>
+<div class="line"><span class="lineno">  203</span>            <a class="code hl_variable" href="#a52e523db6422023cf2f92b3da48c2e90">tcp</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  204</span>        }</div>
+<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abb0223b6db6bfccf7913d870ce6bae95">udp</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  206</span>        {</div>
+<div class="line"><span class="lineno">  207</span>            <a class="code hl_variable" href="#abb0223b6db6bfccf7913d870ce6bae95">udp</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  208</span>        }</div>
+<div class="line"><span class="lineno">  209</span>        <a class="code hl_variable" href="#a52e523db6422023cf2f92b3da48c2e90">tcp</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_client_1_1_t_c_p.html">TCP</a>();</div>
+<div class="line"><span class="lineno">  210</span>        <a class="code hl_variable" href="#abb0223b6db6bfccf7913d870ce6bae95">udp</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_client_1_1_u_d_p.html">UDP</a>();</div>
+<div class="line"><span class="lineno">  211</span>    }</div>
+<div class="ttc" id="aclass_client_1_1_t_c_p_html"><div class="ttname"><a href="class_client_1_1_t_c_p.html">Client.TCP</a></div><div class="ttdoc">Handles TCP connection.</div><div class="ttdef"><b>Definition</b> <a href="_client_8cs_source.html#l00291">Client.cs:292</a></div></div>
+<div class="ttc" id="aclass_client_1_1_u_d_p_html"><div class="ttname"><a href="class_client_1_1_u_d_p.html">Client.UDP</a></div><div class="ttdoc">Handles UDP connection and communication for the client.</div><div class="ttdef"><b>Definition</b> <a href="_client_8cs_source.html#l00468">Client.cs:469</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a441d9a977770b1195cf2962ad70268cd" name="a441d9a977770b1195cf2962ad70268cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a441d9a977770b1195cf2962ad70268cd">&#9670;&#160;</a></span>SetHmacKey()</h2>
+<a id="a63d0cec34bfc440c468329363e95f16c" name="a63d0cec34bfc440c468329363e95f16c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63d0cec34bfc440c468329363e95f16c">&#9670;&#160;</a></span>SetHmacKey()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -725,29 +1109,43 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Client.SetHmacKey </td>
           <td>(</td>
-          <td class="paramtype">byte[]</td>          <td class="paramname"><span class="paramname"><em>hmacKey</em></span></td><td>)</td>
+          <td class="paramtype">byte[]</td>          <td class="paramname"><span class="paramname"><em>newHmacKey</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets the HMAC key for secure communication. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00150">150</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  151</span>    {</div>
+<div class="line"><span class="lineno">  152</span>        <a class="code hl_variable" href="#a5ca3a6d3534bbf4d0891b566131c6699">hmacKey</a> = newHmacKey;</div>
+<div class="line"><span class="lineno">  153</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a5e7be7ab8870455292b5c94e16b14a77" name="a5e7be7ab8870455292b5c94e16b14a77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e7be7ab8870455292b5c94e16b14a77">&#9670;&#160;</a></span>SetMID()</h2>
+<a id="a720fe9c3b3f846e22dafecf84034b338" name="a720fe9c3b3f846e22dafecf84034b338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a720fe9c3b3f846e22dafecf84034b338">&#9670;&#160;</a></span>SetId()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Client.SetMID </td>
+          <td class="memname">void Client.SetId </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mid</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>newId</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets the client ID. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00178">178</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  179</span>    {</div>
+<div class="line"><span class="lineno">  180</span>        <span class="keywordtype">id</span> = newId;</div>
+<div class="line"><span class="lineno">  181</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a575dc349bb76ad8b844d084df7ed5657" name="a575dc349bb76ad8b844d084df7ed5657"></a>
@@ -765,10 +1163,17 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets the authentication token. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00129">129</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  130</span>    {</div>
+<div class="line"><span class="lineno">  131</span>        <a class="code hl_variable" href="#a38db86c8ff1977fb139cbba24a7b908e">authToken</a> = token;</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a988b99f6ea6a386b4b958c1d57166b09" name="a988b99f6ea6a386b4b958c1d57166b09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a988b99f6ea6a386b4b958c1d57166b09">&#9670;&#160;</a></span>SetUsername()</h2>
+<a id="a03cffdee65368f69bd35673e34bb3297" name="a03cffdee65368f69bd35673e34bb3297"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03cffdee65368f69bd35673e34bb3297">&#9670;&#160;</a></span>SetUsername()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -776,12 +1181,19 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Client.SetUsername </td>
           <td>(</td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>username</em></span></td><td>)</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>newUsername</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets the current username. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00164">164</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  165</span>    {</div>
+<div class="line"><span class="lineno">  166</span>        <a class="code hl_variable" href="#aedf64c95ba1148f63235e43a87ac9d89">username</a> = newUsername;</div>
+<div class="line"><span class="lineno">  167</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acc68e05fc420ddff5f5213a9f88bb049" name="acc68e05fc420ddff5f5213a9f88bb049"></a>
@@ -803,31 +1215,19 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a4d27949eb305b5b84772396a3dac9c76" name="a4d27949eb305b5b84772396a3dac9c76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d27949eb305b5b84772396a3dac9c76">&#9670;&#160;</a></span>Start()</h2>
+<p>Spawns the user prefab locally or remotely. </p>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Client.Start </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00643">643</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  644</span>    {</div>
+<div class="line"><span class="lineno">  645</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <a class="code hl_variable" href="#a5ccc991d6e9c7cccc6bd9a6e7ed0eb15">instance</a>.GetId())</div>
+<div class="line"><span class="lineno">  646</span>        {</div>
+<div class="line"><span class="lineno">  647</span>            NetworkManager.networkManager.SpawnUser(<span class="keywordtype">id</span>,<a class="code hl_variable" href="#aedf64c95ba1148f63235e43a87ac9d89">username</a>,<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  648</span>        } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  649</span>        {</div>
+<div class="line"><span class="lineno">  650</span>            NetworkManager.networkManager.SpawnUser(<span class="keywordtype">id</span>, <a class="code hl_variable" href="#aedf64c95ba1148f63235e43a87ac9d89">username</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  651</span>        }</div>
+<div class="line"><span class="lineno">  652</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af41997eff86f882c953c5b1880682142" name="af41997eff86f882c953c5b1880682142"></a>
@@ -845,6 +1245,13 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sends current transform of a game object to the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00663">663</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  664</span>    {</div>
+<div class="line"><span class="lineno">  665</span>        ClientSendHandler.SendTransform(<a class="code hl_variable" href="#a5ccc991d6e9c7cccc6bd9a6e7ed0eb15">instance</a>.GetId(), objectTransform);</div>
+<div class="line"><span class="lineno">  666</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -868,6 +1275,10 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Authentication token used to verify client identity. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00064">64</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+
 </div>
 </div>
 <a id="a3ea518c66e68be8d4bb1efe02f54ebdc" name="a3ea518c66e68be8d4bb1efe02f54ebdc"></a>
@@ -889,6 +1300,10 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Client-specific configuration used during runtime. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00032">32</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
 
 </div>
 </div>
@@ -912,6 +1327,10 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Default buffer size used for sending and receiving data (in bytes). </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00024">24</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+
 </div>
 </div>
 <a id="aeb2cbab91ed3b3c6d18b52a5f73cbc4c" name="aeb2cbab91ed3b3c6d18b52a5f73cbc4c"></a>
@@ -934,10 +1353,14 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Network settings shared between client and server (IP, port, security, ...). </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00028">28</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+
 </div>
 </div>
-<a id="a984ee64f626f162f2315690b29b4d040" name="a984ee64f626f162f2315690b29b4d040"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a984ee64f626f162f2315690b29b4d040">&#9670;&#160;</a></span>HmacKey</h2>
+<a id="a5ca3a6d3534bbf4d0891b566131c6699" name="a5ca3a6d3534bbf4d0891b566131c6699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ca3a6d3534bbf4d0891b566131c6699">&#9670;&#160;</a></span>hmacKey</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -946,7 +1369,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">byte [] Client.HmacKey</td>
+          <td class="memname">byte [] Client.hmacKey</td>
         </tr>
       </table>
   </td>
@@ -955,6 +1378,36 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>HMAC key used for message authentication. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00060">60</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+
+</div>
+</div>
+<a id="a845b09c860f41f3b43dc7a34268bb400" name="a845b09c860f41f3b43dc7a34268bb400"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a845b09c860f41f3b43dc7a34268bb400">&#9670;&#160;</a></span>id</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Client.id = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The unique client id assigned by the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00036">36</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
 
 </div>
 </div>
@@ -978,6 +1431,10 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Singleton instance of the client. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00020">20</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+
 </div>
 </div>
 <a id="ad575863aaa279deecc05945af5659b4f" name="ad575863aaa279deecc05945af5659b4f"></a>
@@ -991,6 +1448,10 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Indicates whether the client is currently connected to the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00052">52</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
 
 </div>
 </div>
@@ -1014,49 +1475,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a872de865b20100449439b8d4ff6521ad" name="a872de865b20100449439b8d4ff6521ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a872de865b20100449439b8d4ff6521ad">&#9670;&#160;</a></span>MID</h2>
+<p>Reference to the coroutine responsible for measuring latency. </p>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Client.MID = 0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a56093e9cf5926f6e72489548f8132823" name="a56093e9cf5926f6e72489548f8132823"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56093e9cf5926f6e72489548f8132823">&#9670;&#160;</a></span>PacketControllers</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Dictionary&lt;int, <a class="el" href="#a043418424768b59437af25dd49b84c09">PacketController</a>&gt; Client.PacketControllers</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00056">56</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
 
 </div>
 </div>
@@ -1072,6 +1493,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Handles <a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a> communication with the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00044">44</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+
 </div>
 </div>
 <a id="abb0223b6db6bfccf7913d870ce6bae95" name="abb0223b6db6bfccf7913d870ce6bae95"></a>
@@ -1086,10 +1511,14 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Handles <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a> communication with the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00048">48</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+
 </div>
 </div>
-<a id="ac9dc22560e4ed8b137c30f337a5c709f" name="ac9dc22560e4ed8b137c30f337a5c709f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9dc22560e4ed8b137c30f337a5c709f">&#9670;&#160;</a></span>Username</h2>
+<a id="aedf64c95ba1148f63235e43a87ac9d89" name="aedf64c95ba1148f63235e43a87ac9d89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedf64c95ba1148f63235e43a87ac9d89">&#9670;&#160;</a></span>username</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1098,7 +1527,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string Client.Username = &quot;&quot;</td>
+          <td class="memname">string Client.username = &quot;&quot;</td>
         </tr>
       </table>
   </td>
@@ -1107,6 +1536,10 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The current username of the client. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00040">40</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
 
 </div>
 </div>
@@ -1123,6 +1556,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Event triggered when an animation update is received. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00088">88</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+
 </div>
 </div>
 <a id="a6a84960d98a382876a1bd9531ec0147a" name="a6a84960d98a382876a1bd9531ec0147a"></a>
@@ -1136,6 +1573,10 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Event triggered when the bandwidth test result is received. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00096">96</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
 
 </div>
 </div>
@@ -1151,6 +1592,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Event triggered when the client successfully connects to the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00068">68</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+
 </div>
 </div>
 <a id="abfacb2b5b9f29952345658da7d49bd3f" name="abfacb2b5b9f29952345658da7d49bd3f"></a>
@@ -1164,6 +1609,10 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Event triggered when the client fails to connect, providing an error message. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00072">72</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
 
 </div>
 </div>
@@ -1179,6 +1628,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Event triggered when the client is disconnected from the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00076">76</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+
 </div>
 </div>
 <a id="a22c917712ed3287414b96bb87a7d983d" name="a22c917712ed3287414b96bb87a7d983d"></a>
@@ -1192,6 +1645,10 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Event triggered when a text message is received from the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00080">80</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
 
 </div>
 </div>
@@ -1207,6 +1664,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Event triggered when a ping response is received. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00092">92</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+
 </div>
 </div>
 <a id="a2a9aa6cce8384bddb7d5dc3463a69ca5" name="a2a9aa6cce8384bddb7d5dc3463a69ca5"></a>
@@ -1220,6 +1681,10 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Event triggered when throughput test results are received. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00100">100</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
 
 </div>
 </div>
@@ -1235,11 +1700,12 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Event triggered when a transform update is received. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00084">84</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/NetworkLibrary/ClientStuff/ClientScripts/Code/<a class="el" href="_client_8cs.html">Client.cs</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

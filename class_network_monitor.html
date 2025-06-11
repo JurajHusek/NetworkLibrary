@@ -91,6 +91,9 @@ $(function(){initNavTree('class_network_monitor.html','','class_network_monitor-
   <div class="headertitle"><div class="title">NetworkMonitor Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_network_monitor.html" title="NetworkMonitor is responsible for actively monitoring network quality metrics such as latency,...">NetworkMonitor</a> is responsible for actively monitoring network quality metrics such as latency, jitter, packet loss, bandwidth, and throughput. It provides real-time updates to the UI.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for NetworkMonitor:</div>
 <div class="dyncontent">
@@ -101,9 +104,13 @@ Inheritance diagram for NetworkMonitor:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:adbed3bb38cadfa351608f313a2cd9254" id="r_adbed3bb38cadfa351608f313a2cd9254"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbed3bb38cadfa351608f313a2cd9254">OnPingResponse</a> (int id)</td></tr>
+<tr class="memdesc:adbed3bb38cadfa351608f313a2cd9254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a received ping response, calculates latency and jitter in ms.  <br /></td></tr>
 <tr class="memitem:a64c41d21deb8372637b5444511f598ae" id="r_a64c41d21deb8372637b5444511f598ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64c41d21deb8372637b5444511f598ae">StartBandwidthTest</a> ()</td></tr>
+<tr class="memdesc:a64c41d21deb8372637b5444511f598ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiates a bandwidth test by sending a large byte array.  <br /></td></tr>
 <tr class="memitem:a8b4462979ca9db0d2f2bd7ed4265dfef" id="r_a8b4462979ca9db0d2f2bd7ed4265dfef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b4462979ca9db0d2f2bd7ed4265dfef">StartThroughputTest</a> ()</td></tr>
+<tr class="memdesc:a8b4462979ca9db0d2f2bd7ed4265dfef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a throughput test by sending 100 UDP packets.  <br /></td></tr>
 <tr class="memitem:a8a6548c87e6699151cf6c254fcf5da11" id="r_a8a6548c87e6699151cf6c254fcf5da11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a6548c87e6699151cf6c254fcf5da11">OnThroughputResposne</a> (int pcktId, int DataSize)</td></tr>
+<tr class="memdesc:a8a6548c87e6699151cf6c254fcf5da11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a response for a throughput packet is received.  <br /></td></tr>
 <tr class="memitem:ac03e9bd86989a9cd59d51b169798b8c2" id="r_ac03e9bd86989a9cd59d51b169798b8c2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac03e9bd86989a9cd59d51b169798b8c2">GetLossPercent</a> ()</td></tr>
 <tr class="memitem:a5ba441b4f07ce7923bdbe6880969e903" id="r_a5ba441b4f07ce7923bdbe6880969e903"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ba441b4f07ce7923bdbe6880969e903">GetAverageRTT</a> ()</td></tr>
 <tr class="memitem:ad09a19a9ccbd6b1bdb7acee5675161b0" id="r_ad09a19a9ccbd6b1bdb7acee5675161b0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad09a19a9ccbd6b1bdb7acee5675161b0">GetJitter</a> ()</td></tr>
@@ -111,50 +118,79 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a39e338fff689f06b66745b5b1a83ba4b" id="r_a39e338fff689f06b66745b5b1a83ba4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39e338fff689f06b66745b5b1a83ba4b">Start</a> ()</td></tr>
+<tr class="memdesc:a39e338fff689f06b66745b5b1a83ba4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribes to client events and starts monitoring after connection.  <br /></td></tr>
 <tr class="memitem:a96e92c8ea2a7bd67c98875fce920f43e" id="r_a96e92c8ea2a7bd67c98875fce920f43e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96e92c8ea2a7bd67c98875fce920f43e">StartMonitor</a> ()</td></tr>
+<tr class="memdesc:a96e92c8ea2a7bd67c98875fce920f43e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the latency monitor coroutine.  <br /></td></tr>
 <tr class="memitem:a269d07239f5af29d7f24a48415c6caa0" id="r_a269d07239f5af29d7f24a48415c6caa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a269d07239f5af29d7f24a48415c6caa0">StopMonitoring</a> ()</td></tr>
-<tr class="memitem:ac81725c313cebfa1b688415685d7a9dd" id="r_ac81725c313cebfa1b688415685d7a9dd"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac81725c313cebfa1b688415685d7a9dd">PingRoutine</a> ()</td></tr>
+<tr class="memdesc:a269d07239f5af29d7f24a48415c6caa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops all monitoring coroutines and cleanups.  <br /></td></tr>
+<tr class="memitem:a5e192db9b5772c1a08b8e01a98d801fa" id="r_a5e192db9b5772c1a08b8e01a98d801fa"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e192db9b5772c1a08b8e01a98d801fa">PingCoroutine</a> ()</td></tr>
+<tr class="memdesc:a5e192db9b5772c1a08b8e01a98d801fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coroutine that repeatedly sends latency packets and calculate packet loss.  <br /></td></tr>
 <tr class="memitem:a33a20c0bdc27f9d826a8b2c64717d153" id="r_a33a20c0bdc27f9d826a8b2c64717d153"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33a20c0bdc27f9d826a8b2c64717d153">SendPing</a> ()</td></tr>
+<tr class="memdesc:a33a20c0bdc27f9d826a8b2c64717d153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a latency packet and tracks its send time.  <br /></td></tr>
 <tr class="memitem:a7e64c43f3dd21a53736aff755431c207" id="r_a7e64c43f3dd21a53736aff755431c207"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e64c43f3dd21a53736aff755431c207">CalculateLoss</a> ()</td></tr>
+<tr class="memdesc:a7e64c43f3dd21a53736aff755431c207"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates packet loss percentage and updates the UI.  <br /></td></tr>
 <tr class="memitem:a1588391fd832de986887e18c59ded94a" id="r_a1588391fd832de986887e18c59ded94a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1588391fd832de986887e18c59ded94a">CleanOldPings</a> ()</td></tr>
+<tr class="memdesc:a1588391fd832de986887e18c59ded94a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes pings that have exceeded the timeout.  <br /></td></tr>
 <tr class="memitem:a2d2454750eb6d72482005914280a7409" id="r_a2d2454750eb6d72482005914280a7409"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d2454750eb6d72482005914280a7409">Average</a> (List&lt; float &gt; list)</td></tr>
+<tr class="memdesc:a2d2454750eb6d72482005914280a7409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the average of values in float list.  <br /></td></tr>
 <tr class="memitem:acf22b2e528f25787f7c8c57c4a08dacf" id="r_acf22b2e528f25787f7c8c57c4a08dacf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf22b2e528f25787f7c8c57c4a08dacf">CalculateJitter</a> ()</td></tr>
+<tr class="memdesc:acf22b2e528f25787f7c8c57c4a08dacf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates jitter based on differences in RTT samples.  <br /></td></tr>
 <tr class="memitem:a450d234835812834a1559f55cb97d76d" id="r_a450d234835812834a1559f55cb97d76d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a450d234835812834a1559f55cb97d76d">OnBandwidthResponse</a> ()</td></tr>
+<tr class="memdesc:a450d234835812834a1559f55cb97d76d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the server replies to a bandwidth test; calculates and displays bandwidth.  <br /></td></tr>
 <tr class="memitem:a0013b17dcd2d8bdbb1db7f40c3cdc102" id="r_a0013b17dcd2d8bdbb1db7f40c3cdc102"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0013b17dcd2d8bdbb1db7f40c3cdc102">stopThroughput</a> ()</td></tr>
+<tr class="memdesc:a0013b17dcd2d8bdbb1db7f40c3cdc102"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coroutine that stops the throughput test after a fixed time - 5s if not completed.  <br /></td></tr>
 <tr class="memitem:a64105753e1c050dbf8cae9b6b4214c08" id="r_a64105753e1c050dbf8cae9b6b4214c08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64105753e1c050dbf8cae9b6b4214c08">ThroughputCalculate</a> ()</td></tr>
+<tr class="memdesc:a64105753e1c050dbf8cae9b6b4214c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalizes throughput test and updates the UI with results.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a9a617ac43120a1ff8b61a1f080efb350" id="r_a9a617ac43120a1ff8b61a1f080efb350"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a617ac43120a1ff8b61a1f080efb350">pingInterval</a> = 1f</td></tr>
+<tr class="memdesc:a9a617ac43120a1ff8b61a1f080efb350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interval in seconds between pings sent to measure latency.  <br /></td></tr>
 <tr class="memitem:a5b8ae59b62467b1af55d2fe280f1efae" id="r_a5b8ae59b62467b1af55d2fe280f1efae"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b8ae59b62467b1af55d2fe280f1efae">pingTimeout</a> = 5f</td></tr>
+<tr class="memdesc:a5b8ae59b62467b1af55d2fe280f1efae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timeout in seconds after which a ping is considered lost.  <br /></td></tr>
 <tr class="memitem:a6a9c3cdf324df421fb3ca7b30296d85f" id="r_a6a9c3cdf324df421fb3ca7b30296d85f"><td class="memItemLeft" align="right" valign="top">Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a9c3cdf324df421fb3ca7b30296d85f">MonitorText1</a></td></tr>
+<tr class="memdesc:a6a9c3cdf324df421fb3ca7b30296d85f"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI Text element displaying packet loss, average latency, and jitter.  <br /></td></tr>
 <tr class="memitem:a68103136d6e66d9cabd7d892cb3ac936" id="r_a68103136d6e66d9cabd7d892cb3ac936"><td class="memItemLeft" align="right" valign="top">Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68103136d6e66d9cabd7d892cb3ac936">MonitorText2</a></td></tr>
+<tr class="memdesc:a68103136d6e66d9cabd7d892cb3ac936"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI Text element displaying bandwidth test result.  <br /></td></tr>
 <tr class="memitem:aed84712cbacc8ece9e41ca4bee53ff82" id="r_aed84712cbacc8ece9e41ca4bee53ff82"><td class="memItemLeft" align="right" valign="top">Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed84712cbacc8ece9e41ca4bee53ff82">MonitorText3</a></td></tr>
+<tr class="memdesc:aed84712cbacc8ece9e41ca4bee53ff82"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI Text element displaying throughput test result.  <br /></td></tr>
 <tr class="memitem:ae3d71d3537d4c9c5d3cf8fc48dab3c9d" id="r_ae3d71d3537d4c9c5d3cf8fc48dab3c9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3d71d3537d4c9c5d3cf8fc48dab3c9d">sentPackets</a> = 0</td></tr>
+<tr class="memdesc:ae3d71d3537d4c9c5d3cf8fc48dab3c9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of latency packets sent.  <br /></td></tr>
 <tr class="memitem:ae54b30712210ea99dd81736a8c42c2b7" id="r_ae54b30712210ea99dd81736a8c42c2b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae54b30712210ea99dd81736a8c42c2b7">receivedResponses</a> = 0</td></tr>
+<tr class="memdesc:ae54b30712210ea99dd81736a8c42c2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of latency responses received.  <br /></td></tr>
 <tr class="memitem:a6491bec5d71b29d3e6bf730974cb5452" id="r_a6491bec5d71b29d3e6bf730974cb5452"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6491bec5d71b29d3e6bf730974cb5452">sentPacketsInterval</a> = 0</td></tr>
+<tr class="memdesc:a6491bec5d71b29d3e6bf730974cb5452"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of latency packets sent during the current interval.  <br /></td></tr>
 <tr class="memitem:a4d8f20aa356046dc539aa9b0867b0920" id="r_a4d8f20aa356046dc539aa9b0867b0920"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d8f20aa356046dc539aa9b0867b0920">receivedResponsesInterval</a> = 0</td></tr>
+<tr class="memdesc:a4d8f20aa356046dc539aa9b0867b0920"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of responses received during the current interval.  <br /></td></tr>
 <tr class="memitem:adf75b1e76a9166dd5f9724cd61e0d2a8" id="r_adf75b1e76a9166dd5f9724cd61e0d2a8"><td class="memItemLeft" align="right" valign="top">HashSet&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf75b1e76a9166dd5f9724cd61e0d2a8">awaitingResponses</a> = new()</td></tr>
+<tr class="memdesc:adf75b1e76a9166dd5f9724cd61e0d2a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of IDs for which responses are still pending.  <br /></td></tr>
 <tr class="memitem:afd13304fa9c45037f5aac44037636303" id="r_afd13304fa9c45037f5aac44037636303"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; int, float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd13304fa9c45037f5aac44037636303">sentTimes</a> = new()</td></tr>
+<tr class="memdesc:afd13304fa9c45037f5aac44037636303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary storing the send time for each packet ID.  <br /></td></tr>
 <tr class="memitem:abe9ea1b47cb7d7ad0901e8b0ebde3d9b" id="r_abe9ea1b47cb7d7ad0901e8b0ebde3d9b"><td class="memItemLeft" align="right" valign="top">List&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe9ea1b47cb7d7ad0901e8b0ebde3d9b">latencySamples</a> = new()</td></tr>
+<tr class="memdesc:abe9ea1b47cb7d7ad0901e8b0ebde3d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of recent round-trip time (RTT) samples for calculating average latency and jitter.  <br /></td></tr>
 <tr class="memitem:ad15d644485175e17bde5b80cc0edda5c" id="r_ad15d644485175e17bde5b80cc0edda5c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad15d644485175e17bde5b80cc0edda5c">lastLossPercent</a> = 0f</td></tr>
+<tr class="memdesc:ad15d644485175e17bde5b80cc0edda5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last calculated packet loss percentage.  <br /></td></tr>
 <tr class="memitem:a7d9cde8ff40b72f8cc7901464ec610b4" id="r_a7d9cde8ff40b72f8cc7901464ec610b4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d9cde8ff40b72f8cc7901464ec610b4">lastJitter</a> = 0f</td></tr>
+<tr class="memdesc:a7d9cde8ff40b72f8cc7901464ec610b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last calculated jitter value.  <br /></td></tr>
 <tr class="memitem:a262a67c8fb16446222e881249b1abb2b" id="r_a262a67c8fb16446222e881249b1abb2b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a262a67c8fb16446222e881249b1abb2b">bandwidthClientStartTime</a></td></tr>
+<tr class="memdesc:a262a67c8fb16446222e881249b1abb2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestamp when the bandwidth test started.  <br /></td></tr>
 <tr class="memitem:a3fa1a91e4116be745ee7cd092c5d7449" id="r_a3fa1a91e4116be745ee7cd092c5d7449"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fa1a91e4116be745ee7cd092c5d7449">BandwidthDataSize</a></td></tr>
+<tr class="memdesc:a3fa1a91e4116be745ee7cd092c5d7449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size in bytes of the bandwidth test data.  <br /></td></tr>
 <tr class="memitem:a10ca55c36c5a77529c8e1db8c54a7673" id="r_a10ca55c36c5a77529c8e1db8c54a7673"><td class="memItemLeft" align="right" valign="top">Coroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10ca55c36c5a77529c8e1db8c54a7673">pingCoroutine</a></td></tr>
+<tr class="memdesc:a10ca55c36c5a77529c8e1db8c54a7673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coroutine reference for the ping routine.  <br /></td></tr>
 <tr class="memitem:a60203c54e8390775ac5945f7ced1b8c8" id="r_a60203c54e8390775ac5945f7ced1b8c8"><td class="memItemLeft" align="right" valign="top">Coroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60203c54e8390775ac5945f7ced1b8c8">throughputTimeoutRoutine</a></td></tr>
-<tr class="memitem:ac31c74ed28068f910b66a455db7f2827" id="r_ac31c74ed28068f910b66a455db7f2827"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac31c74ed28068f910b66a455db7f2827">pingLog</a> = Application.dataPath + &quot;/ping_log.txt&quot;</td></tr>
-<tr class="memitem:a2287f6de94b2cf9ee3029ef41eb2917d" id="r_a2287f6de94b2cf9ee3029ef41eb2917d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2287f6de94b2cf9ee3029ef41eb2917d">jitterLog</a> = Application.dataPath + &quot;/jitter_log.txt&quot;</td></tr>
-<tr class="memitem:ad9d30f7daf207edabc794f17be5144d1" id="r_ad9d30f7daf207edabc794f17be5144d1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9d30f7daf207edabc794f17be5144d1">packetLossLog</a> = Application.dataPath + &quot;/packet_loss_log.txt&quot;</td></tr>
-<tr class="memitem:add6ab31d1df9b3d6b21a876ce5b80949" id="r_add6ab31d1df9b3d6b21a876ce5b80949"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add6ab31d1df9b3d6b21a876ce5b80949">bandwidthLog</a> = Application.dataPath + &quot;/bandwidth_log.txt&quot;</td></tr>
-<tr class="memitem:afaf74373698a8fb2faf50b9a72af8c50" id="r_afaf74373698a8fb2faf50b9a72af8c50"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afaf74373698a8fb2faf50b9a72af8c50">throughputLog</a> = Application.dataPath + &quot;/throughput_log.txt&quot;</td></tr>
+<tr class="memdesc:a60203c54e8390775ac5945f7ced1b8c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coroutine reference for the throughput timeout logic.  <br /></td></tr>
 <tr class="memitem:a0d13bd656a2034887c7df72c5367840a" id="r_a0d13bd656a2034887c7df72c5367840a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d13bd656a2034887c7df72c5367840a">ThroughputStartTime</a></td></tr>
 <tr class="memitem:adadb87cb7588110b2491847a9201be6f" id="r_adadb87cb7588110b2491847a9201be6f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adadb87cb7588110b2491847a9201be6f">ThroughputSentSize</a> = 0</td></tr>
 <tr class="memitem:a5dbc2ffbebdf182e6e05c67bb36d5d02" id="r_a5dbc2ffbebdf182e6e05c67bb36d5d02"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5dbc2ffbebdf182e6e05c67bb36d5d02">ThroughputReceivedSize</a> = 0</td></tr>
 <tr class="memitem:a2c9089d3a457a341faa50049a79f651d" id="r_a2c9089d3a457a341faa50049a79f651d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c9089d3a457a341faa50049a79f651d">isThroughputRunning</a> = false</td></tr>
 <tr class="memitem:a0747405e1dc7c66788d6ca083f2743b2" id="r_a0747405e1dc7c66788d6ca083f2743b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0747405e1dc7c66788d6ca083f2743b2">ThroughputPacketsReceived</a> = 0</td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_network_monitor.html" title="NetworkMonitor is responsible for actively monitoring network quality metrics such as latency,...">NetworkMonitor</a> is responsible for actively monitoring network quality metrics such as latency, jitter, packet loss, bandwidth, and throughput. It provides real-time updates to the UI. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00010">10</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a2d2454750eb6d72482005914280a7409" name="a2d2454750eb6d72482005914280a7409"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d2454750eb6d72482005914280a7409">&#9670;&#160;</a></span>Average()</h2>
 
@@ -178,6 +214,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Calculates the average of values in float list. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00208">208</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  209</span>    {</div>
+<div class="line"><span class="lineno">  210</span>        <span class="keywordtype">float</span> sum = 0f;</div>
+<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">float</span> entry <span class="keywordflow">in</span> list)</div>
+<div class="line"><span class="lineno">  212</span>            sum += entry;</div>
+<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">return</span> sum / list.Count;</div>
+<div class="line"><span class="lineno">  214</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acf22b2e528f25787f7c8c57c4a08dacf" name="acf22b2e528f25787f7c8c57c4a08dacf"></a>
@@ -203,6 +249,19 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Calculates jitter based on differences in RTT samples. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00218">218</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  219</span>    {</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abe9ea1b47cb7d7ad0901e8b0ebde3d9b">latencySamples</a>.Count &lt; 2) <span class="keywordflow">return</span> 0f;</div>
+<div class="line"><span class="lineno">  221</span> </div>
+<div class="line"><span class="lineno">  222</span>        <span class="keywordtype">float</span> totalDiff = 0f;</div>
+<div class="line"><span class="lineno">  223</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; <a class="code hl_variable" href="#abe9ea1b47cb7d7ad0901e8b0ebde3d9b">latencySamples</a>.Count; i++)</div>
+<div class="line"><span class="lineno">  224</span>            totalDiff += Mathf.Abs(<a class="code hl_variable" href="#abe9ea1b47cb7d7ad0901e8b0ebde3d9b">latencySamples</a>[i] - <a class="code hl_variable" href="#abe9ea1b47cb7d7ad0901e8b0ebde3d9b">latencySamples</a>[i - 1]);</div>
+<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">return</span> totalDiff / (latencySamples.Count - 1);</div>
+<div class="line"><span class="lineno">  226</span>    }</div>
+<div class="ttc" id="aclass_network_monitor_html_abe9ea1b47cb7d7ad0901e8b0ebde3d9b"><div class="ttname"><a href="#abe9ea1b47cb7d7ad0901e8b0ebde3d9b">NetworkMonitor.latencySamples</a></div><div class="ttdeci">List&lt; float &gt; latencySamples</div><div class="ttdoc">List of recent round-trip time (RTT) samples for calculating average latency and jitter.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00059">NetworkMonitor.cs:59</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7e64c43f3dd21a53736aff755431c207" name="a7e64c43f3dd21a53736aff755431c207"></a>
@@ -228,6 +287,37 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Calculates packet loss percentage and updates the UI. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00165">165</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  166</span>    {</div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordtype">int</span> lost = <a class="code hl_variable" href="#a6491bec5d71b29d3e6bf730974cb5452">sentPacketsInterval</a> - <a class="code hl_variable" href="#a4d8f20aa356046dc539aa9b0867b0920">receivedResponsesInterval</a>;</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a6491bec5d71b29d3e6bf730974cb5452">sentPacketsInterval</a> &gt; 0) {</div>
+<div class="line"><span class="lineno">  169</span>            <a class="code hl_variable" href="#ad15d644485175e17bde5b80cc0edda5c">lastLossPercent</a> = (float)lost / <a class="code hl_variable" href="#a6491bec5d71b29d3e6bf730974cb5452">sentPacketsInterval</a> * 100f;</div>
+<div class="line"><span class="lineno">  170</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  171</span>            <a class="code hl_variable" href="#ad15d644485175e17bde5b80cc0edda5c">lastLossPercent</a> = 0f;</div>
+<div class="line"><span class="lineno">  172</span>        }</div>
+<div class="line"><span class="lineno">  173</span> </div>
+<div class="line"><span class="lineno">  174</span>        <span class="keywordtype">float</span> avgRtt;</div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abe9ea1b47cb7d7ad0901e8b0ebde3d9b">latencySamples</a>.Count &gt; 0) {</div>
+<div class="line"><span class="lineno">  176</span>            avgRtt = <a class="code hl_function" href="#a2d2454750eb6d72482005914280a7409">Average</a>(<a class="code hl_variable" href="#abe9ea1b47cb7d7ad0901e8b0ebde3d9b">latencySamples</a>);</div>
+<div class="line"><span class="lineno">  177</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  178</span>            avgRtt = 0f;</div>
+<div class="line"><span class="lineno">  179</span>        }</div>
+<div class="line"><span class="lineno">  180</span>        MonitorText1.text = ($<span class="stringliteral">&quot;[NetworkMonitor] Packet Loss: {lastLossPercent:F2}% | Avg RTT: {avgRtt:F2} ms | Jitter: {lastJitter:F2} ms&quot;</span>);</div>
+<div class="line"><span class="lineno">  181</span>        <a class="code hl_variable" href="#a6491bec5d71b29d3e6bf730974cb5452">sentPacketsInterval</a> = 0;</div>
+<div class="line"><span class="lineno">  182</span>        <a class="code hl_variable" href="#a4d8f20aa356046dc539aa9b0867b0920">receivedResponsesInterval</a> = 0;</div>
+<div class="line"><span class="lineno">  183</span> </div>
+<div class="line"><span class="lineno">  184</span>        <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">  185</span><span class="comment">        File.AppendAllText(pingLog, avgRtt.ToString() + &quot;\n&quot;);</span></div>
+<div class="line"><span class="lineno">  186</span><span class="comment">        File.AppendAllText(jitterLog, lastJitter.ToString() + &quot;\n&quot;);</span></div>
+<div class="line"><span class="lineno">  187</span><span class="comment">        File.AppendAllText(packetLossLog, lastLossPercent.ToString() + &quot;\n&quot;); */</span></div>
+<div class="line"><span class="lineno">  188</span>    }</div>
+<div class="ttc" id="aclass_network_monitor_html_a2d2454750eb6d72482005914280a7409"><div class="ttname"><a href="#a2d2454750eb6d72482005914280a7409">NetworkMonitor.Average</a></div><div class="ttdeci">float Average(List&lt; float &gt; list)</div><div class="ttdoc">Calculates the average of values in float list.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00208">NetworkMonitor.cs:208</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_a4d8f20aa356046dc539aa9b0867b0920"><div class="ttname"><a href="#a4d8f20aa356046dc539aa9b0867b0920">NetworkMonitor.receivedResponsesInterval</a></div><div class="ttdeci">int receivedResponsesInterval</div><div class="ttdoc">Number of responses received during the current interval.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00047">NetworkMonitor.cs:47</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_a6491bec5d71b29d3e6bf730974cb5452"><div class="ttname"><a href="#a6491bec5d71b29d3e6bf730974cb5452">NetworkMonitor.sentPacketsInterval</a></div><div class="ttdeci">int sentPacketsInterval</div><div class="ttdoc">Number of latency packets sent during the current interval.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00043">NetworkMonitor.cs:43</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_ad15d644485175e17bde5b80cc0edda5c"><div class="ttname"><a href="#ad15d644485175e17bde5b80cc0edda5c">NetworkMonitor.lastLossPercent</a></div><div class="ttdeci">float lastLossPercent</div><div class="ttdoc">Last calculated packet loss percentage.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00063">NetworkMonitor.cs:63</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1588391fd832de986887e18c59ded94a" name="a1588391fd832de986887e18c59ded94a"></a>
@@ -253,6 +343,25 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Removes pings that have exceeded the timeout. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00192">192</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  193</span>    {</div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordtype">float</span> now = Time.time;</div>
+<div class="line"><span class="lineno">  195</span>        List&lt;int&gt; expired = <span class="keyword">new</span>();</div>
+<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">foreach</span> (var sent <span class="keywordflow">in</span> <a class="code hl_variable" href="#afd13304fa9c45037f5aac44037636303">sentTimes</a>) {</div>
+<div class="line"><span class="lineno">  197</span>            <span class="keywordflow">if</span> (now - sent.Value &gt; <a class="code hl_variable" href="#a5b8ae59b62467b1af55d2fe280f1efae">pingTimeout</a>)</div>
+<div class="line"><span class="lineno">  198</span>                expired.Add(sent.Key);</div>
+<div class="line"><span class="lineno">  199</span>        }</div>
+<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> <span class="keywordtype">id</span> <span class="keywordflow">in</span> expired) {</div>
+<div class="line"><span class="lineno">  201</span>            <a class="code hl_variable" href="#adf75b1e76a9166dd5f9724cd61e0d2a8">awaitingResponses</a>.Remove(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  202</span>            <a class="code hl_variable" href="#afd13304fa9c45037f5aac44037636303">sentTimes</a>.Remove(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  203</span>        }</div>
+<div class="line"><span class="lineno">  204</span>    }</div>
+<div class="ttc" id="aclass_network_monitor_html_a5b8ae59b62467b1af55d2fe280f1efae"><div class="ttname"><a href="#a5b8ae59b62467b1af55d2fe280f1efae">NetworkMonitor.pingTimeout</a></div><div class="ttdeci">float pingTimeout</div><div class="ttdoc">Timeout in seconds after which a ping is considered lost.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00019">NetworkMonitor.cs:19</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_adf75b1e76a9166dd5f9724cd61e0d2a8"><div class="ttname"><a href="#adf75b1e76a9166dd5f9724cd61e0d2a8">NetworkMonitor.awaitingResponses</a></div><div class="ttdeci">HashSet&lt; int &gt; awaitingResponses</div><div class="ttdoc">Set of IDs for which responses are still pending.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00051">NetworkMonitor.cs:51</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_afd13304fa9c45037f5aac44037636303"><div class="ttname"><a href="#afd13304fa9c45037f5aac44037636303">NetworkMonitor.sentTimes</a></div><div class="ttdeci">Dictionary&lt; int, float &gt; sentTimes</div><div class="ttdoc">Dictionary storing the send time for each packet ID.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00055">NetworkMonitor.cs:55</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5ba441b4f07ce7923bdbe6880969e903" name="a5ba441b4f07ce7923bdbe6880969e903"></a>
@@ -270,6 +379,17 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00324">324</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  325</span>    {</div>
+<div class="line"><span class="lineno">  326</span>        <span class="keywordtype">float</span> avgRtt;</div>
+<div class="line"><span class="lineno">  327</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abe9ea1b47cb7d7ad0901e8b0ebde3d9b">latencySamples</a>.Count &gt; 0) {</div>
+<div class="line"><span class="lineno">  328</span>            avgRtt = <a class="code hl_function" href="#a2d2454750eb6d72482005914280a7409">Average</a>(<a class="code hl_variable" href="#abe9ea1b47cb7d7ad0901e8b0ebde3d9b">latencySamples</a>);</div>
+<div class="line"><span class="lineno">  329</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  330</span>            avgRtt = 0f;</div>
+<div class="line"><span class="lineno">  331</span>        }</div>
+<div class="line"><span class="lineno">  332</span>        <span class="keywordflow">return</span> avgRtt;</div>
+<div class="line"><span class="lineno">  333</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad09a19a9ccbd6b1bdb7acee5675161b0" name="ad09a19a9ccbd6b1bdb7acee5675161b0"></a>
@@ -287,6 +407,12 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00334">334</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  334</span>                             {</div>
+<div class="line"><span class="lineno">  335</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7d9cde8ff40b72f8cc7901464ec610b4">lastJitter</a> ;</div>
+<div class="line"><span class="lineno">  336</span>    }</div>
+<div class="ttc" id="aclass_network_monitor_html_a7d9cde8ff40b72f8cc7901464ec610b4"><div class="ttname"><a href="#a7d9cde8ff40b72f8cc7901464ec610b4">NetworkMonitor.lastJitter</a></div><div class="ttdeci">float lastJitter</div><div class="ttdoc">Last calculated jitter value.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00067">NetworkMonitor.cs:67</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac03e9bd86989a9cd59d51b169798b8c2" name="ac03e9bd86989a9cd59d51b169798b8c2"></a>
@@ -304,6 +430,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00320">320</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  321</span>    {</div>
+<div class="line"><span class="lineno">  322</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ad15d644485175e17bde5b80cc0edda5c">lastLossPercent</a>;</div>
+<div class="line"><span class="lineno">  323</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a450d234835812834a1559f55cb97d76d" name="a450d234835812834a1559f55cb97d76d"></a>
@@ -329,6 +460,19 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Called when the server replies to a bandwidth test; calculates and displays bandwidth. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00242">242</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  243</span>    {</div>
+<div class="line"><span class="lineno">  244</span>        <span class="keywordtype">float</span> TimeReply = Time.realtimeSinceStartup;</div>
+<div class="line"><span class="lineno">  245</span>        <span class="keywordtype">float</span> duration = TimeReply - <a class="code hl_variable" href="#a262a67c8fb16446222e881249b1abb2b">bandwidthClientStartTime</a>;</div>
+<div class="line"><span class="lineno">  246</span>        <span class="keywordtype">float</span> bandwidthMbps = (<a class="code hl_variable" href="#a3fa1a91e4116be745ee7cd092c5d7449">BandwidthDataSize</a> * 8f) / duration / 1_000_000f;</div>
+<div class="line"><span class="lineno">  247</span>        MonitorText2.text = ($<span class="stringliteral">&quot;[BandwidthTest] {bandwidthMbps:F2} Mbps&quot;</span>);</div>
+<div class="line"><span class="lineno">  248</span>       <span class="comment">// File.AppendAllText(bandwidthLog, bandwidthMbps.ToString() + &quot;\n&quot;);</span></div>
+<div class="line"><span class="lineno">  249</span>    }</div>
+<div class="ttc" id="aclass_network_monitor_html_a262a67c8fb16446222e881249b1abb2b"><div class="ttname"><a href="#a262a67c8fb16446222e881249b1abb2b">NetworkMonitor.bandwidthClientStartTime</a></div><div class="ttdeci">float bandwidthClientStartTime</div><div class="ttdoc">Timestamp when the bandwidth test started.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00071">NetworkMonitor.cs:71</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_a3fa1a91e4116be745ee7cd092c5d7449"><div class="ttname"><a href="#a3fa1a91e4116be745ee7cd092c5d7449">NetworkMonitor.BandwidthDataSize</a></div><div class="ttdeci">int BandwidthDataSize</div><div class="ttdoc">Size in bytes of the bandwidth test data.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00075">NetworkMonitor.cs:75</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adbed3bb38cadfa351608f313a2cd9254" name="adbed3bb38cadfa351608f313a2cd9254"></a>
@@ -346,6 +490,27 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Handles a received ping response, calculates latency and jitter in ms. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00146">146</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>    {</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#adf75b1e76a9166dd5f9724cd61e0d2a8">awaitingResponses</a>.Contains(<span class="keywordtype">id</span>) &amp;&amp; <a class="code hl_variable" href="#afd13304fa9c45037f5aac44037636303">sentTimes</a>.ContainsKey(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">  149</span>        {</div>
+<div class="line"><span class="lineno">  150</span>            <span class="keywordtype">float</span> sentTime = <a class="code hl_variable" href="#afd13304fa9c45037f5aac44037636303">sentTimes</a>[id];</div>
+<div class="line"><span class="lineno">  151</span>            <span class="keywordtype">float</span> rtt = (Time.time - sentTime) * 1000f; </div>
+<div class="line"><span class="lineno">  152</span>            <a class="code hl_variable" href="#abe9ea1b47cb7d7ad0901e8b0ebde3d9b">latencySamples</a>.Add(rtt);</div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abe9ea1b47cb7d7ad0901e8b0ebde3d9b">latencySamples</a>.Count &gt; 10)</div>
+<div class="line"><span class="lineno">  154</span>                <a class="code hl_variable" href="#abe9ea1b47cb7d7ad0901e8b0ebde3d9b">latencySamples</a>.RemoveAt(0);</div>
+<div class="line"><span class="lineno">  155</span>            <a class="code hl_variable" href="#ae54b30712210ea99dd81736a8c42c2b7">receivedResponses</a>++;</div>
+<div class="line"><span class="lineno">  156</span>            <a class="code hl_variable" href="#a4d8f20aa356046dc539aa9b0867b0920">receivedResponsesInterval</a>++;</div>
+<div class="line"><span class="lineno">  157</span>            <a class="code hl_variable" href="#adf75b1e76a9166dd5f9724cd61e0d2a8">awaitingResponses</a>.Remove(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  158</span>            <a class="code hl_variable" href="#afd13304fa9c45037f5aac44037636303">sentTimes</a>.Remove(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  159</span>            <a class="code hl_variable" href="#a7d9cde8ff40b72f8cc7901464ec610b4">lastJitter</a> = <a class="code hl_function" href="#acf22b2e528f25787f7c8c57c4a08dacf">CalculateJitter</a>();</div>
+<div class="line"><span class="lineno">  160</span>        }</div>
+<div class="line"><span class="lineno">  161</span>    }</div>
+<div class="ttc" id="aclass_network_monitor_html_acf22b2e528f25787f7c8c57c4a08dacf"><div class="ttname"><a href="#acf22b2e528f25787f7c8c57c4a08dacf">NetworkMonitor.CalculateJitter</a></div><div class="ttdeci">float CalculateJitter()</div><div class="ttdoc">Calculates jitter based on differences in RTT samples.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00218">NetworkMonitor.cs:218</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_ae54b30712210ea99dd81736a8c42c2b7"><div class="ttname"><a href="#ae54b30712210ea99dd81736a8c42c2b7">NetworkMonitor.receivedResponses</a></div><div class="ttdeci">int receivedResponses</div><div class="ttdoc">Total number of latency responses received.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00039">NetworkMonitor.cs:39</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8a6548c87e6699151cf6c254fcf5da11" name="a8a6548c87e6699151cf6c254fcf5da11"></a>
@@ -367,10 +532,29 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Called when a response for a throughput packet is received. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00287">287</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  288</span>    {</div>
+<div class="line"><span class="lineno">  289</span>        <a class="code hl_variable" href="#a0747405e1dc7c66788d6ca083f2743b2">ThroughputPacketsReceived</a>++;</div>
+<div class="line"><span class="lineno">  290</span>        <a class="code hl_variable" href="#a5dbc2ffbebdf182e6e05c67bb36d5d02">ThroughputReceivedSize</a> += DataSize;</div>
+<div class="line"><span class="lineno">  291</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a0747405e1dc7c66788d6ca083f2743b2">ThroughputPacketsReceived</a> == 100)</div>
+<div class="line"><span class="lineno">  292</span>        {</div>
+<div class="line"><span class="lineno">  293</span>            <a class="code hl_variable" href="#a2c9089d3a457a341faa50049a79f651d">isThroughputRunning</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  294</span>            StopCoroutine(<a class="code hl_variable" href="#a60203c54e8390775ac5945f7ced1b8c8">throughputTimeoutRoutine</a>);</div>
+<div class="line"><span class="lineno">  295</span>            <a class="code hl_function" href="#a64105753e1c050dbf8cae9b6b4214c08">ThroughputCalculate</a>();</div>
+<div class="line"><span class="lineno">  296</span>        }</div>
+<div class="line"><span class="lineno">  297</span>    }</div>
+<div class="ttc" id="aclass_network_monitor_html_a0747405e1dc7c66788d6ca083f2743b2"><div class="ttname"><a href="#a0747405e1dc7c66788d6ca083f2743b2">NetworkMonitor.ThroughputPacketsReceived</a></div><div class="ttdeci">int ThroughputPacketsReceived</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00254">NetworkMonitor.cs:254</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_a2c9089d3a457a341faa50049a79f651d"><div class="ttname"><a href="#a2c9089d3a457a341faa50049a79f651d">NetworkMonitor.isThroughputRunning</a></div><div class="ttdeci">bool isThroughputRunning</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00253">NetworkMonitor.cs:253</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_a5dbc2ffbebdf182e6e05c67bb36d5d02"><div class="ttname"><a href="#a5dbc2ffbebdf182e6e05c67bb36d5d02">NetworkMonitor.ThroughputReceivedSize</a></div><div class="ttdeci">int ThroughputReceivedSize</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00252">NetworkMonitor.cs:252</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_a60203c54e8390775ac5945f7ced1b8c8"><div class="ttname"><a href="#a60203c54e8390775ac5945f7ced1b8c8">NetworkMonitor.throughputTimeoutRoutine</a></div><div class="ttdeci">Coroutine throughputTimeoutRoutine</div><div class="ttdoc">Coroutine reference for the throughput timeout logic.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00083">NetworkMonitor.cs:83</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_a64105753e1c050dbf8cae9b6b4214c08"><div class="ttname"><a href="#a64105753e1c050dbf8cae9b6b4214c08">NetworkMonitor.ThroughputCalculate</a></div><div class="ttdeci">void ThroughputCalculate()</div><div class="ttdoc">Finalizes throughput test and updates the UI with results.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00311">NetworkMonitor.cs:311</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="ac81725c313cebfa1b688415685d7a9dd" name="ac81725c313cebfa1b688415685d7a9dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac81725c313cebfa1b688415685d7a9dd">&#9670;&#160;</a></span>PingRoutine()</h2>
+<a id="a5e192db9b5772c1a08b8e01a98d801fa" name="a5e192db9b5772c1a08b8e01a98d801fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e192db9b5772c1a08b8e01a98d801fa">&#9670;&#160;</a></span>PingCoroutine()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -379,7 +563,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerator NetworkMonitor.PingRoutine </td>
+          <td class="memname">IEnumerator NetworkMonitor.PingCoroutine </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -392,6 +576,23 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Coroutine that repeatedly sends latency packets and calculate packet loss. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00121">121</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>    {</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  124</span>        {</div>
+<div class="line"><span class="lineno">  125</span>            <a class="code hl_function" href="#a1588391fd832de986887e18c59ded94a">CleanOldPings</a>();</div>
+<div class="line"><span class="lineno">  126</span>            <a class="code hl_function" href="#a33a20c0bdc27f9d826a8b2c64717d153">SendPing</a>();</div>
+<div class="line"><span class="lineno">  127</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(<a class="code hl_variable" href="#a9a617ac43120a1ff8b61a1f080efb350">pingInterval</a>);</div>
+<div class="line"><span class="lineno">  128</span>            <a class="code hl_function" href="#a7e64c43f3dd21a53736aff755431c207">CalculateLoss</a>();</div>
+<div class="line"><span class="lineno">  129</span>        }</div>
+<div class="line"><span class="lineno">  130</span>    }</div>
+<div class="ttc" id="aclass_network_monitor_html_a1588391fd832de986887e18c59ded94a"><div class="ttname"><a href="#a1588391fd832de986887e18c59ded94a">NetworkMonitor.CleanOldPings</a></div><div class="ttdeci">void CleanOldPings()</div><div class="ttdoc">Removes pings that have exceeded the timeout.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00192">NetworkMonitor.cs:192</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_a33a20c0bdc27f9d826a8b2c64717d153"><div class="ttname"><a href="#a33a20c0bdc27f9d826a8b2c64717d153">NetworkMonitor.SendPing</a></div><div class="ttdeci">void SendPing()</div><div class="ttdoc">Sends a latency packet and tracks its send time.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00134">NetworkMonitor.cs:134</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_a7e64c43f3dd21a53736aff755431c207"><div class="ttname"><a href="#a7e64c43f3dd21a53736aff755431c207">NetworkMonitor.CalculateLoss</a></div><div class="ttdeci">void CalculateLoss()</div><div class="ttdoc">Calculates packet loss percentage and updates the UI.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00165">NetworkMonitor.cs:165</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_a9a617ac43120a1ff8b61a1f080efb350"><div class="ttname"><a href="#a9a617ac43120a1ff8b61a1f080efb350">NetworkMonitor.pingInterval</a></div><div class="ttdeci">float pingInterval</div><div class="ttdoc">Interval in seconds between pings sent to measure latency.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00015">NetworkMonitor.cs:15</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a33a20c0bdc27f9d826a8b2c64717d153" name="a33a20c0bdc27f9d826a8b2c64717d153"></a>
@@ -417,6 +618,19 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends a latency packet and tracks its send time. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00134">134</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>    {</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = <a class="code hl_variable" href="#ae3d71d3537d4c9c5d3cf8fc48dab3c9d">sentPackets</a>++;</div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordtype">float</span> timeSent = Time.time;</div>
+<div class="line"><span class="lineno">  138</span>        <a class="code hl_variable" href="#adf75b1e76a9166dd5f9724cd61e0d2a8">awaitingResponses</a>.Add(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  139</span>        <a class="code hl_variable" href="#afd13304fa9c45037f5aac44037636303">sentTimes</a>[id] = timeSent;</div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_variable" href="#a6491bec5d71b29d3e6bf730974cb5452">sentPacketsInterval</a>++;</div>
+<div class="line"><span class="lineno">  141</span>        Client.instance.MeassureRequest(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  142</span>    }</div>
+<div class="ttc" id="aclass_network_monitor_html_ae3d71d3537d4c9c5d3cf8fc48dab3c9d"><div class="ttname"><a href="#ae3d71d3537d4c9c5d3cf8fc48dab3c9d">NetworkMonitor.sentPackets</a></div><div class="ttdeci">int sentPackets</div><div class="ttdoc">Total number of latency packets sent.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00035">NetworkMonitor.cs:35</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a39e338fff689f06b66745b5b1a83ba4b" name="a39e338fff689f06b66745b5b1a83ba4b"></a>
@@ -442,6 +656,22 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Subscribes to client events and starts monitoring after connection. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00094">94</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>    {</div>
+<div class="line"><span class="lineno">   96</span>        Client.instance.OnPingReply += <a class="code hl_function" href="#adbed3bb38cadfa351608f313a2cd9254">OnPingResponse</a>;</div>
+<div class="line"><span class="lineno">   97</span>        Client.instance.OnConnected += <a class="code hl_function" href="#a96e92c8ea2a7bd67c98875fce920f43e">StartMonitor</a>;</div>
+<div class="line"><span class="lineno">   98</span>        Client.instance.OnBandwidthReply += <a class="code hl_function" href="#a450d234835812834a1559f55cb97d76d">OnBandwidthResponse</a>;</div>
+<div class="line"><span class="lineno">   99</span>        Client.instance.OnThroughputReply += <a class="code hl_function" href="#a8a6548c87e6699151cf6c254fcf5da11">OnThroughputResposne</a>;</div>
+<div class="line"><span class="lineno">  100</span>        Client.instance.OnDisconnected += <a class="code hl_function" href="#a269d07239f5af29d7f24a48415c6caa0">StopMonitoring</a>;</div>
+<div class="line"><span class="lineno">  101</span>    }</div>
+<div class="ttc" id="aclass_network_monitor_html_a269d07239f5af29d7f24a48415c6caa0"><div class="ttname"><a href="#a269d07239f5af29d7f24a48415c6caa0">NetworkMonitor.StopMonitoring</a></div><div class="ttdeci">void StopMonitoring()</div><div class="ttdoc">Stops all monitoring coroutines and cleanups.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00112">NetworkMonitor.cs:112</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_a450d234835812834a1559f55cb97d76d"><div class="ttname"><a href="#a450d234835812834a1559f55cb97d76d">NetworkMonitor.OnBandwidthResponse</a></div><div class="ttdeci">void OnBandwidthResponse()</div><div class="ttdoc">Called when the server replies to a bandwidth test; calculates and displays bandwidth.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00242">NetworkMonitor.cs:242</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_a8a6548c87e6699151cf6c254fcf5da11"><div class="ttname"><a href="#a8a6548c87e6699151cf6c254fcf5da11">NetworkMonitor.OnThroughputResposne</a></div><div class="ttdeci">void OnThroughputResposne(int pcktId, int DataSize)</div><div class="ttdoc">Called when a response for a throughput packet is received.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00287">NetworkMonitor.cs:287</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_a96e92c8ea2a7bd67c98875fce920f43e"><div class="ttname"><a href="#a96e92c8ea2a7bd67c98875fce920f43e">NetworkMonitor.StartMonitor</a></div><div class="ttdeci">void StartMonitor()</div><div class="ttdoc">Starts the latency monitor coroutine.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00105">NetworkMonitor.cs:105</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_adbed3bb38cadfa351608f313a2cd9254"><div class="ttname"><a href="#adbed3bb38cadfa351608f313a2cd9254">NetworkMonitor.OnPingResponse</a></div><div class="ttdeci">void OnPingResponse(int id)</div><div class="ttdoc">Handles a received ping response, calculates latency and jitter in ms.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00146">NetworkMonitor.cs:146</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a64c41d21deb8372637b5444511f598ae" name="a64c41d21deb8372637b5444511f598ae"></a>
@@ -459,6 +689,18 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initiates a bandwidth test by sending a large byte array. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00230">230</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  231</span>    {</div>
+<div class="line"><span class="lineno">  232</span>        <span class="keywordtype">int</span> sizeKB = 512;</div>
+<div class="line"><span class="lineno">  233</span>        <span class="keywordtype">byte</span>[] data = <span class="keyword">new</span> <span class="keywordtype">byte</span>[sizeKB * 1024];</div>
+<div class="line"><span class="lineno">  234</span>        <span class="keyword">new</span> System.Random().NextBytes(data);</div>
+<div class="line"><span class="lineno">  235</span>        <a class="code hl_variable" href="#a262a67c8fb16446222e881249b1abb2b">bandwidthClientStartTime</a> = Time.realtimeSinceStartup;</div>
+<div class="line"><span class="lineno">  236</span>        <a class="code hl_variable" href="#a3fa1a91e4116be745ee7cd092c5d7449">BandwidthDataSize</a> = data.Length;</div>
+<div class="line"><span class="lineno">  237</span>        Client.instance.BandwidthRequest(data);</div>
+<div class="line"><span class="lineno">  238</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a96e92c8ea2a7bd67c98875fce920f43e" name="a96e92c8ea2a7bd67c98875fce920f43e"></a>
@@ -484,6 +726,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Starts the latency monitor coroutine. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00105">105</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  106</span>    {</div>
+<div class="line"><span class="lineno">  107</span>        <a class="code hl_variable" href="#a10ca55c36c5a77529c8e1db8c54a7673">pingCoroutine</a> = StartCoroutine(<a class="code hl_function" href="#a5e192db9b5772c1a08b8e01a98d801fa">PingCoroutine</a>());</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
+<div class="ttc" id="aclass_network_monitor_html_a10ca55c36c5a77529c8e1db8c54a7673"><div class="ttname"><a href="#a10ca55c36c5a77529c8e1db8c54a7673">NetworkMonitor.pingCoroutine</a></div><div class="ttdeci">Coroutine pingCoroutine</div><div class="ttdoc">Coroutine reference for the ping routine.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00079">NetworkMonitor.cs:79</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_a5e192db9b5772c1a08b8e01a98d801fa"><div class="ttname"><a href="#a5e192db9b5772c1a08b8e01a98d801fa">NetworkMonitor.PingCoroutine</a></div><div class="ttdeci">IEnumerator PingCoroutine()</div><div class="ttdoc">Coroutine that repeatedly sends latency packets and calculate packet loss.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00121">NetworkMonitor.cs:121</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8b4462979ca9db0d2f2bd7ed4265dfef" name="a8b4462979ca9db0d2f2bd7ed4265dfef"></a>
@@ -501,6 +752,38 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Starts a throughput test by sending 100 UDP packets. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00258">258</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  259</span>    {</div>
+<div class="line"><span class="lineno">  260</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2c9089d3a457a341faa50049a79f651d">isThroughputRunning</a>)</div>
+<div class="line"><span class="lineno">  261</span>        {</div>
+<div class="line"><span class="lineno">  262</span>            Debug.LogWarning(<span class="stringliteral">&quot;[ThroughputTester] Test already running.&quot;</span>);</div>
+<div class="line"><span class="lineno">  263</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  264</span>        }</div>
+<div class="line"><span class="lineno">  265</span>        <a class="code hl_variable" href="#a0747405e1dc7c66788d6ca083f2743b2">ThroughputPacketsReceived</a> = 0;</div>
+<div class="line"><span class="lineno">  266</span>        <a class="code hl_variable" href="#adadb87cb7588110b2491847a9201be6f">ThroughputSentSize</a> = 0;</div>
+<div class="line"><span class="lineno">  267</span>        <a class="code hl_variable" href="#a5dbc2ffbebdf182e6e05c67bb36d5d02">ThroughputReceivedSize</a> = 0;</div>
+<div class="line"><span class="lineno">  268</span>        <a class="code hl_variable" href="#a2c9089d3a457a341faa50049a79f651d">isThroughputRunning</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  269</span>        <a class="code hl_variable" href="#a0d13bd656a2034887c7df72c5367840a">ThroughputStartTime</a> = Time.realtimeSinceStartup;</div>
+<div class="line"><span class="lineno">  270</span>        <a class="code hl_variable" href="#a60203c54e8390775ac5945f7ced1b8c8">throughputTimeoutRoutine</a> = StartCoroutine(<a class="code hl_function" href="#a0013b17dcd2d8bdbb1db7f40c3cdc102">stopThroughput</a>());</div>
+<div class="line"><span class="lineno">  271</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i&lt;=100; i++)</div>
+<div class="line"><span class="lineno">  272</span>        { </div>
+<div class="line"><span class="lineno">  273</span>            <span class="keywordflow">if</span>(!<a class="code hl_variable" href="#a2c9089d3a457a341faa50049a79f651d">isThroughputRunning</a>)</div>
+<div class="line"><span class="lineno">  274</span>            {</div>
+<div class="line"><span class="lineno">  275</span>                <a class="code hl_function" href="#a64105753e1c050dbf8cae9b6b4214c08">ThroughputCalculate</a>();</div>
+<div class="line"><span class="lineno">  276</span>                <span class="keywordflow">break</span>;     </div>
+<div class="line"><span class="lineno">  277</span>            }</div>
+<div class="line"><span class="lineno">  278</span>            <span class="keywordtype">byte</span>[] data = <span class="keyword">new</span> <span class="keywordtype">byte</span>[1024];</div>
+<div class="line"><span class="lineno">  279</span>            <span class="keyword">new</span> System.Random().NextBytes(data);</div>
+<div class="line"><span class="lineno">  280</span>            <a class="code hl_variable" href="#adadb87cb7588110b2491847a9201be6f">ThroughputSentSize</a> += data.Length;</div>
+<div class="line"><span class="lineno">  281</span>            Client.instance.SendThroughputData(i, data);</div>
+<div class="line"><span class="lineno">  282</span>        }</div>
+<div class="line"><span class="lineno">  283</span>    }</div>
+<div class="ttc" id="aclass_network_monitor_html_a0013b17dcd2d8bdbb1db7f40c3cdc102"><div class="ttname"><a href="#a0013b17dcd2d8bdbb1db7f40c3cdc102">NetworkMonitor.stopThroughput</a></div><div class="ttdeci">IEnumerator stopThroughput()</div><div class="ttdoc">Coroutine that stops the throughput test after a fixed time - 5s if not completed.</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00301">NetworkMonitor.cs:301</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_a0d13bd656a2034887c7df72c5367840a"><div class="ttname"><a href="#a0d13bd656a2034887c7df72c5367840a">NetworkMonitor.ThroughputStartTime</a></div><div class="ttdeci">float ThroughputStartTime</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00250">NetworkMonitor.cs:250</a></div></div>
+<div class="ttc" id="aclass_network_monitor_html_adadb87cb7588110b2491847a9201be6f"><div class="ttname"><a href="#adadb87cb7588110b2491847a9201be6f">NetworkMonitor.ThroughputSentSize</a></div><div class="ttdeci">int ThroughputSentSize</div><div class="ttdef"><b>Definition</b> <a href="_network_monitor_8cs_source.html#l00251">NetworkMonitor.cs:251</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a269d07239f5af29d7f24a48415c6caa0" name="a269d07239f5af29d7f24a48415c6caa0"></a>
@@ -526,6 +809,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Stops all monitoring coroutines and cleanups. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00112">112</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>    {</div>
+<div class="line"><span class="lineno">  114</span>        StopCoroutine(<a class="code hl_variable" href="#a10ca55c36c5a77529c8e1db8c54a7673">pingCoroutine</a>);</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a60203c54e8390775ac5945f7ced1b8c8">throughputTimeoutRoutine</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  116</span>        StopCoroutine(<a class="code hl_variable" href="#a60203c54e8390775ac5945f7ced1b8c8">throughputTimeoutRoutine</a>);</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0013b17dcd2d8bdbb1db7f40c3cdc102" name="a0013b17dcd2d8bdbb1db7f40c3cdc102"></a>
@@ -551,6 +843,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Coroutine that stops the throughput test after a fixed time - 5s if not completed. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00301">301</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  302</span>    {</div>
+<div class="line"><span class="lineno">  303</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(5);</div>
+<div class="line"><span class="lineno">  304</span>        <a class="code hl_variable" href="#a2c9089d3a457a341faa50049a79f651d">isThroughputRunning</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  305</span>        <a class="code hl_function" href="#a64105753e1c050dbf8cae9b6b4214c08">ThroughputCalculate</a>();</div>
+<div class="line"><span class="lineno">  306</span> </div>
+<div class="line"><span class="lineno">  307</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a64105753e1c050dbf8cae9b6b4214c08" name="a64105753e1c050dbf8cae9b6b4214c08"></a>
@@ -576,6 +878,18 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Finalizes throughput test and updates the UI with results. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00311">311</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  312</span>    {</div>
+<div class="line"><span class="lineno">  313</span>        StopCoroutine(<a class="code hl_variable" href="#a60203c54e8390775ac5945f7ced1b8c8">throughputTimeoutRoutine</a>);</div>
+<div class="line"><span class="lineno">  314</span>        <span class="keywordtype">float</span> duration = Time.realtimeSinceStartup - <a class="code hl_variable" href="#a0d13bd656a2034887c7df72c5367840a">ThroughputStartTime</a>;</div>
+<div class="line"><span class="lineno">  315</span>        <span class="keywordtype">float</span> throughputMbps = (<a class="code hl_variable" href="#a5dbc2ffbebdf182e6e05c67bb36d5d02">ThroughputReceivedSize</a> * 8f) / duration / 1_000_000f;</div>
+<div class="line"><span class="lineno">  316</span>        MonitorText3.text = ($<span class="stringliteral">&quot;[ThroughputTest] {throughputMbps:F2} Mbps, received {ThroughputPacketsReceived} / 100 packets with size 1024B&quot;</span>);</div>
+<div class="line"><span class="lineno">  317</span>       <span class="comment">/* File.AppendAllText(throughputLog, throughputMbps.ToString() + &quot;\n&quot;);</span></div>
+<div class="line"><span class="lineno">  318</span><span class="comment">        File.AppendAllText(&quot;throughput.csv&quot;, $&quot;{throughputMbps:F2};{ThroughputReceivedSize};{duration:F3}\n&quot;); */</span></div>
+<div class="line"><span class="lineno">  319</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -599,6 +913,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Set of IDs for which responses are still pending. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00051">51</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+
 </div>
 </div>
 <a id="a262a67c8fb16446222e881249b1abb2b" name="a262a67c8fb16446222e881249b1abb2b"></a>
@@ -620,6 +938,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Timestamp when the bandwidth test started. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00071">71</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
 
 </div>
 </div>
@@ -643,27 +965,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="add6ab31d1df9b3d6b21a876ce5b80949" name="add6ab31d1df9b3d6b21a876ce5b80949"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add6ab31d1df9b3d6b21a876ce5b80949">&#9670;&#160;</a></span>bandwidthLog</h2>
+<p>Size in bytes of the bandwidth test data. </p>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string NetworkMonitor.bandwidthLog = Application.dataPath + &quot;/bandwidth_log.txt&quot;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00075">75</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
 
 </div>
 </div>
@@ -687,27 +991,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a2287f6de94b2cf9ee3029ef41eb2917d" name="a2287f6de94b2cf9ee3029ef41eb2917d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2287f6de94b2cf9ee3029ef41eb2917d">&#9670;&#160;</a></span>jitterLog</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string NetworkMonitor.jitterLog = Application.dataPath + &quot;/jitter_log.txt&quot;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00253">253</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
 
 </div>
 </div>
@@ -731,6 +1015,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Last calculated jitter value. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00067">67</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+
 </div>
 </div>
 <a id="ad15d644485175e17bde5b80cc0edda5c" name="ad15d644485175e17bde5b80cc0edda5c"></a>
@@ -752,6 +1040,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Last calculated packet loss percentage. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00063">63</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
 
 </div>
 </div>
@@ -775,6 +1067,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>List of recent round-trip time (RTT) samples for calculating average latency and jitter. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00059">59</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+
 </div>
 </div>
 <a id="a6a9c3cdf324df421fb3ca7b30296d85f" name="a6a9c3cdf324df421fb3ca7b30296d85f"></a>
@@ -796,6 +1092,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>UI Text element displaying packet loss, average latency, and jitter. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00023">23</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
 
 </div>
 </div>
@@ -819,6 +1119,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>UI Text element displaying bandwidth test result. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00027">27</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+
 </div>
 </div>
 <a id="aed84712cbacc8ece9e41ca4bee53ff82" name="aed84712cbacc8ece9e41ca4bee53ff82"></a>
@@ -841,27 +1145,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="ad9d30f7daf207edabc794f17be5144d1" name="ad9d30f7daf207edabc794f17be5144d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9d30f7daf207edabc794f17be5144d1">&#9670;&#160;</a></span>packetLossLog</h2>
+<p>UI Text element displaying throughput test result. </p>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string NetworkMonitor.packetLossLog = Application.dataPath + &quot;/packet_loss_log.txt&quot;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00031">31</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
 
 </div>
 </div>
@@ -885,6 +1171,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Coroutine reference for the ping routine. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00079">79</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+
 </div>
 </div>
 <a id="a9a617ac43120a1ff8b61a1f080efb350" name="a9a617ac43120a1ff8b61a1f080efb350"></a>
@@ -907,27 +1197,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="ac31c74ed28068f910b66a455db7f2827" name="ac31c74ed28068f910b66a455db7f2827"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac31c74ed28068f910b66a455db7f2827">&#9670;&#160;</a></span>pingLog</h2>
+<p>Interval in seconds between pings sent to measure latency. </p>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string NetworkMonitor.pingLog = Application.dataPath + &quot;/ping_log.txt&quot;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00015">15</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
 
 </div>
 </div>
@@ -951,6 +1223,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Timeout in seconds after which a ping is considered lost. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00019">19</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+
 </div>
 </div>
 <a id="ae54b30712210ea99dd81736a8c42c2b7" name="ae54b30712210ea99dd81736a8c42c2b7"></a>
@@ -972,6 +1248,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Total number of latency responses received. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00039">39</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
 
 </div>
 </div>
@@ -995,6 +1275,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Number of responses received during the current interval. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00047">47</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+
 </div>
 </div>
 <a id="ae3d71d3537d4c9c5d3cf8fc48dab3c9d" name="ae3d71d3537d4c9c5d3cf8fc48dab3c9d"></a>
@@ -1016,6 +1300,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Total number of latency packets sent. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00035">35</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
 
 </div>
 </div>
@@ -1039,6 +1327,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Number of latency packets sent during the current interval. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00043">43</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+
 </div>
 </div>
 <a id="afd13304fa9c45037f5aac44037636303" name="afd13304fa9c45037f5aac44037636303"></a>
@@ -1061,27 +1353,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="afaf74373698a8fb2faf50b9a72af8c50" name="afaf74373698a8fb2faf50b9a72af8c50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afaf74373698a8fb2faf50b9a72af8c50">&#9670;&#160;</a></span>throughputLog</h2>
+<p>Dictionary storing the send time for each packet ID. </p>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string NetworkMonitor.throughputLog = Application.dataPath + &quot;/throughput_log.txt&quot;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00055">55</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
 
 </div>
 </div>
@@ -1105,6 +1379,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00254">254</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+
 </div>
 </div>
 <a id="a5dbc2ffbebdf182e6e05c67bb36d5d02" name="a5dbc2ffbebdf182e6e05c67bb36d5d02"></a>
@@ -1126,6 +1402,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00252">252</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
 
 </div>
 </div>
@@ -1149,6 +1427,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00251">251</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+
 </div>
 </div>
 <a id="a0d13bd656a2034887c7df72c5367840a" name="a0d13bd656a2034887c7df72c5367840a"></a>
@@ -1170,6 +1450,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00250">250</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
 
 </div>
 </div>
@@ -1193,11 +1475,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Coroutine reference for the throughput timeout logic. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_monitor_8cs_source.html#l00083">83</a> of file <a class="el" href="_network_monitor_8cs_source.html">NetworkMonitor.cs</a>.</p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/NetworkLibrary/ClientStuff/ClientScripts/Components/<a class="el" href="_network_monitor_8cs.html">NetworkMonitor.cs</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

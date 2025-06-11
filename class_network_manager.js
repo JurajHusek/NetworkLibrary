@@ -21,6 +21,6 @@ var class_network_manager =
     [ "UpdateTransform", "class_network_manager.html#aceda224e5159f6ada4f75cc143f7c1b1", null ],
     [ "ClientSettings", "class_network_manager.html#a460af8158f476b83137a81c27a893932", null ],
     [ "networkManager", "class_network_manager.html#a88de126b5881bbb7de57cb19f99e4e1f", null ],
-    [ "OnlineUsers", "class_network_manager.html#a1bc1f6baf88a737073a9586b5b0118a9", null ],
+    [ "onlineUsers", "class_network_manager.html#a7ad202ed2928430d19e69b3751ff57f6", null ],
     [ "spawnPoints", "class_network_manager.html#a048c99961dffd609ef88dc7c8a65da40", null ]
 ];

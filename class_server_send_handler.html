@@ -91,33 +91,59 @@ $(function(){initNavTree('class_server_send_handler.html','','class_server_send_
   <div class="headertitle"><div class="title">ServerSendHandler Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Contains all of the methods for packet sending according to their type.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a76de3e45727870d21bef3405b441002c" id="r_a76de3e45727870d21bef3405b441002c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_packet.html">Packet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76de3e45727870d21bef3405b441002c">AddHmac</a> (<a class="el" href="class_packet.html">Packet</a> sendPacket, int ClientNum)</td></tr>
+<tr class="memdesc:a76de3e45727870d21bef3405b441002c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds HMAC to packet, returns packet with HMAC.  <br /></td></tr>
 <tr class="memitem:a4ae4147220091120d4b075525d00a374" id="r_a4ae4147220091120d4b075525d00a374"><td class="memItemLeft" align="right" valign="top">static byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ae4147220091120d4b075525d00a374">GenerateHmac</a> (<a class="el" href="class_packet.html">Packet</a> packet, byte[] key)</td></tr>
-<tr class="memitem:a37a8955aa18562630130e332c3d94961" id="r_a37a8955aa18562630130e332c3d94961"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37a8955aa18562630130e332c3d94961">DisconnectedUser</a> (int ClientNum)</td></tr>
-<tr class="memitem:acb0bc7ae68091c440e365ed175fd493e" id="r_acb0bc7ae68091c440e365ed175fd493e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb0bc7ae68091c440e365ed175fd493e">LatencyToUser</a> (int ClientNum, int pcktId)</td></tr>
-<tr class="memitem:a96b3a1a61ccce81eed79df538dfca4db" id="r_a96b3a1a61ccce81eed79df538dfca4db"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96b3a1a61ccce81eed79df538dfca4db">WelcomePacket</a> (int ClientNum, string Message)</td></tr>
+<tr class="memdesc:a4ae4147220091120d4b075525d00a374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates HMAC of the data with the key from argument.  <br /></td></tr>
+<tr class="memitem:a2a82215bc276307624e2a33b4fd93961" id="r_a2a82215bc276307624e2a33b4fd93961"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a82215bc276307624e2a33b4fd93961">DisconnectedUser</a> (int clientId)</td></tr>
+<tr class="memdesc:a2a82215bc276307624e2a33b4fd93961"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a packet to all clients to inform them that a user has disconnected.  <br /></td></tr>
+<tr class="memitem:a4864494775ee8055c676ed7a607380e6" id="r_a4864494775ee8055c676ed7a607380e6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4864494775ee8055c676ed7a607380e6">LatencyToUser</a> (int clientId, int pcktId)</td></tr>
+<tr class="memdesc:a4864494775ee8055c676ed7a607380e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a latency response packet (ping reply) to a specific client.  <br /></td></tr>
+<tr class="memitem:aceeb91806e92f2256b8b47e692a78567" id="r_aceeb91806e92f2256b8b47e692a78567"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aceeb91806e92f2256b8b47e692a78567">WelcomePacket</a> (int clientId, string message)</td></tr>
+<tr class="memdesc:aceeb91806e92f2256b8b47e692a78567"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a welcome message to a newly connected client.  <br /></td></tr>
 <tr class="memitem:a8af9f5a46bb58720cd0d8c9e62a4f2ab" id="r_a8af9f5a46bb58720cd0d8c9e62a4f2ab"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8af9f5a46bb58720cd0d8c9e62a4f2ab">SendHmacKeyPacket</a> (int clientID, byte[] hmacKey)</td></tr>
-<tr class="memitem:a564a140daa2620538e57aa6c01125fed" id="r_a564a140daa2620538e57aa6c01125fed"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a564a140daa2620538e57aa6c01125fed">SendAuthPacket</a> (int clientID, string Token)</td></tr>
-<tr class="memitem:a9ccf90cb6286a2a44681b80bc25a9b8c" id="r_a9ccf90cb6286a2a44681b80bc25a9b8c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ccf90cb6286a2a44681b80bc25a9b8c">SpawnUser</a> (int ClientNum, <a class="el" href="class_server_side_client_instance.html">ServerSideClientInstance</a> user)</td></tr>
-<tr class="memitem:af763486d87f1a7117a547fd451074905" id="r_af763486d87f1a7117a547fd451074905"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af763486d87f1a7117a547fd451074905">SendBandwidthReply</a> (int ClientId)</td></tr>
-<tr class="memitem:a88a87eb877e8d2198a88f2133e4d7bf8" id="r_a88a87eb877e8d2198a88f2133e4d7bf8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88a87eb877e8d2198a88f2133e4d7bf8">SendThroughputReply</a> (int ClientId, int pcktId, int DataSize)</td></tr>
-<tr class="memitem:a72c779e5a9bb42a22c0e6633b690ff8a" id="r_a72c779e5a9bb42a22c0e6633b690ff8a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72c779e5a9bb42a22c0e6633b690ff8a">SendMessage</a> (int ClientNum, string Message)</td></tr>
-<tr class="memitem:ac71a1a4adfe8f6f07b120abcf07dec9b" id="r_ac71a1a4adfe8f6f07b120abcf07dec9b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac71a1a4adfe8f6f07b120abcf07dec9b">SendMessageAll</a> (int ClientNum, string Message)</td></tr>
-<tr class="memitem:a9d4152a91b74ea0337ab17cd62eb56ca" id="r_a9d4152a91b74ea0337ab17cd62eb56ca"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d4152a91b74ea0337ab17cd62eb56ca">SendToAll</a> (<a class="el" href="class_packet.html">Packet</a> SendPacket)</td></tr>
-<tr class="memitem:ad60dfa1158a0c5d63391417a2c75e950" id="r_ad60dfa1158a0c5d63391417a2c75e950"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad60dfa1158a0c5d63391417a2c75e950">SendToClient</a> (<a class="el" href="class_packet.html">Packet</a> SendPacket, int ClientNum)</td></tr>
-<tr class="memitem:a1405a21282eab400301c6355494c567c" id="r_a1405a21282eab400301c6355494c567c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1405a21282eab400301c6355494c567c">SendUpdatedTransform</a> (int ClientNum, Vector3 pos, Quaternion rot)</td></tr>
-<tr class="memitem:a566a472149da9073a6f364abdc3b8e3c" id="r_a566a472149da9073a6f364abdc3b8e3c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a566a472149da9073a6f364abdc3b8e3c">SendUpdatedAnimation</a> (int ClientNum, int type, string name, float value)</td></tr>
-<tr class="memitem:a959a7d45aec13282b6167f0c6a6683c7" id="r_a959a7d45aec13282b6167f0c6a6683c7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a959a7d45aec13282b6167f0c6a6683c7">SendToAllExc</a> (<a class="el" href="class_packet.html">Packet</a> SendPacket, int ExceptClient)</td></tr>
-<tr class="memitem:a4df54f6aa4c4029c372d06d33d8ef4af" id="r_a4df54f6aa4c4029c372d06d33d8ef4af"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4df54f6aa4c4029c372d06d33d8ef4af">UDPSendToAll</a> (<a class="el" href="class_packet.html">Packet</a> SendPacket)</td></tr>
+<tr class="memdesc:a8af9f5a46bb58720cd0d8c9e62a4f2ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the HMAC key to a client for securing message integrity.  <br /></td></tr>
+<tr class="memitem:a6324a147f326fd76bf1fe6b0bff14da7" id="r_a6324a147f326fd76bf1fe6b0bff14da7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6324a147f326fd76bf1fe6b0bff14da7">SendAuthPacket</a> (int clientID, string token)</td></tr>
+<tr class="memdesc:a6324a147f326fd76bf1fe6b0bff14da7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends an authentication token to the client.  <br /></td></tr>
+<tr class="memitem:ae2a01d01758726118f33bb489bc89aba" id="r_ae2a01d01758726118f33bb489bc89aba"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2a01d01758726118f33bb489bc89aba">SpawnUser</a> (int clientId, <a class="el" href="class_server_side_client_instance.html">ServerSideClientInstance</a> user)</td></tr>
+<tr class="memdesc:ae2a01d01758726118f33bb489bc89aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a packet to spawn a new user instance on the client side.  <br /></td></tr>
+<tr class="memitem:a813ed6221a7cd0247add6d8a6e9c2408" id="r_a813ed6221a7cd0247add6d8a6e9c2408"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a813ed6221a7cd0247add6d8a6e9c2408">SendBandwidthReply</a> (int clientId)</td></tr>
+<tr class="memdesc:a813ed6221a7cd0247add6d8a6e9c2408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a bandwidth reply packet to the client after measurement.  <br /></td></tr>
+<tr class="memitem:ad0c0e627f8a5665e8d69fd1d12cc7105" id="r_ad0c0e627f8a5665e8d69fd1d12cc7105"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0c0e627f8a5665e8d69fd1d12cc7105">SendThroughputReply</a> (int clientId, int pcktId, int dataSize)</td></tr>
+<tr class="memdesc:ad0c0e627f8a5665e8d69fd1d12cc7105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a throughput measurement result to the client.  <br /></td></tr>
+<tr class="memitem:af8c0f378119be7303fc45f0db6feb953" id="r_af8c0f378119be7303fc45f0db6feb953"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8c0f378119be7303fc45f0db6feb953">SendMessage</a> (int clientId, string message)</td></tr>
+<tr class="memdesc:af8c0f378119be7303fc45f0db6feb953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a private text message to a specific client.  <br /></td></tr>
+<tr class="memitem:a431ed0f1a54984a8da008d64b9950f11" id="r_a431ed0f1a54984a8da008d64b9950f11"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a431ed0f1a54984a8da008d64b9950f11">SendMessageAll</a> (int clientId, string message)</td></tr>
+<tr class="memdesc:a431ed0f1a54984a8da008d64b9950f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a message to all clients except the sender.  <br /></td></tr>
+<tr class="memitem:a133e8fc158deb519083d8072c6578516" id="r_a133e8fc158deb519083d8072c6578516"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a133e8fc158deb519083d8072c6578516">SendToAll</a> (<a class="el" href="class_packet.html">Packet</a> sendPacket)</td></tr>
+<tr class="memdesc:a133e8fc158deb519083d8072c6578516"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a packet to all connected clients.  <br /></td></tr>
+<tr class="memitem:a311964ac93d89ed53cf579022cdf1b26" id="r_a311964ac93d89ed53cf579022cdf1b26"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a311964ac93d89ed53cf579022cdf1b26">SendToClient</a> (<a class="el" href="class_packet.html">Packet</a> sendPacket, int clientId)</td></tr>
+<tr class="memdesc:a311964ac93d89ed53cf579022cdf1b26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a packet to a specific client.  <br /></td></tr>
+<tr class="memitem:a407e7383786a79e7631d34ff57194f57" id="r_a407e7383786a79e7631d34ff57194f57"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a407e7383786a79e7631d34ff57194f57">SendUpdatedTransform</a> (int clientId, Vector3 pos, Quaternion rot)</td></tr>
+<tr class="memdesc:a407e7383786a79e7631d34ff57194f57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends updated transform (position and rotation) to all clients.  <br /></td></tr>
+<tr class="memitem:a8cc96579073b75be417ea1b333e4ab40" id="r_a8cc96579073b75be417ea1b333e4ab40"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8cc96579073b75be417ea1b333e4ab40">SendUpdatedAnimation</a> (int clientId, int type, string name, float value)</td></tr>
+<tr class="memdesc:a8cc96579073b75be417ea1b333e4ab40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends updated animation data to all clients.  <br /></td></tr>
+<tr class="memitem:ac8cbadd507681113086778dbe996fe4f" id="r_ac8cbadd507681113086778dbe996fe4f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8cbadd507681113086778dbe996fe4f">SendToAllExc</a> (<a class="el" href="class_packet.html">Packet</a> sendPacket, int exceptClient)</td></tr>
+<tr class="memdesc:ac8cbadd507681113086778dbe996fe4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a packet to all clients except one specified by ID.  <br /></td></tr>
+<tr class="memitem:a9f76e948d1e1a3388af94f88f4479e2f" id="r_a9f76e948d1e1a3388af94f88f4479e2f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f76e948d1e1a3388af94f88f4479e2f">UDPSendToAll</a> (<a class="el" href="class_packet.html">Packet</a> sendPacket)</td></tr>
+<tr class="memdesc:a9f76e948d1e1a3388af94f88f4479e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a packet to all clients using UDP.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a3792d9c534ed10af43e8fc0ade8c2172" id="r_a3792d9c534ed10af43e8fc0ade8c2172"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3792d9c534ed10af43e8fc0ade8c2172">UDPSendToClient</a> (<a class="el" href="class_packet.html">Packet</a> SendPacket, int ClientNum)</td></tr>
+<tr class="memitem:a2b3fbe072279e2c8e4a1835308e6ef31" id="r_a2b3fbe072279e2c8e4a1835308e6ef31"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b3fbe072279e2c8e4a1835308e6ef31">UDPSendToClient</a> (<a class="el" href="class_packet.html">Packet</a> sendPacket, int clientId)</td></tr>
+<tr class="memdesc:a2b3fbe072279e2c8e4a1835308e6ef31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a packet to a specific client using UDP.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contains all of the methods for packet sending according to their type. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00009">9</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a76de3e45727870d21bef3405b441002c" name="a76de3e45727870d21bef3405b441002c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a76de3e45727870d21bef3405b441002c">&#9670;&#160;</a></span>AddHmac()</h2>
 
@@ -145,10 +171,23 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Adds HMAC to packet, returns packet with HMAC. </p>
+<p>Value of clients HMAC key.</p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00014">14</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordtype">byte</span>[] hmacKey = ServerLogic.clientsList[ClientNum].tcp.hmacKey;</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordtype">byte</span>[] hmac = <a class="code hl_function" href="#a4ae4147220091120d4b075525d00a374">GenerateHmac</a>(sendPacket, hmacKey);</div>
+<div class="line"><span class="lineno">   21</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(hmac);</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">return</span> sendPacket;</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
+<div class="ttc" id="aclass_packet_html_a9ba5bf13c5cf2e63a362062896ee18a6"><div class="ttname"><a href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Packet.Write</a></div><div class="ttdeci">void Write(string text)</div><div class="ttdoc">Write string data.</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00044">Packet.cs:44</a></div></div>
+<div class="ttc" id="aclass_server_send_handler_html_a4ae4147220091120d4b075525d00a374"><div class="ttname"><a href="#a4ae4147220091120d4b075525d00a374">ServerSendHandler.GenerateHmac</a></div><div class="ttdeci">static byte[] GenerateHmac(Packet packet, byte[] key)</div><div class="ttdoc">Generates HMAC of the data with the key from argument.</div><div class="ttdef"><b>Definition</b> <a href="_server_send_handler_8cs_source.html#l00027">ServerSendHandler.cs:27</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a37a8955aa18562630130e332c3d94961" name="a37a8955aa18562630130e332c3d94961"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37a8955aa18562630130e332c3d94961">&#9670;&#160;</a></span>DisconnectedUser()</h2>
+<a id="a2a82215bc276307624e2a33b4fd93961" name="a2a82215bc276307624e2a33b4fd93961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a82215bc276307624e2a33b4fd93961">&#9670;&#160;</a></span>DisconnectedUser()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -159,7 +198,7 @@ Static Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ServerSendHandler.DisconnectedUser </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ClientNum</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>clientId</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -170,6 +209,21 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends a packet to all clients to inform them that a user has disconnected. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00042">42</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>        Packet sendPacket = <span class="keyword">new</span> Packet((<span class="keywordtype">int</span>)Packet.ServerPackets.DisconnectUser);</div>
+<div class="line"><span class="lineno">   45</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(clientId);</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span>(ServerLogic.GetSettings().useHMAC == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            sendPacket = <a class="code hl_function" href="#a76de3e45727870d21bef3405b441002c">AddHmac</a>(sendPacket, clientId);</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>        <a class="code hl_function" href="#a133e8fc158deb519083d8072c6578516">SendToAll</a>(sendPacket);</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+<div class="ttc" id="aclass_server_send_handler_html_a133e8fc158deb519083d8072c6578516"><div class="ttname"><a href="#a133e8fc158deb519083d8072c6578516">ServerSendHandler.SendToAll</a></div><div class="ttdeci">static void SendToAll(Packet sendPacket)</div><div class="ttdoc">Sends a packet to all connected clients.</div><div class="ttdef"><b>Definition</b> <a href="_server_send_handler_8cs_source.html#l00158">ServerSendHandler.cs:158</a></div></div>
+<div class="ttc" id="aclass_server_send_handler_html_a76de3e45727870d21bef3405b441002c"><div class="ttname"><a href="#a76de3e45727870d21bef3405b441002c">ServerSendHandler.AddHmac</a></div><div class="ttdeci">static Packet AddHmac(Packet sendPacket, int ClientNum)</div><div class="ttdoc">Adds HMAC to packet, returns packet with HMAC.</div><div class="ttdef"><b>Definition</b> <a href="_server_send_handler_8cs_source.html#l00014">ServerSendHandler.cs:14</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4ae4147220091120d4b075525d00a374" name="a4ae4147220091120d4b075525d00a374"></a>
@@ -199,10 +253,24 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Generates HMAC of the data with the key from argument. </p>
+<p>Uses HMACSHA256 for computing HMAC value.</p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00027">27</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordtype">byte</span>[] packetData = packet.<a class="code hl_function" href="class_packet.html#a3adf900e0869f7d54aaf275db531d637">ConvertToArray</a>();</div>
+<div class="line"><span class="lineno">   30</span></div>
+<div class="line"><span class="lineno">   34</span>        <span class="keyword">using</span> (HMACSHA256 hmac = <span class="keyword">new</span> HMACSHA256(key))</div>
+<div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">return</span> hmac.ComputeHash(packetData);</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+<div class="ttc" id="aclass_packet_html_a3adf900e0869f7d54aaf275db531d637"><div class="ttname"><a href="class_packet.html#a3adf900e0869f7d54aaf275db531d637">Packet.ConvertToArray</a></div><div class="ttdeci">byte[] ConvertToArray()</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00287">Packet.cs:287</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="acb0bc7ae68091c440e365ed175fd493e" name="acb0bc7ae68091c440e365ed175fd493e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb0bc7ae68091c440e365ed175fd493e">&#9670;&#160;</a></span>LatencyToUser()</h2>
+<a id="a4864494775ee8055c676ed7a607380e6" name="a4864494775ee8055c676ed7a607380e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4864494775ee8055c676ed7a607380e6">&#9670;&#160;</a></span>LatencyToUser()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,7 +281,7 @@ Static Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ServerSendHandler.LatencyToUser </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ClientNum</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>clientId</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -228,10 +296,21 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends a latency response packet (ping reply) to a specific client. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00055">55</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        Packet sendPacket = <span class="keyword">new</span> Packet((<span class="keywordtype">int</span>)Packet.ServerPackets.Latency);</div>
+<div class="line"><span class="lineno">   58</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(clientId);</div>
+<div class="line"><span class="lineno">   59</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(pcktId);</div>
+<div class="line"><span class="lineno">   60</span>        <a class="code hl_function" href="#a2b3fbe072279e2c8e4a1835308e6ef31">UDPSendToClient</a>(sendPacket, clientId);</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+<div class="ttc" id="aclass_server_send_handler_html_a2b3fbe072279e2c8e4a1835308e6ef31"><div class="ttname"><a href="#a2b3fbe072279e2c8e4a1835308e6ef31">ServerSendHandler.UDPSendToClient</a></div><div class="ttdeci">static void UDPSendToClient(Packet sendPacket, int clientId)</div><div class="ttdoc">Sends a packet to a specific client using UDP.</div><div class="ttdef"><b>Definition</b> <a href="_server_send_handler_8cs_source.html#l00221">ServerSendHandler.cs:221</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a564a140daa2620538e57aa6c01125fed" name="a564a140daa2620538e57aa6c01125fed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a564a140daa2620538e57aa6c01125fed">&#9670;&#160;</a></span>SendAuthPacket()</h2>
+<a id="a6324a147f326fd76bf1fe6b0bff14da7" name="a6324a147f326fd76bf1fe6b0bff14da7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6324a147f326fd76bf1fe6b0bff14da7">&#9670;&#160;</a></span>SendAuthPacket()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +326,7 @@ Static Private Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>Token</em></span>&#160;)</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>token</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -257,10 +336,21 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends an authentication token to the client. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00085">85</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>    {</div>
+<div class="line"><span class="lineno">   87</span>        Packet sendPacket = <span class="keyword">new</span> Packet((<span class="keywordtype">int</span>)Packet.ServerPackets.AuthToken);</div>
+<div class="line"><span class="lineno">   88</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(token);</div>
+<div class="line"><span class="lineno">   89</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(clientID);</div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_function" href="#a311964ac93d89ed53cf579022cdf1b26">SendToClient</a>(sendPacket, clientID);</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
+<div class="ttc" id="aclass_server_send_handler_html_a311964ac93d89ed53cf579022cdf1b26"><div class="ttname"><a href="#a311964ac93d89ed53cf579022cdf1b26">ServerSendHandler.SendToClient</a></div><div class="ttdeci">static void SendToClient(Packet sendPacket, int clientId)</div><div class="ttdoc">Sends a packet to a specific client.</div><div class="ttdef"><b>Definition</b> <a href="_server_send_handler_8cs_source.html#l00170">ServerSendHandler.cs:170</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="af763486d87f1a7117a547fd451074905" name="af763486d87f1a7117a547fd451074905"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af763486d87f1a7117a547fd451074905">&#9670;&#160;</a></span>SendBandwidthReply()</h2>
+<a id="a813ed6221a7cd0247add6d8a6e9c2408" name="a813ed6221a7cd0247add6d8a6e9c2408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a813ed6221a7cd0247add6d8a6e9c2408">&#9670;&#160;</a></span>SendBandwidthReply()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -271,7 +361,7 @@ Static Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ServerSendHandler.SendBandwidthReply </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ClientId</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>clientId</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -282,6 +372,19 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends a bandwidth reply packet to the client after measurement. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00109">109</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>    {</div>
+<div class="line"><span class="lineno">  111</span>        Packet sendPacket = <span class="keyword">new</span> Packet((<span class="keywordtype">int</span>)Packet.ServerPackets.BandwidthReply);</div>
+<div class="line"><span class="lineno">  112</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(clientId);</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">if</span> (ServerLogic.GetSettings().useHMAC == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  114</span>        {</div>
+<div class="line"><span class="lineno">  115</span>            sendPacket = <a class="code hl_function" href="#a76de3e45727870d21bef3405b441002c">AddHmac</a>(sendPacket, clientId);</div>
+<div class="line"><span class="lineno">  116</span>        }</div>
+<div class="line"><span class="lineno">  117</span>        <a class="code hl_function" href="#a311964ac93d89ed53cf579022cdf1b26">SendToClient</a>(sendPacket, clientId);</div>
+<div class="line"><span class="lineno">  118</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8af9f5a46bb58720cd0d8c9e62a4f2ab" name="a8af9f5a46bb58720cd0d8c9e62a4f2ab"></a>
@@ -311,10 +414,20 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends the HMAC key to a client for securing message integrity. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00075">75</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>    {</div>
+<div class="line"><span class="lineno">   77</span>        Packet sendPacket = <span class="keyword">new</span> Packet((<span class="keywordtype">int</span>)Packet.ServerPackets.HmacKey); </div>
+<div class="line"><span class="lineno">   78</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(hmacKey.Length); </div>
+<div class="line"><span class="lineno">   79</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(hmacKey);       </div>
+<div class="line"><span class="lineno">   80</span>        <a class="code hl_function" href="#a311964ac93d89ed53cf579022cdf1b26">SendToClient</a>(sendPacket, clientID);</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a72c779e5a9bb42a22c0e6633b690ff8a" name="a72c779e5a9bb42a22c0e6633b690ff8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72c779e5a9bb42a22c0e6633b690ff8a">&#9670;&#160;</a></span>SendMessage()</h2>
+<a id="af8c0f378119be7303fc45f0db6feb953" name="af8c0f378119be7303fc45f0db6feb953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8c0f378119be7303fc45f0db6feb953">&#9670;&#160;</a></span>SendMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -325,12 +438,12 @@ Static Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ServerSendHandler.SendMessage </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ClientNum</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>clientId</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>Message</em></span>&#160;)</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -340,10 +453,25 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends a private text message to a specific client. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00132">132</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  133</span>    {</div>
+<div class="line"><span class="lineno">  134</span>        Packet sendPacket = <span class="keyword">new</span> Packet((<span class="keywordtype">int</span>)Packet.ServerPackets.Message);</div>
+<div class="line"><span class="lineno">  135</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(message);</div>
+<div class="line"><span class="lineno">  136</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(clientId);</div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (ServerLogic.GetSettings().useHMAC == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  138</span>        {</div>
+<div class="line"><span class="lineno">  139</span>            sendPacket = <a class="code hl_function" href="#a76de3e45727870d21bef3405b441002c">AddHmac</a>(sendPacket, clientId);</div>
+<div class="line"><span class="lineno">  140</span>        }</div>
+<div class="line"><span class="lineno">  141</span>        <a class="code hl_function" href="#a311964ac93d89ed53cf579022cdf1b26">SendToClient</a>(sendPacket, clientId);</div>
+<div class="line"><span class="lineno">  142</span>        </div>
+<div class="line"><span class="lineno">  143</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="ac71a1a4adfe8f6f07b120abcf07dec9b" name="ac71a1a4adfe8f6f07b120abcf07dec9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac71a1a4adfe8f6f07b120abcf07dec9b">&#9670;&#160;</a></span>SendMessageAll()</h2>
+<a id="a431ed0f1a54984a8da008d64b9950f11" name="a431ed0f1a54984a8da008d64b9950f11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a431ed0f1a54984a8da008d64b9950f11">&#9670;&#160;</a></span>SendMessageAll()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -354,12 +482,12 @@ Static Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ServerSendHandler.SendMessageAll </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ClientNum</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>clientId</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>Message</em></span>&#160;)</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -369,10 +497,22 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends a message to all clients except the sender. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00147">147</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  148</span>    {</div>
+<div class="line"><span class="lineno">  149</span>        Packet sendPacket = <span class="keyword">new</span> Packet((<span class="keywordtype">int</span>)Packet.ServerPackets.MessageAll);</div>
+<div class="line"><span class="lineno">  150</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(message);</div>
+<div class="line"><span class="lineno">  151</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(clientId);</div>
+<div class="line"><span class="lineno">  152</span>        <a class="code hl_function" href="#ac8cbadd507681113086778dbe996fe4f">SendToAllExc</a>(sendPacket, clientId);</div>
+<div class="line"><span class="lineno">  153</span> </div>
+<div class="line"><span class="lineno">  154</span>    }</div>
+<div class="ttc" id="aclass_server_send_handler_html_ac8cbadd507681113086778dbe996fe4f"><div class="ttname"><a href="#ac8cbadd507681113086778dbe996fe4f">ServerSendHandler.SendToAllExc</a></div><div class="ttdeci">static void SendToAllExc(Packet sendPacket, int exceptClient)</div><div class="ttdoc">Sends a packet to all clients except one specified by ID.</div><div class="ttdef"><b>Definition</b> <a href="_server_send_handler_8cs_source.html#l00207">ServerSendHandler.cs:207</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a88a87eb877e8d2198a88f2133e4d7bf8" name="a88a87eb877e8d2198a88f2133e4d7bf8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88a87eb877e8d2198a88f2133e4d7bf8">&#9670;&#160;</a></span>SendThroughputReply()</h2>
+<a id="ad0c0e627f8a5665e8d69fd1d12cc7105" name="ad0c0e627f8a5665e8d69fd1d12cc7105"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0c0e627f8a5665e8d69fd1d12cc7105">&#9670;&#160;</a></span>SendThroughputReply()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -383,7 +523,7 @@ Static Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ServerSendHandler.SendThroughputReply </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ClientId</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>clientId</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -393,7 +533,7 @@ Static Private Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>DataSize</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dataSize</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -403,10 +543,20 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends a throughput measurement result to the client. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00122">122</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>    {</div>
+<div class="line"><span class="lineno">  124</span>        Packet sendPacket = <span class="keyword">new</span> Packet((<span class="keywordtype">int</span>)Packet.ServerPackets.ThroughputReply);</div>
+<div class="line"><span class="lineno">  125</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(pcktId);</div>
+<div class="line"><span class="lineno">  126</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(dataSize);</div>
+<div class="line"><span class="lineno">  127</span>        <a class="code hl_function" href="#a2b3fbe072279e2c8e4a1835308e6ef31">UDPSendToClient</a>(sendPacket, clientId);</div>
+<div class="line"><span class="lineno">  128</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a9d4152a91b74ea0337ab17cd62eb56ca" name="a9d4152a91b74ea0337ab17cd62eb56ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d4152a91b74ea0337ab17cd62eb56ca">&#9670;&#160;</a></span>SendToAll()</h2>
+<a id="a133e8fc158deb519083d8072c6578516" name="a133e8fc158deb519083d8072c6578516"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a133e8fc158deb519083d8072c6578516">&#9670;&#160;</a></span>SendToAll()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -417,7 +567,7 @@ Static Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ServerSendHandler.SendToAll </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>SendPacket</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>sendPacket</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -428,10 +578,25 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends a packet to all connected clients. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00158">158</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>    {</div>
+<div class="line"><span class="lineno">  160</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a1c9d20ffde4981855184b32ec05d9691">SizeOfDataAtStart</a>();</div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">foreach</span> (var user <span class="keywordflow">in</span> ServerLogic.clientsList)</div>
+<div class="line"><span class="lineno">  162</span>        {</div>
+<div class="line"><span class="lineno">  163</span>            ServerSideClient ConnectedClient = user.Value;</div>
+<div class="line"><span class="lineno">  164</span>            ConnectedClient.<a class="code hl_variable" href="class_server_side_client.html#a99afc81de132e760b68813d03e8c9b10">tcp</a>.<a class="code hl_function" href="class_server_side_client_1_1_t_c_p.html#a3789eefefdbc283cafabc905bbf4c1d3">Send</a>(sendPacket);</div>
+<div class="line"><span class="lineno">  165</span>        }</div>
+<div class="line"><span class="lineno">  166</span>    }</div>
+<div class="ttc" id="aclass_packet_html_a1c9d20ffde4981855184b32ec05d9691"><div class="ttname"><a href="class_packet.html#a1c9d20ffde4981855184b32ec05d9691">Packet.SizeOfDataAtStart</a></div><div class="ttdeci">void SizeOfDataAtStart()</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00296">Packet.cs:296</a></div></div>
+<div class="ttc" id="aclass_server_side_client_1_1_t_c_p_html_a3789eefefdbc283cafabc905bbf4c1d3"><div class="ttname"><a href="class_server_side_client_1_1_t_c_p.html#a3789eefefdbc283cafabc905bbf4c1d3">ServerSideClient.TCP.Send</a></div><div class="ttdeci">void Send(Packet sendPacket)</div><div class="ttdoc">Sends a packet over the TCP stream to the connected client.</div><div class="ttdef"><b>Definition</b> <a href="_server_side_client_8cs_source.html#l00281">ServerSideClient.cs:281</a></div></div>
+<div class="ttc" id="aclass_server_side_client_html_a99afc81de132e760b68813d03e8c9b10"><div class="ttname"><a href="class_server_side_client.html#a99afc81de132e760b68813d03e8c9b10">ServerSideClient.tcp</a></div><div class="ttdeci">TCP tcp</div><div class="ttdoc">TCP connection handler.</div><div class="ttdef"><b>Definition</b> <a href="_server_side_client_8cs_source.html#l00027">ServerSideClient.cs:27</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a959a7d45aec13282b6167f0c6a6683c7" name="a959a7d45aec13282b6167f0c6a6683c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a959a7d45aec13282b6167f0c6a6683c7">&#9670;&#160;</a></span>SendToAllExc()</h2>
+<a id="ac8cbadd507681113086778dbe996fe4f" name="ac8cbadd507681113086778dbe996fe4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8cbadd507681113086778dbe996fe4f">&#9670;&#160;</a></span>SendToAllExc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -442,12 +607,12 @@ Static Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ServerSendHandler.SendToAllExc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>SendPacket</em></span>, </td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>sendPacket</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ExceptClient</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>exceptClient</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -457,10 +622,24 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends a packet to all clients except one specified by ID. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00207">207</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  208</span>    {</div>
+<div class="line"><span class="lineno">  209</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a1c9d20ffde4981855184b32ec05d9691">SizeOfDataAtStart</a>();</div>
+<div class="line"><span class="lineno">  210</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= ServerLogic.maxCCU; i++)</div>
+<div class="line"><span class="lineno">  211</span>        {</div>
+<div class="line"><span class="lineno">  212</span>            <span class="keywordflow">if</span> (i != exceptClient)</div>
+<div class="line"><span class="lineno">  213</span>            {</div>
+<div class="line"><span class="lineno">  214</span>                ServerLogic.clientsList[i].tcp.Send(sendPacket);</div>
+<div class="line"><span class="lineno">  215</span>            }</div>
+<div class="line"><span class="lineno">  216</span>        }</div>
+<div class="line"><span class="lineno">  217</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="ad60dfa1158a0c5d63391417a2c75e950" name="ad60dfa1158a0c5d63391417a2c75e950"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad60dfa1158a0c5d63391417a2c75e950">&#9670;&#160;</a></span>SendToClient()</h2>
+<a id="a311964ac93d89ed53cf579022cdf1b26" name="a311964ac93d89ed53cf579022cdf1b26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a311964ac93d89ed53cf579022cdf1b26">&#9670;&#160;</a></span>SendToClient()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -471,12 +650,12 @@ Static Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ServerSendHandler.SendToClient </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>SendPacket</em></span>, </td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>sendPacket</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ClientNum</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>clientId</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -486,10 +665,18 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends a packet to a specific client. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00170">170</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  171</span>    {</div>
+<div class="line"><span class="lineno">  172</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a1c9d20ffde4981855184b32ec05d9691">SizeOfDataAtStart</a>();</div>
+<div class="line"><span class="lineno">  173</span>        ServerLogic.clientsList[clientId].tcp.Send(sendPacket);</div>
+<div class="line"><span class="lineno">  174</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a566a472149da9073a6f364abdc3b8e3c" name="a566a472149da9073a6f364abdc3b8e3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a566a472149da9073a6f364abdc3b8e3c">&#9670;&#160;</a></span>SendUpdatedAnimation()</h2>
+<a id="a8cc96579073b75be417ea1b333e4ab40" name="a8cc96579073b75be417ea1b333e4ab40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cc96579073b75be417ea1b333e4ab40">&#9670;&#160;</a></span>SendUpdatedAnimation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -500,7 +687,7 @@ Static Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ServerSendHandler.SendUpdatedAnimation </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ClientNum</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>clientId</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -525,10 +712,22 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends updated animation data to all clients. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00195">195</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  196</span>    {</div>
+<div class="line"><span class="lineno">  197</span>        Packet sendPacket = <span class="keyword">new</span> Packet((<span class="keywordtype">int</span>)Packet.ServerPackets.AnimationUpdate);</div>
+<div class="line"><span class="lineno">  198</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(clientId);</div>
+<div class="line"><span class="lineno">  199</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(type);</div>
+<div class="line"><span class="lineno">  200</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(name);</div>
+<div class="line"><span class="lineno">  201</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(value);</div>
+<div class="line"><span class="lineno">  202</span>        <a class="code hl_function" href="#a133e8fc158deb519083d8072c6578516">SendToAll</a>(sendPacket);</div>
+<div class="line"><span class="lineno">  203</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a1405a21282eab400301c6355494c567c" name="a1405a21282eab400301c6355494c567c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1405a21282eab400301c6355494c567c">&#9670;&#160;</a></span>SendUpdatedTransform()</h2>
+<a id="a407e7383786a79e7631d34ff57194f57" name="a407e7383786a79e7631d34ff57194f57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a407e7383786a79e7631d34ff57194f57">&#9670;&#160;</a></span>SendUpdatedTransform()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -539,7 +738,7 @@ Static Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ServerSendHandler.SendUpdatedTransform </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ClientNum</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>clientId</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -559,10 +758,28 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends updated transform (position and rotation) to all clients. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00178">178</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  179</span>    {</div>
+<div class="line"><span class="lineno">  180</span>        Packet sendPacket = <span class="keyword">new</span> Packet((<span class="keywordtype">int</span>)Packet.ServerPackets.TransformUpdate);</div>
+<div class="line"><span class="lineno">  181</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(clientId);</div>
+<div class="line"><span class="lineno">  182</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(pos);</div>
+<div class="line"><span class="lineno">  183</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(rot);</div>
+<div class="line"><span class="lineno">  184</span>        <span class="keywordflow">if</span>(ServerLogic.GetSettings().allowUDP == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  185</span>        {</div>
+<div class="line"><span class="lineno">  186</span>            <a class="code hl_function" href="#a9f76e948d1e1a3388af94f88f4479e2f">UDPSendToAll</a>(sendPacket);</div>
+<div class="line"><span class="lineno">  187</span>        } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  188</span>        {</div>
+<div class="line"><span class="lineno">  189</span>            <a class="code hl_function" href="#a133e8fc158deb519083d8072c6578516">SendToAll</a>(sendPacket);</div>
+<div class="line"><span class="lineno">  190</span>        }</div>
+<div class="line"><span class="lineno">  191</span>    }</div>
+<div class="ttc" id="aclass_server_send_handler_html_a9f76e948d1e1a3388af94f88f4479e2f"><div class="ttname"><a href="#a9f76e948d1e1a3388af94f88f4479e2f">ServerSendHandler.UDPSendToAll</a></div><div class="ttdeci">static void UDPSendToAll(Packet sendPacket)</div><div class="ttdoc">Sends a packet to all clients using UDP.</div><div class="ttdef"><b>Definition</b> <a href="_server_send_handler_8cs_source.html#l00229">ServerSendHandler.cs:229</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a9ccf90cb6286a2a44681b80bc25a9b8c" name="a9ccf90cb6286a2a44681b80bc25a9b8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ccf90cb6286a2a44681b80bc25a9b8c">&#9670;&#160;</a></span>SpawnUser()</h2>
+<a id="ae2a01d01758726118f33bb489bc89aba" name="ae2a01d01758726118f33bb489bc89aba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2a01d01758726118f33bb489bc89aba">&#9670;&#160;</a></span>SpawnUser()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -573,7 +790,7 @@ Static Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ServerSendHandler.SpawnUser </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ClientNum</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>clientId</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -588,10 +805,26 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends a packet to spawn a new user instance on the client side. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00095">95</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>    {</div>
+<div class="line"><span class="lineno">   97</span>        Packet sendPacket = <span class="keyword">new</span> Packet((<span class="keywordtype">int</span>)Packet.ServerPackets.SpawnUser);</div>
+<div class="line"><span class="lineno">   98</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(user.<a class="code hl_variable" href="class_server_side_client_instance.html#a0580294a8fd731dea0dde084aaad0a3c">userID</a>);</div>
+<div class="line"><span class="lineno">   99</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(user.<a class="code hl_variable" href="class_server_side_client_instance.html#a9b0658922674d0ed25a0b164f07c20e8">userName</a>);</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (ServerLogic.GetSettings().useHMAC == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  101</span>        {</div>
+<div class="line"><span class="lineno">  102</span>            sendPacket = <a class="code hl_function" href="#a76de3e45727870d21bef3405b441002c">AddHmac</a>(sendPacket, clientId);</div>
+<div class="line"><span class="lineno">  103</span>        }</div>
+<div class="line"><span class="lineno">  104</span>        <a class="code hl_function" href="#a311964ac93d89ed53cf579022cdf1b26">SendToClient</a>(sendPacket, clientId);</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
+<div class="ttc" id="aclass_server_side_client_instance_html_a0580294a8fd731dea0dde084aaad0a3c"><div class="ttname"><a href="class_server_side_client_instance.html#a0580294a8fd731dea0dde084aaad0a3c">ServerSideClientInstance.userID</a></div><div class="ttdeci">int userID</div><div class="ttdef"><b>Definition</b> <a href="_server_side_client_instance_8cs_source.html#l00010">ServerSideClientInstance.cs:10</a></div></div>
+<div class="ttc" id="aclass_server_side_client_instance_html_a9b0658922674d0ed25a0b164f07c20e8"><div class="ttname"><a href="class_server_side_client_instance.html#a9b0658922674d0ed25a0b164f07c20e8">ServerSideClientInstance.userName</a></div><div class="ttdeci">string userName</div><div class="ttdef"><b>Definition</b> <a href="_server_side_client_instance_8cs_source.html#l00011">ServerSideClientInstance.cs:11</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a4df54f6aa4c4029c372d06d33d8ef4af" name="a4df54f6aa4c4029c372d06d33d8ef4af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4df54f6aa4c4029c372d06d33d8ef4af">&#9670;&#160;</a></span>UDPSendToAll()</h2>
+<a id="a9f76e948d1e1a3388af94f88f4479e2f" name="a9f76e948d1e1a3388af94f88f4479e2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f76e948d1e1a3388af94f88f4479e2f">&#9670;&#160;</a></span>UDPSendToAll()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -602,7 +835,7 @@ Static Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ServerSendHandler.UDPSendToAll </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>SendPacket</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>sendPacket</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -613,10 +846,24 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends a packet to all clients using UDP. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00229">229</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  230</span>    {</div>
+<div class="line"><span class="lineno">  231</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a1c9d20ffde4981855184b32ec05d9691">SizeOfDataAtStart</a>();</div>
+<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">foreach</span> (var user <span class="keywordflow">in</span> ServerLogic.clientsList)</div>
+<div class="line"><span class="lineno">  233</span>        {</div>
+<div class="line"><span class="lineno">  234</span>            ServerSideClient ConnectedClient = user.Value;</div>
+<div class="line"><span class="lineno">  235</span>            ConnectedClient.<a class="code hl_variable" href="class_server_side_client.html#ab387535bfef4a18d653ca5cd3b641b9f">udp</a>.<a class="code hl_function" href="class_server_side_client_1_1_u_d_p.html#a0c309e2f74aaa20be3b5f4ca21cf1223">SendUDPData</a>(sendPacket);</div>
+<div class="line"><span class="lineno">  236</span>        }</div>
+<div class="line"><span class="lineno">  237</span>    }</div>
+<div class="ttc" id="aclass_server_side_client_1_1_u_d_p_html_a0c309e2f74aaa20be3b5f4ca21cf1223"><div class="ttname"><a href="class_server_side_client_1_1_u_d_p.html#a0c309e2f74aaa20be3b5f4ca21cf1223">ServerSideClient.UDP.SendUDPData</a></div><div class="ttdeci">void SendUDPData(Packet SendPacket)</div><div class="ttdoc">Sends a UDP packet to the client using the configured endpoint.</div><div class="ttdef"><b>Definition</b> <a href="_server_side_client_8cs_source.html#l00403">ServerSideClient.cs:403</a></div></div>
+<div class="ttc" id="aclass_server_side_client_html_ab387535bfef4a18d653ca5cd3b641b9f"><div class="ttname"><a href="class_server_side_client.html#ab387535bfef4a18d653ca5cd3b641b9f">ServerSideClient.udp</a></div><div class="ttdeci">UDP udp</div><div class="ttdoc">UDP connection handler.</div><div class="ttdef"><b>Definition</b> <a href="_server_side_client_8cs_source.html#l00030">ServerSideClient.cs:30</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a3792d9c534ed10af43e8fc0ade8c2172" name="a3792d9c534ed10af43e8fc0ade8c2172"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3792d9c534ed10af43e8fc0ade8c2172">&#9670;&#160;</a></span>UDPSendToClient()</h2>
+<a id="a2b3fbe072279e2c8e4a1835308e6ef31" name="a2b3fbe072279e2c8e4a1835308e6ef31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b3fbe072279e2c8e4a1835308e6ef31">&#9670;&#160;</a></span>UDPSendToClient()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -627,12 +874,12 @@ Static Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ServerSendHandler.UDPSendToClient </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>SendPacket</em></span>, </td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>sendPacket</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ClientNum</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>clientId</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -642,10 +889,18 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends a packet to a specific client using UDP. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00221">221</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  222</span>    {</div>
+<div class="line"><span class="lineno">  223</span>        sendPacket.<a class="code hl_function" href="class_packet.html#a1c9d20ffde4981855184b32ec05d9691">SizeOfDataAtStart</a>();</div>
+<div class="line"><span class="lineno">  224</span>        ServerLogic.clientsList[clientId].udp.SendUDPData(sendPacket);</div>
+<div class="line"><span class="lineno">  225</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a96b3a1a61ccce81eed79df538dfca4db" name="a96b3a1a61ccce81eed79df538dfca4db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96b3a1a61ccce81eed79df538dfca4db">&#9670;&#160;</a></span>WelcomePacket()</h2>
+<a id="aceeb91806e92f2256b8b47e692a78567" name="aceeb91806e92f2256b8b47e692a78567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceeb91806e92f2256b8b47e692a78567">&#9670;&#160;</a></span>WelcomePacket()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -656,12 +911,12 @@ Static Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ServerSendHandler.WelcomePacket </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ClientNum</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>clientId</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>Message</em></span>&#160;)</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -671,11 +926,18 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends a welcome message to a newly connected client. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_send_handler_8cs_source.html#l00065">65</a> of file <a class="el" href="_server_send_handler_8cs_source.html">ServerSendHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
+<div class="line"><span class="lineno">   67</span>        Packet SendPacket = <span class="keyword">new</span> Packet((<span class="keywordtype">int</span>)Packet.ServerPackets.welcome);</div>
+<div class="line"><span class="lineno">   68</span>        SendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(message);</div>
+<div class="line"><span class="lineno">   69</span>        SendPacket.<a class="code hl_function" href="class_packet.html#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(clientId);</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_function" href="#a311964ac93d89ed53cf579022cdf1b26">SendToClient</a>(SendPacket, clientId);</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/NetworkLibrary/ServerStuff/ServerScripts/Code/<a class="el" href="_server_send_handler_8cs.html">ServerSendHandler.cs</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

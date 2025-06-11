@@ -92,7 +92,7 @@ $(function(){initNavTree('class_packet.html','','class_packet-members'); });
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="class_packet.html" title="Packet class used as data represenation - used for reading and writing of data that will be send or w...">Packet</a> class used as data represenation - used for reading and writing of data that will be send or were received, includes methos for de-/serialization of different data types.  
+<p><a class="el" href="class_packet.html" title="Packet class used for data representation - used for reading and writing data that will be send or we...">Packet</a> class used for data representation - used for reading and writing data that will be send or were received, includes methods for de-/serialization of different data types.  
  <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -131,49 +131,49 @@ Public Types</h2></td></tr>
 , <a class="el" href="#ab51148f7134cedf405521073cae0cb09af01e3be31d8700873b380c0e736854c1">ThroughputRequest</a>
 <br />
  }</td></tr>
-<tr class="memdesc:ab51148f7134cedf405521073cae0cb09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defined packets sent to Server by <a class="el" href="class_client.html">Client</a>.  <a href="#ab51148f7134cedf405521073cae0cb09">More...</a><br /></td></tr>
+<tr class="memdesc:ab51148f7134cedf405521073cae0cb09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defined packets sent to Server by <a class="el" href="class_client.html" title="Main MonoBehaviour singleton class handling the client-side networking logic (TCP,...">Client</a>.  <a href="#ab51148f7134cedf405521073cae0cb09">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a281651350a412374f055e1f80efd2891" id="r_a281651350a412374f055e1f80efd2891"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a281651350a412374f055e1f80efd2891">Packet</a> ()</td></tr>
-<tr class="memitem:a7c09410d03e1aaa3d00fc0a102ba8f9e" id="r_a7c09410d03e1aaa3d00fc0a102ba8f9e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c09410d03e1aaa3d00fc0a102ba8f9e">Packet</a> (int PacketId)</td></tr>
-<tr class="memitem:ab06ee2c451ef1f217cb7977fa8f66afc" id="r_ab06ee2c451ef1f217cb7977fa8f66afc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab06ee2c451ef1f217cb7977fa8f66afc">Packet</a> (byte[] Data)</td></tr>
+<tr class="memitem:a0b79b0939614e28650c1a39999143f62" id="r_a0b79b0939614e28650c1a39999143f62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b79b0939614e28650c1a39999143f62">Packet</a> (int packetId)</td></tr>
+<tr class="memitem:a567eb98ab3c0791d8da2104ca752b68a" id="r_a567eb98ab3c0791d8da2104ca752b68a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a567eb98ab3c0791d8da2104ca752b68a">Packet</a> (byte[] data)</td></tr>
 <tr class="memitem:a9ba5bf13c5cf2e63a362062896ee18a6" id="r_a9ba5bf13c5cf2e63a362062896ee18a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a> (string text)</td></tr>
 <tr class="memdesc:a9ba5bf13c5cf2e63a362062896ee18a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write string data.  <br /></td></tr>
 <tr class="memitem:af48e5f82f59f0f50a09e0f2bb1aa3df9" id="r_af48e5f82f59f0f50a09e0f2bb1aa3df9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af48e5f82f59f0f50a09e0f2bb1aa3df9">ReadString</a> (bool ChangeReadPosition=true)</td></tr>
 <tr class="memdesc:af48e5f82f59f0f50a09e0f2bb1aa3df9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read string data.  <br /></td></tr>
-<tr class="memitem:a14347e1681a1748803bcade0d41ad2a8" id="r_a14347e1681a1748803bcade0d41ad2a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14347e1681a1748803bcade0d41ad2a8">Write</a> (int decimalNum)</td></tr>
-<tr class="memdesc:a14347e1681a1748803bcade0d41ad2a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write int data.  <br /></td></tr>
-<tr class="memitem:ab29acd0ab016eca8eb9f84ac84a2658e" id="r_ab29acd0ab016eca8eb9f84ac84a2658e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab29acd0ab016eca8eb9f84ac84a2658e">ReadInt</a> (bool ChangeReadPosition=true)</td></tr>
-<tr class="memdesc:ab29acd0ab016eca8eb9f84ac84a2658e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read int data.  <br /></td></tr>
-<tr class="memitem:abce718a12cc98716c0d423a8c2c6c71c" id="r_abce718a12cc98716c0d423a8c2c6c71c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abce718a12cc98716c0d423a8c2c6c71c">Write</a> (float floatingPointNum)</td></tr>
-<tr class="memdesc:abce718a12cc98716c0d423a8c2c6c71c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write float data.  <br /></td></tr>
-<tr class="memitem:a0b31de8ff9dfd3bd65129a99c7ebf9de" id="r_a0b31de8ff9dfd3bd65129a99c7ebf9de"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b31de8ff9dfd3bd65129a99c7ebf9de">ReadFloat</a> (bool ChangeReadPosition=true)</td></tr>
-<tr class="memdesc:a0b31de8ff9dfd3bd65129a99c7ebf9de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read float data.  <br /></td></tr>
-<tr class="memitem:a5472562d70da7d95b3d912debd4e0cb9" id="r_a5472562d70da7d95b3d912debd4e0cb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5472562d70da7d95b3d912debd4e0cb9">Write</a> (bool trueFalseValue)</td></tr>
-<tr class="memdesc:a5472562d70da7d95b3d912debd4e0cb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write bool data.  <br /></td></tr>
-<tr class="memitem:ad0fc41aec9297768e1fe486a964aeb22" id="r_ad0fc41aec9297768e1fe486a964aeb22"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0fc41aec9297768e1fe486a964aeb22">ReadBool</a> (bool ChangeReadPosition=true)</td></tr>
-<tr class="memdesc:ad0fc41aec9297768e1fe486a964aeb22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read bool data.  <br /></td></tr>
-<tr class="memitem:a5eb03f90535f425a966e1ac66896272d" id="r_a5eb03f90535f425a966e1ac66896272d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5eb03f90535f425a966e1ac66896272d">Write</a> (byte ByteValue)</td></tr>
-<tr class="memdesc:a5eb03f90535f425a966e1ac66896272d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write byte data.  <br /></td></tr>
-<tr class="memitem:ab0e9696157432c32da9a4966d6e6b44b" id="r_ab0e9696157432c32da9a4966d6e6b44b"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0e9696157432c32da9a4966d6e6b44b">ReadByte</a> (bool ChangeReadPosition=true)</td></tr>
-<tr class="memdesc:ab0e9696157432c32da9a4966d6e6b44b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read byte data.  <br /></td></tr>
-<tr class="memitem:adf1ec7b82da418a4de889cd8a6438206" id="r_adf1ec7b82da418a4de889cd8a6438206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf1ec7b82da418a4de889cd8a6438206">Write</a> (byte[] ByteArray)</td></tr>
-<tr class="memdesc:adf1ec7b82da418a4de889cd8a6438206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write byte array data.  <br /></td></tr>
-<tr class="memitem:a607d731fd200c7941a11b87a4759467c" id="r_a607d731fd200c7941a11b87a4759467c"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a607d731fd200c7941a11b87a4759467c">ReadBytes</a> (int ArrayLength, bool ChangeReadPosition=true)</td></tr>
-<tr class="memdesc:a607d731fd200c7941a11b87a4759467c"><td class="mdescLeft">&#160;</td><td class="mdescRight">read byte array data  <br /></td></tr>
-<tr class="memitem:a4159dd6eca623beb5f572827825f828d" id="r_a4159dd6eca623beb5f572827825f828d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4159dd6eca623beb5f572827825f828d">Write</a> (short Shortdec)</td></tr>
-<tr class="memdesc:a4159dd6eca623beb5f572827825f828d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write short data.  <br /></td></tr>
-<tr class="memitem:aa391a68c5ffd8539767a349f579b99e9" id="r_aa391a68c5ffd8539767a349f579b99e9"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa391a68c5ffd8539767a349f579b99e9">ReadShort</a> (bool ChangeReadPos=true)</td></tr>
-<tr class="memdesc:aa391a68c5ffd8539767a349f579b99e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read short data.  <br /></td></tr>
+<tr class="memitem:aeb5f61ca78f5214b213f50706f2939bb" id="r_aeb5f61ca78f5214b213f50706f2939bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb5f61ca78f5214b213f50706f2939bb">Write</a> (int data)</td></tr>
+<tr class="memdesc:aeb5f61ca78f5214b213f50706f2939bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write int data.  <br /></td></tr>
+<tr class="memitem:a822c0ba0dce983b19af0adf3b2fc1b9e" id="r_a822c0ba0dce983b19af0adf3b2fc1b9e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a> (bool changeReadPosition=true)</td></tr>
+<tr class="memdesc:a822c0ba0dce983b19af0adf3b2fc1b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read int data.  <br /></td></tr>
+<tr class="memitem:ab1753174b56daa5451994418bef01d99" id="r_ab1753174b56daa5451994418bef01d99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1753174b56daa5451994418bef01d99">Write</a> (float data)</td></tr>
+<tr class="memdesc:ab1753174b56daa5451994418bef01d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write float data.  <br /></td></tr>
+<tr class="memitem:a290a030fd13fc63d1592b175ec44264b" id="r_a290a030fd13fc63d1592b175ec44264b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a290a030fd13fc63d1592b175ec44264b">ReadFloat</a> (bool changeReadPosition=true)</td></tr>
+<tr class="memdesc:a290a030fd13fc63d1592b175ec44264b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read float data.  <br /></td></tr>
+<tr class="memitem:ac0399762e2785ba89550d4b9f2e6b15a" id="r_ac0399762e2785ba89550d4b9f2e6b15a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0399762e2785ba89550d4b9f2e6b15a">Write</a> (bool data)</td></tr>
+<tr class="memdesc:ac0399762e2785ba89550d4b9f2e6b15a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write bool data.  <br /></td></tr>
+<tr class="memitem:ab5cf4198460f21632d02b6423b208910" id="r_ab5cf4198460f21632d02b6423b208910"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5cf4198460f21632d02b6423b208910">ReadBool</a> (bool changeReadPosition=true)</td></tr>
+<tr class="memdesc:ab5cf4198460f21632d02b6423b208910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read bool data.  <br /></td></tr>
+<tr class="memitem:a79bf745e5cc2b74eb35430d4ea0c5e79" id="r_a79bf745e5cc2b74eb35430d4ea0c5e79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79bf745e5cc2b74eb35430d4ea0c5e79">Write</a> (byte data)</td></tr>
+<tr class="memdesc:a79bf745e5cc2b74eb35430d4ea0c5e79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write byte data.  <br /></td></tr>
+<tr class="memitem:a00fc140d579fd906b5b1609836a70947" id="r_a00fc140d579fd906b5b1609836a70947"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00fc140d579fd906b5b1609836a70947">ReadByte</a> (bool changeReadPosition=true)</td></tr>
+<tr class="memdesc:a00fc140d579fd906b5b1609836a70947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read byte data.  <br /></td></tr>
+<tr class="memitem:a9513f7cc415071747aea40ace22a58ad" id="r_a9513f7cc415071747aea40ace22a58ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9513f7cc415071747aea40ace22a58ad">Write</a> (byte[] data)</td></tr>
+<tr class="memdesc:a9513f7cc415071747aea40ace22a58ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write byte array data.  <br /></td></tr>
+<tr class="memitem:af2e6874f82fe3be88b34b944518c82d6" id="r_af2e6874f82fe3be88b34b944518c82d6"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2e6874f82fe3be88b34b944518c82d6">ReadBytes</a> (int arrayLength, bool changeReadPosition=true)</td></tr>
+<tr class="memdesc:af2e6874f82fe3be88b34b944518c82d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">read byte array data  <br /></td></tr>
+<tr class="memitem:a6e19d9a5c9613cfd52b7757956a4f0c0" id="r_a6e19d9a5c9613cfd52b7757956a4f0c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e19d9a5c9613cfd52b7757956a4f0c0">Write</a> (short data)</td></tr>
+<tr class="memdesc:a6e19d9a5c9613cfd52b7757956a4f0c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write short data.  <br /></td></tr>
+<tr class="memitem:a14055eb85c71d3befb094ea1d0faea6d" id="r_a14055eb85c71d3befb094ea1d0faea6d"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14055eb85c71d3befb094ea1d0faea6d">ReadShort</a> (bool changeReadPos=true)</td></tr>
+<tr class="memdesc:a14055eb85c71d3befb094ea1d0faea6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read short data.  <br /></td></tr>
 <tr class="memitem:a4dfee5b30b3aafd788491eaebe69d9f9" id="r_a4dfee5b30b3aafd788491eaebe69d9f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dfee5b30b3aafd788491eaebe69d9f9">Write</a> (Vector3 vector)</td></tr>
 <tr class="memdesc:a4dfee5b30b3aafd788491eaebe69d9f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write Vector3 data.  <br /></td></tr>
-<tr class="memitem:a5aa4303cd62b8d17b1cf3182535dd35b" id="r_a5aa4303cd62b8d17b1cf3182535dd35b"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5aa4303cd62b8d17b1cf3182535dd35b">ReadVector3</a> (bool ChangeReadPos=true)</td></tr>
-<tr class="memdesc:a5aa4303cd62b8d17b1cf3182535dd35b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read Vector3 data.  <br /></td></tr>
-<tr class="memitem:a3e08368045e2ac9c291905036781d2b2" id="r_a3e08368045e2ac9c291905036781d2b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e08368045e2ac9c291905036781d2b2">Write</a> (Quaternion quat)</td></tr>
-<tr class="memdesc:a3e08368045e2ac9c291905036781d2b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write Quaternion data.  <br /></td></tr>
-<tr class="memitem:a56912fb3ce1e58455e486b7e0f52662c" id="r_a56912fb3ce1e58455e486b7e0f52662c"><td class="memItemLeft" align="right" valign="top">Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56912fb3ce1e58455e486b7e0f52662c">ReadQuaternion</a> (bool ChangeReadPos=true)</td></tr>
-<tr class="memdesc:a56912fb3ce1e58455e486b7e0f52662c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read Quaternion data.  <br /></td></tr>
+<tr class="memitem:aa6a9c4114916d343a328c584982df48d" id="r_aa6a9c4114916d343a328c584982df48d"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6a9c4114916d343a328c584982df48d">ReadVector3</a> (bool changeReadPos=true)</td></tr>
+<tr class="memdesc:aa6a9c4114916d343a328c584982df48d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read Vector3 data.  <br /></td></tr>
+<tr class="memitem:a69551aede842dd72918c0a4497258b44" id="r_a69551aede842dd72918c0a4497258b44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69551aede842dd72918c0a4497258b44">Write</a> (Quaternion data)</td></tr>
+<tr class="memdesc:a69551aede842dd72918c0a4497258b44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write Quaternion data.  <br /></td></tr>
+<tr class="memitem:a1d164e20a4e421a28e6b60b24f147bd1" id="r_a1d164e20a4e421a28e6b60b24f147bd1"><td class="memItemLeft" align="right" valign="top">Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d164e20a4e421a28e6b60b24f147bd1">ReadQuaternion</a> (bool changeReadPos=true)</td></tr>
+<tr class="memdesc:a1d164e20a4e421a28e6b60b24f147bd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read Quaternion data.  <br /></td></tr>
 <tr class="memitem:a7c44ce0240177cd57f18d1e38aaf2a52" id="r_a7c44ce0240177cd57f18d1e38aaf2a52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c44ce0240177cd57f18d1e38aaf2a52">ClearPacket</a> (bool clear)</td></tr>
 <tr class="memitem:a3adf900e0869f7d54aaf275db531d637" id="r_a3adf900e0869f7d54aaf275db531d637"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3adf900e0869f7d54aaf275db531d637">ConvertToArray</a> ()</td></tr>
 <tr class="memitem:aa94ea5430ea67fa0538cdaa1fe65299c" id="r_aa94ea5430ea67fa0538cdaa1fe65299c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa94ea5430ea67fa0538cdaa1fe65299c">AddIntAtStart</a> (int number)</td></tr>
@@ -188,14 +188,16 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a0bd352b1ea237eb259335e640aae796f" id="r_a0bd352b1ea237eb259335e640aae796f"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bd352b1ea237eb259335e640aae796f">PacketDataBuffer</a></td></tr>
-<tr class="memdesc:a0bd352b1ea237eb259335e640aae796f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic data list.  <br /></td></tr>
-<tr class="memitem:a39236052ba84debffe99f8bcdbea4a9c" id="r_a39236052ba84debffe99f8bcdbea4a9c"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39236052ba84debffe99f8bcdbea4a9c">DataBuffer</a></td></tr>
-<tr class="memdesc:a39236052ba84debffe99f8bcdbea4a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Byte array for reading data.  <br /></td></tr>
-<tr class="memitem:ab0073c50e2e09bb654b2d93cdcaeb34d" id="r_ab0073c50e2e09bb654b2d93cdcaeb34d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0073c50e2e09bb654b2d93cdcaeb34d">ReadPosition</a></td></tr>
+<tr class="memitem:a3d0d13ba76065cea0b1d25a405c85ab8" id="r_a3d0d13ba76065cea0b1d25a405c85ab8"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a></td></tr>
+<tr class="memdesc:a3d0d13ba76065cea0b1d25a405c85ab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic data list.  <br /></td></tr>
+<tr class="memitem:a5c75fbd7270358949d1518049c024e1d" id="r_a5c75fbd7270358949d1518049c024e1d"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c75fbd7270358949d1518049c024e1d">dataBuffer</a></td></tr>
+<tr class="memdesc:a5c75fbd7270358949d1518049c024e1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Byte array for reading data.  <br /></td></tr>
+<tr class="memitem:a1ac12b6b877f96a8eab2ab5cc019e45c" id="r_a1ac12b6b877f96a8eab2ab5cc019e45c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="class_packet.html" title="Packet class used as data represenation - used for reading and writing of data that will be send or w...">Packet</a> class used as data represenation - used for reading and writing of data that will be send or were received, includes methos for de-/serialization of different data types. </p>
+<div class="textblock"><p><a class="el" href="class_packet.html" title="Packet class used for data representation - used for reading and writing data that will be send or we...">Packet</a> class used for data representation - used for reading and writing data that will be send or were received, includes methods for de-/serialization of different data types. </p>
+
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00009">9</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
 </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
 <a id="ab51148f7134cedf405521073cae0cb09" name="ab51148f7134cedf405521073cae0cb09"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab51148f7134cedf405521073cae0cb09">&#9670;&#160;</a></span>ClientPackets</h2>
@@ -209,7 +211,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Defined packets sent to Server by <a class="el" href="class_client.html">Client</a>. </p>
+<p>Defined packets sent to Server by <a class="el" href="class_client.html" title="Main MonoBehaviour singleton class handling the client-side networking logic (TCP,...">Client</a>. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab51148f7134cedf405521073cae0cb09af57d48f0706a750444b0f25001cd70e3" name="ab51148f7134cedf405521073cae0cb09af57d48f0706a750444b0f25001cd70e3"></a>welcomeReceived&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ab51148f7134cedf405521073cae0cb09ae74a2c38fc2b06413b7415c8fc59b843" name="ab51148f7134cedf405521073cae0cb09ae74a2c38fc2b06413b7415c8fc59b843"></a>MeassureRequest&#160;</td><td class="fielddoc"></td></tr>
@@ -224,6 +226,21 @@ Private Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="ab51148f7134cedf405521073cae0cb09af01e3be31d8700873b380c0e736854c1" name="ab51148f7134cedf405521073cae0cb09af01e3be31d8700873b380c0e736854c1"></a>ThroughputRequest&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00351">351</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  352</span>    {</div>
+<div class="line"><span class="lineno">  353</span>        welcomeReceived = 1, </div>
+<div class="line"><span class="lineno">  354</span>        MeassureRequest,</div>
+<div class="line"><span class="lineno">  355</span>        DisconnectRequest,</div>
+<div class="line"><span class="lineno">  356</span>        MessageToUserRequest,</div>
+<div class="line"><span class="lineno">  357</span>        MessageToAllRequest,</div>
+<div class="line"><span class="lineno">  358</span>        HmacKey,</div>
+<div class="line"><span class="lineno">  359</span>        AutToken,</div>
+<div class="line"><span class="lineno">  360</span>        TransformChange,</div>
+<div class="line"><span class="lineno">  361</span>        AnimationChange,</div>
+<div class="line"><span class="lineno">  362</span>        BandwidthRequest,</div>
+<div class="line"><span class="lineno">  363</span>        ThroughputRequest</div>
+<div class="line"><span class="lineno">  364</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af5da800782dec1cfe8f3b8dcf7b0b0d7" name="af5da800782dec1cfe8f3b8dcf7b0b0d7"></a>
@@ -254,6 +271,22 @@ Private Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="af5da800782dec1cfe8f3b8dcf7b0b0d7a6f8c52c44f9beaa16c0a67902254b0c4" name="af5da800782dec1cfe8f3b8dcf7b0b0d7a6f8c52c44f9beaa16c0a67902254b0c4"></a>ThroughputReply&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00332">332</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  333</span>    {</div>
+<div class="line"><span class="lineno">  334</span>        welcome = 1, </div>
+<div class="line"><span class="lineno">  335</span>        SpawnUser,</div>
+<div class="line"><span class="lineno">  336</span>        DisconnectUser,</div>
+<div class="line"><span class="lineno">  337</span>        Latency,</div>
+<div class="line"><span class="lineno">  338</span>        Message,</div>
+<div class="line"><span class="lineno">  339</span>        HmacKey,</div>
+<div class="line"><span class="lineno">  340</span>        AuthToken,</div>
+<div class="line"><span class="lineno">  341</span>        MessageAll,</div>
+<div class="line"><span class="lineno">  342</span>        TransformUpdate,</div>
+<div class="line"><span class="lineno">  343</span>        AnimationUpdate,</div>
+<div class="line"><span class="lineno">  344</span>        BandwidthReply,</div>
+<div class="line"><span class="lineno">  345</span>        ThroughputReply</div>
+<div class="line"><span class="lineno">  346</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -272,10 +305,18 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00023">23</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a> = 0; </div>
+<div class="line"><span class="lineno">   26</span>        <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a> = <span class="keyword">new</span> List&lt;byte&gt;(); </div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+<div class="ttc" id="aclass_packet_html_a1ac12b6b877f96a8eab2ab5cc019e45c"><div class="ttname"><a href="#a1ac12b6b877f96a8eab2ab5cc019e45c">Packet.readPosition</a></div><div class="ttdeci">int readPosition</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00020">Packet.cs:20</a></div></div>
+<div class="ttc" id="aclass_packet_html_a3d0d13ba76065cea0b1d25a405c85ab8"><div class="ttname"><a href="#a3d0d13ba76065cea0b1d25a405c85ab8">Packet.packetDataBuffer</a></div><div class="ttdeci">List&lt; byte &gt; packetDataBuffer</div><div class="ttdoc">Dynamic data list.</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00014">Packet.cs:14</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a7c09410d03e1aaa3d00fc0a102ba8f9e" name="a7c09410d03e1aaa3d00fc0a102ba8f9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c09410d03e1aaa3d00fc0a102ba8f9e">&#9670;&#160;</a></span>Packet() <span class="overload">[2/3]</span></h2>
+<a id="a0b79b0939614e28650c1a39999143f62" name="a0b79b0939614e28650c1a39999143f62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b79b0939614e28650c1a39999143f62">&#9670;&#160;</a></span>Packet() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -283,16 +324,24 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">Packet.Packet </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>PacketId</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>packetId</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00028">28</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a> = 0;  </div>
+<div class="line"><span class="lineno">   31</span>        <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a> = <span class="keyword">new</span> List&lt;byte&gt;(); </div>
+<div class="line"><span class="lineno">   32</span>        <a class="code hl_function" href="#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(packetId); </div>
+<div class="line"><span class="lineno">   33</span>    }</div>
+<div class="ttc" id="aclass_packet_html_a9ba5bf13c5cf2e63a362062896ee18a6"><div class="ttname"><a href="#a9ba5bf13c5cf2e63a362062896ee18a6">Packet.Write</a></div><div class="ttdeci">void Write(string text)</div><div class="ttdoc">Write string data.</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00044">Packet.cs:44</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="ab06ee2c451ef1f217cb7977fa8f66afc" name="ab06ee2c451ef1f217cb7977fa8f66afc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab06ee2c451ef1f217cb7977fa8f66afc">&#9670;&#160;</a></span>Packet() <span class="overload">[3/3]</span></h2>
+<a id="a567eb98ab3c0791d8da2104ca752b68a" name="a567eb98ab3c0791d8da2104ca752b68a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a567eb98ab3c0791d8da2104ca752b68a">&#9670;&#160;</a></span>Packet() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -300,12 +349,20 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">Packet.Packet </td>
           <td>(</td>
-          <td class="paramtype">byte[]</td>          <td class="paramname"><span class="paramname"><em>Data</em></span></td><td>)</td>
+          <td class="paramtype">byte[]</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00034">34</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a> = 0;  </div>
+<div class="line"><span class="lineno">   37</span>        <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a> = <span class="keyword">new</span> List&lt;byte&gt;(); </div>
+<div class="line"><span class="lineno">   38</span>        <a class="code hl_function" href="#a1e6956b6dc69c995712572f99fc5b152">AddBytesToBuffers</a>(data); </div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+<div class="ttc" id="aclass_packet_html_a1e6956b6dc69c995712572f99fc5b152"><div class="ttname"><a href="#a1e6956b6dc69c995712572f99fc5b152">Packet.AddBytesToBuffers</a></div><div class="ttdeci">void AddBytesToBuffers(byte[] Data)</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00309">Packet.cs:309</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -324,6 +381,13 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00309">309</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  310</span>    {</div>
+<div class="line"><span class="lineno">  311</span>        <a class="code hl_function" href="#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(Data); </div>
+<div class="line"><span class="lineno">  312</span>        <a class="code hl_variable" href="#a5c75fbd7270358949d1518049c024e1d">dataBuffer</a> = <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.ToArray(); </div>
+<div class="line"><span class="lineno">  313</span>    }</div>
+<div class="ttc" id="aclass_packet_html_a5c75fbd7270358949d1518049c024e1d"><div class="ttname"><a href="#a5c75fbd7270358949d1518049c024e1d">Packet.dataBuffer</a></div><div class="ttdeci">byte[] dataBuffer</div><div class="ttdoc">Byte array for reading data.</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00018">Packet.cs:18</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa94ea5430ea67fa0538cdaa1fe65299c" name="aa94ea5430ea67fa0538cdaa1fe65299c"></a>
@@ -341,6 +405,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00292">292</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  293</span>    {</div>
+<div class="line"><span class="lineno">  294</span>        <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.InsertRange(0, BitConverter.GetBytes(number)); </div>
+<div class="line"><span class="lineno">  295</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7c44ce0240177cd57f18d1e38aaf2a52" name="a7c44ce0240177cd57f18d1e38aaf2a52"></a>
@@ -358,6 +427,20 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00274">274</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  275</span>    {</div>
+<div class="line"><span class="lineno">  276</span>        <span class="keywordflow">if</span> (clear == <span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">  277</span>        {</div>
+<div class="line"><span class="lineno">  278</span>            <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a> -= 4; </div>
+<div class="line"><span class="lineno">  279</span>        }</div>
+<div class="line"><span class="lineno">  280</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  281</span>        {</div>
+<div class="line"><span class="lineno">  282</span>            <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.Clear();</div>
+<div class="line"><span class="lineno">  283</span>            <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a> = 0;</div>
+<div class="line"><span class="lineno">  284</span>            <a class="code hl_variable" href="#a5c75fbd7270358949d1518049c024e1d">dataBuffer</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  285</span>        }</div>
+<div class="line"><span class="lineno">  286</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3adf900e0869f7d54aaf275db531d637" name="a3adf900e0869f7d54aaf275db531d637"></a>
@@ -375,6 +458,12 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00287">287</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  288</span>    {</div>
+<div class="line"><span class="lineno">  289</span>        <a class="code hl_variable" href="#a5c75fbd7270358949d1518049c024e1d">dataBuffer</a> = <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.ToArray();</div>
+<div class="line"><span class="lineno">  290</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a5c75fbd7270358949d1518049c024e1d">dataBuffer</a>;</div>
+<div class="line"><span class="lineno">  291</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4350f8d19ce8152d7024104ad81cf6d6" name="a4350f8d19ce8152d7024104ad81cf6d6"></a>
@@ -392,6 +481,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00300">300</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  301</span>    {</div>
+<div class="line"><span class="lineno">  302</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.Count;</div>
+<div class="line"><span class="lineno">  303</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0427eb53bbe3b677288dce8054c61e9f" name="a0427eb53bbe3b677288dce8054c61e9f"></a>
@@ -411,6 +505,11 @@ Private Attributes</h2></td></tr>
 
 <p>Return data without HMAC. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00317">317</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  318</span>    {</div>
+<div class="line"><span class="lineno">  319</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.GetRange(0, <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.Count - 32).ToArray();</div>
+<div class="line"><span class="lineno">  320</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5353c75f453f9e021f2f0b9e105903a9" name="a5353c75f453f9e021f2f0b9e105903a9"></a>
@@ -430,10 +529,15 @@ Private Attributes</h2></td></tr>
 
 <p>return HMAC from data </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00324">324</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  325</span>    {</div>
+<div class="line"><span class="lineno">  326</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.GetRange(<a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.Count - 32, 32).ToArray();</div>
+<div class="line"><span class="lineno">  327</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="ad0fc41aec9297768e1fe486a964aeb22" name="ad0fc41aec9297768e1fe486a964aeb22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0fc41aec9297768e1fe486a964aeb22">&#9670;&#160;</a></span>ReadBool()</h2>
+<a id="ab5cf4198460f21632d02b6423b208910" name="ab5cf4198460f21632d02b6423b208910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5cf4198460f21632d02b6423b208910">&#9670;&#160;</a></span>ReadBool()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -441,7 +545,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">bool Packet.ReadBool </td>
           <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>ChangeReadPosition</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>changeReadPosition</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -449,10 +553,27 @@ Private Attributes</h2></td></tr>
 
 <p>Read bool data. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00134">134</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>    {</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.Count &gt; <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a>) </div>
+<div class="line"><span class="lineno">  137</span>        {</div>
+<div class="line"><span class="lineno">  138</span>            <span class="keywordtype">bool</span> data = BitConverter.ToBoolean(<a class="code hl_variable" href="#a5c75fbd7270358949d1518049c024e1d">dataBuffer</a>, <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a>);</div>
+<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">if</span> (changeReadPosition)</div>
+<div class="line"><span class="lineno">  140</span>            {</div>
+<div class="line"><span class="lineno">  141</span>                <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a> += 1;</div>
+<div class="line"><span class="lineno">  142</span>            }</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">return</span> data; </div>
+<div class="line"><span class="lineno">  144</span>        }</div>
+<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  146</span>        {</div>
+<div class="line"><span class="lineno">  147</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Error reading bool&quot;</span>);</div>
+<div class="line"><span class="lineno">  148</span>        }</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="ab0e9696157432c32da9a4966d6e6b44b" name="ab0e9696157432c32da9a4966d6e6b44b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0e9696157432c32da9a4966d6e6b44b">&#9670;&#160;</a></span>ReadByte()</h2>
+<a id="a00fc140d579fd906b5b1609836a70947" name="a00fc140d579fd906b5b1609836a70947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00fc140d579fd906b5b1609836a70947">&#9670;&#160;</a></span>ReadByte()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -460,7 +581,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">byte Packet.ReadByte </td>
           <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>ChangeReadPosition</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>changeReadPosition</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -468,10 +589,27 @@ Private Attributes</h2></td></tr>
 
 <p>Read byte data. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00161">161</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  162</span>    {</div>
+<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.Count &gt; <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a>)</div>
+<div class="line"><span class="lineno">  164</span>        {</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordtype">byte</span> data = <a class="code hl_variable" href="#a5c75fbd7270358949d1518049c024e1d">dataBuffer</a>[<a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a>];</div>
+<div class="line"><span class="lineno">  166</span>            <span class="keywordflow">if</span> (changeReadPosition == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  167</span>            {</div>
+<div class="line"><span class="lineno">  168</span>                <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a> += 1;</div>
+<div class="line"><span class="lineno">  169</span>            }</div>
+<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">return</span> data;</div>
+<div class="line"><span class="lineno">  171</span>        }</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  173</span>        {</div>
+<div class="line"><span class="lineno">  174</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Error reading byte&quot;</span>);</div>
+<div class="line"><span class="lineno">  175</span>        }</div>
+<div class="line"><span class="lineno">  176</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a607d731fd200c7941a11b87a4759467c" name="a607d731fd200c7941a11b87a4759467c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a607d731fd200c7941a11b87a4759467c">&#9670;&#160;</a></span>ReadBytes()</h2>
+<a id="af2e6874f82fe3be88b34b944518c82d6" name="af2e6874f82fe3be88b34b944518c82d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2e6874f82fe3be88b34b944518c82d6">&#9670;&#160;</a></span>ReadBytes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -479,22 +617,39 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">byte[] Packet.ReadBytes </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ArrayLength</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>arrayLength</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>ChangeReadPosition</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>changeReadPosition</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>read byte array data </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00188">188</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  189</span>    {</div>
+<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.Count &gt; <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a>)</div>
+<div class="line"><span class="lineno">  191</span>        {</div>
+<div class="line"><span class="lineno">  192</span>            <span class="keywordtype">byte</span>[] ByteArray = <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.GetRange(<a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a>, arrayLength).ToArray();</div>
+<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">if</span> (changeReadPosition == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  194</span>            {</div>
+<div class="line"><span class="lineno">  195</span>                <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a> += arrayLength;</div>
+<div class="line"><span class="lineno">  196</span>            }</div>
+<div class="line"><span class="lineno">  197</span>            <span class="keywordflow">return</span> ByteArray;</div>
+<div class="line"><span class="lineno">  198</span>        }</div>
+<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  200</span>        {</div>
+<div class="line"><span class="lineno">  201</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Error reading byte array&quot;</span>);</div>
+<div class="line"><span class="lineno">  202</span>        }</div>
+<div class="line"><span class="lineno">  203</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a0b31de8ff9dfd3bd65129a99c7ebf9de" name="a0b31de8ff9dfd3bd65129a99c7ebf9de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b31de8ff9dfd3bd65129a99c7ebf9de">&#9670;&#160;</a></span>ReadFloat()</h2>
+<a id="a290a030fd13fc63d1592b175ec44264b" name="a290a030fd13fc63d1592b175ec44264b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a290a030fd13fc63d1592b175ec44264b">&#9670;&#160;</a></span>ReadFloat()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -502,7 +657,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">float Packet.ReadFloat </td>
           <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>ChangeReadPosition</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>changeReadPosition</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -510,10 +665,27 @@ Private Attributes</h2></td></tr>
 
 <p>Read float data. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00107">107</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>    {</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.Count &gt; <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a>) </div>
+<div class="line"><span class="lineno">  110</span>        {</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keywordtype">float</span> floatingPointNum = BitConverter.ToSingle(<a class="code hl_variable" href="#a5c75fbd7270358949d1518049c024e1d">dataBuffer</a>, <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a>);</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">if</span> (changeReadPosition == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  113</span>            {</div>
+<div class="line"><span class="lineno">  114</span>                <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a> += 4;</div>
+<div class="line"><span class="lineno">  115</span>            }</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">return</span> floatingPointNum; </div>
+<div class="line"><span class="lineno">  117</span>        }</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  119</span>        {</div>
+<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Error reading float&quot;</span>);</div>
+<div class="line"><span class="lineno">  121</span>        }</div>
+<div class="line"><span class="lineno">  122</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="ab29acd0ab016eca8eb9f84ac84a2658e" name="ab29acd0ab016eca8eb9f84ac84a2658e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab29acd0ab016eca8eb9f84ac84a2658e">&#9670;&#160;</a></span>ReadInt()</h2>
+<a id="a822c0ba0dce983b19af0adf3b2fc1b9e" name="a822c0ba0dce983b19af0adf3b2fc1b9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a822c0ba0dce983b19af0adf3b2fc1b9e">&#9670;&#160;</a></span>ReadInt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -521,7 +693,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">int Packet.ReadInt </td>
           <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>ChangeReadPosition</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>changeReadPosition</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -529,10 +701,27 @@ Private Attributes</h2></td></tr>
 
 <p>Read int data. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00080">80</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.Count &gt; <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a>) </div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            <span class="keywordtype">int</span> data = BitConverter.ToInt32(<a class="code hl_variable" href="#a5c75fbd7270358949d1518049c024e1d">dataBuffer</a>, <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a>); </div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> (changeReadPosition == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">   86</span>            {</div>
+<div class="line"><span class="lineno">   87</span>                <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a> += 4;</div>
+<div class="line"><span class="lineno">   88</span>            }</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">return</span> data; </div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Error reading int&quot;</span>);</div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+<div class="line"><span class="lineno">   95</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a56912fb3ce1e58455e486b7e0f52662c" name="a56912fb3ce1e58455e486b7e0f52662c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56912fb3ce1e58455e486b7e0f52662c">&#9670;&#160;</a></span>ReadQuaternion()</h2>
+<a id="a1d164e20a4e421a28e6b60b24f147bd1" name="a1d164e20a4e421a28e6b60b24f147bd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d164e20a4e421a28e6b60b24f147bd1">&#9670;&#160;</a></span>ReadQuaternion()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -540,7 +729,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">Quaternion Packet.ReadQuaternion </td>
           <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>ChangeReadPos</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>changeReadPos</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -548,10 +737,20 @@ Private Attributes</h2></td></tr>
 
 <p>Read Quaternion data. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00263">263</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  264</span>    {</div>
+<div class="line"><span class="lineno">  265</span>        <span class="keywordtype">float</span> x = <a class="code hl_function" href="#a290a030fd13fc63d1592b175ec44264b">ReadFloat</a>(changeReadPos);</div>
+<div class="line"><span class="lineno">  266</span>        <span class="keywordtype">float</span> y = <a class="code hl_function" href="#a290a030fd13fc63d1592b175ec44264b">ReadFloat</a>(changeReadPos);</div>
+<div class="line"><span class="lineno">  267</span>        <span class="keywordtype">float</span> z = <a class="code hl_function" href="#a290a030fd13fc63d1592b175ec44264b">ReadFloat</a>(changeReadPos);</div>
+<div class="line"><span class="lineno">  268</span>        <span class="keywordtype">float</span> w = <a class="code hl_function" href="#a290a030fd13fc63d1592b175ec44264b">ReadFloat</a>(changeReadPos);</div>
+<div class="line"><span class="lineno">  269</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Quaternion(x, y, z, w);</div>
+<div class="line"><span class="lineno">  270</span>    }</div>
+<div class="ttc" id="aclass_packet_html_a290a030fd13fc63d1592b175ec44264b"><div class="ttname"><a href="#a290a030fd13fc63d1592b175ec44264b">Packet.ReadFloat</a></div><div class="ttdeci">float ReadFloat(bool changeReadPosition=true)</div><div class="ttdoc">Read float data.</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00107">Packet.cs:107</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="aa391a68c5ffd8539767a349f579b99e9" name="aa391a68c5ffd8539767a349f579b99e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa391a68c5ffd8539767a349f579b99e9">&#9670;&#160;</a></span>ReadShort()</h2>
+<a id="a14055eb85c71d3befb094ea1d0faea6d" name="a14055eb85c71d3befb094ea1d0faea6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14055eb85c71d3befb094ea1d0faea6d">&#9670;&#160;</a></span>ReadShort()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -559,7 +758,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">short Packet.ReadShort </td>
           <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>ChangeReadPos</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>changeReadPos</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -567,6 +766,23 @@ Private Attributes</h2></td></tr>
 
 <p>Read short data. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00215">215</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  216</span>    {</div>
+<div class="line"><span class="lineno">  217</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.Count &gt; <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a>)</div>
+<div class="line"><span class="lineno">  218</span>        {</div>
+<div class="line"><span class="lineno">  219</span>            <span class="keywordtype">short</span> data = BitConverter.ToInt16(<a class="code hl_variable" href="#a5c75fbd7270358949d1518049c024e1d">dataBuffer</a>, <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a>);</div>
+<div class="line"><span class="lineno">  220</span>            <span class="keywordflow">if</span> (changeReadPos == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  221</span>            {</div>
+<div class="line"><span class="lineno">  222</span>                <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a> += 2;</div>
+<div class="line"><span class="lineno">  223</span>            }</div>
+<div class="line"><span class="lineno">  224</span>            <span class="keywordflow">return</span> data;</div>
+<div class="line"><span class="lineno">  225</span>        }</div>
+<div class="line"><span class="lineno">  226</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  227</span>        {</div>
+<div class="line"><span class="lineno">  228</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Error reading short&quot;</span>);</div>
+<div class="line"><span class="lineno">  229</span>        }</div>
+<div class="line"><span class="lineno">  230</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af48e5f82f59f0f50a09e0f2bb1aa3df9" name="af48e5f82f59f0f50a09e0f2bb1aa3df9"></a>
@@ -586,10 +802,29 @@ Private Attributes</h2></td></tr>
 
 <p>Read string data. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00052">52</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   55</span>        {</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordtype">int</span> textLength = <a class="code hl_function" href="#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a>(); </div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordtype">string</span> text = Encoding.ASCII.GetString(<a class="code hl_variable" href="#a5c75fbd7270358949d1518049c024e1d">dataBuffer</a>, <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a>, textLength); </div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">if</span> (ChangeReadPosition == <span class="keyword">true</span> &amp;&amp; text.Length &gt; 0) </div>
+<div class="line"><span class="lineno">   59</span>            {</div>
+<div class="line"><span class="lineno">   60</span>                <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a> += textLength; </div>
+<div class="line"><span class="lineno">   61</span>            }</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">return</span> text; </div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">   65</span>        {</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Error reading string&quot;</span>);</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aclass_packet_html_a822c0ba0dce983b19af0adf3b2fc1b9e"><div class="ttname"><a href="#a822c0ba0dce983b19af0adf3b2fc1b9e">Packet.ReadInt</a></div><div class="ttdeci">int ReadInt(bool changeReadPosition=true)</div><div class="ttdoc">Read int data.</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00080">Packet.cs:80</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a5aa4303cd62b8d17b1cf3182535dd35b" name="a5aa4303cd62b8d17b1cf3182535dd35b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5aa4303cd62b8d17b1cf3182535dd35b">&#9670;&#160;</a></span>ReadVector3()</h2>
+<a id="aa6a9c4114916d343a328c584982df48d" name="aa6a9c4114916d343a328c584982df48d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6a9c4114916d343a328c584982df48d">&#9670;&#160;</a></span>ReadVector3()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -597,7 +832,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">Vector3 Packet.ReadVector3 </td>
           <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>ChangeReadPos</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>changeReadPos</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -605,6 +840,14 @@ Private Attributes</h2></td></tr>
 
 <p>Read Vector3 data. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00243">243</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  244</span>    {</div>
+<div class="line"><span class="lineno">  245</span>        <span class="keywordtype">float</span> x = <a class="code hl_function" href="#a290a030fd13fc63d1592b175ec44264b">ReadFloat</a>(changeReadPos);</div>
+<div class="line"><span class="lineno">  246</span>        <span class="keywordtype">float</span> y = <a class="code hl_function" href="#a290a030fd13fc63d1592b175ec44264b">ReadFloat</a>(changeReadPos);</div>
+<div class="line"><span class="lineno">  247</span>        <span class="keywordtype">float</span> z = <a class="code hl_function" href="#a290a030fd13fc63d1592b175ec44264b">ReadFloat</a>(changeReadPos);</div>
+<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Vector3(x, y, z);</div>
+<div class="line"><span class="lineno">  249</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1c9d20ffde4981855184b32ec05d9691" name="a1c9d20ffde4981855184b32ec05d9691"></a>
@@ -622,6 +865,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00296">296</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  297</span>    {</div>
+<div class="line"><span class="lineno">  298</span>        <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.InsertRange(0, BitConverter.GetBytes(<a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.Count)); </div>
+<div class="line"><span class="lineno">  299</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a804b6a5db6900949d9108f7e905b90c8" name="a804b6a5db6900949d9108f7e905b90c8"></a>
@@ -639,10 +887,17 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00304">304</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  305</span>    {</div>
+<div class="line"><span class="lineno">  306</span>        <span class="keywordtype">int</span> actual_lenghth = <a class="code hl_function" href="#a4350f8d19ce8152d7024104ad81cf6d6">DataLength</a>();</div>
+<div class="line"><span class="lineno">  307</span>        <span class="keywordflow">return</span> actual_lenghth - <a class="code hl_variable" href="#a1ac12b6b877f96a8eab2ab5cc019e45c">readPosition</a>; </div>
+<div class="line"><span class="lineno">  308</span>    }</div>
+<div class="ttc" id="aclass_packet_html_a4350f8d19ce8152d7024104ad81cf6d6"><div class="ttname"><a href="#a4350f8d19ce8152d7024104ad81cf6d6">Packet.DataLength</a></div><div class="ttdeci">int DataLength()</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00300">Packet.cs:300</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a5472562d70da7d95b3d912debd4e0cb9" name="a5472562d70da7d95b3d912debd4e0cb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5472562d70da7d95b3d912debd4e0cb9">&#9670;&#160;</a></span>Write() <span class="overload">[1/9]</span></h2>
+<a id="ac0399762e2785ba89550d4b9f2e6b15a" name="ac0399762e2785ba89550d4b9f2e6b15a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0399762e2785ba89550d4b9f2e6b15a">&#9670;&#160;</a></span>Write() <span class="overload">[1/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -650,7 +905,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Packet.Write </td>
           <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>trueFalseValue</em></span></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -658,10 +913,15 @@ Private Attributes</h2></td></tr>
 
 <p>Write bool data. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00127">127</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>    {</div>
+<div class="line"><span class="lineno">  129</span>        <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.AddRange(BitConverter.GetBytes(data));</div>
+<div class="line"><span class="lineno">  130</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a5eb03f90535f425a966e1ac66896272d" name="a5eb03f90535f425a966e1ac66896272d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5eb03f90535f425a966e1ac66896272d">&#9670;&#160;</a></span>Write() <span class="overload">[2/9]</span></h2>
+<a id="a79bf745e5cc2b74eb35430d4ea0c5e79" name="a79bf745e5cc2b74eb35430d4ea0c5e79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79bf745e5cc2b74eb35430d4ea0c5e79">&#9670;&#160;</a></span>Write() <span class="overload">[2/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -669,7 +929,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Packet.Write </td>
           <td>(</td>
-          <td class="paramtype">byte</td>          <td class="paramname"><span class="paramname"><em>ByteValue</em></span></td><td>)</td>
+          <td class="paramtype">byte</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -677,10 +937,15 @@ Private Attributes</h2></td></tr>
 
 <p>Write byte data. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00154">154</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  155</span>    {</div>
+<div class="line"><span class="lineno">  156</span>        <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.Add(data);</div>
+<div class="line"><span class="lineno">  157</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="adf1ec7b82da418a4de889cd8a6438206" name="adf1ec7b82da418a4de889cd8a6438206"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf1ec7b82da418a4de889cd8a6438206">&#9670;&#160;</a></span>Write() <span class="overload">[3/9]</span></h2>
+<a id="a9513f7cc415071747aea40ace22a58ad" name="a9513f7cc415071747aea40ace22a58ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9513f7cc415071747aea40ace22a58ad">&#9670;&#160;</a></span>Write() <span class="overload">[3/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -688,7 +953,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Packet.Write </td>
           <td>(</td>
-          <td class="paramtype">byte[]</td>          <td class="paramname"><span class="paramname"><em>ByteArray</em></span></td><td>)</td>
+          <td class="paramtype">byte[]</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -696,10 +961,15 @@ Private Attributes</h2></td></tr>
 
 <p>Write byte array data. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00181">181</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  182</span>    {</div>
+<div class="line"><span class="lineno">  183</span>        <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.AddRange(data);</div>
+<div class="line"><span class="lineno">  184</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="abce718a12cc98716c0d423a8c2c6c71c" name="abce718a12cc98716c0d423a8c2c6c71c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abce718a12cc98716c0d423a8c2c6c71c">&#9670;&#160;</a></span>Write() <span class="overload">[4/9]</span></h2>
+<a id="ab1753174b56daa5451994418bef01d99" name="ab1753174b56daa5451994418bef01d99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1753174b56daa5451994418bef01d99">&#9670;&#160;</a></span>Write() <span class="overload">[4/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -707,7 +977,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Packet.Write </td>
           <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>floatingPointNum</em></span></td><td>)</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -715,10 +985,15 @@ Private Attributes</h2></td></tr>
 
 <p>Write float data. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00100">100</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>    {</div>
+<div class="line"><span class="lineno">  102</span>        <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.AddRange(BitConverter.GetBytes(data));</div>
+<div class="line"><span class="lineno">  103</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a14347e1681a1748803bcade0d41ad2a8" name="a14347e1681a1748803bcade0d41ad2a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14347e1681a1748803bcade0d41ad2a8">&#9670;&#160;</a></span>Write() <span class="overload">[5/9]</span></h2>
+<a id="aeb5f61ca78f5214b213f50706f2939bb" name="aeb5f61ca78f5214b213f50706f2939bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb5f61ca78f5214b213f50706f2939bb">&#9670;&#160;</a></span>Write() <span class="overload">[5/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -726,7 +1001,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Packet.Write </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>decimalNum</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -734,10 +1009,15 @@ Private Attributes</h2></td></tr>
 
 <p>Write int data. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00073">73</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>    {</div>
+<div class="line"><span class="lineno">   75</span>        <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.AddRange(BitConverter.GetBytes(data));</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a3e08368045e2ac9c291905036781d2b2" name="a3e08368045e2ac9c291905036781d2b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e08368045e2ac9c291905036781d2b2">&#9670;&#160;</a></span>Write() <span class="overload">[6/9]</span></h2>
+<a id="a69551aede842dd72918c0a4497258b44" name="a69551aede842dd72918c0a4497258b44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69551aede842dd72918c0a4497258b44">&#9670;&#160;</a></span>Write() <span class="overload">[6/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -745,7 +1025,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Packet.Write </td>
           <td>(</td>
-          <td class="paramtype">Quaternion</td>          <td class="paramname"><span class="paramname"><em>quat</em></span></td><td>)</td>
+          <td class="paramtype">Quaternion</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -753,10 +1033,18 @@ Private Attributes</h2></td></tr>
 
 <p>Write Quaternion data. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00253">253</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  254</span>    {</div>
+<div class="line"><span class="lineno">  255</span>        <a class="code hl_function" href="#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(data.x);</div>
+<div class="line"><span class="lineno">  256</span>        <a class="code hl_function" href="#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(data.y);</div>
+<div class="line"><span class="lineno">  257</span>        <a class="code hl_function" href="#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(data.z);</div>
+<div class="line"><span class="lineno">  258</span>        <a class="code hl_function" href="#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(data.w);</div>
+<div class="line"><span class="lineno">  259</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a4159dd6eca623beb5f572827825f828d" name="a4159dd6eca623beb5f572827825f828d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4159dd6eca623beb5f572827825f828d">&#9670;&#160;</a></span>Write() <span class="overload">[7/9]</span></h2>
+<a id="a6e19d9a5c9613cfd52b7757956a4f0c0" name="a6e19d9a5c9613cfd52b7757956a4f0c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e19d9a5c9613cfd52b7757956a4f0c0">&#9670;&#160;</a></span>Write() <span class="overload">[7/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -764,7 +1052,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Packet.Write </td>
           <td>(</td>
-          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>Shortdec</em></span></td><td>)</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -772,6 +1060,11 @@ Private Attributes</h2></td></tr>
 
 <p>Write short data. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00208">208</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  209</span>    {</div>
+<div class="line"><span class="lineno">  210</span>        <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.AddRange(BitConverter.GetBytes(data));</div>
+<div class="line"><span class="lineno">  211</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9ba5bf13c5cf2e63a362062896ee18a6" name="a9ba5bf13c5cf2e63a362062896ee18a6"></a>
@@ -791,6 +1084,12 @@ Private Attributes</h2></td></tr>
 
 <p>Write string data. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00044">44</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        <a class="code hl_function" href="#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(text.Length); </div>
+<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="#a3d0d13ba76065cea0b1d25a405c85ab8">packetDataBuffer</a>.AddRange(Encoding.ASCII.GetBytes(text));</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4dfee5b30b3aafd788491eaebe69d9f9" name="a4dfee5b30b3aafd788491eaebe69d9f9"></a>
@@ -810,11 +1109,18 @@ Private Attributes</h2></td></tr>
 
 <p>Write Vector3 data. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00234">234</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  235</span>    {</div>
+<div class="line"><span class="lineno">  236</span>        <a class="code hl_function" href="#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(vector.x);</div>
+<div class="line"><span class="lineno">  237</span>        <a class="code hl_function" href="#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(vector.y);</div>
+<div class="line"><span class="lineno">  238</span>        <a class="code hl_function" href="#a9ba5bf13c5cf2e63a362062896ee18a6">Write</a>(vector.z);</div>
+<div class="line"><span class="lineno">  239</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="a39236052ba84debffe99f8bcdbea4a9c" name="a39236052ba84debffe99f8bcdbea4a9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39236052ba84debffe99f8bcdbea4a9c">&#9670;&#160;</a></span>DataBuffer</h2>
+<a id="a5c75fbd7270358949d1518049c024e1d" name="a5c75fbd7270358949d1518049c024e1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c75fbd7270358949d1518049c024e1d">&#9670;&#160;</a></span>dataBuffer</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -823,7 +1129,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">byte [] Packet.DataBuffer</td>
+          <td class="memname">byte [] Packet.dataBuffer</td>
         </tr>
       </table>
   </td>
@@ -835,10 +1141,12 @@ Private Attributes</h2></td></tr>
 
 <p>Byte array for reading data. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00018">18</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+
 </div>
 </div>
-<a id="a0bd352b1ea237eb259335e640aae796f" name="a0bd352b1ea237eb259335e640aae796f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bd352b1ea237eb259335e640aae796f">&#9670;&#160;</a></span>PacketDataBuffer</h2>
+<a id="a3d0d13ba76065cea0b1d25a405c85ab8" name="a3d0d13ba76065cea0b1d25a405c85ab8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d0d13ba76065cea0b1d25a405c85ab8">&#9670;&#160;</a></span>packetDataBuffer</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -847,7 +1155,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;byte&gt; Packet.PacketDataBuffer</td>
+          <td class="memname">List&lt;byte&gt; Packet.packetDataBuffer</td>
         </tr>
       </table>
   </td>
@@ -859,10 +1167,12 @@ Private Attributes</h2></td></tr>
 
 <p>Dynamic data list. </p>
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00014">14</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+
 </div>
 </div>
-<a id="ab0073c50e2e09bb654b2d93cdcaeb34d" name="ab0073c50e2e09bb654b2d93cdcaeb34d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0073c50e2e09bb654b2d93cdcaeb34d">&#9670;&#160;</a></span>ReadPosition</h2>
+<a id="a1ac12b6b877f96a8eab2ab5cc019e45c" name="a1ac12b6b877f96a8eab2ab5cc019e45c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ac12b6b877f96a8eab2ab5cc019e45c">&#9670;&#160;</a></span>readPosition</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -871,7 +1181,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Packet.ReadPosition</td>
+          <td class="memname">int Packet.readPosition</td>
         </tr>
       </table>
   </td>
@@ -881,11 +1191,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_packet_8cs_source.html#l00020">20</a> of file <a class="el" href="_packet_8cs_source.html">Packet.cs</a>.</p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/NetworkLibrary/Scripts/<a class="el" href="_packet_8cs.html">Packet.cs</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

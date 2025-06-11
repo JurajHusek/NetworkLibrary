@@ -91,14 +91,22 @@ $(function(){initNavTree('class_server_side_client_1_1_u_d_p.html','','class_ser
   <div class="headertitle"><div class="title">ServerSideClient.UDP Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class for managing <a class="el" href="class_server_side_client_1_1_u_d_p.html" title="Class for managing UDP connection.">UDP</a> connection.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a063098b915bcaa06fa993f868997fc45" id="r_a063098b915bcaa06fa993f868997fc45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a063098b915bcaa06fa993f868997fc45">UDP</a> (int id)</td></tr>
-<tr class="memitem:a6b3c4e59cf2e6ac13c6149c24ce8b50a" id="r_a6b3c4e59cf2e6ac13c6149c24ce8b50a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b3c4e59cf2e6ac13c6149c24ce8b50a">ConnectUDP</a> (IPEndPoint NEndPoint)</td></tr>
+<tr class="memdesc:a063098b915bcaa06fa993f868997fc45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new <a class="el" href="class_server_side_client_1_1_u_d_p.html" title="Class for managing UDP connection.">UDP</a> object with the given client ID.  <br /></td></tr>
+<tr class="memitem:abeba6e43ce909ad2fbb2a1c499c83d96" id="r_abeba6e43ce909ad2fbb2a1c499c83d96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abeba6e43ce909ad2fbb2a1c499c83d96">ConnectUDP</a> (IPEndPoint endPoint)</td></tr>
+<tr class="memdesc:abeba6e43ce909ad2fbb2a1c499c83d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the remote endpoint for the <a class="el" href="class_server_side_client_1_1_u_d_p.html" title="Class for managing UDP connection.">UDP</a> client.  <br /></td></tr>
 <tr class="memitem:a0c309e2f74aaa20be3b5f4ca21cf1223" id="r_a0c309e2f74aaa20be3b5f4ca21cf1223"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c309e2f74aaa20be3b5f4ca21cf1223">SendUDPData</a> (<a class="el" href="class_packet.html">Packet</a> SendPacket)</td></tr>
-<tr class="memitem:a9b6ef335012bf8cdf65b86d86e4cb751" id="r_a9b6ef335012bf8cdf65b86d86e4cb751"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b6ef335012bf8cdf65b86d86e4cb751">UdpDataHandler</a> (<a class="el" href="class_packet.html">Packet</a> Data)</td></tr>
+<tr class="memdesc:a0c309e2f74aaa20be3b5f4ca21cf1223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a <a class="el" href="class_server_side_client_1_1_u_d_p.html" title="Class for managing UDP connection.">UDP</a> packet to the client using the configured endpoint.  <br /></td></tr>
+<tr class="memitem:ad78196d65c4564ee2245b7dd6ceac510" id="r_ad78196d65c4564ee2245b7dd6ceac510"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad78196d65c4564ee2245b7dd6ceac510">UdpDataHandler</a> (<a class="el" href="class_packet.html">Packet</a> data)</td></tr>
+<tr class="memdesc:ad78196d65c4564ee2245b7dd6ceac510"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles incoming <a class="el" href="class_server_side_client_1_1_u_d_p.html" title="Class for managing UDP connection.">UDP</a> data and calls PacketAction() on the main thread.  <br /></td></tr>
 <tr class="memitem:a90c7e371c0b8e8de48a8b7967784c34b" id="r_a90c7e371c0b8e8de48a8b7967784c34b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90c7e371c0b8e8de48a8b7967784c34b">Disconnect</a> ()</td></tr>
+<tr class="memdesc:a90c7e371c0b8e8de48a8b7967784c34b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnects the <a class="el" href="class_server_side_client_1_1_u_d_p.html" title="Class for managing UDP connection.">UDP</a> client by clearing its endpoint.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -106,9 +114,13 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a5d69cc20f86d21c389e25cd55a36316f" id="r_a5d69cc20f86d21c389e25cd55a36316f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d69cc20f86d21c389e25cd55a36316f">ClientId</a></td></tr>
+<tr class="memitem:aeb276307afdbf82bf68021b4ed380225" id="r_aeb276307afdbf82bf68021b4ed380225"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb276307afdbf82bf68021b4ed380225">clientId</a></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class for managing <a class="el" href="class_server_side_client_1_1_u_d_p.html" title="Class for managing UDP connection.">UDP</a> connection. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_side_client_8cs_source.html#l00382">382</a> of file <a class="el" href="_server_side_client_8cs_source.html">ServerSideClient.cs</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a063098b915bcaa06fa993f868997fc45" name="a063098b915bcaa06fa993f868997fc45"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a063098b915bcaa06fa993f868997fc45">&#9670;&#160;</a></span>UDP()</h2>
 
@@ -124,11 +136,18 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initializes a new <a class="el" href="class_server_side_client_1_1_u_d_p.html" title="Class for managing UDP connection.">UDP</a> object with the given client ID. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_side_client_8cs_source.html#l00389">389</a> of file <a class="el" href="_server_side_client_8cs_source.html">ServerSideClient.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  390</span>        {</div>
+<div class="line"><span class="lineno">  391</span>            clientId = id;</div>
+<div class="line"><span class="lineno">  392</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a6b3c4e59cf2e6ac13c6149c24ce8b50a" name="a6b3c4e59cf2e6ac13c6149c24ce8b50a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b3c4e59cf2e6ac13c6149c24ce8b50a">&#9670;&#160;</a></span>ConnectUDP()</h2>
+<a id="abeba6e43ce909ad2fbb2a1c499c83d96" name="abeba6e43ce909ad2fbb2a1c499c83d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeba6e43ce909ad2fbb2a1c499c83d96">&#9670;&#160;</a></span>ConnectUDP()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,12 +155,19 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void ServerSideClient.UDP.ConnectUDP </td>
           <td>(</td>
-          <td class="paramtype">IPEndPoint</td>          <td class="paramname"><span class="paramname"><em>NEndPoint</em></span></td><td>)</td>
+          <td class="paramtype">IPEndPoint</td>          <td class="paramname"><span class="paramname"><em>endPoint</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets the remote endpoint for the <a class="el" href="class_server_side_client_1_1_u_d_p.html" title="Class for managing UDP connection.">UDP</a> client. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_side_client_8cs_source.html#l00396">396</a> of file <a class="el" href="_server_side_client_8cs_source.html">ServerSideClient.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  397</span>        {</div>
+<div class="line"><span class="lineno">  398</span>            EndPoint = endPoint;</div>
+<div class="line"><span class="lineno">  399</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a90c7e371c0b8e8de48a8b7967784c34b" name="a90c7e371c0b8e8de48a8b7967784c34b"></a>
@@ -159,6 +185,13 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Disconnects the <a class="el" href="class_server_side_client_1_1_u_d_p.html" title="Class for managing UDP connection.">UDP</a> client by clearing its endpoint. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_side_client_8cs_source.html#l00423">423</a> of file <a class="el" href="_server_side_client_8cs_source.html">ServerSideClient.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  424</span>        {</div>
+<div class="line"><span class="lineno">  425</span>            EndPoint = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  426</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0c309e2f74aaa20be3b5f4ca21cf1223" name="a0c309e2f74aaa20be3b5f4ca21cf1223"></a>
@@ -176,10 +209,17 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sends a <a class="el" href="class_server_side_client_1_1_u_d_p.html" title="Class for managing UDP connection.">UDP</a> packet to the client using the configured endpoint. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_side_client_8cs_source.html#l00403">403</a> of file <a class="el" href="_server_side_client_8cs_source.html">ServerSideClient.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  404</span>        {</div>
+<div class="line"><span class="lineno">  405</span>            ServerLogic.SendUDPData(EndPoint, SendPacket);</div>
+<div class="line"><span class="lineno">  406</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a9b6ef335012bf8cdf65b86d86e4cb751" name="a9b6ef335012bf8cdf65b86d86e4cb751"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b6ef335012bf8cdf65b86d86e4cb751">&#9670;&#160;</a></span>UdpDataHandler()</h2>
+<a id="ad78196d65c4564ee2245b7dd6ceac510" name="ad78196d65c4564ee2245b7dd6ceac510"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad78196d65c4564ee2245b7dd6ceac510">&#9670;&#160;</a></span>UdpDataHandler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,17 +227,32 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void ServerSideClient.UDP.UdpDataHandler </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>Data</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Handles incoming <a class="el" href="class_server_side_client_1_1_u_d_p.html" title="Class for managing UDP connection.">UDP</a> data and calls PacketAction() on the main thread. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_side_client_8cs_source.html#l00410">410</a> of file <a class="el" href="_server_side_client_8cs_source.html">ServerSideClient.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  411</span>        {</div>
+<div class="line"><span class="lineno">  412</span>            <span class="keywordtype">int</span> dataLength = data.<a class="code hl_function" href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a>();</div>
+<div class="line"><span class="lineno">  413</span>            <span class="keywordtype">byte</span>[] packetBytes = data.<a class="code hl_function" href="class_packet.html#af2e6874f82fe3be88b34b944518c82d6">ReadBytes</a>(dataLength);</div>
+<div class="line"><span class="lineno">  414</span>            ThreadsController.StartOnMainThread(() =&gt; {</div>
+<div class="line"><span class="lineno">  415</span>                Packet newPacket = <span class="keyword">new</span> Packet(packetBytes);</div>
+<div class="line"><span class="lineno">  416</span>                <span class="keywordtype">int</span> packetId = newPacket.<a class="code hl_function" href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a>();</div>
+<div class="line"><span class="lineno">  417</span>                ServerLogic.PacketAction(packetId, newPacket, clientId);</div>
+<div class="line"><span class="lineno">  418</span>            });</div>
+<div class="line"><span class="lineno">  419</span>        }</div>
+<div class="ttc" id="aclass_packet_html_a822c0ba0dce983b19af0adf3b2fc1b9e"><div class="ttname"><a href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">Packet.ReadInt</a></div><div class="ttdeci">int ReadInt(bool changeReadPosition=true)</div><div class="ttdoc">Read int data.</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00080">Packet.cs:80</a></div></div>
+<div class="ttc" id="aclass_packet_html_af2e6874f82fe3be88b34b944518c82d6"><div class="ttname"><a href="class_packet.html#af2e6874f82fe3be88b34b944518c82d6">Packet.ReadBytes</a></div><div class="ttdeci">byte[] ReadBytes(int arrayLength, bool changeReadPosition=true)</div><div class="ttdoc">read byte array data</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00188">Packet.cs:188</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="a5d69cc20f86d21c389e25cd55a36316f" name="a5d69cc20f86d21c389e25cd55a36316f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d69cc20f86d21c389e25cd55a36316f">&#9670;&#160;</a></span>ClientId</h2>
+<a id="aeb276307afdbf82bf68021b4ed380225" name="aeb276307afdbf82bf68021b4ed380225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb276307afdbf82bf68021b4ed380225">&#9670;&#160;</a></span>clientId</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -206,7 +261,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ServerSideClient.UDP.ClientId</td>
+          <td class="memname">int ServerSideClient.UDP.clientId</td>
         </tr>
       </table>
   </td>
@@ -215,6 +270,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_server_side_client_8cs_source.html#l00385">385</a> of file <a class="el" href="_server_side_client_8cs_source.html">ServerSideClient.cs</a>.</p>
 
 </div>
 </div>
@@ -230,11 +287,10 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_server_side_client_8cs_source.html#l00384">384</a> of file <a class="el" href="_server_side_client_8cs_source.html">ServerSideClient.cs</a>.</p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/NetworkLibrary/ServerStuff/ServerScripts/Code/<a class="el" href="_server_side_client_8cs.html">ServerSideClient.cs</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

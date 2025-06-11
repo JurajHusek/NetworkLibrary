@@ -91,6 +91,9 @@ $(function(){initNavTree('class_network_chat_demo.html','','class_network_chat_d
   <div class="headertitle"><div class="title">NetworkChatDemo Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Chat demo class, manages UI.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for NetworkChatDemo:</div>
 <div class="dyncontent">
@@ -104,16 +107,20 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aed1066bf1384ab3d8388cad296b6ee5c" id="r_aed1066bf1384ab3d8388cad296b6ee5c"><td class="memItemLeft" align="right" valign="top">Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed1066bf1384ab3d8388cad296b6ee5c">SendText</a></td></tr>
-<tr class="memitem:adc8fc45f502c0d93aca2493539e01b66" id="r_adc8fc45f502c0d93aca2493539e01b66"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc8fc45f502c0d93aca2493539e01b66">Rect</a></td></tr>
-<tr class="memitem:a94acf2c06df267a71c466253db8fbda4" id="r_a94acf2c06df267a71c466253db8fbda4"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94acf2c06df267a71c466253db8fbda4">NetworkChatDemoEntry</a></td></tr>
+<tr class="memitem:a0de45591538e6123adff1e462b242e47" id="r_a0de45591538e6123adff1e462b242e47"><td class="memItemLeft" align="right" valign="top">Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0de45591538e6123adff1e462b242e47">sendText</a></td></tr>
+<tr class="memitem:a41e3f20782a88fa9ecfbcd5535da01f2" id="r_a41e3f20782a88fa9ecfbcd5535da01f2"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41e3f20782a88fa9ecfbcd5535da01f2">container</a></td></tr>
+<tr class="memitem:a39ef1356eba5b5997366a217a9138c9b" id="r_a39ef1356eba5b5997366a217a9138c9b"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39ef1356eba5b5997366a217a9138c9b">networkChatDemoEntry</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a181a6eef9dcaf2fff139010bf9b4daad" id="r_a181a6eef9dcaf2fff139010bf9b4daad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a181a6eef9dcaf2fff139010bf9b4daad">Start</a> ()</td></tr>
 <tr class="memitem:afb2b7c380ad11bd5c712fc0193da4af4" id="r_afb2b7c380ad11bd5c712fc0193da4af4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb2b7c380ad11bd5c712fc0193da4af4">SpawnMessageEntry</a> (string message)</td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Chat demo class, manages UI. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_chat_demo_8cs_source.html#l00009">9</a> of file <a class="el" href="_network_chat_demo_8cs_source.html">NetworkChatDemo.cs</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a7d5a1b05e66fe7df1bb29318dc501fe6" name="a7d5a1b05e66fe7df1bb29318dc501fe6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d5a1b05e66fe7df1bb29318dc501fe6">&#9670;&#160;</a></span>SendMessageToAll()</h2>
 
@@ -129,6 +136,17 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_network_chat_demo_8cs_source.html#l00025">25</a> of file <a class="el" href="_network_chat_demo_8cs_source.html">NetworkChatDemo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordtype">string</span> username = Client.instance.GetUsername();</div>
+<div class="line"><span class="lineno">   28</span>        NetworkManager.networkManager.SendTextMessage(username + <span class="stringliteral">&quot;: &quot;</span> + <a class="code hl_variable" href="#a0de45591538e6123adff1e462b242e47">sendText</a>.text, 1, Client.instance.GetId());</div>
+<div class="line"><span class="lineno">   29</span>        GameObject newEntry = Instantiate(<a class="code hl_variable" href="#a39ef1356eba5b5997366a217a9138c9b">networkChatDemoEntry</a>, <a class="code hl_variable" href="#a41e3f20782a88fa9ecfbcd5535da01f2">container</a>);</div>
+<div class="line"><span class="lineno">   30</span>        newEntry.GetComponent&lt;Text&gt;().text = username + <span class="stringliteral">&quot;: &quot;</span> + <a class="code hl_variable" href="#a0de45591538e6123adff1e462b242e47">sendText</a>.text;</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="ttc" id="aclass_network_chat_demo_html_a0de45591538e6123adff1e462b242e47"><div class="ttname"><a href="#a0de45591538e6123adff1e462b242e47">NetworkChatDemo.sendText</a></div><div class="ttdeci">Text sendText</div><div class="ttdef"><b>Definition</b> <a href="_network_chat_demo_8cs_source.html#l00011">NetworkChatDemo.cs:11</a></div></div>
+<div class="ttc" id="aclass_network_chat_demo_html_a39ef1356eba5b5997366a217a9138c9b"><div class="ttname"><a href="#a39ef1356eba5b5997366a217a9138c9b">NetworkChatDemo.networkChatDemoEntry</a></div><div class="ttdeci">GameObject networkChatDemoEntry</div><div class="ttdef"><b>Definition</b> <a href="_network_chat_demo_8cs_source.html#l00013">NetworkChatDemo.cs:13</a></div></div>
+<div class="ttc" id="aclass_network_chat_demo_html_a41e3f20782a88fa9ecfbcd5535da01f2"><div class="ttname"><a href="#a41e3f20782a88fa9ecfbcd5535da01f2">NetworkChatDemo.container</a></div><div class="ttdeci">Transform container</div><div class="ttdef"><b>Definition</b> <a href="_network_chat_demo_8cs_source.html#l00012">NetworkChatDemo.cs:12</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afb2b7c380ad11bd5c712fc0193da4af4" name="afb2b7c380ad11bd5c712fc0193da4af4"></a>
@@ -154,6 +172,12 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_network_chat_demo_8cs_source.html#l00020">20</a> of file <a class="el" href="_network_chat_demo_8cs_source.html">NetworkChatDemo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        GameObject newEntry = Instantiate(<a class="code hl_variable" href="#a39ef1356eba5b5997366a217a9138c9b">networkChatDemoEntry</a>, <a class="code hl_variable" href="#a41e3f20782a88fa9ecfbcd5535da01f2">container</a>);</div>
+<div class="line"><span class="lineno">   23</span>        newEntry.GetComponent&lt;Text&gt;().text = message;</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a181a6eef9dcaf2fff139010bf9b4daad" name="a181a6eef9dcaf2fff139010bf9b4daad"></a>
@@ -179,54 +203,63 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_network_chat_demo_8cs_source.html#l00015">15</a> of file <a class="el" href="_network_chat_demo_8cs_source.html">NetworkChatDemo.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        Client.instance.OnMessageReceived += <a class="code hl_function" href="#afb2b7c380ad11bd5c712fc0193da4af4">SpawnMessageEntry</a>;</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+<div class="ttc" id="aclass_network_chat_demo_html_afb2b7c380ad11bd5c712fc0193da4af4"><div class="ttname"><a href="#afb2b7c380ad11bd5c712fc0193da4af4">NetworkChatDemo.SpawnMessageEntry</a></div><div class="ttdeci">void SpawnMessageEntry(string message)</div><div class="ttdef"><b>Definition</b> <a href="_network_chat_demo_8cs_source.html#l00020">NetworkChatDemo.cs:20</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="a94acf2c06df267a71c466253db8fbda4" name="a94acf2c06df267a71c466253db8fbda4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94acf2c06df267a71c466253db8fbda4">&#9670;&#160;</a></span>NetworkChatDemoEntry</h2>
+<a id="a41e3f20782a88fa9ecfbcd5535da01f2" name="a41e3f20782a88fa9ecfbcd5535da01f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41e3f20782a88fa9ecfbcd5535da01f2">&#9670;&#160;</a></span>container</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">GameObject NetworkChatDemo.NetworkChatDemoEntry</td>
+          <td class="memname">Transform NetworkChatDemo.container</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_network_chat_demo_8cs_source.html#l00012">12</a> of file <a class="el" href="_network_chat_demo_8cs_source.html">NetworkChatDemo.cs</a>.</p>
+
 </div>
 </div>
-<a id="adc8fc45f502c0d93aca2493539e01b66" name="adc8fc45f502c0d93aca2493539e01b66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc8fc45f502c0d93aca2493539e01b66">&#9670;&#160;</a></span>Rect</h2>
+<a id="a39ef1356eba5b5997366a217a9138c9b" name="a39ef1356eba5b5997366a217a9138c9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39ef1356eba5b5997366a217a9138c9b">&#9670;&#160;</a></span>networkChatDemoEntry</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Transform NetworkChatDemo.Rect</td>
+          <td class="memname">GameObject NetworkChatDemo.networkChatDemoEntry</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_network_chat_demo_8cs_source.html#l00013">13</a> of file <a class="el" href="_network_chat_demo_8cs_source.html">NetworkChatDemo.cs</a>.</p>
+
 </div>
 </div>
-<a id="aed1066bf1384ab3d8388cad296b6ee5c" name="aed1066bf1384ab3d8388cad296b6ee5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed1066bf1384ab3d8388cad296b6ee5c">&#9670;&#160;</a></span>SendText</h2>
+<a id="a0de45591538e6123adff1e462b242e47" name="a0de45591538e6123adff1e462b242e47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0de45591538e6123adff1e462b242e47">&#9670;&#160;</a></span>sendText</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Text NetworkChatDemo.SendText</td>
+          <td class="memname">Text NetworkChatDemo.sendText</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_network_chat_demo_8cs_source.html#l00011">11</a> of file <a class="el" href="_network_chat_demo_8cs_source.html">NetworkChatDemo.cs</a>.</p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/NetworkLibrary/ClientStuff/ChatDemo/<a class="el" href="_network_chat_demo_8cs.html">NetworkChatDemo.cs</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

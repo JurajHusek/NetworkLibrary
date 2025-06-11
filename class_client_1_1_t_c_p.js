@@ -3,7 +3,7 @@ var class_client_1_1_t_c_p =
     [ "Connect", "class_client_1_1_t_c_p.html#a0c2bedd795658fc134568af0b245f829", null ],
     [ "ConnectCallback", "class_client_1_1_t_c_p.html#a4678919644f7b29da558e0e806e45105", null ],
     [ "Disconnect", "class_client_1_1_t_c_p.html#a0bf46ee66dfea6fff92a83f71b603c3a", null ],
-    [ "Handler", "class_client_1_1_t_c_p.html#a354ffd069b81ae0826e3159646f6c10d", null ],
+    [ "Handler", "class_client_1_1_t_c_p.html#a44edac61b06a9d44a9d8341b80a65037", null ],
     [ "ReceiveCallback", "class_client_1_1_t_c_p.html#a32327fa0b978d235c84ca54e18eaaf03", null ],
     [ "Send", "class_client_1_1_t_c_p.html#af7fd62fb1c3a33697ee9991503d7d0cb", null ],
     [ "ValidateServerCertificate", "class_client_1_1_t_c_p.html#a782a25d41986e3c78fb75117fe4f67df", null ],

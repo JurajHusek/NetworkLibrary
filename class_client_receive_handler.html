@@ -91,6 +91,9 @@ $(function(){initNavTree('class_client_receive_handler.html','','class_client_re
   <div class="headertitle"><div class="title">ClientReceiveHandler Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Handles incoming packets from the server and performs client-side actions accordingly.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ClientReceiveHandler:</div>
 <div class="dyncontent">
@@ -100,24 +103,42 @@ Inheritance diagram for ClientReceiveHandler:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aff941d76d8732fd26734260439272c06" id="r_aff941d76d8732fd26734260439272c06"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff941d76d8732fd26734260439272c06">ValidateHmac</a> (<a class="el" href="class_packet.html">Packet</a> ReceivedPacket)</td></tr>
+<tr class="memitem:a661544c91a39c9f4eb3299399bd296b3" id="r_a661544c91a39c9f4eb3299399bd296b3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a661544c91a39c9f4eb3299399bd296b3">ValidateHmac</a> (<a class="el" href="class_packet.html">Packet</a> receivedPacket)</td></tr>
+<tr class="memdesc:a661544c91a39c9f4eb3299399bd296b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates the HMAC of a received packet using the client's stored key.  <br /></td></tr>
 <tr class="memitem:ac7888c5a84fa6146a26376e516fe3d62" id="r_ac7888c5a84fa6146a26376e516fe3d62"><td class="memItemLeft" align="right" valign="top">static byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7888c5a84fa6146a26376e516fe3d62">GenerateHmac</a> (byte[] data, byte[] key)</td></tr>
-<tr class="memitem:a992f31fece69f70d89bfb0e788d0f83c" id="r_a992f31fece69f70d89bfb0e788d0f83c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a992f31fece69f70d89bfb0e788d0f83c">Welcome</a> (<a class="el" href="class_packet.html">Packet</a> ReceivedPacket)</td></tr>
+<tr class="memdesc:ac7888c5a84fa6146a26376e516fe3d62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a HMAC-SHA256 hash for the provided data using the given key.  <br /></td></tr>
+<tr class="memitem:a7987901c899b770fa4f36d331ec99bd8" id="r_a7987901c899b770fa4f36d331ec99bd8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7987901c899b770fa4f36d331ec99bd8">Welcome</a> (<a class="el" href="class_packet.html">Packet</a> receivedPacket)</td></tr>
+<tr class="memdesc:a7987901c899b770fa4f36d331ec99bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the welcome packet from the server, sets the client ID, and initiates UDP connection.  <br /></td></tr>
 <tr class="memitem:a669387070c43ccbf6ab085a180531021" id="r_a669387070c43ccbf6ab085a180531021"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a669387070c43ccbf6ab085a180531021">ReceiveHmacKey</a> (<a class="el" href="class_packet.html">Packet</a> receivedPacket)</td></tr>
+<tr class="memdesc:a669387070c43ccbf6ab085a180531021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles receiving the HMAC key from the server and stores it on the client.  <br /></td></tr>
 <tr class="memitem:ac906f5d1b937c325b71e3587d3d343e6" id="r_ac906f5d1b937c325b71e3587d3d343e6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac906f5d1b937c325b71e3587d3d343e6">ReceiveToken</a> (<a class="el" href="class_packet.html">Packet</a> receivedPacket)</td></tr>
-<tr class="memitem:a880b04f7544c29ffb95b46b5afb82d8a" id="r_a880b04f7544c29ffb95b46b5afb82d8a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a880b04f7544c29ffb95b46b5afb82d8a">Latency</a> (<a class="el" href="class_packet.html">Packet</a> ReceivedPacket)</td></tr>
-<tr class="memitem:a8a9ffeb7a09d53f5a0d8081306407d7e" id="r_a8a9ffeb7a09d53f5a0d8081306407d7e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a9ffeb7a09d53f5a0d8081306407d7e">SpawnUser</a> (<a class="el" href="class_packet.html">Packet</a> ReceivedPacket)</td></tr>
-<tr class="memitem:a601cf0ff26f95f411348f18aef958b43" id="r_a601cf0ff26f95f411348f18aef958b43"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a601cf0ff26f95f411348f18aef958b43">BandwidthReply</a> (<a class="el" href="class_packet.html">Packet</a> ReceivedPacket)</td></tr>
-<tr class="memitem:a0e6a16796e2e94d84eed2e5ae7db0c44" id="r_a0e6a16796e2e94d84eed2e5ae7db0c44"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e6a16796e2e94d84eed2e5ae7db0c44">ThroughputReply</a> (<a class="el" href="class_packet.html">Packet</a> ReceivedPacket)</td></tr>
-<tr class="memitem:a72a9601187e5afa3bea3c3fbafd7f0d7" id="r_a72a9601187e5afa3bea3c3fbafd7f0d7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72a9601187e5afa3bea3c3fbafd7f0d7">ReceiveMessage</a> (<a class="el" href="class_packet.html">Packet</a> ReceivedPacket)</td></tr>
-<tr class="memitem:a533581c5c8cea56f2e1df9f386b0de1d" id="r_a533581c5c8cea56f2e1df9f386b0de1d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a533581c5c8cea56f2e1df9f386b0de1d">ReceiveMessageAll</a> (<a class="el" href="class_packet.html">Packet</a> ReceivePacket)</td></tr>
-<tr class="memitem:a3174c93978d492e3dc795d33d344fa62" id="r_a3174c93978d492e3dc795d33d344fa62"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3174c93978d492e3dc795d33d344fa62">DisconnectUser</a> (<a class="el" href="class_packet.html">Packet</a> ReceivedPacket)</td></tr>
-<tr class="memitem:a4e5fb3577eb30e890410441ba75e664a" id="r_a4e5fb3577eb30e890410441ba75e664a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e5fb3577eb30e890410441ba75e664a">TransformUpdate</a> (<a class="el" href="class_packet.html">Packet</a> ReceivedPacket)</td></tr>
-<tr class="memitem:afec52c7a81ea8d039b313970e36c7f3c" id="r_afec52c7a81ea8d039b313970e36c7f3c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afec52c7a81ea8d039b313970e36c7f3c">AnimationUpdate</a> (<a class="el" href="class_packet.html">Packet</a> ReceivedPacket)</td></tr>
+<tr class="memdesc:ac906f5d1b937c325b71e3587d3d343e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles receiving an authentication token from the server and stores it on the client.  <br /></td></tr>
+<tr class="memitem:aa7667a6d8b5d471190846530a53676dd" id="r_aa7667a6d8b5d471190846530a53676dd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7667a6d8b5d471190846530a53676dd">Latency</a> (<a class="el" href="class_packet.html">Packet</a> receivedPacket)</td></tr>
+<tr class="memdesc:aa7667a6d8b5d471190846530a53676dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a latency response packet from the server.  <br /></td></tr>
+<tr class="memitem:abd8647a0f969f4c197e24d960379bfe2" id="r_abd8647a0f969f4c197e24d960379bfe2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd8647a0f969f4c197e24d960379bfe2">SpawnUser</a> (<a class="el" href="class_packet.html">Packet</a> receivedPacket)</td></tr>
+<tr class="memdesc:abd8647a0f969f4c197e24d960379bfe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a user prefab on the client.  <br /></td></tr>
+<tr class="memitem:ac342c5af0e4b484460de76875f09de53" id="r_ac342c5af0e4b484460de76875f09de53"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac342c5af0e4b484460de76875f09de53">BandwidthReply</a> (<a class="el" href="class_packet.html">Packet</a> receivedPacket)</td></tr>
+<tr class="memdesc:ac342c5af0e4b484460de76875f09de53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a bandwidth test response from the server.  <br /></td></tr>
+<tr class="memitem:aa72d4542f95bcc2eea046d142f06c3c4" id="r_aa72d4542f95bcc2eea046d142f06c3c4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa72d4542f95bcc2eea046d142f06c3c4">ThroughputReply</a> (<a class="el" href="class_packet.html">Packet</a> receivedPacket)</td></tr>
+<tr class="memdesc:aa72d4542f95bcc2eea046d142f06c3c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a throughput test response from the server.  <br /></td></tr>
+<tr class="memitem:ad5b89fd596292eb16e54842f58fbfa91" id="r_ad5b89fd596292eb16e54842f58fbfa91"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5b89fd596292eb16e54842f58fbfa91">ReceiveMessage</a> (<a class="el" href="class_packet.html">Packet</a> receivedPacket)</td></tr>
+<tr class="memdesc:ad5b89fd596292eb16e54842f58fbfa91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives a private text message from server.  <br /></td></tr>
+<tr class="memitem:ac964a858519c57e92f4a11fe8fc16325" id="r_ac964a858519c57e92f4a11fe8fc16325"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac964a858519c57e92f4a11fe8fc16325">ReceiveMessageAll</a> (<a class="el" href="class_packet.html">Packet</a> receivePacket)</td></tr>
+<tr class="memdesc:ac964a858519c57e92f4a11fe8fc16325"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives a broadcast message sent to all clients by the server.  <br /></td></tr>
+<tr class="memitem:a41de76f4a2f969b118d9bcbe61adb168" id="r_a41de76f4a2f969b118d9bcbe61adb168"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41de76f4a2f969b118d9bcbe61adb168">DisconnectUser</a> (<a class="el" href="class_packet.html">Packet</a> receivedPacket)</td></tr>
+<tr class="memdesc:a41de76f4a2f969b118d9bcbe61adb168"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles disconnection of a specific client.  <br /></td></tr>
+<tr class="memitem:a571dbde8cdb2a68d970c55e3b2cdaddc" id="r_a571dbde8cdb2a68d970c55e3b2cdaddc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a571dbde8cdb2a68d970c55e3b2cdaddc">TransformUpdate</a> (<a class="el" href="class_packet.html">Packet</a> receivedPacket)</td></tr>
+<tr class="memdesc:a571dbde8cdb2a68d970c55e3b2cdaddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives and applies a position and rotation update for a user in the scene.  <br /></td></tr>
+<tr class="memitem:a5ecf40310b166a950b6fbfc5b5c4bc0b" id="r_a5ecf40310b166a950b6fbfc5b5c4bc0b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ecf40310b166a950b6fbfc5b5c4bc0b">AnimationUpdate</a> (<a class="el" href="class_packet.html">Packet</a> receivedPacket)</td></tr>
+<tr class="memdesc:a5ecf40310b166a950b6fbfc5b5c4bc0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives and applies an animation update from the server for a specific user.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="afec52c7a81ea8d039b313970e36c7f3c" name="afec52c7a81ea8d039b313970e36c7f3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afec52c7a81ea8d039b313970e36c7f3c">&#9670;&#160;</a></span>AnimationUpdate()</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Handles incoming packets from the server and performs client-side actions accordingly. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_receive_handler_8cs_source.html#l00010">10</a> of file <a class="el" href="_client_receive_handler_8cs_source.html">ClientReceiveHandler.cs</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a5ecf40310b166a950b6fbfc5b5c4bc0b" name="a5ecf40310b166a950b6fbfc5b5c4bc0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ecf40310b166a950b6fbfc5b5c4bc0b">&#9670;&#160;</a></span>AnimationUpdate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,7 +149,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ClientReceiveHandler.AnimationUpdate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>ReceivedPacket</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>receivedPacket</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -139,10 +160,30 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Receives and applies an animation update from the server for a specific user. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_receive_handler_8cs_source.html#l00169">169</a> of file <a class="el" href="_client_receive_handler_8cs_source.html">ClientReceiveHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  170</span>    {</div>
+<div class="line"><span class="lineno">  171</span>        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = receivedPacket.<a class="code hl_function" href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a>();</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordtype">int</span> type = receivedPacket.<a class="code hl_function" href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a>();</div>
+<div class="line"><span class="lineno">  173</span>        <span class="keywordtype">string</span> paramName = receivedPacket.<a class="code hl_function" href="class_packet.html#af48e5f82f59f0f50a09e0f2bb1aa3df9">ReadString</a>();</div>
+<div class="line"><span class="lineno">  174</span>        <span class="keywordtype">float</span> value;</div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">if</span> (type != 2)</div>
+<div class="line"><span class="lineno">  176</span>        {</div>
+<div class="line"><span class="lineno">  177</span>            value = receivedPacket.<a class="code hl_function" href="class_packet.html#a290a030fd13fc63d1592b175ec44264b">ReadFloat</a>();</div>
+<div class="line"><span class="lineno">  178</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  179</span>            value = 0f;</div>
+<div class="line"><span class="lineno">  180</span>        }</div>
+<div class="line"><span class="lineno">  181</span>        Client.instance.ChangeAnimatorState(<span class="keywordtype">id</span>,type,paramName,value);</div>
+<div class="line"><span class="lineno">  182</span>    }</div>
+<div class="ttc" id="aclass_packet_html_a290a030fd13fc63d1592b175ec44264b"><div class="ttname"><a href="class_packet.html#a290a030fd13fc63d1592b175ec44264b">Packet.ReadFloat</a></div><div class="ttdeci">float ReadFloat(bool changeReadPosition=true)</div><div class="ttdoc">Read float data.</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00107">Packet.cs:107</a></div></div>
+<div class="ttc" id="aclass_packet_html_a822c0ba0dce983b19af0adf3b2fc1b9e"><div class="ttname"><a href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">Packet.ReadInt</a></div><div class="ttdeci">int ReadInt(bool changeReadPosition=true)</div><div class="ttdoc">Read int data.</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00080">Packet.cs:80</a></div></div>
+<div class="ttc" id="aclass_packet_html_af48e5f82f59f0f50a09e0f2bb1aa3df9"><div class="ttname"><a href="class_packet.html#af48e5f82f59f0f50a09e0f2bb1aa3df9">Packet.ReadString</a></div><div class="ttdeci">string ReadString(bool ChangeReadPosition=true)</div><div class="ttdoc">Read string data.</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00052">Packet.cs:52</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a601cf0ff26f95f411348f18aef958b43" name="a601cf0ff26f95f411348f18aef958b43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a601cf0ff26f95f411348f18aef958b43">&#9670;&#160;</a></span>BandwidthReply()</h2>
+<a id="ac342c5af0e4b484460de76875f09de53" name="ac342c5af0e4b484460de76875f09de53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac342c5af0e4b484460de76875f09de53">&#9670;&#160;</a></span>BandwidthReply()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -153,7 +194,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ClientReceiveHandler.BandwidthReply </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>ReceivedPacket</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>receivedPacket</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -164,10 +205,26 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Handles a bandwidth test response from the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_receive_handler_8cs_source.html#l00097">97</a> of file <a class="el" href="_client_receive_handler_8cs_source.html">ClientReceiveHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>    {</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span> (Client.instance.GetDefaultSettings().useHMAC == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  100</span>        {</div>
+<div class="line"><span class="lineno">  101</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a661544c91a39c9f4eb3299399bd296b3">ValidateHmac</a>(receivedPacket))</div>
+<div class="line"><span class="lineno">  102</span>            {</div>
+<div class="line"><span class="lineno">  103</span>                Debug.LogError(<span class="stringliteral">&quot;Invalid HMAC received for packet. Dropping packet.&quot;</span>);</div>
+<div class="line"><span class="lineno">  104</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  105</span>            }</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+<div class="line"><span class="lineno">  107</span>        Client.instance.ReceivedBandwidth();</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
+<div class="ttc" id="aclass_client_receive_handler_html_a661544c91a39c9f4eb3299399bd296b3"><div class="ttname"><a href="#a661544c91a39c9f4eb3299399bd296b3">ClientReceiveHandler.ValidateHmac</a></div><div class="ttdeci">static bool ValidateHmac(Packet receivedPacket)</div><div class="ttdoc">Validates the HMAC of a received packet using the client&#39;s stored key.</div><div class="ttdef"><b>Definition</b> <a href="_client_receive_handler_8cs_source.html#l00015">ClientReceiveHandler.cs:15</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a3174c93978d492e3dc795d33d344fa62" name="a3174c93978d492e3dc795d33d344fa62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3174c93978d492e3dc795d33d344fa62">&#9670;&#160;</a></span>DisconnectUser()</h2>
+<a id="a41de76f4a2f969b118d9bcbe61adb168" name="a41de76f4a2f969b118d9bcbe61adb168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41de76f4a2f969b118d9bcbe61adb168">&#9670;&#160;</a></span>DisconnectUser()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -178,7 +235,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ClientReceiveHandler.DisconnectUser </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>ReceivedPacket</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>receivedPacket</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -189,6 +246,20 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Handles disconnection of a specific client. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_receive_handler_8cs_source.html#l00145">145</a> of file <a class="el" href="_client_receive_handler_8cs_source.html">ClientReceiveHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>    {</div>
+<div class="line"><span class="lineno">  147</span>        <span class="keywordtype">int</span> clientId = receivedPacket.<a class="code hl_function" href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a>();</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">if</span>(clientId == Client.instance.GetId())</div>
+<div class="line"><span class="lineno">  149</span>        {</div>
+<div class="line"><span class="lineno">  150</span>            Client.instance.Disconnect();</div>
+<div class="line"><span class="lineno">  151</span>        } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  152</span>        {</div>
+<div class="line"><span class="lineno">  153</span>            Client.instance.DisconnectOther(clientId);</div>
+<div class="line"><span class="lineno">  154</span>        }</div>
+<div class="line"><span class="lineno">  155</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac7888c5a84fa6146a26376e516fe3d62" name="ac7888c5a84fa6146a26376e516fe3d62"></a>
@@ -218,10 +289,20 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Generates a HMAC-SHA256 hash for the provided data using the given key. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_receive_handler_8cs_source.html#l00028">28</a> of file <a class="el" href="_client_receive_handler_8cs_source.html">ClientReceiveHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keyword">using</span> (HMACSHA256 hmac = <span class="keyword">new</span> HMACSHA256(key))</div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">return</span> hmac.ComputeHash(data);</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a880b04f7544c29ffb95b46b5afb82d8a" name="a880b04f7544c29ffb95b46b5afb82d8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a880b04f7544c29ffb95b46b5afb82d8a">&#9670;&#160;</a></span>Latency()</h2>
+<a id="aa7667a6d8b5d471190846530a53676dd" name="aa7667a6d8b5d471190846530a53676dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7667a6d8b5d471190846530a53676dd">&#9670;&#160;</a></span>Latency()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -232,7 +313,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ClientReceiveHandler.Latency </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>ReceivedPacket</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>receivedPacket</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -243,6 +324,15 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Handles a latency response packet from the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_receive_handler_8cs_source.html#l00071">71</a> of file <a class="el" href="_client_receive_handler_8cs_source.html">ClientReceiveHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>    {</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordtype">int</span> clientId = receivedPacket.<a class="code hl_function" href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a>();</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordtype">int</span> pcktId = receivedPacket.<a class="code hl_function" href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a>();</div>
+<div class="line"><span class="lineno">   75</span>        Client.instance.MeassureAnswer(pcktId);</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a669387070c43ccbf6ab085a180531021" name="a669387070c43ccbf6ab085a180531021"></a>
@@ -268,10 +358,20 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Handles receiving the HMAC key from the server and stores it on the client. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_receive_handler_8cs_source.html#l00054">54</a> of file <a class="el" href="_client_receive_handler_8cs_source.html">ClientReceiveHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordtype">int</span> keyLength = receivedPacket.<a class="code hl_function" href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a>(); </div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordtype">byte</span>[] hmacKey = receivedPacket.<a class="code hl_function" href="class_packet.html#af2e6874f82fe3be88b34b944518c82d6">ReadBytes</a>(keyLength); </div>
+<div class="line"><span class="lineno">   58</span>        Client.instance.SetHmacKey(hmacKey);</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+<div class="ttc" id="aclass_packet_html_af2e6874f82fe3be88b34b944518c82d6"><div class="ttname"><a href="class_packet.html#af2e6874f82fe3be88b34b944518c82d6">Packet.ReadBytes</a></div><div class="ttdeci">byte[] ReadBytes(int arrayLength, bool changeReadPosition=true)</div><div class="ttdoc">read byte array data</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00188">Packet.cs:188</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a72a9601187e5afa3bea3c3fbafd7f0d7" name="a72a9601187e5afa3bea3c3fbafd7f0d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72a9601187e5afa3bea3c3fbafd7f0d7">&#9670;&#160;</a></span>ReceiveMessage()</h2>
+<a id="ad5b89fd596292eb16e54842f58fbfa91" name="ad5b89fd596292eb16e54842f58fbfa91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5b89fd596292eb16e54842f58fbfa91">&#9670;&#160;</a></span>ReceiveMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,7 +382,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ClientReceiveHandler.ReceiveMessage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>ReceivedPacket</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>receivedPacket</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -293,10 +393,26 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Receives a private text message from server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_receive_handler_8cs_source.html#l00121">121</a> of file <a class="el" href="_client_receive_handler_8cs_source.html">ClientReceiveHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>    {</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (Client.instance.GetDefaultSettings().useHMAC == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  124</span>        {</div>
+<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a661544c91a39c9f4eb3299399bd296b3">ValidateHmac</a>(receivedPacket))</div>
+<div class="line"><span class="lineno">  126</span>            {</div>
+<div class="line"><span class="lineno">  127</span>                Debug.LogError(<span class="stringliteral">&quot;Invalid HMAC received for packet. Dropping packet.&quot;</span>);</div>
+<div class="line"><span class="lineno">  128</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  129</span>            }</div>
+<div class="line"><span class="lineno">  130</span>        }</div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordtype">string</span> message = receivedPacket.<a class="code hl_function" href="class_packet.html#af48e5f82f59f0f50a09e0f2bb1aa3df9">ReadString</a>();</div>
+<div class="line"><span class="lineno">  132</span>        Client.instance.ReceivedMessage(message);</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a533581c5c8cea56f2e1df9f386b0de1d" name="a533581c5c8cea56f2e1df9f386b0de1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a533581c5c8cea56f2e1df9f386b0de1d">&#9670;&#160;</a></span>ReceiveMessageAll()</h2>
+<a id="ac964a858519c57e92f4a11fe8fc16325" name="ac964a858519c57e92f4a11fe8fc16325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac964a858519c57e92f4a11fe8fc16325">&#9670;&#160;</a></span>ReceiveMessageAll()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -307,7 +423,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ClientReceiveHandler.ReceiveMessageAll </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>ReceivePacket</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>receivePacket</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -318,6 +434,14 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Receives a broadcast message sent to all clients by the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_receive_handler_8cs_source.html#l00137">137</a> of file <a class="el" href="_client_receive_handler_8cs_source.html">ClientReceiveHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>    {</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordtype">string</span> message = receivePacket.<a class="code hl_function" href="class_packet.html#af48e5f82f59f0f50a09e0f2bb1aa3df9">ReadString</a>();</div>
+<div class="line"><span class="lineno">  140</span>        Client.instance.ReceivedMessage(message);</div>
+<div class="line"><span class="lineno">  141</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac906f5d1b937c325b71e3587d3d343e6" name="ac906f5d1b937c325b71e3587d3d343e6"></a>
@@ -343,10 +467,18 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Handles receiving an authentication token from the server and stores it on the client. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_receive_handler_8cs_source.html#l00063">63</a> of file <a class="el" href="_client_receive_handler_8cs_source.html">ClientReceiveHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordtype">string</span> token = receivedPacket.<a class="code hl_function" href="class_packet.html#af48e5f82f59f0f50a09e0f2bb1aa3df9">ReadString</a>();</div>
+<div class="line"><span class="lineno">   66</span>        Client.instance.SetToken(token);</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a8a9ffeb7a09d53f5a0d8081306407d7e" name="a8a9ffeb7a09d53f5a0d8081306407d7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a9ffeb7a09d53f5a0d8081306407d7e">&#9670;&#160;</a></span>SpawnUser()</h2>
+<a id="abd8647a0f969f4c197e24d960379bfe2" name="abd8647a0f969f4c197e24d960379bfe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd8647a0f969f4c197e24d960379bfe2">&#9670;&#160;</a></span>SpawnUser()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -357,7 +489,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ClientReceiveHandler.SpawnUser </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>ReceivedPacket</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>receivedPacket</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -368,10 +500,27 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Spawns a user prefab on the client. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_receive_handler_8cs_source.html#l00080">80</a> of file <a class="el" href="_client_receive_handler_8cs_source.html">ClientReceiveHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (Client.instance.GetDefaultSettings().useHMAC == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a661544c91a39c9f4eb3299399bd296b3">ValidateHmac</a>(receivedPacket))</div>
+<div class="line"><span class="lineno">   85</span>            {</div>
+<div class="line"><span class="lineno">   86</span>                Debug.LogError(<span class="stringliteral">&quot;Invalid HMAC received for packet. Dropping packet.&quot;</span>);</div>
+<div class="line"><span class="lineno">   87</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   88</span>            }</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordtype">int</span> clientId = receivedPacket.<a class="code hl_function" href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a>();</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordtype">string</span> userName = receivedPacket.<a class="code hl_function" href="class_packet.html#af48e5f82f59f0f50a09e0f2bb1aa3df9">ReadString</a>();</div>
+<div class="line"><span class="lineno">   92</span>        Client.instance.SpawnUserPrefab(clientId, userName);</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a0e6a16796e2e94d84eed2e5ae7db0c44" name="a0e6a16796e2e94d84eed2e5ae7db0c44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e6a16796e2e94d84eed2e5ae7db0c44">&#9670;&#160;</a></span>ThroughputReply()</h2>
+<a id="aa72d4542f95bcc2eea046d142f06c3c4" name="aa72d4542f95bcc2eea046d142f06c3c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa72d4542f95bcc2eea046d142f06c3c4">&#9670;&#160;</a></span>ThroughputReply()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -382,7 +531,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ClientReceiveHandler.ThroughputReply </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>ReceivedPacket</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>receivedPacket</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -393,10 +542,19 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Handles a throughput test response from the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_receive_handler_8cs_source.html#l00112">112</a> of file <a class="el" href="_client_receive_handler_8cs_source.html">ClientReceiveHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>    {</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordtype">int</span> pcktId = receivedPacket.<a class="code hl_function" href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a>();</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordtype">int</span> dataSize = receivedPacket.<a class="code hl_function" href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a>();</div>
+<div class="line"><span class="lineno">  116</span>        Client.instance.ReceivedThroughput(pcktId, dataSize);</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a4e5fb3577eb30e890410441ba75e664a" name="a4e5fb3577eb30e890410441ba75e664a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e5fb3577eb30e890410441ba75e664a">&#9670;&#160;</a></span>TransformUpdate()</h2>
+<a id="a571dbde8cdb2a68d970c55e3b2cdaddc" name="a571dbde8cdb2a68d970c55e3b2cdaddc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a571dbde8cdb2a68d970c55e3b2cdaddc">&#9670;&#160;</a></span>TransformUpdate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -407,7 +565,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ClientReceiveHandler.TransformUpdate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>ReceivedPacket</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>receivedPacket</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -418,10 +576,22 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Receives and applies a position and rotation update for a user in the scene. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_receive_handler_8cs_source.html#l00159">159</a> of file <a class="el" href="_client_receive_handler_8cs_source.html">ClientReceiveHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>    {</div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = receivedPacket.<a class="code hl_function" href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a>();</div>
+<div class="line"><span class="lineno">  162</span>        Vector3 pos = receivedPacket.<a class="code hl_function" href="class_packet.html#aa6a9c4114916d343a328c584982df48d">ReadVector3</a>();</div>
+<div class="line"><span class="lineno">  163</span>        Quaternion rot = receivedPacket.<a class="code hl_function" href="class_packet.html#a1d164e20a4e421a28e6b60b24f147bd1">ReadQuaternion</a>();</div>
+<div class="line"><span class="lineno">  164</span>        Client.instance.ChangeTransform(<span class="keywordtype">id</span>, pos, rot);</div>
+<div class="line"><span class="lineno">  165</span>    }</div>
+<div class="ttc" id="aclass_packet_html_a1d164e20a4e421a28e6b60b24f147bd1"><div class="ttname"><a href="class_packet.html#a1d164e20a4e421a28e6b60b24f147bd1">Packet.ReadQuaternion</a></div><div class="ttdeci">Quaternion ReadQuaternion(bool changeReadPos=true)</div><div class="ttdoc">Read Quaternion data.</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00263">Packet.cs:263</a></div></div>
+<div class="ttc" id="aclass_packet_html_aa6a9c4114916d343a328c584982df48d"><div class="ttname"><a href="class_packet.html#aa6a9c4114916d343a328c584982df48d">Packet.ReadVector3</a></div><div class="ttdeci">Vector3 ReadVector3(bool changeReadPos=true)</div><div class="ttdoc">Read Vector3 data.</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00243">Packet.cs:243</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="aff941d76d8732fd26734260439272c06" name="aff941d76d8732fd26734260439272c06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff941d76d8732fd26734260439272c06">&#9670;&#160;</a></span>ValidateHmac()</h2>
+<a id="a661544c91a39c9f4eb3299399bd296b3" name="a661544c91a39c9f4eb3299399bd296b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a661544c91a39c9f4eb3299399bd296b3">&#9670;&#160;</a></span>ValidateHmac()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -432,7 +602,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool ClientReceiveHandler.ValidateHmac </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>ReceivedPacket</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>receivedPacket</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -443,10 +613,24 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Validates the HMAC of a received packet using the client's stored key. </p>
+<p>Validity check of HMAC.</p>
+
+<p class="definition">Definition at line <a class="el" href="_client_receive_handler_8cs_source.html#l00015">15</a> of file <a class="el" href="_client_receive_handler_8cs_source.html">ClientReceiveHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordtype">byte</span>[] dataWithoutHmac = receivedPacket.<a class="code hl_function" href="class_packet.html#a0427eb53bbe3b677288dce8054c61e9f">GetDataWithoutHmac</a>(); </div>
+<div class="line"><span class="lineno">   18</span>        <span class="keywordtype">byte</span>[] receivedHmac = receivedPacket.<a class="code hl_function" href="class_packet.html#a5353c75f453f9e021f2f0b9e105903a9">GetHmac</a>(); </div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordtype">byte</span>[] expectedHmac = <a class="code hl_function" href="#ac7888c5a84fa6146a26376e516fe3d62">GenerateHmac</a>(dataWithoutHmac, Client.instance.GetHmacKey());</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">return</span> StructuralComparisons.StructuralEqualityComparer.Equals(receivedHmac, expectedHmac);</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+<div class="ttc" id="aclass_client_receive_handler_html_ac7888c5a84fa6146a26376e516fe3d62"><div class="ttname"><a href="#ac7888c5a84fa6146a26376e516fe3d62">ClientReceiveHandler.GenerateHmac</a></div><div class="ttdeci">static byte[] GenerateHmac(byte[] data, byte[] key)</div><div class="ttdoc">Generates a HMAC-SHA256 hash for the provided data using the given key.</div><div class="ttdef"><b>Definition</b> <a href="_client_receive_handler_8cs_source.html#l00028">ClientReceiveHandler.cs:28</a></div></div>
+<div class="ttc" id="aclass_packet_html_a0427eb53bbe3b677288dce8054c61e9f"><div class="ttname"><a href="class_packet.html#a0427eb53bbe3b677288dce8054c61e9f">Packet.GetDataWithoutHmac</a></div><div class="ttdeci">byte[] GetDataWithoutHmac()</div><div class="ttdoc">Return data without HMAC.</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00317">Packet.cs:317</a></div></div>
+<div class="ttc" id="aclass_packet_html_a5353c75f453f9e021f2f0b9e105903a9"><div class="ttname"><a href="class_packet.html#a5353c75f453f9e021f2f0b9e105903a9">Packet.GetHmac</a></div><div class="ttdeci">byte[] GetHmac()</div><div class="ttdoc">return HMAC from data</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00324">Packet.cs:324</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a992f31fece69f70d89bfb0e788d0f83c" name="a992f31fece69f70d89bfb0e788d0f83c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a992f31fece69f70d89bfb0e788d0f83c">&#9670;&#160;</a></span>Welcome()</h2>
+<a id="a7987901c899b770fa4f36d331ec99bd8" name="a7987901c899b770fa4f36d331ec99bd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7987901c899b770fa4f36d331ec99bd8">&#9670;&#160;</a></span>Welcome()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -457,7 +641,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ClientReceiveHandler.Welcome </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>ReceivedPacket</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>receivedPacket</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -468,11 +652,24 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Handles the welcome packet from the server, sets the client ID, and initiates UDP connection. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_receive_handler_8cs_source.html#l00038">38</a> of file <a class="el" href="_client_receive_handler_8cs_source.html">ClientReceiveHandler.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordtype">string</span> ReceivedMessage = receivedPacket.<a class="code hl_function" href="class_packet.html#af48e5f82f59f0f50a09e0f2bb1aa3df9">ReadString</a>();</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = receivedPacket.<a class="code hl_function" href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a>();</div>
+<div class="line"><span class="lineno">   42</span>        Client.instance.SetId(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span>(ReceivedMessage != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            Client.instance.ReceivedMessage($<span class="stringliteral">&quot;Server message: {ReceivedMessage} [{Client.instance.GetUsername()}]&quot;</span>);</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>        ClientSendHandler.WelcomeReceived();</div>
+<div class="line"><span class="lineno">   48</span>        Client.instance.isConnected = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   49</span>        Client.instance.udp.Connect(((IPEndPoint)Client.instance.tcp.Socket.Client.LocalEndPoint).Port);</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/NetworkLibrary/ClientStuff/ClientScripts/Code/<a class="el" href="_client_receive_handler_8cs.html">ClientReceiveHandler.cs</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

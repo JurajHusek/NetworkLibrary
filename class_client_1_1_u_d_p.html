@@ -91,13 +91,19 @@ $(function(){initNavTree('class_client_1_1_u_d_p.html','','class_client_1_1_u_d_
   <div class="headertitle"><div class="title">Client.UDP Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Handles <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a> connection and communication for the client.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af9f6630e6b1f38a3188fd683e81e38f8" id="r_af9f6630e6b1f38a3188fd683e81e38f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9f6630e6b1f38a3188fd683e81e38f8">UDP</a> ()</td></tr>
 <tr class="memitem:ad66150c3af7293cf572001486ccc228e" id="r_ad66150c3af7293cf572001486ccc228e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad66150c3af7293cf572001486ccc228e">Connect</a> (int Port)</td></tr>
+<tr class="memdesc:ad66150c3af7293cf572001486ccc228e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes and connects the <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a> socket to the server.  <br /></td></tr>
 <tr class="memitem:a6e5bb7a6d56e98cd014a9e0289cd19e4" id="r_a6e5bb7a6d56e98cd014a9e0289cd19e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e5bb7a6d56e98cd014a9e0289cd19e4">SendUdpData</a> (<a class="el" href="class_packet.html">Packet</a> SendPacket)</td></tr>
+<tr class="memdesc:a6e5bb7a6d56e98cd014a9e0289cd19e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a> data packet to the server.  <br /></td></tr>
 <tr class="memitem:a6a22f681f1b99838a5e45dede38b25ea" id="r_a6a22f681f1b99838a5e45dede38b25ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a22f681f1b99838a5e45dede38b25ea">Disconnect</a> ()</td></tr>
+<tr class="memdesc:a6a22f681f1b99838a5e45dede38b25ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnects the <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a> client from the server.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -107,9 +113,15 @@ Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a3c4175e11f1e2cd10a4e262936dc25c2" id="r_a3c4175e11f1e2cd10a4e262936dc25c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c4175e11f1e2cd10a4e262936dc25c2">UdpDataHandler</a> (byte[] Data)</td></tr>
+<tr class="memdesc:a3c4175e11f1e2cd10a4e262936dc25c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles incoming <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a> data and calls <a class="el" href="class_client.html#a98eeb732c160e101b19e567fe4eb0489" title="Handles the received packet by type by calling methods in ClientReceiveHandler.">PacketAction()</a> on the main thread.  <br /></td></tr>
 <tr class="memitem:a652cdef0148c9c2ded3cf56ba6a94873" id="r_a652cdef0148c9c2ded3cf56ba6a94873"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a652cdef0148c9c2ded3cf56ba6a94873">UdpReceiveCallback</a> (IAsyncResult Result)</td></tr>
+<tr class="memdesc:a652cdef0148c9c2ded3cf56ba6a94873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for receiving data over the <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a>. Reads data into the data buffer, manages it by Handler and continues reading.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Handles <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a> connection and communication for the client. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00468">468</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af9f6630e6b1f38a3188fd683e81e38f8" name="af9f6630e6b1f38a3188fd683e81e38f8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9f6630e6b1f38a3188fd683e81e38f8">&#9670;&#160;</a></span>UDP()</h2>
 
@@ -125,6 +137,11 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00472">472</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  473</span>        {</div>
+<div class="line"><span class="lineno">  474</span>            EndPoint = <span class="keyword">new</span> IPEndPoint(IPAddress.Parse(instance.defaultNetworkSettings.ipAddress), instance.defaultNetworkSettings.port);</div>
+<div class="line"><span class="lineno">  475</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -143,6 +160,17 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initializes and connects the <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a> socket to the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00479">479</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  480</span>        {</div>
+<div class="line"><span class="lineno">  481</span>            Socket = <span class="keyword">new</span> UdpClient(Port);</div>
+<div class="line"><span class="lineno">  482</span>            Socket.Connect(EndPoint);</div>
+<div class="line"><span class="lineno">  483</span>            Socket.BeginReceive(UdpReceiveCallback, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  484</span>            Packet SendPacket = <span class="keyword">new</span> Packet();</div>
+<div class="line"><span class="lineno">  485</span>            SendUdpData(SendPacket);</div>
+<div class="line"><span class="lineno">  486</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6a22f681f1b99838a5e45dede38b25ea" name="a6a22f681f1b99838a5e45dede38b25ea"></a>
@@ -160,6 +188,15 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Disconnects the <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a> client from the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00524">524</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  525</span>        {</div>
+<div class="line"><span class="lineno">  526</span>            instance.Disconnect();</div>
+<div class="line"><span class="lineno">  527</span>            EndPoint = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  528</span>            Socket = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  529</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6e5bb7a6d56e98cd014a9e0289cd19e4" name="a6e5bb7a6d56e98cd014a9e0289cd19e4"></a>
@@ -177,6 +214,29 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sends <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a> data packet to the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00504">504</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  505</span>        {</div>
+<div class="line"><span class="lineno">  506</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  507</span>            {</div>
+<div class="line"><span class="lineno">  508</span>                <span class="keywordflow">if</span> (Socket == <span class="keyword">null</span> || !Client.instance.isConnected) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  509</span> </div>
+<div class="line"><span class="lineno">  510</span>                SendPacket.<a class="code hl_function" href="class_packet.html#aa94ea5430ea67fa0538cdaa1fe65299c">AddIntAtStart</a>(instance.id);</div>
+<div class="line"><span class="lineno">  511</span>                <span class="keywordflow">if</span>(Socket != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  512</span>                {</div>
+<div class="line"><span class="lineno">  513</span>                    Socket.BeginSend(SendPacket.<a class="code hl_function" href="class_packet.html#a3adf900e0869f7d54aaf275db531d637">ConvertToArray</a>(), SendPacket.<a class="code hl_function" href="class_packet.html#a4350f8d19ce8152d7024104ad81cf6d6">DataLength</a>(), <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  514</span>                }</div>
+<div class="line"><span class="lineno">  515</span>            }</div>
+<div class="line"><span class="lineno">  516</span>            <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><span class="lineno">  517</span>            {</div>
+<div class="line"><span class="lineno">  518</span>                Debug.LogError($<span class="stringliteral">&quot;Error sending UDP data {ex}&quot;</span>);</div>
+<div class="line"><span class="lineno">  519</span>            }</div>
+<div class="line"><span class="lineno">  520</span>        }</div>
+<div class="ttc" id="aclass_packet_html_a3adf900e0869f7d54aaf275db531d637"><div class="ttname"><a href="class_packet.html#a3adf900e0869f7d54aaf275db531d637">Packet.ConvertToArray</a></div><div class="ttdeci">byte[] ConvertToArray()</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00287">Packet.cs:287</a></div></div>
+<div class="ttc" id="aclass_packet_html_a4350f8d19ce8152d7024104ad81cf6d6"><div class="ttname"><a href="class_packet.html#a4350f8d19ce8152d7024104ad81cf6d6">Packet.DataLength</a></div><div class="ttdeci">int DataLength()</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00300">Packet.cs:300</a></div></div>
+<div class="ttc" id="aclass_packet_html_aa94ea5430ea67fa0538cdaa1fe65299c"><div class="ttname"><a href="class_packet.html#aa94ea5430ea67fa0538cdaa1fe65299c">Packet.AddIntAtStart</a></div><div class="ttdeci">void AddIntAtStart(int number)</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00292">Packet.cs:292</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3c4175e11f1e2cd10a4e262936dc25c2" name="a3c4175e11f1e2cd10a4e262936dc25c2"></a>
@@ -202,6 +262,22 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Handles incoming <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a> data and calls <a class="el" href="class_client.html#a98eeb732c160e101b19e567fe4eb0489" title="Handles the received packet by type by calling methods in ClientReceiveHandler.">PacketAction()</a> on the main thread. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00490">490</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  491</span>        {</div>
+<div class="line"><span class="lineno">  492</span>            Packet ReceivedPacket = <span class="keyword">new</span> Packet(Data);</div>
+<div class="line"><span class="lineno">  493</span>            <span class="keywordtype">int</span> DataLength = ReceivedPacket.<a class="code hl_function" href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a>();</div>
+<div class="line"><span class="lineno">  494</span>            Data = ReceivedPacket.<a class="code hl_function" href="class_packet.html#af2e6874f82fe3be88b34b944518c82d6">ReadBytes</a>(DataLength);</div>
+<div class="line"><span class="lineno">  495</span>            ThreadsController.StartOnMainThread(() =&gt; {</div>
+<div class="line"><span class="lineno">  496</span>                Packet nPacket = <span class="keyword">new</span> Packet(Data);</div>
+<div class="line"><span class="lineno">  497</span>                <span class="keywordtype">int</span> PId = nPacket.<a class="code hl_function" href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a>();</div>
+<div class="line"><span class="lineno">  498</span>                PacketAction(PId, nPacket);</div>
+<div class="line"><span class="lineno">  499</span>            }) ;</div>
+<div class="line"><span class="lineno">  500</span>        }</div>
+<div class="ttc" id="aclass_packet_html_a822c0ba0dce983b19af0adf3b2fc1b9e"><div class="ttname"><a href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">Packet.ReadInt</a></div><div class="ttdeci">int ReadInt(bool changeReadPosition=true)</div><div class="ttdoc">Read int data.</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00080">Packet.cs:80</a></div></div>
+<div class="ttc" id="aclass_packet_html_af2e6874f82fe3be88b34b944518c82d6"><div class="ttname"><a href="class_packet.html#af2e6874f82fe3be88b34b944518c82d6">Packet.ReadBytes</a></div><div class="ttdeci">byte[] ReadBytes(int arrayLength, bool changeReadPosition=true)</div><div class="ttdoc">read byte array data</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00188">Packet.cs:188</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a652cdef0148c9c2ded3cf56ba6a94873" name="a652cdef0148c9c2ded3cf56ba6a94873"></a>
@@ -227,6 +303,26 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Callback for receiving data over the <a class="el" href="class_client_1_1_u_d_p.html" title="Handles UDP connection and communication for the client.">UDP</a>. Reads data into the data buffer, manages it by Handler and continues reading. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00534">534</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  535</span>        {</div>
+<div class="line"><span class="lineno">  536</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  537</span>            {</div>
+<div class="line"><span class="lineno">  538</span>                <span class="keywordtype">byte</span>[] data = Socket.EndReceive(Result, ref EndPoint);</div>
+<div class="line"><span class="lineno">  539</span>                Socket.BeginReceive(UdpReceiveCallback, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  540</span>                <span class="keywordflow">if</span>(data.Length &lt; 4)</div>
+<div class="line"><span class="lineno">  541</span>                {</div>
+<div class="line"><span class="lineno">  542</span>                    instance.Disconnect();</div>
+<div class="line"><span class="lineno">  543</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  544</span>                }</div>
+<div class="line"><span class="lineno">  545</span>                UdpDataHandler(data);</div>
+<div class="line"><span class="lineno">  546</span>            } <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  547</span>            {</div>
+<div class="line"><span class="lineno">  548</span>                Disconnect();</div>
+<div class="line"><span class="lineno">  549</span>            }</div>
+<div class="line"><span class="lineno">  550</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -242,6 +338,8 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00471">471</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+
 </div>
 </div>
 <a id="a239c0e1729d0954b494df4beff78587c" name="a239c0e1729d0954b494df4beff78587c"></a>
@@ -256,11 +354,10 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00470">470</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/NetworkLibrary/ClientStuff/ClientScripts/Code/<a class="el" href="_client_8cs.html">Client.cs</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

@@ -91,6 +91,9 @@ $(function(){initNavTree('class_network_manager.html','','class_network_manager-
   <div class="headertitle"><div class="title">NetworkManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Manages network-related operations on the client side, including connection handling, user synchronization, transform and animation updates, and messaging. It is part of EDA architecture of the library.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for NetworkManager:</div>
 <div class="dyncontent">
@@ -101,42 +104,69 @@ Inheritance diagram for NetworkManager:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa079da652b2fd90e86f433a3b10e9ef6" id="r_aa079da652b2fd90e86f433a3b10e9ef6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa079da652b2fd90e86f433a3b10e9ef6">ConnectToServer</a> ()</td></tr>
+<tr class="memdesc:aa079da652b2fd90e86f433a3b10e9ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiates a connection to the server.  <br /></td></tr>
 <tr class="memitem:aef471d6ae283a0327040340acc81db99" id="r_aef471d6ae283a0327040340acc81db99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef471d6ae283a0327040340acc81db99">DisconnectFromServer</a> ()</td></tr>
+<tr class="memdesc:aef471d6ae283a0327040340acc81db99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a request to disconnect the client from the server.  <br /></td></tr>
 <tr class="memitem:aa968574fcb38c643f6730d7bca524f9d" id="r_aa968574fcb38c643f6730d7bca524f9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa968574fcb38c643f6730d7bca524f9d">AddUser</a> (GameObject userPrefab)</td></tr>
+<tr class="memdesc:aa968574fcb38c643f6730d7bca524f9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a newly spawned user object to the list of online users.  <br /></td></tr>
 <tr class="memitem:a02cfc0d15dbe9051478b51fc4764c254" id="r_a02cfc0d15dbe9051478b51fc4764c254"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02cfc0d15dbe9051478b51fc4764c254">GetUserByName</a> (string username)</td></tr>
+<tr class="memdesc:a02cfc0d15dbe9051478b51fc4764c254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a user GameObject by username.  <br /></td></tr>
 <tr class="memitem:a45216d93e4db8f98bb7e4ac3c14d929d" id="r_a45216d93e4db8f98bb7e4ac3c14d929d"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45216d93e4db8f98bb7e4ac3c14d929d">GetUserById</a> (int id)</td></tr>
+<tr class="memdesc:a45216d93e4db8f98bb7e4ac3c14d929d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a user GameObject by user ID.  <br /></td></tr>
 <tr class="memitem:a9178f7218e29a0805e4b5ff9867ee56c" id="r_a9178f7218e29a0805e4b5ff9867ee56c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9178f7218e29a0805e4b5ff9867ee56c">SpawnUser</a> (int id, string userName, bool isLocal)</td></tr>
+<tr class="memdesc:a9178f7218e29a0805e4b5ff9867ee56c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates and initializes a new user object in the scene.  <br /></td></tr>
 <tr class="memitem:aa8cf3eae77423bdd88fd851de6f3b376" id="r_aa8cf3eae77423bdd88fd851de6f3b376"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8cf3eae77423bdd88fd851de6f3b376">DisconnectForeignUser</a> (int id)</td></tr>
+<tr class="memdesc:aa8cf3eae77423bdd88fd851de6f3b376"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a remote user object from the scene based on its ID.  <br /></td></tr>
 <tr class="memitem:ab6f697c2d5361063e756a971714150c9" id="r_ab6f697c2d5361063e756a971714150c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6f697c2d5361063e756a971714150c9">SendTextMessage</a> (string message, int mode, int id)</td></tr>
+<tr class="memdesc:ab6f697c2d5361063e756a971714150c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a text message to either all users or a specific user.  <br /></td></tr>
 <tr class="memitem:a7d1780726aa484158407e4f83e8bc5f4" id="r_a7d1780726aa484158407e4f83e8bc5f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d1780726aa484158407e4f83e8bc5f4">sendTestMessage</a> ()</td></tr>
+<tr class="memdesc:a7d1780726aa484158407e4f83e8bc5f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a test broadcast message to the server.  <br /></td></tr>
 <tr class="memitem:aceda224e5159f6ada4f75cc143f7c1b1" id="r_aceda224e5159f6ada4f75cc143f7c1b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aceda224e5159f6ada4f75cc143f7c1b1">UpdateTransform</a> (Transform objectTransform)</td></tr>
+<tr class="memdesc:aceda224e5159f6ada4f75cc143f7c1b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the updated transform of the local user to the server.  <br /></td></tr>
 <tr class="memitem:a80d6c620cf55c58e7f231cf940347aab" id="r_a80d6c620cf55c58e7f231cf940347aab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80d6c620cf55c58e7f231cf940347aab">SendAnimatorParameter</a> (int type, string name, float value)</td></tr>
+<tr class="memdesc:a80d6c620cf55c58e7f231cf940347aab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends an animation parameter change to the server for synchronization.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a1bc1f6baf88a737073a9586b5b0118a9" id="r_a1bc1f6baf88a737073a9586b5b0118a9"><td class="memItemLeft" align="right" valign="top">List&lt; GameObject &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bc1f6baf88a737073a9586b5b0118a9">OnlineUsers</a></td></tr>
+<tr class="memitem:a7ad202ed2928430d19e69b3751ff57f6" id="r_a7ad202ed2928430d19e69b3751ff57f6"><td class="memItemLeft" align="right" valign="top">List&lt; GameObject &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ad202ed2928430d19e69b3751ff57f6">onlineUsers</a></td></tr>
+<tr class="memdesc:a7ad202ed2928430d19e69b3751ff57f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of all currently active (connected) user GameObjects in the scene.  <br /></td></tr>
 <tr class="memitem:a048c99961dffd609ef88dc7c8a65da40" id="r_a048c99961dffd609ef88dc7c8a65da40"><td class="memItemLeft" align="right" valign="top">Transform[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a048c99961dffd609ef88dc7c8a65da40">spawnPoints</a></td></tr>
+<tr class="memdesc:a048c99961dffd609ef88dc7c8a65da40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predefined spawn points used for placing newly connected users in the scene.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a88de126b5881bbb7de57cb19f99e4e1f" id="r_a88de126b5881bbb7de57cb19f99e4e1f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_network_manager.html">NetworkManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88de126b5881bbb7de57cb19f99e4e1f">networkManager</a></td></tr>
+<tr class="memdesc:a88de126b5881bbb7de57cb19f99e4e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Singleton instance of the <a class="el" href="class_network_manager.html" title="Manages network-related operations on the client side, including connection handling,...">NetworkManager</a>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a8eb293bf440cb5afa0026c358465f0df" id="r_a8eb293bf440cb5afa0026c358465f0df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8eb293bf440cb5afa0026c358465f0df">Awake</a> ()</td></tr>
+<tr class="memdesc:a8eb293bf440cb5afa0026c358465f0df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the singleton instance of the <a class="el" href="class_network_manager.html" title="Manages network-related operations on the client side, including connection handling,...">NetworkManager</a>.  <br /></td></tr>
 <tr class="memitem:a3e9146c4e5bda229850acb04f80383cd" id="r_a3e9146c4e5bda229850acb04f80383cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e9146c4e5bda229850acb04f80383cd">Start</a> ()</td></tr>
+<tr class="memdesc:a3e9146c4e5bda229850acb04f80383cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribes to client events for handling network state changes and data reception, can be easily extended of new events.  <br /></td></tr>
 <tr class="memitem:aed8415624c642614b0b0995e4b267d4e" id="r_aed8415624c642614b0b0995e4b267d4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed8415624c642614b0b0995e4b267d4e">HandleConnected</a> ()</td></tr>
+<tr class="memdesc:aed8415624c642614b0b0995e4b267d4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback invoked when the client successfully connects to the server.  <br /></td></tr>
 <tr class="memitem:a9e3daf8530d9ecadc597a14643290d12" id="r_a9e3daf8530d9ecadc597a14643290d12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e3daf8530d9ecadc597a14643290d12">HandleConnectionFailed</a> (string reason)</td></tr>
+<tr class="memdesc:a9e3daf8530d9ecadc597a14643290d12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback invoked when the connection to the server fails.  <br /></td></tr>
 <tr class="memitem:a76c832debb41a6aee20140d9c2650cfc" id="r_a76c832debb41a6aee20140d9c2650cfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76c832debb41a6aee20140d9c2650cfc">HandleMessage</a> (string message)</td></tr>
+<tr class="memdesc:a76c832debb41a6aee20140d9c2650cfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for processing a received message from the server.  <br /></td></tr>
 <tr class="memitem:a9c3b37cb86bd11ff86c3524410accdc3" id="r_a9c3b37cb86bd11ff86c3524410accdc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c3b37cb86bd11ff86c3524410accdc3">HandleDisconnected</a> ()</td></tr>
+<tr class="memdesc:a9c3b37cb86bd11ff86c3524410accdc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback invoked when the client is disconnected from the server. Removes all user objects from the scene.  <br /></td></tr>
 <tr class="memitem:ab7eb6aac280475d4b526e32b54a18601" id="r_ab7eb6aac280475d4b526e32b54a18601"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7eb6aac280475d4b526e32b54a18601">HandleTransformChange</a> (int id, Vector3 pos, Quaternion rot)</td></tr>
+<tr class="memdesc:ab7eb6aac280475d4b526e32b54a18601"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a received position and rotation update to the corresponding remote user.  <br /></td></tr>
 <tr class="memitem:a26ae747422c36a841c3643bd49975564" id="r_a26ae747422c36a841c3643bd49975564"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26ae747422c36a841c3643bd49975564">HandleAnimationChange</a> (int id, int type, string name, float value)</td></tr>
+<tr class="memdesc:a26ae747422c36a841c3643bd49975564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a received animation parameter change to the corresponding remote user.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a460af8158f476b83137a81c27a893932" id="r_a460af8158f476b83137a81c27a893932"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_client_settings.html">ClientSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a460af8158f476b83137a81c27a893932">ClientSettings</a></td></tr>
+<tr class="memdesc:a460af8158f476b83137a81c27a893932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration settings for the client, including user prefab and other preferences.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages network-related operations on the client side, including connection handling, user synchronization, transform and animation updates, and messaging. It is part of EDA architecture of the library. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00010">10</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="aa968574fcb38c643f6730d7bca524f9d" name="aa968574fcb38c643f6730d7bca524f9d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa968574fcb38c643f6730d7bca524f9d">&#9670;&#160;</a></span>AddUser()</h2>
 
@@ -152,6 +182,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Adds a newly spawned user object to the list of online users. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00142">142</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  143</span>    {</div>
+<div class="line"><span class="lineno">  144</span>        <a class="code hl_variable" href="#a7ad202ed2928430d19e69b3751ff57f6">onlineUsers</a>.Add(userPrefab);</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
+<div class="ttc" id="aclass_network_manager_html_a7ad202ed2928430d19e69b3751ff57f6"><div class="ttname"><a href="#a7ad202ed2928430d19e69b3751ff57f6">NetworkManager.onlineUsers</a></div><div class="ttdeci">List&lt; GameObject &gt; onlineUsers</div><div class="ttdoc">List of all currently active (connected) user GameObjects in the scene.</div><div class="ttdef"><b>Definition</b> <a href="_network_manager_8cs_source.html#l00019">NetworkManager.cs:19</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8eb293bf440cb5afa0026c358465f0df" name="a8eb293bf440cb5afa0026c358465f0df"></a>
@@ -177,6 +215,21 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initializes the singleton instance of the <a class="el" href="class_network_manager.html" title="Manages network-related operations on the client side, including connection handling,...">NetworkManager</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00032">32</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a88de126b5881bbb7de57cb19f99e4e1f">networkManager</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            <a class="code hl_variable" href="#a88de126b5881bbb7de57cb19f99e4e1f">networkManager</a> = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a88de126b5881bbb7de57cb19f99e4e1f">networkManager</a> != <span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            Destroy(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+<div class="ttc" id="aclass_network_manager_html_a88de126b5881bbb7de57cb19f99e4e1f"><div class="ttname"><a href="#a88de126b5881bbb7de57cb19f99e4e1f">NetworkManager.networkManager</a></div><div class="ttdeci">static NetworkManager networkManager</div><div class="ttdoc">Singleton instance of the NetworkManager.</div><div class="ttdef"><b>Definition</b> <a href="_network_manager_8cs_source.html#l00015">NetworkManager.cs:15</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa079da652b2fd90e86f433a3b10e9ef6" name="aa079da652b2fd90e86f433a3b10e9ef6"></a>
@@ -194,6 +247,13 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initiates a connection to the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00058">58</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        Client.instance.ConnectToServer();</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa8cf3eae77423bdd88fd851de6f3b376" name="aa8cf3eae77423bdd88fd851de6f3b376"></a>
@@ -211,6 +271,22 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Removes a remote user object from the scene based on its ID. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00186">186</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  187</span>    {</div>
+<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">foreach</span> (GameObject user <span class="keywordflow">in</span> <a class="code hl_variable" href="#a7ad202ed2928430d19e69b3751ff57f6">onlineUsers</a>)</div>
+<div class="line"><span class="lineno">  189</span>        {</div>
+<div class="line"><span class="lineno">  190</span>            <span class="keywordflow">if</span> (user.GetComponent&lt;NetworkUser&gt;().GetId() == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  191</span>            {</div>
+<div class="line"><span class="lineno">  192</span>                GameObject UserObject = user;</div>
+<div class="line"><span class="lineno">  193</span>                <a class="code hl_variable" href="#a7ad202ed2928430d19e69b3751ff57f6">onlineUsers</a>.Remove(user);</div>
+<div class="line"><span class="lineno">  194</span>                Destroy(UserObject);</div>
+<div class="line"><span class="lineno">  195</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  196</span>            }</div>
+<div class="line"><span class="lineno">  197</span>        }</div>
+<div class="line"><span class="lineno">  198</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aef471d6ae283a0327040340acc81db99" name="aef471d6ae283a0327040340acc81db99"></a>
@@ -228,6 +304,13 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sends a request to disconnect the client from the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00065">65</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
+<div class="line"><span class="lineno">   67</span>        Client.instance.DisconnectRequested();</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a45216d93e4db8f98bb7e4ac3c14d929d" name="a45216d93e4db8f98bb7e4ac3c14d929d"></a>
@@ -245,6 +328,20 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Retrieves a user GameObject by user ID. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00163">163</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  164</span>    {</div>
+<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">foreach</span> (GameObject user <span class="keywordflow">in</span> <a class="code hl_variable" href="#a7ad202ed2928430d19e69b3751ff57f6">onlineUsers</a>)</div>
+<div class="line"><span class="lineno">  166</span>        {</div>
+<div class="line"><span class="lineno">  167</span>            <span class="keywordflow">if</span> (user.GetComponent&lt;NetworkUser&gt;().GetId() == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  168</span>            {</div>
+<div class="line"><span class="lineno">  169</span>                <span class="keywordflow">return</span> user;</div>
+<div class="line"><span class="lineno">  170</span>            }</div>
+<div class="line"><span class="lineno">  171</span>        }</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  173</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a02cfc0d15dbe9051478b51fc4764c254" name="a02cfc0d15dbe9051478b51fc4764c254"></a>
@@ -262,6 +359,20 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Retrieves a user GameObject by username. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00149">149</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  150</span>    {</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">foreach</span> (GameObject user <span class="keywordflow">in</span> <a class="code hl_variable" href="#a7ad202ed2928430d19e69b3751ff57f6">onlineUsers</a>)</div>
+<div class="line"><span class="lineno">  152</span>        {</div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">if</span> (user.GetComponent&lt;NetworkUser&gt;().GetUsername() == username)</div>
+<div class="line"><span class="lineno">  154</span>            {</div>
+<div class="line"><span class="lineno">  155</span>                <span class="keywordflow">return</span> user;</div>
+<div class="line"><span class="lineno">  156</span>            }</div>
+<div class="line"><span class="lineno">  157</span>        }</div>
+<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  159</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a26ae747422c36a841c3643bd49975564" name="a26ae747422c36a841c3643bd49975564"></a>
@@ -301,6 +412,26 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Applies a received animation parameter change to the corresponding remote user. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00125">125</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>    {</div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">foreach</span> (GameObject userObject <span class="keywordflow">in</span> <a class="code hl_variable" href="#a7ad202ed2928430d19e69b3751ff57f6">onlineUsers</a>)</div>
+<div class="line"><span class="lineno">  128</span>        {</div>
+<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">if</span> (userObject.GetComponent&lt;NetworkUser&gt;().GetId() == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  130</span>            {</div>
+<div class="line"><span class="lineno">  131</span>                NetworkAnimator nt = userObject.GetComponent&lt;NetworkAnimator&gt;();</div>
+<div class="line"><span class="lineno">  132</span>                <span class="keywordflow">if</span> (nt != <span class="keyword">null</span> &amp;&amp; !nt.<a class="code hl_variable" href="class_network_animator.html#afd9a6e206c83615b8aff4304eaf61ade">UserInfo</a>.<a class="code hl_variable" href="class_network_user.html#a57b10a3b3d430111d11023e09f6d5da3">isLocalUser</a>)</div>
+<div class="line"><span class="lineno">  133</span>                {</div>
+<div class="line"><span class="lineno">  134</span>                    nt.<a class="code hl_function" href="class_network_animator.html#a2c436b9cee13429e89387f98b8d08d72">ApplyRemoteParameter</a>(type, name, value);</div>
+<div class="line"><span class="lineno">  135</span>                }</div>
+<div class="line"><span class="lineno">  136</span>            }</div>
+<div class="line"><span class="lineno">  137</span>        }</div>
+<div class="line"><span class="lineno">  138</span>    }</div>
+<div class="ttc" id="aclass_network_animator_html_a2c436b9cee13429e89387f98b8d08d72"><div class="ttname"><a href="class_network_animator.html#a2c436b9cee13429e89387f98b8d08d72">NetworkAnimator.ApplyRemoteParameter</a></div><div class="ttdeci">void ApplyRemoteParameter(int type, string name, float value)</div><div class="ttdoc">Applies an animation parameter update received from a remote user.</div><div class="ttdef"><b>Definition</b> <a href="_network_animator_8cs_source.html#l00122">NetworkAnimator.cs:122</a></div></div>
+<div class="ttc" id="aclass_network_animator_html_afd9a6e206c83615b8aff4304eaf61ade"><div class="ttname"><a href="class_network_animator.html#afd9a6e206c83615b8aff4304eaf61ade">NetworkAnimator.UserInfo</a></div><div class="ttdeci">NetworkUser UserInfo</div><div class="ttdoc">Information about the network user used to check local or remote status.</div><div class="ttdef"><b>Definition</b> <a href="_network_animator_8cs_source.html#l00013">NetworkAnimator.cs:13</a></div></div>
+<div class="ttc" id="aclass_network_user_html_a57b10a3b3d430111d11023e09f6d5da3"><div class="ttname"><a href="class_network_user.html#a57b10a3b3d430111d11023e09f6d5da3">NetworkUser.isLocalUser</a></div><div class="ttdeci">bool isLocalUser</div><div class="ttdef"><b>Definition</b> <a href="_network_user_8cs_source.html#l00012">NetworkUser.cs:12</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aed8415624c642614b0b0995e4b267d4e" name="aed8415624c642614b0b0995e4b267d4e"></a>
@@ -326,6 +457,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Callback invoked when the client successfully connects to the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00072">72</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
+<div class="line"><span class="lineno">   74</span>        <span class="comment">//</span></div>
+<div class="line"><span class="lineno">   75</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9e3daf8530d9ecadc597a14643290d12" name="a9e3daf8530d9ecadc597a14643290d12"></a>
@@ -351,6 +489,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Callback invoked when the connection to the server fails. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00079">79</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>    {</div>
+<div class="line"><span class="lineno">   81</span>        Debug.LogError(<span class="stringliteral">&quot;NETWORKMANAGER: Connection failed: &quot;</span> + reason);</div>
+<div class="line"><span class="lineno">   82</span>        <span class="comment">// </span></div>
+<div class="line"><span class="lineno">   83</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9c3b37cb86bd11ff86c3524410accdc3" name="a9c3b37cb86bd11ff86c3524410accdc3"></a>
@@ -376,6 +522,19 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Callback invoked when the client is disconnected from the server. Removes all user objects from the scene. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00095">95</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>    {</div>
+<div class="line"><span class="lineno">   97</span>        Debug.Log(<span class="stringliteral">&quot;NETWORKMANAGER: Disconnected from server.&quot;</span>);</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">foreach</span> (GameObject user <span class="keywordflow">in</span> <a class="code hl_variable" href="#a7ad202ed2928430d19e69b3751ff57f6">onlineUsers</a>)</div>
+<div class="line"><span class="lineno">   99</span>        {</div>
+<div class="line"><span class="lineno">  100</span>            GameObject UserObject = user;</div>
+<div class="line"><span class="lineno">  101</span>            <a class="code hl_variable" href="#a7ad202ed2928430d19e69b3751ff57f6">onlineUsers</a>.Remove(user);</div>
+<div class="line"><span class="lineno">  102</span>            Destroy(UserObject);</div>
+<div class="line"><span class="lineno">  103</span>        }</div>
+<div class="line"><span class="lineno">  104</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a76c832debb41a6aee20140d9c2650cfc" name="a76c832debb41a6aee20140d9c2650cfc"></a>
@@ -401,6 +560,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Callback for processing a received message from the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00087">87</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>    {</div>
+<div class="line"><span class="lineno">   89</span>        <span class="comment">// </span></div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab7eb6aac280475d4b526e32b54a18601" name="ab7eb6aac280475d4b526e32b54a18601"></a>
@@ -435,6 +601,25 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Applies a received position and rotation update to the corresponding remote user. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00108">108</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>    {</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">foreach</span>(GameObject userObject <span class="keywordflow">in</span> <a class="code hl_variable" href="#a7ad202ed2928430d19e69b3751ff57f6">onlineUsers</a>)</div>
+<div class="line"><span class="lineno">  111</span>        {</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">if</span>(userObject.GetComponent&lt;NetworkUser&gt;().GetId() == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  113</span>            {</div>
+<div class="line"><span class="lineno">  114</span>                NetworkTransform nt = userObject.GetComponent&lt;NetworkTransform&gt;();</div>
+<div class="line"><span class="lineno">  115</span>                <span class="keywordflow">if</span> (nt != <span class="keyword">null</span> &amp;&amp; !nt.<a class="code hl_variable" href="class_network_transform.html#ab95299adfe2b587666d93611ff38e19c">UserInfo</a>.<a class="code hl_variable" href="class_network_user.html#a57b10a3b3d430111d11023e09f6d5da3">isLocalUser</a>)</div>
+<div class="line"><span class="lineno">  116</span>                {</div>
+<div class="line"><span class="lineno">  117</span>                    nt.<a class="code hl_function" href="class_network_transform.html#a0cf145b2e8f537c9720e1a8d61488e91">ApplyNetworkTransform</a>(pos, rot);</div>
+<div class="line"><span class="lineno">  118</span>                }</div>
+<div class="line"><span class="lineno">  119</span>            }</div>
+<div class="line"><span class="lineno">  120</span>        }</div>
+<div class="line"><span class="lineno">  121</span>    }</div>
+<div class="ttc" id="aclass_network_transform_html_a0cf145b2e8f537c9720e1a8d61488e91"><div class="ttname"><a href="class_network_transform.html#a0cf145b2e8f537c9720e1a8d61488e91">NetworkTransform.ApplyNetworkTransform</a></div><div class="ttdeci">void ApplyNetworkTransform(Vector3 pos, Quaternion rot)</div><div class="ttdoc">Applies the received position and rotation from the network to be used for interpolation.</div><div class="ttdef"><b>Definition</b> <a href="_network_transform_8cs_source.html#l00064">NetworkTransform.cs:64</a></div></div>
+<div class="ttc" id="aclass_network_transform_html_ab95299adfe2b587666d93611ff38e19c"><div class="ttname"><a href="class_network_transform.html#ab95299adfe2b587666d93611ff38e19c">NetworkTransform.UserInfo</a></div><div class="ttdeci">NetworkUser UserInfo</div><div class="ttdoc">UserInfo class used for checking if the object belongs to the local user or another player.</div><div class="ttdef"><b>Definition</b> <a href="_network_transform_8cs_source.html#l00027">NetworkTransform.cs:27</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a80d6c620cf55c58e7f231cf940347aab" name="a80d6c620cf55c58e7f231cf940347aab"></a>
@@ -461,6 +646,13 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sends an animation parameter change to the server for synchronization. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00228">228</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  229</span>    {</div>
+<div class="line"><span class="lineno">  230</span>        Client.instance.AnimationUpdate(type,name,value);</div>
+<div class="line"><span class="lineno">  231</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7d1780726aa484158407e4f83e8bc5f4" name="a7d1780726aa484158407e4f83e8bc5f4"></a>
@@ -478,6 +670,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sends a test broadcast message to the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00214">214</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  215</span>    {</div>
+<div class="line"><span class="lineno">  216</span>        <a class="code hl_function" href="#ab6f697c2d5361063e756a971714150c9">SendTextMessage</a>(<span class="stringliteral">&quot;Test message&quot;</span>, 1, 0);</div>
+<div class="line"><span class="lineno">  217</span>    }</div>
+<div class="ttc" id="aclass_network_manager_html_ab6f697c2d5361063e756a971714150c9"><div class="ttname"><a href="#ab6f697c2d5361063e756a971714150c9">NetworkManager.SendTextMessage</a></div><div class="ttdeci">void SendTextMessage(string message, int mode, int id)</div><div class="ttdoc">Sends a text message to either all users or a specific user.</div><div class="ttdef"><b>Definition</b> <a href="_network_manager_8cs_source.html#l00202">NetworkManager.cs:202</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab6f697c2d5361063e756a971714150c9" name="ab6f697c2d5361063e756a971714150c9"></a>
@@ -504,6 +704,18 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sends a text message to either all users or a specific user. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00202">202</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  203</span>    {</div>
+<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">if</span>(mode == 1) { </div>
+<div class="line"><span class="lineno">  205</span>            Client.instance.MessageToAllRequest(message);</div>
+<div class="line"><span class="lineno">  206</span>        } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  207</span>        {</div>
+<div class="line"><span class="lineno">  208</span>            Client.instance.MessageToUserRequest(message, <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  209</span>        }</div>
+<div class="line"><span class="lineno">  210</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9178f7218e29a0805e4b5ff9867ee56c" name="a9178f7218e29a0805e4b5ff9867ee56c"></a>
@@ -530,6 +742,17 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Instantiates and initializes a new user object in the scene. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00177">177</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  178</span>    {</div>
+<div class="line"><span class="lineno">  179</span>        GameObject UserPrefab = Instantiate(<a class="code hl_variable" href="#a460af8158f476b83137a81c27a893932">ClientSettings</a>.userPrefab[0], <a class="code hl_variable" href="#a048c99961dffd609ef88dc7c8a65da40">spawnPoints</a>[0]);</div>
+<div class="line"><span class="lineno">  180</span>        UserPrefab.GetComponent&lt;NetworkUser&gt;().SetUser(<span class="keywordtype">id</span>, userName, isLocal);</div>
+<div class="line"><span class="lineno">  181</span>        <a class="code hl_variable" href="#a88de126b5881bbb7de57cb19f99e4e1f">networkManager</a>.AddUser(UserPrefab);</div>
+<div class="line"><span class="lineno">  182</span>    }</div>
+<div class="ttc" id="aclass_network_manager_html_a048c99961dffd609ef88dc7c8a65da40"><div class="ttname"><a href="#a048c99961dffd609ef88dc7c8a65da40">NetworkManager.spawnPoints</a></div><div class="ttdeci">Transform[] spawnPoints</div><div class="ttdoc">Predefined spawn points used for placing newly connected users in the scene.</div><div class="ttdef"><b>Definition</b> <a href="_network_manager_8cs_source.html#l00027">NetworkManager.cs:27</a></div></div>
+<div class="ttc" id="aclass_network_manager_html_a460af8158f476b83137a81c27a893932"><div class="ttname"><a href="#a460af8158f476b83137a81c27a893932">NetworkManager.ClientSettings</a></div><div class="ttdeci">ClientSettings ClientSettings</div><div class="ttdoc">Configuration settings for the client, including user prefab and other preferences.</div><div class="ttdef"><b>Definition</b> <a href="_network_manager_8cs_source.html#l00023">NetworkManager.cs:23</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3e9146c4e5bda229850acb04f80383cd" name="a3e9146c4e5bda229850acb04f80383cd"></a>
@@ -555,6 +778,24 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Subscribes to client events for handling network state changes and data reception, can be easily extended of new events. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00046">46</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        Client.instance.OnConnected += <a class="code hl_function" href="#aed8415624c642614b0b0995e4b267d4e">HandleConnected</a>;</div>
+<div class="line"><span class="lineno">   49</span>        Client.instance.OnConnectionFailed += <a class="code hl_function" href="#a9e3daf8530d9ecadc597a14643290d12">HandleConnectionFailed</a>;</div>
+<div class="line"><span class="lineno">   50</span>        Client.instance.OnDisconnected += <a class="code hl_function" href="#a9c3b37cb86bd11ff86c3524410accdc3">HandleDisconnected</a>;</div>
+<div class="line"><span class="lineno">   51</span>        Client.instance.OnMessageReceived += <a class="code hl_function" href="#a76c832debb41a6aee20140d9c2650cfc">HandleMessage</a>;</div>
+<div class="line"><span class="lineno">   52</span>        Client.instance.OnTransformReceived += <a class="code hl_function" href="#ab7eb6aac280475d4b526e32b54a18601">HandleTransformChange</a>;</div>
+<div class="line"><span class="lineno">   53</span>        Client.instance.OnAnimationChangeReceived += <a class="code hl_function" href="#a26ae747422c36a841c3643bd49975564">HandleAnimationChange</a>;</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aclass_network_manager_html_a26ae747422c36a841c3643bd49975564"><div class="ttname"><a href="#a26ae747422c36a841c3643bd49975564">NetworkManager.HandleAnimationChange</a></div><div class="ttdeci">void HandleAnimationChange(int id, int type, string name, float value)</div><div class="ttdoc">Applies a received animation parameter change to the corresponding remote user.</div><div class="ttdef"><b>Definition</b> <a href="_network_manager_8cs_source.html#l00125">NetworkManager.cs:125</a></div></div>
+<div class="ttc" id="aclass_network_manager_html_a76c832debb41a6aee20140d9c2650cfc"><div class="ttname"><a href="#a76c832debb41a6aee20140d9c2650cfc">NetworkManager.HandleMessage</a></div><div class="ttdeci">void HandleMessage(string message)</div><div class="ttdoc">Callback for processing a received message from the server.</div><div class="ttdef"><b>Definition</b> <a href="_network_manager_8cs_source.html#l00087">NetworkManager.cs:87</a></div></div>
+<div class="ttc" id="aclass_network_manager_html_a9c3b37cb86bd11ff86c3524410accdc3"><div class="ttname"><a href="#a9c3b37cb86bd11ff86c3524410accdc3">NetworkManager.HandleDisconnected</a></div><div class="ttdeci">void HandleDisconnected()</div><div class="ttdoc">Callback invoked when the client is disconnected from the server. Removes all user objects from the s...</div><div class="ttdef"><b>Definition</b> <a href="_network_manager_8cs_source.html#l00095">NetworkManager.cs:95</a></div></div>
+<div class="ttc" id="aclass_network_manager_html_a9e3daf8530d9ecadc597a14643290d12"><div class="ttname"><a href="#a9e3daf8530d9ecadc597a14643290d12">NetworkManager.HandleConnectionFailed</a></div><div class="ttdeci">void HandleConnectionFailed(string reason)</div><div class="ttdoc">Callback invoked when the connection to the server fails.</div><div class="ttdef"><b>Definition</b> <a href="_network_manager_8cs_source.html#l00079">NetworkManager.cs:79</a></div></div>
+<div class="ttc" id="aclass_network_manager_html_ab7eb6aac280475d4b526e32b54a18601"><div class="ttname"><a href="#ab7eb6aac280475d4b526e32b54a18601">NetworkManager.HandleTransformChange</a></div><div class="ttdeci">void HandleTransformChange(int id, Vector3 pos, Quaternion rot)</div><div class="ttdoc">Applies a received position and rotation update to the corresponding remote user.</div><div class="ttdef"><b>Definition</b> <a href="_network_manager_8cs_source.html#l00108">NetworkManager.cs:108</a></div></div>
+<div class="ttc" id="aclass_network_manager_html_aed8415624c642614b0b0995e4b267d4e"><div class="ttname"><a href="#aed8415624c642614b0b0995e4b267d4e">NetworkManager.HandleConnected</a></div><div class="ttdeci">void HandleConnected()</div><div class="ttdoc">Callback invoked when the client successfully connects to the server.</div><div class="ttdef"><b>Definition</b> <a href="_network_manager_8cs_source.html#l00072">NetworkManager.cs:72</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aceda224e5159f6ada4f75cc143f7c1b1" name="aceda224e5159f6ada4f75cc143f7c1b1"></a>
@@ -572,6 +813,13 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sends the updated transform of the local user to the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00221">221</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  222</span>    {</div>
+<div class="line"><span class="lineno">  223</span>        Client.instance.UpdateTransform(objectTransform);</div>
+<div class="line"><span class="lineno">  224</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -595,6 +843,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Configuration settings for the client, including user prefab and other preferences. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00023">23</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+
 </div>
 </div>
 <a id="a88de126b5881bbb7de57cb19f99e4e1f" name="a88de126b5881bbb7de57cb19f99e4e1f"></a>
@@ -617,19 +869,27 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Singleton instance of the <a class="el" href="class_network_manager.html" title="Manages network-related operations on the client side, including connection handling,...">NetworkManager</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00015">15</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+
 </div>
 </div>
-<a id="a1bc1f6baf88a737073a9586b5b0118a9" name="a1bc1f6baf88a737073a9586b5b0118a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bc1f6baf88a737073a9586b5b0118a9">&#9670;&#160;</a></span>OnlineUsers</h2>
+<a id="a7ad202ed2928430d19e69b3751ff57f6" name="a7ad202ed2928430d19e69b3751ff57f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ad202ed2928430d19e69b3751ff57f6">&#9670;&#160;</a></span>onlineUsers</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;GameObject&gt; NetworkManager.OnlineUsers</td>
+          <td class="memname">List&lt;GameObject&gt; NetworkManager.onlineUsers</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>List of all currently active (connected) user GameObjects in the scene. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00019">19</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
 
 </div>
 </div>
@@ -645,11 +905,12 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Predefined spawn points used for placing newly connected users in the scene. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_manager_8cs_source.html#l00027">27</a> of file <a class="el" href="_network_manager_8cs_source.html">NetworkManager.cs</a>.</p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/NetworkLibrary/ClientStuff/ClientScripts/Components/<a class="el" href="_network_manager_8cs.html">NetworkManager.cs</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

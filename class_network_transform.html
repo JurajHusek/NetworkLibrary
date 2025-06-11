@@ -91,6 +91,9 @@ $(function(){initNavTree('class_network_transform.html','','class_network_transf
   <div class="headertitle"><div class="title">NetworkTransform Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Handles synchronization of position and rotation over the network. For local users sends updates in time interval, for remote users interpolates transform.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for NetworkTransform:</div>
 <div class="dyncontent">
@@ -101,26 +104,36 @@ Inheritance diagram for NetworkTransform:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0cf145b2e8f537c9720e1a8d61488e91" id="r_a0cf145b2e8f537c9720e1a8d61488e91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cf145b2e8f537c9720e1a8d61488e91">ApplyNetworkTransform</a> (Vector3 pos, Quaternion rot)</td></tr>
+<tr class="memdesc:a0cf145b2e8f537c9720e1a8d61488e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the received position and rotation from the network to be used for interpolation.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ab91795f19e039018c035680d8714dc4b" id="r_ab91795f19e039018c035680d8714dc4b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab91795f19e039018c035680d8714dc4b">sendRate</a> = 0.05f</td></tr>
+<tr class="memdesc:ab91795f19e039018c035680d8714dc4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time interval between transform updates for local users.  <br /></td></tr>
 <tr class="memitem:ab95299adfe2b587666d93611ff38e19c" id="r_ab95299adfe2b587666d93611ff38e19c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_network_user.html">NetworkUser</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab95299adfe2b587666d93611ff38e19c">UserInfo</a></td></tr>
+<tr class="memdesc:ab95299adfe2b587666d93611ff38e19c"><td class="mdescLeft">&#160;</td><td class="mdescRight">UserInfo class used for checking if the object belongs to the local user or another player.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ac40a60c0c299fbb4ee56cbae881e2693" id="r_ac40a60c0c299fbb4ee56cbae881e2693"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac40a60c0c299fbb4ee56cbae881e2693">Start</a> ()</td></tr>
+<tr class="memdesc:ac40a60c0c299fbb4ee56cbae881e2693"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the transform targets and adjusts send rate based on UDP setting.  <br /></td></tr>
 <tr class="memitem:a7571ff4a92e78aee0368712dfcbaa6c7" id="r_a7571ff4a92e78aee0368712dfcbaa6c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7571ff4a92e78aee0368712dfcbaa6c7">Update</a> ()</td></tr>
+<tr class="memdesc:a7571ff4a92e78aee0368712dfcbaa6c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">For local users, sends transform updates periodically. For remote users, smoothly interpolates transform to the target.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a559733114a519f70666ee9bc45f68898" id="r_a559733114a519f70666ee9bc45f68898"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a559733114a519f70666ee9bc45f68898">lastPosition</a></td></tr>
-<tr class="memitem:adfe45e17f552da9a30df233200923265" id="r_adfe45e17f552da9a30df233200923265"><td class="memItemLeft" align="right" valign="top">Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfe45e17f552da9a30df233200923265">lastRotation</a></td></tr>
 <tr class="memitem:a41423b85a5afbdbc69f01d14e33531c8" id="r_a41423b85a5afbdbc69f01d14e33531c8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41423b85a5afbdbc69f01d14e33531c8">sendTimer</a> = 0f</td></tr>
+<tr class="memdesc:a41423b85a5afbdbc69f01d14e33531c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer to track when the next transform should be sent.  <br /></td></tr>
 <tr class="memitem:af9b546d7a6fcbe0b3e0558a6e8bd75dc" id="r_af9b546d7a6fcbe0b3e0558a6e8bd75dc"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9b546d7a6fcbe0b3e0558a6e8bd75dc">targetPosition</a></td></tr>
+<tr class="memdesc:af9b546d7a6fcbe0b3e0558a6e8bd75dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Target position to interpolate to (for remote users).  <br /></td></tr>
 <tr class="memitem:a2ed72920802e21011e0253d0a627cf36" id="r_a2ed72920802e21011e0253d0a627cf36"><td class="memItemLeft" align="right" valign="top">Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ed72920802e21011e0253d0a627cf36">targetRotation</a></td></tr>
+<tr class="memdesc:a2ed72920802e21011e0253d0a627cf36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Target rotation to interpolate to (for remote users).  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Handles synchronization of position and rotation over the network. For local users sends updates in time interval, for remote users interpolates transform. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_transform_8cs_source.html#l00006">6</a> of file <a class="el" href="_network_transform_8cs_source.html">NetworkTransform.cs</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a0cf145b2e8f537c9720e1a8d61488e91" name="a0cf145b2e8f537c9720e1a8d61488e91"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0cf145b2e8f537c9720e1a8d61488e91">&#9670;&#160;</a></span>ApplyNetworkTransform()</h2>
 
@@ -140,6 +153,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Applies the received position and rotation from the network to be used for interpolation. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_transform_8cs_source.html#l00064">64</a> of file <a class="el" href="_network_transform_8cs_source.html">NetworkTransform.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>    {</div>
+<div class="line"><span class="lineno">   66</span>        <a class="code hl_variable" href="#af9b546d7a6fcbe0b3e0558a6e8bd75dc">targetPosition</a> = pos;</div>
+<div class="line"><span class="lineno">   67</span>        <a class="code hl_variable" href="#a2ed72920802e21011e0253d0a627cf36">targetRotation</a> = rot;</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aclass_network_transform_html_a2ed72920802e21011e0253d0a627cf36"><div class="ttname"><a href="#a2ed72920802e21011e0253d0a627cf36">NetworkTransform.targetRotation</a></div><div class="ttdeci">Quaternion targetRotation</div><div class="ttdoc">Target rotation to interpolate to (for remote users).</div><div class="ttdef"><b>Definition</b> <a href="_network_transform_8cs_source.html#l00023">NetworkTransform.cs:23</a></div></div>
+<div class="ttc" id="aclass_network_transform_html_af9b546d7a6fcbe0b3e0558a6e8bd75dc"><div class="ttname"><a href="#af9b546d7a6fcbe0b3e0558a6e8bd75dc">NetworkTransform.targetPosition</a></div><div class="ttdeci">Vector3 targetPosition</div><div class="ttdoc">Target position to interpolate to (for remote users).</div><div class="ttdef"><b>Definition</b> <a href="_network_transform_8cs_source.html#l00019">NetworkTransform.cs:19</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac40a60c0c299fbb4ee56cbae881e2693" name="ac40a60c0c299fbb4ee56cbae881e2693"></a>
@@ -165,6 +188,19 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initializes the transform targets and adjusts send rate based on UDP setting. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_transform_8cs_source.html#l00031">31</a> of file <a class="el" href="_network_transform_8cs_source.html">NetworkTransform.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <a class="code hl_variable" href="#af9b546d7a6fcbe0b3e0558a6e8bd75dc">targetPosition</a> = transform.position;</div>
+<div class="line"><span class="lineno">   34</span>        <a class="code hl_variable" href="#a2ed72920802e21011e0253d0a627cf36">targetRotation</a> = transform.rotation;</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span>(Client.instance.GetDefaultSettings().allowUDP == <span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <a class="code hl_variable" href="#ab91795f19e039018c035680d8714dc4b">sendRate</a> = 1f;</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+<div class="ttc" id="aclass_network_transform_html_ab91795f19e039018c035680d8714dc4b"><div class="ttname"><a href="#ab91795f19e039018c035680d8714dc4b">NetworkTransform.sendRate</a></div><div class="ttdeci">float sendRate</div><div class="ttdoc">Time interval between transform updates for local users.</div><div class="ttdef"><b>Definition</b> <a href="_network_transform_8cs_source.html#l00011">NetworkTransform.cs:11</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7571ff4a92e78aee0368712dfcbaa6c7" name="a7571ff4a92e78aee0368712dfcbaa6c7"></a>
@@ -190,53 +226,31 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>For local users, sends transform updates periodically. For remote users, smoothly interpolates transform to the target. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_transform_8cs_source.html#l00044">44</a> of file <a class="el" href="_network_transform_8cs_source.html">NetworkTransform.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab95299adfe2b587666d93611ff38e19c">UserInfo</a>.isLocalUser)</div>
+<div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            <a class="code hl_variable" href="#a41423b85a5afbdbc69f01d14e33531c8">sendTimer</a> += Time.deltaTime;</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a41423b85a5afbdbc69f01d14e33531c8">sendTimer</a> &gt;= <a class="code hl_variable" href="#ab91795f19e039018c035680d8714dc4b">sendRate</a>)</div>
+<div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                NetworkManager.networkManager.UpdateTransform(this.transform);</div>
+<div class="line"><span class="lineno">   52</span>                <a class="code hl_variable" href="#a41423b85a5afbdbc69f01d14e33531c8">sendTimer</a> = 0f;</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            transform.position = Vector3.Lerp(transform.position, <a class="code hl_variable" href="#af9b546d7a6fcbe0b3e0558a6e8bd75dc">targetPosition</a>, Time.deltaTime * 10f);</div>
+<div class="line"><span class="lineno">   58</span>            transform.rotation = Quaternion.Lerp(transform.rotation, <a class="code hl_variable" href="#a2ed72920802e21011e0253d0a627cf36">targetRotation</a>, Time.deltaTime * 10f);</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="ttc" id="aclass_network_transform_html_a41423b85a5afbdbc69f01d14e33531c8"><div class="ttname"><a href="#a41423b85a5afbdbc69f01d14e33531c8">NetworkTransform.sendTimer</a></div><div class="ttdeci">float sendTimer</div><div class="ttdoc">Timer to track when the next transform should be sent.</div><div class="ttdef"><b>Definition</b> <a href="_network_transform_8cs_source.html#l00015">NetworkTransform.cs:15</a></div></div>
+<div class="ttc" id="aclass_network_transform_html_ab95299adfe2b587666d93611ff38e19c"><div class="ttname"><a href="#ab95299adfe2b587666d93611ff38e19c">NetworkTransform.UserInfo</a></div><div class="ttdeci">NetworkUser UserInfo</div><div class="ttdoc">UserInfo class used for checking if the object belongs to the local user or another player.</div><div class="ttdef"><b>Definition</b> <a href="_network_transform_8cs_source.html#l00027">NetworkTransform.cs:27</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="a559733114a519f70666ee9bc45f68898" name="a559733114a519f70666ee9bc45f68898"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a559733114a519f70666ee9bc45f68898">&#9670;&#160;</a></span>lastPosition</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vector3 NetworkTransform.lastPosition</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adfe45e17f552da9a30df233200923265" name="adfe45e17f552da9a30df233200923265"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfe45e17f552da9a30df233200923265">&#9670;&#160;</a></span>lastRotation</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Quaternion NetworkTransform.lastRotation</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ab91795f19e039018c035680d8714dc4b" name="ab91795f19e039018c035680d8714dc4b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab91795f19e039018c035680d8714dc4b">&#9670;&#160;</a></span>sendRate</h2>
 
@@ -248,6 +262,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Time interval between transform updates for local users. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_transform_8cs_source.html#l00011">11</a> of file <a class="el" href="_network_transform_8cs_source.html">NetworkTransform.cs</a>.</p>
 
 </div>
 </div>
@@ -271,6 +289,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Timer to track when the next transform should be sent. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_transform_8cs_source.html#l00015">15</a> of file <a class="el" href="_network_transform_8cs_source.html">NetworkTransform.cs</a>.</p>
+
 </div>
 </div>
 <a id="af9b546d7a6fcbe0b3e0558a6e8bd75dc" name="af9b546d7a6fcbe0b3e0558a6e8bd75dc"></a>
@@ -292,6 +314,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Target position to interpolate to (for remote users). </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_transform_8cs_source.html#l00019">19</a> of file <a class="el" href="_network_transform_8cs_source.html">NetworkTransform.cs</a>.</p>
 
 </div>
 </div>
@@ -315,6 +341,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Target rotation to interpolate to (for remote users). </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_transform_8cs_source.html#l00023">23</a> of file <a class="el" href="_network_transform_8cs_source.html">NetworkTransform.cs</a>.</p>
+
 </div>
 </div>
 <a id="ab95299adfe2b587666d93611ff38e19c" name="ab95299adfe2b587666d93611ff38e19c"></a>
@@ -329,11 +359,12 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>UserInfo class used for checking if the object belongs to the local user or another player. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_transform_8cs_source.html#l00027">27</a> of file <a class="el" href="_network_transform_8cs_source.html">NetworkTransform.cs</a>.</p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/NetworkLibrary/ClientStuff/ClientScripts/Components/<a class="el" href="_network_transform_8cs.html">NetworkTransform.cs</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

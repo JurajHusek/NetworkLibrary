@@ -1,4 +1,4 @@
 var files_dup =
 [
-    [ "Assets", "dir_84bbf7b3c7f28a5a18725745e1505219.html", "dir_84bbf7b3c7f28a5a18725745e1505219" ]
+    [ "nova verzia", "dir_389694b20d7dc556b0aaaa23defac3f4.html", "dir_389694b20d7dc556b0aaaa23defac3f4" ]
 ];

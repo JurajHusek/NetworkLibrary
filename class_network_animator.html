@@ -91,6 +91,9 @@ $(function(){initNavTree('class_network_animator.html','','class_network_animato
   <div class="headertitle"><div class="title">NetworkAnimator Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Synchronizes animator parameters (bools, floats, triggers) over the network. Sends changes from the local user to the server and applies received parameters on remote clients.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for NetworkAnimator:</div>
 <div class="dyncontent">
@@ -101,27 +104,42 @@ Inheritance diagram for NetworkAnimator:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8498cfdd915db2060452e2ed678a6ed2" id="r_a8498cfdd915db2060452e2ed678a6ed2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8498cfdd915db2060452e2ed678a6ed2">Trigger</a> (string triggerName)</td></tr>
+<tr class="memdesc:a8498cfdd915db2060452e2ed678a6ed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers an animation parameter both locally and across the network if controlled by local user.  <br /></td></tr>
 <tr class="memitem:a2c436b9cee13429e89387f98b8d08d72" id="r_a2c436b9cee13429e89387f98b8d08d72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c436b9cee13429e89387f98b8d08d72">ApplyRemoteParameter</a> (int type, string name, float value)</td></tr>
+<tr class="memdesc:a2c436b9cee13429e89387f98b8d08d72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies an animation parameter update received from a remote user.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:afd9a6e206c83615b8aff4304eaf61ade" id="r_afd9a6e206c83615b8aff4304eaf61ade"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_network_user.html">NetworkUser</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd9a6e206c83615b8aff4304eaf61ade">UserInfo</a></td></tr>
+<tr class="memdesc:afd9a6e206c83615b8aff4304eaf61ade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Information about the network user used to check local or remote status.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ac2b459a0b7e21707877a82f472ab1c3a" id="r_ac2b459a0b7e21707877a82f472ab1c3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2b459a0b7e21707877a82f472ab1c3a">Start</a> ()</td></tr>
+<tr class="memdesc:ac2b459a0b7e21707877a82f472ab1c3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the animator reference and caches all initial animator parameter states.  <br /></td></tr>
 <tr class="memitem:aefc3a28672df7a11819a0740d13c44fe" id="r_aefc3a28672df7a11819a0740d13c44fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefc3a28672df7a11819a0740d13c44fe">Update</a> ()</td></tr>
+<tr class="memdesc:aefc3a28672df7a11819a0740d13c44fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for any changed animator parameters if the object is controlled by the local user. Sends updated parameters to the server.  <br /></td></tr>
 <tr class="memitem:a962d138ecda7ccaf77fd8b4f64ef21e9" id="r_a962d138ecda7ccaf77fd8b4f64ef21e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a962d138ecda7ccaf77fd8b4f64ef21e9">CacheInitialStates</a> ()</td></tr>
+<tr class="memdesc:a962d138ecda7ccaf77fd8b4f64ef21e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores initial states of all bool and float animator parameters for change tracking.  <br /></td></tr>
 <tr class="memitem:ab407aff7abb27436d735458ae8453349" id="r_ab407aff7abb27436d735458ae8453349"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab407aff7abb27436d735458ae8453349">CheckAndSendBoolChanges</a> ()</td></tr>
+<tr class="memdesc:ab407aff7abb27436d735458ae8453349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detects and sends changed boolean parameters to the server.  <br /></td></tr>
 <tr class="memitem:a7c4295e196b8d74909d3145b7d1ffa75" id="r_a7c4295e196b8d74909d3145b7d1ffa75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c4295e196b8d74909d3145b7d1ffa75">CheckAndSendFloatChanges</a> ()</td></tr>
+<tr class="memdesc:a7c4295e196b8d74909d3145b7d1ffa75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detects and sends changed float parameters to the server.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a0f8ad4378f54332a76bc3f021d527560" id="r_a0f8ad4378f54332a76bc3f021d527560"><td class="memItemLeft" align="right" valign="top">Animator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f8ad4378f54332a76bc3f021d527560">animator</a></td></tr>
+<tr class="memdesc:a0f8ad4378f54332a76bc3f021d527560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the Animator component used to control animations.  <br /></td></tr>
 <tr class="memitem:a6e69fd59e8460c9c11eaddab4c2b6d4b" id="r_a6e69fd59e8460c9c11eaddab4c2b6d4b"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e69fd59e8460c9c11eaddab4c2b6d4b">boolStates</a> = new Dictionary&lt;string, bool&gt;()</td></tr>
+<tr class="memdesc:a6e69fd59e8460c9c11eaddab4c2b6d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks last known values of boolean parameters to detect changes.  <br /></td></tr>
 <tr class="memitem:a4b28d59c913563fb1d59fdbdb3427978" id="r_a4b28d59c913563fb1d59fdbdb3427978"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b28d59c913563fb1d59fdbdb3427978">floatStates</a> = new Dictionary&lt;string, float&gt;()</td></tr>
+<tr class="memdesc:a4b28d59c913563fb1d59fdbdb3427978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks last known values of float parameters to detect changes.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Synchronizes animator parameters (bools, floats, triggers) over the network. Sends changes from the local user to the server and applies received parameters on remote clients. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_animator_8cs_source.html#l00008">8</a> of file <a class="el" href="_network_animator_8cs_source.html">NetworkAnimator.cs</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a2c436b9cee13429e89387f98b8d08d72" name="a2c436b9cee13429e89387f98b8d08d72"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2c436b9cee13429e89387f98b8d08d72">&#9670;&#160;</a></span>ApplyRemoteParameter()</h2>
 
@@ -146,6 +164,19 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Applies an animation parameter update received from a remote user. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_animator_8cs_source.html#l00122">122</a> of file <a class="el" href="_network_animator_8cs_source.html">NetworkAnimator.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>    {</div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">switch</span> (type)</div>
+<div class="line"><span class="lineno">  125</span>        {</div>
+<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">case</span> 0: <a class="code hl_variable" href="#a0f8ad4378f54332a76bc3f021d527560">animator</a>.SetBool(name, value &gt; 0.5f); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">case</span> 1: <a class="code hl_variable" href="#a0f8ad4378f54332a76bc3f021d527560">animator</a>.SetFloat(name, value); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">case</span> 2: <a class="code hl_variable" href="#a0f8ad4378f54332a76bc3f021d527560">animator</a>.SetTrigger(name); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  129</span>        }</div>
+<div class="line"><span class="lineno">  130</span>    }</div>
+<div class="ttc" id="aclass_network_animator_html_a0f8ad4378f54332a76bc3f021d527560"><div class="ttname"><a href="#a0f8ad4378f54332a76bc3f021d527560">NetworkAnimator.animator</a></div><div class="ttdeci">Animator animator</div><div class="ttdoc">Reference to the Animator component used to control animations.</div><div class="ttdef"><b>Definition</b> <a href="_network_animator_8cs_source.html#l00017">NetworkAnimator.cs:17</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a962d138ecda7ccaf77fd8b4f64ef21e9" name="a962d138ecda7ccaf77fd8b4f64ef21e9"></a>
@@ -171,6 +202,25 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Stores initial states of all bool and float animator parameters for change tracking. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_animator_8cs_source.html#l00050">50</a> of file <a class="el" href="_network_animator_8cs_source.html">NetworkAnimator.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">foreach</span> (AnimatorControllerParameter param <span class="keywordflow">in</span> <a class="code hl_variable" href="#a0f8ad4378f54332a76bc3f021d527560">animator</a>.parameters)</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">switch</span> (param.type) {</div>
+<div class="line"><span class="lineno">   55</span>                <span class="keywordflow">case</span> AnimatorControllerParameterType.Bool:</div>
+<div class="line"><span class="lineno">   56</span>                    <a class="code hl_variable" href="#a6e69fd59e8460c9c11eaddab4c2b6d4b">boolStates</a>[param.name] = <a class="code hl_variable" href="#a0f8ad4378f54332a76bc3f021d527560">animator</a>.GetBool(param.name);</div>
+<div class="line"><span class="lineno">   57</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   58</span>                <span class="keywordflow">case</span> AnimatorControllerParameterType.Float:</div>
+<div class="line"><span class="lineno">   59</span>                    <a class="code hl_variable" href="#a4b28d59c913563fb1d59fdbdb3427978">floatStates</a>[param.name] = <a class="code hl_variable" href="#a0f8ad4378f54332a76bc3f021d527560">animator</a>.GetFloat(param.name);</div>
+<div class="line"><span class="lineno">   60</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   61</span>            }</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+<div class="ttc" id="aclass_network_animator_html_a4b28d59c913563fb1d59fdbdb3427978"><div class="ttname"><a href="#a4b28d59c913563fb1d59fdbdb3427978">NetworkAnimator.floatStates</a></div><div class="ttdeci">Dictionary&lt; string, float &gt; floatStates</div><div class="ttdoc">Tracks last known values of float parameters to detect changes.</div><div class="ttdef"><b>Definition</b> <a href="_network_animator_8cs_source.html#l00025">NetworkAnimator.cs:25</a></div></div>
+<div class="ttc" id="aclass_network_animator_html_a6e69fd59e8460c9c11eaddab4c2b6d4b"><div class="ttname"><a href="#a6e69fd59e8460c9c11eaddab4c2b6d4b">NetworkAnimator.boolStates</a></div><div class="ttdeci">Dictionary&lt; string, bool &gt; boolStates</div><div class="ttdoc">Tracks last known values of boolean parameters to detect changes.</div><div class="ttdef"><b>Definition</b> <a href="_network_animator_8cs_source.html#l00021">NetworkAnimator.cs:21</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab407aff7abb27436d735458ae8453349" name="ab407aff7abb27436d735458ae8453349"></a>
@@ -196,6 +246,26 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Detects and sends changed boolean parameters to the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_animator_8cs_source.html#l00067">67</a> of file <a class="el" href="_network_animator_8cs_source.html">NetworkAnimator.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        List&lt;string&gt; changedKeys = <span class="keyword">new</span> List&lt;string&gt;();</div>
+<div class="line"><span class="lineno">   70</span>    </div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">foreach</span> (var entry <span class="keywordflow">in</span> <a class="code hl_variable" href="#a6e69fd59e8460c9c11eaddab4c2b6d4b">boolStates</a>) {</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordtype">bool</span> current = <a class="code hl_variable" href="#a0f8ad4378f54332a76bc3f021d527560">animator</a>.GetBool(entry.Key);</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (current != entry.Value) {</div>
+<div class="line"><span class="lineno">   74</span>                changedKeys.Add(entry.Key); </div>
+<div class="line"><span class="lineno">   75</span>            }</div>
+<div class="line"><span class="lineno">   76</span>        }</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> key <span class="keywordflow">in</span> changedKeys) {</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordtype">bool</span> newValue = <a class="code hl_variable" href="#a0f8ad4378f54332a76bc3f021d527560">animator</a>.GetBool(key);</div>
+<div class="line"><span class="lineno">   80</span>        <a class="code hl_variable" href="#a6e69fd59e8460c9c11eaddab4c2b6d4b">boolStates</a>[key] = newValue;</div>
+<div class="line"><span class="lineno">   81</span>        NetworkManager.networkManager.SendAnimatorParameter(0, key, newValue ? 1f : 0f);</div>
+<div class="line"><span class="lineno">   82</span>        }</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7c4295e196b8d74909d3145b7d1ffa75" name="a7c4295e196b8d74909d3145b7d1ffa75"></a>
@@ -221,6 +291,29 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Detects and sends changed float parameters to the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_animator_8cs_source.html#l00088">88</a> of file <a class="el" href="_network_animator_8cs_source.html">NetworkAnimator.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>    {</div>
+<div class="line"><span class="lineno">   90</span>        List&lt;string&gt; changedKeys = <span class="keyword">new</span> List&lt;string&gt;();</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">foreach</span> (var kvp <span class="keywordflow">in</span> <a class="code hl_variable" href="#a4b28d59c913563fb1d59fdbdb3427978">floatStates</a>)</div>
+<div class="line"><span class="lineno">   93</span>        {</div>
+<div class="line"><span class="lineno">   94</span>            <span class="keywordtype">float</span> current = <a class="code hl_variable" href="#a0f8ad4378f54332a76bc3f021d527560">animator</a>.GetFloat(kvp.Key);</div>
+<div class="line"><span class="lineno">   95</span>            <span class="keywordflow">if</span> (Mathf.Abs(current - kvp.Value) &gt; 0.01f)</div>
+<div class="line"><span class="lineno">   96</span>            {</div>
+<div class="line"><span class="lineno">   97</span>                changedKeys.Add(kvp.Key);</div>
+<div class="line"><span class="lineno">   98</span>            }</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> key <span class="keywordflow">in</span> changedKeys)</div>
+<div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            <span class="keywordtype">float</span> newValue = <a class="code hl_variable" href="#a0f8ad4378f54332a76bc3f021d527560">animator</a>.GetFloat(key);</div>
+<div class="line"><span class="lineno">  104</span>            <a class="code hl_variable" href="#a4b28d59c913563fb1d59fdbdb3427978">floatStates</a>[key] = newValue;</div>
+<div class="line"><span class="lineno">  105</span>            NetworkManager.networkManager.SendAnimatorParameter(1, key, newValue);</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+<div class="line"><span class="lineno">  107</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac2b459a0b7e21707877a82f472ab1c3a" name="ac2b459a0b7e21707877a82f472ab1c3a"></a>
@@ -246,6 +339,17 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initializes the animator reference and caches all initial animator parameter states. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_animator_8cs_source.html#l00029">29</a> of file <a class="el" href="_network_animator_8cs_source.html">NetworkAnimator.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a0f8ad4378f54332a76bc3f021d527560">animator</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   32</span>            <a class="code hl_variable" href="#a0f8ad4378f54332a76bc3f021d527560">animator</a> = GetComponent&lt;Animator&gt;();</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>        <a class="code hl_function" href="#a962d138ecda7ccaf77fd8b4f64ef21e9">CacheInitialStates</a>();</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="ttc" id="aclass_network_animator_html_a962d138ecda7ccaf77fd8b4f64ef21e9"><div class="ttname"><a href="#a962d138ecda7ccaf77fd8b4f64ef21e9">NetworkAnimator.CacheInitialStates</a></div><div class="ttdeci">void CacheInitialStates()</div><div class="ttdoc">Stores initial states of all bool and float animator parameters for change tracking.</div><div class="ttdef"><b>Definition</b> <a href="_network_animator_8cs_source.html#l00050">NetworkAnimator.cs:50</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8498cfdd915db2060452e2ed678a6ed2" name="a8498cfdd915db2060452e2ed678a6ed2"></a>
@@ -263,6 +367,18 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Triggers an animation parameter both locally and across the network if controlled by local user. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_animator_8cs_source.html#l00111">111</a> of file <a class="el" href="_network_animator_8cs_source.html">NetworkAnimator.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  112</span>    {</div>
+<div class="line"><span class="lineno">  113</span>        <a class="code hl_variable" href="#a0f8ad4378f54332a76bc3f021d527560">animator</a>.SetTrigger(triggerName);</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#afd9a6e206c83615b8aff4304eaf61ade">UserInfo</a>.isLocalUser)</div>
+<div class="line"><span class="lineno">  115</span>        {</div>
+<div class="line"><span class="lineno">  116</span>            NetworkManager.networkManager.SendAnimatorParameter(2, triggerName, 0f);</div>
+<div class="line"><span class="lineno">  117</span>        }</div>
+<div class="line"><span class="lineno">  118</span>    }</div>
+<div class="ttc" id="aclass_network_animator_html_afd9a6e206c83615b8aff4304eaf61ade"><div class="ttname"><a href="#afd9a6e206c83615b8aff4304eaf61ade">NetworkAnimator.UserInfo</a></div><div class="ttdeci">NetworkUser UserInfo</div><div class="ttdoc">Information about the network user used to check local or remote status.</div><div class="ttdef"><b>Definition</b> <a href="_network_animator_8cs_source.html#l00013">NetworkAnimator.cs:13</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aefc3a28672df7a11819a0740d13c44fe" name="aefc3a28672df7a11819a0740d13c44fe"></a>
@@ -288,6 +404,18 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Checks for any changed animator parameters if the object is controlled by the local user. Sends updated parameters to the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_animator_8cs_source.html#l00040">40</a> of file <a class="el" href="_network_animator_8cs_source.html">NetworkAnimator.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#afd9a6e206c83615b8aff4304eaf61ade">UserInfo</a>.isLocalUser) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>        <a class="code hl_function" href="#ab407aff7abb27436d735458ae8453349">CheckAndSendBoolChanges</a>();</div>
+<div class="line"><span class="lineno">   45</span>        <a class="code hl_function" href="#a7c4295e196b8d74909d3145b7d1ffa75">CheckAndSendFloatChanges</a>();</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
+<div class="ttc" id="aclass_network_animator_html_a7c4295e196b8d74909d3145b7d1ffa75"><div class="ttname"><a href="#a7c4295e196b8d74909d3145b7d1ffa75">NetworkAnimator.CheckAndSendFloatChanges</a></div><div class="ttdeci">void CheckAndSendFloatChanges()</div><div class="ttdoc">Detects and sends changed float parameters to the server.</div><div class="ttdef"><b>Definition</b> <a href="_network_animator_8cs_source.html#l00088">NetworkAnimator.cs:88</a></div></div>
+<div class="ttc" id="aclass_network_animator_html_ab407aff7abb27436d735458ae8453349"><div class="ttname"><a href="#ab407aff7abb27436d735458ae8453349">NetworkAnimator.CheckAndSendBoolChanges</a></div><div class="ttdeci">void CheckAndSendBoolChanges()</div><div class="ttdoc">Detects and sends changed boolean parameters to the server.</div><div class="ttdef"><b>Definition</b> <a href="_network_animator_8cs_source.html#l00067">NetworkAnimator.cs:67</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -311,6 +439,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Reference to the Animator component used to control animations. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_animator_8cs_source.html#l00017">17</a> of file <a class="el" href="_network_animator_8cs_source.html">NetworkAnimator.cs</a>.</p>
+
 </div>
 </div>
 <a id="a6e69fd59e8460c9c11eaddab4c2b6d4b" name="a6e69fd59e8460c9c11eaddab4c2b6d4b"></a>
@@ -332,6 +464,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Tracks last known values of boolean parameters to detect changes. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_animator_8cs_source.html#l00021">21</a> of file <a class="el" href="_network_animator_8cs_source.html">NetworkAnimator.cs</a>.</p>
 
 </div>
 </div>
@@ -355,6 +491,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Tracks last known values of float parameters to detect changes. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_animator_8cs_source.html#l00025">25</a> of file <a class="el" href="_network_animator_8cs_source.html">NetworkAnimator.cs</a>.</p>
+
 </div>
 </div>
 <a id="afd9a6e206c83615b8aff4304eaf61ade" name="afd9a6e206c83615b8aff4304eaf61ade"></a>
@@ -369,11 +509,12 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Information about the network user used to check local or remote status. </p>
+
+<p class="definition">Definition at line <a class="el" href="_network_animator_8cs_source.html#l00013">13</a> of file <a class="el" href="_network_animator_8cs_source.html">NetworkAnimator.cs</a>.</p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/NetworkLibrary/ClientStuff/ClientScripts/Components/<a class="el" href="_network_animator_8cs.html">NetworkAnimator.cs</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

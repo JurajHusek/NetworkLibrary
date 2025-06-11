@@ -1,20 +1,14 @@
 var searchData=
 [
-  ['maintcplistener_0',['MainTcpListener',['../class_server_logic.html#a39a9554a1df8e6e8621689902789f882',1,'ServerLogic']]],
-  ['mainthreadtasks_1',['MainThreadTasks',['../class_threads_controller.html#af982ab6d581d863194f029e0ca19e12d',1,'ThreadsController']]],
-  ['mainudplistener_2',['MainUdpListener',['../class_server_logic.html#ac6621e09945d5255ee141e4cac724b8b',1,'ServerLogic']]],
-  ['maxccu_3',['MaxCCU',['../class_server_logic.html#a600d45d6fc0d97fde9c63842d84cb472',1,'ServerLogic']]],
-  ['maxccu_4',['maxCCU',['../class_server_settings.html#a2081c4fd666e80d3ab027b7901995770',1,'ServerSettings']]],
-  ['meassureanswer_5',['MeassureAnswer',['../class_client.html#a804f36910abca6782d410b386d118f45',1,'Client']]],
-  ['meassurerequest_6',['MeassureRequest',['../class_client.html#a6f5d9487be831b82301c183ec2670c2f',1,'Client.MeassureRequest()'],['../class_client_send_handler.html#a729419dfed9b00e83671e4068dd756c3',1,'ClientSendHandler.MeassureRequest()'],['../class_packet.html#ab51148f7134cedf405521073cae0cb09ae74a2c38fc2b06413b7415c8fc59b843',1,'Packet.MeassureRequest']]],
-  ['message_7',['Message',['../class_packet.html#af5da800782dec1cfe8f3b8dcf7b0b0d7a4c2a8fe7eaf24721cc7a9f0175115bd4',1,'Packet']]],
-  ['messageall_8',['MessageAll',['../class_packet.html#af5da800782dec1cfe8f3b8dcf7b0b0d7adbcbae06544d0948f8bede9ec0f6df34',1,'Packet']]],
-  ['messagetoallrequest_9',['MessageToAllRequest',['../class_client.html#a10438dc8b5cac6039e879227c2ddfe31',1,'Client.MessageToAllRequest()'],['../class_client_send_handler.html#af341084b3250e541877614914fdc0a78',1,'ClientSendHandler.MessageToAllRequest()'],['../class_packet.html#ab51148f7134cedf405521073cae0cb09a110d209eb4c9e0bc1d6076728b8f7d5e',1,'Packet.MessageToAllRequest']]],
-  ['messagetoallrequestreceived_10',['MessageToAllRequestReceived',['../class_server_receive_handler.html#a4b465f7db78015f443f0adfb363a5e7a',1,'ServerReceiveHandler']]],
-  ['messagetouserrequest_11',['MessageToUserRequest',['../class_client.html#a6da1ba0370f93a67ff6e95f6e491f74c',1,'Client.MessageToUserRequest()'],['../class_client_send_handler.html#a1526af29540c3d90fb979ed314a7f799',1,'ClientSendHandler.MessageToUserRequest()'],['../class_packet.html#ab51148f7134cedf405521073cae0cb09ae4ea4c13740ba0d254be25beba060d8d',1,'Packet.MessageToUserRequest']]],
-  ['messagetouserrequestreceived_12',['MessageToUserRequestReceived',['../class_server_receive_handler.html#a3742bcfe7cf6c2d24187bb73562a62a5',1,'ServerReceiveHandler']]],
-  ['mid_13',['MID',['../class_client.html#a872de865b20100449439b8d4ff6521ad',1,'Client.MID'],['../class_network_user.html#a1e28eb1882e3cf18cb31e8d86ffbc18f',1,'NetworkUser.MID']]],
-  ['monitortext1_14',['MonitorText1',['../class_network_monitor.html#a6a9c3cdf324df421fb3ca7b30296d85f',1,'NetworkMonitor']]],
-  ['monitortext2_15',['MonitorText2',['../class_network_monitor.html#a68103136d6e66d9cabd7d892cb3ac936',1,'NetworkMonitor']]],
-  ['monitortext3_16',['MonitorText3',['../class_network_monitor.html#aed84712cbacc8ece9e41ca4bee53ff82',1,'NetworkMonitor']]]
+  ['networkanimator_0',['NetworkAnimator',['../class_network_animator.html',1,'']]],
+  ['networkchatdemo_1',['NetworkChatDemo',['../class_network_chat_demo.html',1,'']]],
+  ['networkchatdemoentry_2',['networkChatDemoEntry',['../class_network_chat_demo.html#a39ef1356eba5b5997366a217a9138c9b',1,'NetworkChatDemo']]],
+  ['networkmanager_3',['NetworkManager',['../class_network_manager.html',1,'']]],
+  ['networkmanager_4',['networkManager',['../class_network_manager.html#a88de126b5881bbb7de57cb19f99e4e1f',1,'NetworkManager']]],
+  ['networkmonitor_5',['NetworkMonitor',['../class_network_monitor.html',1,'']]],
+  ['networkonlinelist_6',['NetworkOnlineList',['../class_network_online_list.html',1,'']]],
+  ['networkserver_7',['NetworkServer',['../class_network_server.html',1,'']]],
+  ['networktransform_8',['NetworkTransform',['../class_network_transform.html',1,'']]],
+  ['networkuser_9',['NetworkUser',['../class_network_user.html',1,'']]],
+  ['newuser_10',['NewUser',['../class_network_server.html#a16593f26d5d268b1bcfbf0898665b4be',1,'NetworkServer']]]
 ];

@@ -1,13 +1,8 @@
 var searchData=
 [
-  ['packetcontrollers_0',['PacketControllers',['../class_client.html#a56093e9cf5926f6e72489548f8132823',1,'Client']]],
-  ['packetdatabuffer_1',['PacketDataBuffer',['../class_packet.html#a0bd352b1ea237eb259335e640aae796f',1,'Packet']]],
-  ['packethandlers_2',['packetHandlers',['../class_server_logic.html#a29986f17d0dc8d65c53949edbd2a192e',1,'ServerLogic']]],
-  ['packetlosslog_3',['packetLossLog',['../class_network_monitor.html#ad9d30f7daf207edabc794f17be5144d1',1,'NetworkMonitor']]],
-  ['pingcoroutine_4',['pingCoroutine',['../class_network_monitor.html#a10ca55c36c5a77529c8e1db8c54a7673',1,'NetworkMonitor']]],
-  ['pinginterval_5',['pingInterval',['../class_network_monitor.html#a9a617ac43120a1ff8b61a1f080efb350',1,'NetworkMonitor']]],
-  ['pinglog_6',['pingLog',['../class_network_monitor.html#ac31c74ed28068f910b66a455db7f2827',1,'NetworkMonitor']]],
-  ['pingtimeout_7',['pingTimeout',['../class_network_monitor.html#a5b8ae59b62467b1af55d2fe280f1efae',1,'NetworkMonitor']]],
-  ['port_8',['Port',['../class_network_server.html#ac7588c346c7f058365dc8621463e5ba3',1,'NetworkServer']]],
-  ['port_9',['port',['../class_default_network_settings.html#a7eefab40523664617b9b6ac57e1fc9ad',1,'DefaultNetworkSettings']]]
+  ['readposition_0',['readPosition',['../class_packet.html#a1ac12b6b877f96a8eab2ab5cc019e45c',1,'Packet']]],
+  ['receivebuffer_1',['receiveBuffer',['../class_client_1_1_t_c_p.html#aef7822fec93702d321e61ea7f8914365',1,'Client.TCP.receiveBuffer'],['../class_server_side_client_1_1_t_c_p.html#a97cf64a8290337661038d70e59436a2a',1,'ServerSideClient.TCP.receiveBuffer']]],
+  ['receivedpacket_2',['receivedPacket',['../class_client_1_1_t_c_p.html#a3bdaabc5fff332954aef50c962fb93ad',1,'Client.TCP.receivedPacket'],['../class_server_side_client_1_1_t_c_p.html#afaf94da43d7c74da6a3defa05aca358a',1,'ServerSideClient.TCP.receivedPacket']]],
+  ['receivedresponses_3',['receivedResponses',['../class_network_monitor.html#ae54b30712210ea99dd81736a8c42c2b7',1,'NetworkMonitor']]],
+  ['receivedresponsesinterval_4',['receivedResponsesInterval',['../class_network_monitor.html#a4d8f20aa356046dc539aa9b0867b0920',1,'NetworkMonitor']]]
 ];

@@ -91,12 +91,18 @@ $(function(){initNavTree('class_client_1_1_t_c_p.html','','class_client_1_1_t_c_
   <div class="headertitle"><div class="title">Client.TCP Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Handles <a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a> connection.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0c2bedd795658fc134568af0b245f829" id="r_a0c2bedd795658fc134568af0b245f829"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c2bedd795658fc134568af0b245f829">Connect</a> ()</td></tr>
+<tr class="memdesc:a0c2bedd795658fc134568af0b245f829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes a <a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a> connection to the server and begins receiving data.  <br /></td></tr>
 <tr class="memitem:af7fd62fb1c3a33697ee9991503d7d0cb" id="r_af7fd62fb1c3a33697ee9991503d7d0cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7fd62fb1c3a33697ee9991503d7d0cb">Send</a> (<a class="el" href="class_packet.html">Packet</a> <a class="el" href="class_packet.html">Packet</a>)</td></tr>
+<tr class="memdesc:af7fd62fb1c3a33697ee9991503d7d0cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a packet to the server using <a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a>.  <br /></td></tr>
 <tr class="memitem:a0bf46ee66dfea6fff92a83f71b603c3a" id="r_a0bf46ee66dfea6fff92a83f71b603c3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bf46ee66dfea6fff92a83f71b603c3a">Disconnect</a> ()</td></tr>
+<tr class="memdesc:a0bf46ee66dfea6fff92a83f71b603c3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnects the <a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a> connection and clears the buffers.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -104,13 +110,17 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a354ffd069b81ae0826e3159646f6c10d" id="r_a354ffd069b81ae0826e3159646f6c10d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a354ffd069b81ae0826e3159646f6c10d">Handler</a> (byte[] Data)</td></tr>
+<tr class="memitem:a44edac61b06a9d44a9d8341b80a65037" id="r_a44edac61b06a9d44a9d8341b80a65037"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44edac61b06a9d44a9d8341b80a65037">Handler</a> (byte[] data)</td></tr>
+<tr class="memdesc:a44edac61b06a9d44a9d8341b80a65037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles received raw byte data from the server.  <br /></td></tr>
 <tr class="memitem:a4678919644f7b29da558e0e806e45105" id="r_a4678919644f7b29da558e0e806e45105"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4678919644f7b29da558e0e806e45105">ConnectCallback</a> (IAsyncResult result)</td></tr>
+<tr class="memdesc:a4678919644f7b29da558e0e806e45105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback triggered after attempting to connect to the server by <a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a>. Initializes TLS if enabled, sets up the stream, and begins reading data.  <br /></td></tr>
 <tr class="memitem:a32327fa0b978d235c84ca54e18eaaf03" id="r_a32327fa0b978d235c84ca54e18eaaf03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32327fa0b978d235c84ca54e18eaaf03">ReceiveCallback</a> (IAsyncResult result)</td></tr>
+<tr class="memdesc:a32327fa0b978d235c84ca54e18eaaf03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for receiving data over the <a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a>. Reads data into the data buffer, manages it by Handler and continues reading.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
 <tr class="memitem:a782a25d41986e3c78fb75117fe4f67df" id="r_a782a25d41986e3c78fb75117fe4f67df"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a782a25d41986e3c78fb75117fe4f67df">ValidateServerCertificate</a> (object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)</td></tr>
+<tr class="memdesc:a782a25d41986e3c78fb75117fe4f67df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates the server's SSL/TLS certificate. Returns true if the certificate is valid; else writes error and returns false.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -118,7 +128,11 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:aef7822fec93702d321e61ea7f8914365" id="r_aef7822fec93702d321e61ea7f8914365"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef7822fec93702d321e61ea7f8914365">receiveBuffer</a></td></tr>
 <tr class="memitem:a3bdaabc5fff332954aef50c962fb93ad" id="r_a3bdaabc5fff332954aef50c962fb93ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_packet.html">Packet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bdaabc5fff332954aef50c962fb93ad">receivedPacket</a></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Handles <a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a> connection. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00291">291</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a0c2bedd795658fc134568af0b245f829" name="a0c2bedd795658fc134568af0b245f829"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0c2bedd795658fc134568af0b245f829">&#9670;&#160;</a></span>Connect()</h2>
 
@@ -134,6 +148,25 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Establishes a <a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a> connection to the server and begins receiving data. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00300">300</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  301</span>        {</div>
+<div class="line"><span class="lineno">  302</span>            <span class="keywordflow">if</span>(Client.instance.GetUsername() == <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">  303</span>            {</div>
+<div class="line"><span class="lineno">  304</span>                System.Random rng = <span class="keyword">new</span> System.Random();</div>
+<div class="line"><span class="lineno">  305</span>                <span class="keywordtype">int</span> rand = rng.Next(1000); </div>
+<div class="line"><span class="lineno">  306</span>                Client.instance.SetUsername(<span class="stringliteral">&quot;Guest&quot;</span> + rand.ToString());</div>
+<div class="line"><span class="lineno">  307</span>            }</div>
+<div class="line"><span class="lineno">  308</span>            Socket = <span class="keyword">new</span> TcpClient </div>
+<div class="line"><span class="lineno">  309</span>            {</div>
+<div class="line"><span class="lineno">  310</span>                ReceiveBufferSize = DefaultBufferSize,</div>
+<div class="line"><span class="lineno">  311</span>                SendBufferSize = DefaultBufferSize</div>
+<div class="line"><span class="lineno">  312</span>            };</div>
+<div class="line"><span class="lineno">  313</span>            receiveBuffer = <span class="keyword">new</span> <span class="keywordtype">byte</span>[DefaultBufferSize]; </div>
+<div class="line"><span class="lineno">  314</span>            Socket.BeginConnect(Client.instance.defaultNetworkSettings.ipAddress, Client.instance.defaultNetworkSettings.port, ConnectCallback, Socket); <span class="comment">// zacne asynchronne pripojenie k serveru, ak uspesne da callback</span></div>
+<div class="line"><span class="lineno">  315</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4678919644f7b29da558e0e806e45105" name="a4678919644f7b29da558e0e806e45105"></a>
@@ -159,6 +192,49 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Callback triggered after attempting to connect to the server by <a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a>. Initializes TLS if enabled, sets up the stream, and begins reading data. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00401">401</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  402</span>        {</div>
+<div class="line"><span class="lineno">  403</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  404</span>            {</div>
+<div class="line"><span class="lineno">  405</span>                Socket.EndConnect(result); </div>
+<div class="line"><span class="lineno">  406</span>                <span class="keywordflow">if</span> (!Socket.Connected)</div>
+<div class="line"><span class="lineno">  407</span>                {</div>
+<div class="line"><span class="lineno">  408</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  409</span>                }</div>
+<div class="line"><span class="lineno">  410</span>                <span class="keywordflow">if</span> (Client.instance.defaultNetworkSettings.useTLS == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  411</span>                {</div>
+<div class="line"><span class="lineno">  412</span>                    SslStream ScStream = <span class="keyword">new</span> SslStream(Socket.GetStream(), <span class="keyword">false</span>, ValidateServerCertificate);</div>
+<div class="line"><span class="lineno">  413</span>                    ScStream.AuthenticateAsClient(Client.instance.defaultNetworkSettings.ipAddress); </div>
+<div class="line"><span class="lineno">  414</span> </div>
+<div class="line"><span class="lineno">  415</span>                    receiveBuffer = <span class="keyword">new</span> <span class="keywordtype">byte</span>[Client.DefaultBufferSize];</div>
+<div class="line"><span class="lineno">  416</span>                    receivedPacket = <span class="keyword">new</span> Packet();</div>
+<div class="line"><span class="lineno">  417</span>                    Stream = ScStream;</div>
+<div class="line"><span class="lineno">  418</span>                } <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  419</span>                {</div>
+<div class="line"><span class="lineno">  420</span>                    Stream = Socket.GetStream();</div>
+<div class="line"><span class="lineno">  421</span>                    receiveBuffer = <span class="keyword">new</span> <span class="keywordtype">byte</span>[Client.DefaultBufferSize];</div>
+<div class="line"><span class="lineno">  422</span>                    receivedPacket = <span class="keyword">new</span> Packet();</div>
+<div class="line"><span class="lineno">  423</span>                }</div>
+<div class="line"><span class="lineno">  424</span>                Stream.BeginRead(receiveBuffer, 0, Client.DefaultBufferSize, ReceiveCallback, <span class="keyword">null</span>); </div>
+<div class="line"><span class="lineno">  425</span>                Client.instance.isConnected = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  426</span>                ThreadsController.StartOnMainThread(() =&gt;</div>
+<div class="line"><span class="lineno">  427</span>                {</div>
+<div class="line"><span class="lineno">  428</span>                    Client.instance.OnConnected?.Invoke();</div>
+<div class="line"><span class="lineno">  429</span>                });</div>
+<div class="line"><span class="lineno">  430</span>            }</div>
+<div class="line"><span class="lineno">  431</span>            <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><span class="lineno">  432</span>            {</div>
+<div class="line"><span class="lineno">  433</span>                Debug.LogError($<span class="stringliteral">&quot;Error during SSL/TLS handshake: {ex.Message}&quot;</span>);</div>
+<div class="line"><span class="lineno">  434</span>                ThreadsController.StartOnMainThread(() =&gt;</div>
+<div class="line"><span class="lineno">  435</span>                {</div>
+<div class="line"><span class="lineno">  436</span>                    Client.instance.OnConnectionFailed?.Invoke($<span class="stringliteral">&quot;Error during SSL/TLS handshake: {ex.Message}&quot;</span>);</div>
+<div class="line"><span class="lineno">  437</span>                });</div>
+<div class="line"><span class="lineno">  438</span>                Disconnect();</div>
+<div class="line"><span class="lineno">  439</span>            }</div>
+<div class="line"><span class="lineno">  440</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0bf46ee66dfea6fff92a83f71b603c3a" name="a0bf46ee66dfea6fff92a83f71b603c3a"></a>
@@ -176,10 +252,20 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Disconnects the <a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a> connection and clears the buffers. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00336">336</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  337</span>        {</div>
+<div class="line"><span class="lineno">  338</span>            Stream = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  339</span>            receivedPacket = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  340</span>            receiveBuffer = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  341</span>            Socket = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  342</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a354ffd069b81ae0826e3159646f6c10d" name="a354ffd069b81ae0826e3159646f6c10d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a354ffd069b81ae0826e3159646f6c10d">&#9670;&#160;</a></span>Handler()</h2>
+<a id="a44edac61b06a9d44a9d8341b80a65037" name="a44edac61b06a9d44a9d8341b80a65037"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44edac61b06a9d44a9d8341b80a65037">&#9670;&#160;</a></span>Handler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -190,7 +276,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">bool Client.TCP.Handler </td>
           <td>(</td>
-          <td class="paramtype">byte[]</td>          <td class="paramname"><span class="paramname"><em>Data</em></span></td><td>)</td>
+          <td class="paramtype">byte[]</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -201,6 +287,47 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Handles received raw byte data from the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00358">358</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  359</span>        {</div>
+<div class="line"><span class="lineno">  360</span>            <span class="keywordtype">int</span> packetLength = 0;</div>
+<div class="line"><span class="lineno">  361</span>            receivedPacket.AddBytesToBuffers(data);</div>
+<div class="line"><span class="lineno">  362</span>            <span class="keywordflow">if</span> (receivedPacket.UnreadLength() &gt;= 4)</div>
+<div class="line"><span class="lineno">  363</span>            {</div>
+<div class="line"><span class="lineno">  364</span>                packetLength = receivedPacket.ReadInt();</div>
+<div class="line"><span class="lineno">  365</span>                <span class="keywordflow">if</span> (packetLength &lt;= 0)</div>
+<div class="line"><span class="lineno">  366</span>                {</div>
+<div class="line"><span class="lineno">  367</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  368</span>                }</div>
+<div class="line"><span class="lineno">  369</span>            }</div>
+<div class="line"><span class="lineno">  370</span>            <span class="keywordflow">while</span> (packetLength &gt; 0 &amp;&amp; packetLength &lt;= receivedPacket.UnreadLength())</div>
+<div class="line"><span class="lineno">  371</span>            {</div>
+<div class="line"><span class="lineno">  372</span>                <span class="keywordtype">byte</span>[] packetBytes = receivedPacket.ReadBytes(packetLength);</div>
+<div class="line"><span class="lineno">  373</span>                ThreadsController.StartOnMainThread(() =&gt;</div>
+<div class="line"><span class="lineno">  374</span>                {</div>
+<div class="line"><span class="lineno">  375</span>                Packet packet = <span class="keyword">new</span> Packet(packetBytes); </div>
+<div class="line"><span class="lineno">  376</span>                <span class="keywordtype">int</span> packetId = packet.<a class="code hl_function" href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a>();</div>
+<div class="line"><span class="lineno">  377</span>                PacketAction(packetId, packet); </div>
+<div class="line"><span class="lineno">  378</span>                });</div>
+<div class="line"><span class="lineno">  379</span>                packetLength = 0;</div>
+<div class="line"><span class="lineno">  380</span>                <span class="keywordflow">if</span> (receivedPacket.UnreadLength() &gt;= 4)</div>
+<div class="line"><span class="lineno">  381</span>                {</div>
+<div class="line"><span class="lineno">  382</span>                    packetLength = receivedPacket.ReadInt();</div>
+<div class="line"><span class="lineno">  383</span>                    <span class="keywordflow">if</span> (packetLength &lt;= 0)</div>
+<div class="line"><span class="lineno">  384</span>                    {</div>
+<div class="line"><span class="lineno">  385</span>                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  386</span>                    }</div>
+<div class="line"><span class="lineno">  387</span>                }</div>
+<div class="line"><span class="lineno">  388</span>            }</div>
+<div class="line"><span class="lineno">  389</span>            <span class="keywordflow">if</span> (packetLength &lt;= 1)</div>
+<div class="line"><span class="lineno">  390</span>            {</div>
+<div class="line"><span class="lineno">  391</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  392</span>            }</div>
+<div class="line"><span class="lineno">  393</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  394</span>        }</div>
+<div class="ttc" id="aclass_packet_html_a822c0ba0dce983b19af0adf3b2fc1b9e"><div class="ttname"><a href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">Packet.ReadInt</a></div><div class="ttdeci">int ReadInt(bool changeReadPosition=true)</div><div class="ttdoc">Read int data.</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00080">Packet.cs:80</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a32327fa0b978d235c84ca54e18eaaf03" name="a32327fa0b978d235c84ca54e18eaaf03"></a>
@@ -226,6 +353,28 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Callback for receiving data over the <a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a>. Reads data into the data buffer, manages it by Handler and continues reading. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00445">445</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  446</span>        {</div>
+<div class="line"><span class="lineno">  447</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  448</span>            {</div>
+<div class="line"><span class="lineno">  449</span>                <span class="keywordtype">int</span> dataLength = Stream.EndRead(result); </div>
+<div class="line"><span class="lineno">  450</span>                <span class="keywordflow">if</span> (dataLength &lt;= 0) </div>
+<div class="line"><span class="lineno">  451</span>                {</div>
+<div class="line"><span class="lineno">  452</span>                    instance.Disconnect();</div>
+<div class="line"><span class="lineno">  453</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  454</span>                }</div>
+<div class="line"><span class="lineno">  455</span>                <span class="keywordtype">byte</span>[] data = <span class="keyword">new</span> <span class="keywordtype">byte</span>[dataLength];</div>
+<div class="line"><span class="lineno">  456</span>                Array.Copy(receiveBuffer, data, dataLength); </div>
+<div class="line"><span class="lineno">  457</span>                receivedPacket.ClearPacket(Handler(data));</div>
+<div class="line"><span class="lineno">  458</span>                Stream.BeginRead(receiveBuffer, 0, DefaultBufferSize, ReceiveCallback, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  459</span>            }</div>
+<div class="line"><span class="lineno">  460</span>            <span class="keywordflow">catch</span> (Exception ex) {</div>
+<div class="line"><span class="lineno">  461</span>                Debug.LogError($<span class="stringliteral">&quot;Error connecting {ex}&quot;</span>);</div>
+<div class="line"><span class="lineno">  462</span>            }</div>
+<div class="line"><span class="lineno">  463</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af7fd62fb1c3a33697ee9991503d7d0cb" name="af7fd62fb1c3a33697ee9991503d7d0cb"></a>
@@ -243,6 +392,25 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sends a packet to the server using <a class="el" href="class_client_1_1_t_c_p.html" title="Handles TCP connection.">TCP</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00319">319</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  320</span>        {</div>
+<div class="line"><span class="lineno">  321</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  322</span>            {</div>
+<div class="line"><span class="lineno">  323</span>                <span class="keywordflow">if</span> (Socket != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  324</span>                {</div>
+<div class="line"><span class="lineno">  325</span>                    Stream.BeginWrite(Packet.<a class="code hl_function" href="class_packet.html#a3adf900e0869f7d54aaf275db531d637">ConvertToArray</a>(), 0, Packet.<a class="code hl_function" href="class_packet.html#a4350f8d19ce8152d7024104ad81cf6d6">DataLength</a>(), <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  326</span>                }</div>
+<div class="line"><span class="lineno">  327</span>            }</div>
+<div class="line"><span class="lineno">  328</span>            <span class="keywordflow">catch</span> (Exception _ex)</div>
+<div class="line"><span class="lineno">  329</span>            {</div>
+<div class="line"><span class="lineno">  330</span>                Debug.LogError($<span class="stringliteral">&quot;Error sending data to server via TCP: {_ex}&quot;</span>);</div>
+<div class="line"><span class="lineno">  331</span>            }</div>
+<div class="line"><span class="lineno">  332</span>        }</div>
+<div class="ttc" id="aclass_packet_html_a3adf900e0869f7d54aaf275db531d637"><div class="ttname"><a href="class_packet.html#a3adf900e0869f7d54aaf275db531d637">Packet.ConvertToArray</a></div><div class="ttdeci">byte[] ConvertToArray()</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00287">Packet.cs:287</a></div></div>
+<div class="ttc" id="aclass_packet_html_a4350f8d19ce8152d7024104ad81cf6d6"><div class="ttname"><a href="class_packet.html#a4350f8d19ce8152d7024104ad81cf6d6">Packet.DataLength</a></div><div class="ttdeci">int DataLength()</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00300">Packet.cs:300</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a782a25d41986e3c78fb75117fe4f67df" name="a782a25d41986e3c78fb75117fe4f67df"></a>
@@ -282,6 +450,18 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Validates the server's SSL/TLS certificate. Returns true if the certificate is valid; else writes error and returns false. </p>
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00346">346</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  347</span>        {</div>
+<div class="line"><span class="lineno">  348</span>            <span class="keywordflow">if</span> (sslPolicyErrors == SslPolicyErrors.None)</div>
+<div class="line"><span class="lineno">  349</span>            {</div>
+<div class="line"><span class="lineno">  350</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>; </div>
+<div class="line"><span class="lineno">  351</span>            }</div>
+<div class="line"><span class="lineno">  352</span>            Debug.LogError($<span class="stringliteral">&quot;SSL/TLS validation error: {sslPolicyErrors}&quot;</span>);</div>
+<div class="line"><span class="lineno">  353</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>; </div>
+<div class="line"><span class="lineno">  354</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -305,6 +485,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00295">295</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+
 </div>
 </div>
 <a id="a3bdaabc5fff332954aef50c962fb93ad" name="a3bdaabc5fff332954aef50c962fb93ad"></a>
@@ -327,6 +509,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00296">296</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+
 </div>
 </div>
 <a id="a1bd07333ad6a91267a1e8ec51c477426" name="a1bd07333ad6a91267a1e8ec51c477426"></a>
@@ -340,6 +524,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00293">293</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
 
 </div>
 </div>
@@ -363,11 +549,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_client_8cs_source.html#l00294">294</a> of file <a class="el" href="_client_8cs_source.html">Client.cs</a>.</p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/NetworkLibrary/ClientStuff/ClientScripts/Code/<a class="el" href="_client_8cs.html">Client.cs</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

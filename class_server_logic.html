@@ -91,46 +91,61 @@ $(function(){initNavTree('class_server_logic.html','','class_server_logic-member
   <div class="headertitle"><div class="title">ServerLogic Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Main server logic class, responsible for all server-managing actions.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a6f5665ff16369adecda5ad38a3a76293" id="r_a6f5665ff16369adecda5ad38a3a76293"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f5665ff16369adecda5ad38a3a76293">PacketHandler</a> (int _fromClient, <a class="el" href="class_packet.html">Packet</a> _packet)</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a8f50df24389a51f09650ffffada82ecd" id="r_a8f50df24389a51f09650ffffada82ecd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f50df24389a51f09650ffffada82ecd">StartServer</a> (int maxCCU, int port, <a class="el" href="class_default_network_settings.html">DefaultNetworkSettings</a> defaultSettings, <a class="el" href="class_server_settings.html">ServerSettings</a> serverSettings)</td></tr>
+<tr class="memitem:a0d73ce79e8026b698c44119cd6ee5a7d" id="r_a0d73ce79e8026b698c44119cd6ee5a7d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d73ce79e8026b698c44119cd6ee5a7d">StartServer</a> (int CCU, int port, <a class="el" href="class_default_network_settings.html">DefaultNetworkSettings</a> defaultSettings, <a class="el" href="class_server_settings.html">ServerSettings</a> serverSettings)</td></tr>
+<tr class="memdesc:a0d73ce79e8026b698c44119cd6ee5a7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes and starts the server, including TCP/UDP listeners and packet handlers.  <br /></td></tr>
 <tr class="memitem:a2525c29a2111592edd22f9c902969710" id="r_a2525c29a2111592edd22f9c902969710"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2525c29a2111592edd22f9c902969710">StopServer</a> ()</td></tr>
-<tr class="memitem:ad5fbe45d9c4560077b1addaabec3b20f" id="r_ad5fbe45d9c4560077b1addaabec3b20f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5fbe45d9c4560077b1addaabec3b20f">SendUDPData</a> (IPEndPoint ClientEndPoint, <a class="el" href="class_packet.html">Packet</a> SendPacket)</td></tr>
-<tr class="memitem:aa2747bf9cf0ee07d6a89cd7163e6d746" id="r_aa2747bf9cf0ee07d6a89cd7163e6d746"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2747bf9cf0ee07d6a89cd7163e6d746">GetOnlineClients</a> ()</td></tr>
+<tr class="memdesc:a2525c29a2111592edd22f9c902969710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the server and closes all TCP and UDP connections.  <br /></td></tr>
+<tr class="memitem:adda2c12e48af28c4588de1d9388d04f1" id="r_adda2c12e48af28c4588de1d9388d04f1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adda2c12e48af28c4588de1d9388d04f1">PacketAction</a> (int packetId, <a class="el" href="class_packet.html">Packet</a> packet, int fromClient)</td></tr>
+<tr class="memdesc:adda2c12e48af28c4588de1d9388d04f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method responsible for managing received <a class="el" href="class_packet.html#ab51148f7134cedf405521073cae0cb09" title="Defined packets sent to Server by Client.">Packet.ClientPackets</a> actions that are written in <a class="el" href="class_server_receive_handler.html" title="Contains all of the managing methods for received packets on server.">ServerReceiveHandler</a> class. Can be easily extended for new packet types.  <br /></td></tr>
+<tr class="memitem:a358e53faea8b6a93104392928a1a8dc2" id="r_a358e53faea8b6a93104392928a1a8dc2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a358e53faea8b6a93104392928a1a8dc2">SendUDPData</a> (IPEndPoint clientEndPoint, <a class="el" href="class_packet.html">Packet</a> sendPacket)</td></tr>
+<tr class="memdesc:a358e53faea8b6a93104392928a1a8dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a UDP packet to the specified client endpoint.  <br /></td></tr>
 <tr class="memitem:a3c624e300ba966476e0282247171599f" id="r_a3c624e300ba966476e0282247171599f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_default_network_settings.html">DefaultNetworkSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c624e300ba966476e0282247171599f">GetSettings</a> ()</td></tr>
 <tr class="memitem:af01b939411efbb7218ba2e9e827e4848" id="r_af01b939411efbb7218ba2e9e827e4848"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_server_settings.html">ServerSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af01b939411efbb7218ba2e9e827e4848">GetServerSettings</a> ()</td></tr>
 <tr class="memitem:a045177f43322c52b3a47ad89439f87c9" id="r_a045177f43322c52b3a47ad89439f87c9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a045177f43322c52b3a47ad89439f87c9">ConsoleLog</a> (string message)</td></tr>
+<tr class="memdesc:a045177f43322c52b3a47ad89439f87c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message to the console with a newline.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a38062c87fc2a238a14c3ba9c07ede0aa" id="r_a38062c87fc2a238a14c3ba9c07ede0aa"><td class="memItemLeft" align="right" valign="top">static Dictionary&lt; int, <a class="el" href="class_server_side_client.html">ServerSideClient</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38062c87fc2a238a14c3ba9c07ede0aa">clientsList</a> = new Dictionary&lt;int, <a class="el" href="class_server_side_client.html">ServerSideClient</a>&gt;()</td></tr>
-<tr class="memitem:a29986f17d0dc8d65c53949edbd2a192e" id="r_a29986f17d0dc8d65c53949edbd2a192e"><td class="memItemLeft" align="right" valign="top">static Dictionary&lt; int, <a class="el" href="#a6f5665ff16369adecda5ad38a3a76293">PacketHandler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29986f17d0dc8d65c53949edbd2a192e">packetHandlers</a></td></tr>
-<tr class="memitem:a7d5f83869ab8ebde6f822658fa1c14e6" id="r_a7d5f83869ab8ebde6f822658fa1c14e6"><td class="memItemLeft" align="right" valign="top">static X509Certificate2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d5f83869ab8ebde6f822658fa1c14e6">ServerCertificate</a></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
-Properties</h2></td></tr>
-<tr class="memitem:a600d45d6fc0d97fde9c63842d84cb472" id="r_a600d45d6fc0d97fde9c63842d84cb472"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a600d45d6fc0d97fde9c63842d84cb472">MaxCCU</a><code> [get, private set]</code></td></tr>
-<tr class="memitem:a4a15c087bdae99c34edda71df8b84dfc" id="r_a4a15c087bdae99c34edda71df8b84dfc"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a15c087bdae99c34edda71df8b84dfc">ListeningPort</a><code> [get, private set]</code></td></tr>
+<tr class="memdesc:a38062c87fc2a238a14c3ba9c07ede0aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">A dictionary holding all connected clients, indexed by their client ID.  <br /></td></tr>
+<tr class="memitem:af6eaa1b688bc52485fcd9c2fe5601b39" id="r_af6eaa1b688bc52485fcd9c2fe5601b39"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6eaa1b688bc52485fcd9c2fe5601b39">maxCCU</a></td></tr>
+<tr class="memdesc:af6eaa1b688bc52485fcd9c2fe5601b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of concurrent users allowed on the server.  <br /></td></tr>
+<tr class="memitem:a237034469e3c5c53597310f5034159c9" id="r_a237034469e3c5c53597310f5034159c9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a237034469e3c5c53597310f5034159c9">listeningPort</a></td></tr>
+<tr class="memdesc:a237034469e3c5c53597310f5034159c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Port number the server listens on for incoming connections.  <br /></td></tr>
+<tr class="memitem:ae9f1d3d25d0e17cfa6a8ec5c3aea1d6c" id="r_ae9f1d3d25d0e17cfa6a8ec5c3aea1d6c"><td class="memItemLeft" align="right" valign="top">static X509Certificate2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9f1d3d25d0e17cfa6a8ec5c3aea1d6c">serverCertificate</a></td></tr>
+<tr class="memdesc:ae9f1d3d25d0e17cfa6a8ec5c3aea1d6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLS certificate used for secure communication, if enabled.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
 <tr class="memitem:a5134b62bf16a90fa9e6ea569885ec1ba" id="r_a5134b62bf16a90fa9e6ea569885ec1ba"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5134b62bf16a90fa9e6ea569885ec1ba">InitializeClientsList</a> ()</td></tr>
-<tr class="memitem:a082a06c71e22f21e740ed552add14476" id="r_a082a06c71e22f21e740ed552add14476"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a082a06c71e22f21e740ed552add14476">TcpConnectCallback</a> (IAsyncResult Result)</td></tr>
-<tr class="memitem:aa78a417e7c04c343281b6e42fa6976ed" id="r_aa78a417e7c04c343281b6e42fa6976ed"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa78a417e7c04c343281b6e42fa6976ed">UdpReceiveCallback</a> (IAsyncResult Result)</td></tr>
+<tr class="memdesc:a5134b62bf16a90fa9e6ea569885ec1ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the client list.  <br /></td></tr>
+<tr class="memitem:a509307f7e12f9a31a750af0c87324396" id="r_a509307f7e12f9a31a750af0c87324396"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a509307f7e12f9a31a750af0c87324396">TcpConnectCallback</a> (IAsyncResult result)</td></tr>
+<tr class="memdesc:a509307f7e12f9a31a750af0c87324396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for handling new TCP client connections asynchronously. Assigns the client to the first available slot.  <br /></td></tr>
+<tr class="memitem:aeee6660dda42cd2e6b7242a58ade03a8" id="r_aeee6660dda42cd2e6b7242a58ade03a8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeee6660dda42cd2e6b7242a58ade03a8">UdpReceiveCallback</a> (IAsyncResult result)</td></tr>
+<tr class="memdesc:aeee6660dda42cd2e6b7242a58ade03a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for processing incoming UDP data packets from clients.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
-<tr class="memitem:a39a9554a1df8e6e8621689902789f882" id="r_a39a9554a1df8e6e8621689902789f882"><td class="memItemLeft" align="right" valign="top">static TcpListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39a9554a1df8e6e8621689902789f882">MainTcpListener</a></td></tr>
-<tr class="memitem:ac6621e09945d5255ee141e4cac724b8b" id="r_ac6621e09945d5255ee141e4cac724b8b"><td class="memItemLeft" align="right" valign="top">static UdpClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6621e09945d5255ee141e4cac724b8b">MainUdpListener</a></td></tr>
+<tr class="memitem:a481259898bb2ffcba46beccda118bcb7" id="r_a481259898bb2ffcba46beccda118bcb7"><td class="memItemLeft" align="right" valign="top">static TcpListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a481259898bb2ffcba46beccda118bcb7">tcpListener</a></td></tr>
+<tr class="memdesc:a481259898bb2ffcba46beccda118bcb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP listener for handling incoming TCP connections.  <br /></td></tr>
+<tr class="memitem:a29a4ce2b86ff0190a23617d0c211f616" id="r_a29a4ce2b86ff0190a23617d0c211f616"><td class="memItemLeft" align="right" valign="top">static UdpClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29a4ce2b86ff0190a23617d0c211f616">udpListener</a></td></tr>
+<tr class="memdesc:a29a4ce2b86ff0190a23617d0c211f616"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP listener for handling incoming UDP packets.  <br /></td></tr>
 <tr class="memitem:acdb357ce61331fe2ef641699adafac3c" id="r_acdb357ce61331fe2ef641699adafac3c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_default_network_settings.html">DefaultNetworkSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdb357ce61331fe2ef641699adafac3c">DefaultSettings</a></td></tr>
+<tr class="memdesc:acdb357ce61331fe2ef641699adafac3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default network configuration settings for the server.  <br /></td></tr>
 <tr class="memitem:a38a8b39866a879badfa0a5c84d27d4b6" id="r_a38a8b39866a879badfa0a5c84d27d4b6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_server_settings.html">ServerSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38a8b39866a879badfa0a5c84d27d4b6">ServerSettings</a></td></tr>
+<tr class="memdesc:a38a8b39866a879badfa0a5c84d27d4b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advanced server-side settings used during initialization.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Main server logic class, responsible for all server-managing actions. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00012">12</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a045177f43322c52b3a47ad89439f87c9" name="a045177f43322c52b3a47ad89439f87c9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a045177f43322c52b3a47ad89439f87c9">&#9670;&#160;</a></span>ConsoleLog()</h2>
 
@@ -154,31 +169,13 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="aa2747bf9cf0ee07d6a89cd7163e6d746" name="aa2747bf9cf0ee07d6a89cd7163e6d746"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2747bf9cf0ee07d6a89cd7163e6d746">&#9670;&#160;</a></span>GetOnlineClients()</h2>
+<p>Logs a message to the console with a newline. </p>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ServerLogic.GetOnlineClients </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00250">250</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  251</span>    {</div>
+<div class="line"><span class="lineno">  252</span>        Console.WriteLine(message + <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  253</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af01b939411efbb7218ba2e9e827e4848" name="af01b939411efbb7218ba2e9e827e4848"></a>
@@ -204,6 +201,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00243">243</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  244</span>    {</div>
+<div class="line"><span class="lineno">  245</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a38a8b39866a879badfa0a5c84d27d4b6">ServerSettings</a>;</div>
+<div class="line"><span class="lineno">  246</span>    }</div>
+<div class="ttc" id="aclass_server_logic_html_a38a8b39866a879badfa0a5c84d27d4b6"><div class="ttname"><a href="#a38a8b39866a879badfa0a5c84d27d4b6">ServerLogic.ServerSettings</a></div><div class="ttdeci">static ServerSettings ServerSettings</div><div class="ttdoc">Advanced server-side settings used during initialization.</div><div class="ttdef"><b>Definition</b> <a href="_server_logic_8cs_source.html#l00045">ServerLogic.cs:45</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3c624e300ba966476e0282247171599f" name="a3c624e300ba966476e0282247171599f"></a>
@@ -229,6 +232,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00238">238</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  239</span>    {</div>
+<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#acdb357ce61331fe2ef641699adafac3c">DefaultSettings</a>;</div>
+<div class="line"><span class="lineno">  241</span>    }</div>
+<div class="ttc" id="aclass_server_logic_html_acdb357ce61331fe2ef641699adafac3c"><div class="ttname"><a href="#acdb357ce61331fe2ef641699adafac3c">ServerLogic.DefaultSettings</a></div><div class="ttdeci">static DefaultNetworkSettings DefaultSettings</div><div class="ttdoc">Default network configuration settings for the server.</div><div class="ttdef"><b>Definition</b> <a href="_server_logic_8cs_source.html#l00041">ServerLogic.cs:41</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5134b62bf16a90fa9e6ea569885ec1ba" name="a5134b62bf16a90fa9e6ea569885ec1ba"></a>
@@ -254,31 +263,112 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initializes the client list. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00104">104</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>    {</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= <a class="code hl_variable" href="#af6eaa1b688bc52485fcd9c2fe5601b39">maxCCU</a>; i++)</div>
+<div class="line"><span class="lineno">  107</span>        {</div>
+<div class="line"><span class="lineno">  108</span>            <a class="code hl_variable" href="#a38062c87fc2a238a14c3ba9c07ede0aa">clientsList</a>.Add(i, <span class="keyword">new</span> ServerSideClient(i));</div>
+<div class="line"><span class="lineno">  109</span>        }</div>
+<div class="line"><span class="lineno">  110</span>    }</div>
+<div class="ttc" id="aclass_server_logic_html_a38062c87fc2a238a14c3ba9c07ede0aa"><div class="ttname"><a href="#a38062c87fc2a238a14c3ba9c07ede0aa">ServerLogic.clientsList</a></div><div class="ttdeci">static Dictionary&lt; int, ServerSideClient &gt; clientsList</div><div class="ttdoc">A dictionary holding all connected clients, indexed by their client ID.</div><div class="ttdef"><b>Definition</b> <a href="_server_logic_8cs_source.html#l00017">ServerLogic.cs:17</a></div></div>
+<div class="ttc" id="aclass_server_logic_html_af6eaa1b688bc52485fcd9c2fe5601b39"><div class="ttname"><a href="#af6eaa1b688bc52485fcd9c2fe5601b39">ServerLogic.maxCCU</a></div><div class="ttdeci">static int maxCCU</div><div class="ttdoc">Maximum number of concurrent users allowed on the server.</div><div class="ttdef"><b>Definition</b> <a href="_server_logic_8cs_source.html#l00021">ServerLogic.cs:21</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a6f5665ff16369adecda5ad38a3a76293" name="a6f5665ff16369adecda5ad38a3a76293"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f5665ff16369adecda5ad38a3a76293">&#9670;&#160;</a></span>PacketHandler()</h2>
+<a id="adda2c12e48af28c4588de1d9388d04f1" name="adda2c12e48af28c4588de1d9388d04f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adda2c12e48af28c4588de1d9388d04f1">&#9670;&#160;</a></span>PacketAction()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">delegate void ServerLogic.PacketHandler </td>
+          <td class="memname">void ServerLogic.PacketAction </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>_fromClient</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>packetId</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>_packet</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>packet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fromClient</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
+<p>Method responsible for managing received <a class="el" href="class_packet.html#ab51148f7134cedf405521073cae0cb09" title="Defined packets sent to Server by Client.">Packet.ClientPackets</a> actions that are written in <a class="el" href="class_server_receive_handler.html" title="Contains all of the managing methods for received packets on server.">ServerReceiveHandler</a> class. Can be easily extended for new packet types. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00114">114</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>    {</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span> (!Enum.IsDefined(typeof(Packet.ClientPackets), packetId))</div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            Debug.LogWarning($<span class="stringliteral">&quot;Unknown packet ID: {packetId}&quot;</span>);</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  120</span>        }</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>        Packet.ClientPackets packetType = (Packet.ClientPackets)packetId;</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">switch</span> (packetType)</div>
+<div class="line"><span class="lineno">  125</span>        {</div>
+<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">case</span> Packet.ClientPackets.welcomeReceived:</div>
+<div class="line"><span class="lineno">  127</span>                ServerReceiveHandler.WelcomeReceived(fromClient, packet);</div>
+<div class="line"><span class="lineno">  128</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>            <span class="keywordflow">case</span> Packet.ClientPackets.MeassureRequest:</div>
+<div class="line"><span class="lineno">  131</span>                ServerReceiveHandler.LatencyRequestReceived(fromClient, packet);</div>
+<div class="line"><span class="lineno">  132</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  133</span> </div>
+<div class="line"><span class="lineno">  134</span>            <span class="keywordflow">case</span> Packet.ClientPackets.DisconnectRequest:</div>
+<div class="line"><span class="lineno">  135</span>                ServerReceiveHandler.DisconnectRequestReceived(fromClient, packet);</div>
+<div class="line"><span class="lineno">  136</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">case</span> Packet.ClientPackets.MessageToUserRequest:</div>
+<div class="line"><span class="lineno">  139</span>                ServerReceiveHandler.MessageToUserRequestReceived(fromClient, packet);</div>
+<div class="line"><span class="lineno">  140</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>            <span class="keywordflow">case</span> Packet.ClientPackets.MessageToAllRequest:</div>
+<div class="line"><span class="lineno">  143</span>                ServerReceiveHandler.MessageToAllRequestReceived(fromClient, packet);</div>
+<div class="line"><span class="lineno">  144</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>            <span class="keywordflow">case</span> Packet.ClientPackets.TransformChange:</div>
+<div class="line"><span class="lineno">  147</span>                ServerReceiveHandler.TransformChangeReceived(fromClient, packet);</div>
+<div class="line"><span class="lineno">  148</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">case</span> Packet.ClientPackets.AnimationChange:</div>
+<div class="line"><span class="lineno">  151</span>                ServerReceiveHandler.AnimationChangeReceived(fromClient, packet);</div>
+<div class="line"><span class="lineno">  152</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  153</span> </div>
+<div class="line"><span class="lineno">  154</span>            <span class="keywordflow">case</span> Packet.ClientPackets.BandwidthRequest:</div>
+<div class="line"><span class="lineno">  155</span>                ServerReceiveHandler.BandwidthRequestReceived(fromClient, packet);</div>
+<div class="line"><span class="lineno">  156</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  157</span> </div>
+<div class="line"><span class="lineno">  158</span>            <span class="keywordflow">case</span> Packet.ClientPackets.ThroughputRequest:</div>
+<div class="line"><span class="lineno">  159</span>                ServerReceiveHandler.ThroughputRequestReceived(fromClient, packet);</div>
+<div class="line"><span class="lineno">  160</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  163</span>                Debug.LogWarning($<span class="stringliteral">&quot;Unhandled client packet type: {packetType}&quot;</span>);</div>
+<div class="line"><span class="lineno">  164</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  165</span>        }</div>
+<div class="line"><span class="lineno">  166</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="ad5fbe45d9c4560077b1addaabec3b20f" name="ad5fbe45d9c4560077b1addaabec3b20f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5fbe45d9c4560077b1addaabec3b20f">&#9670;&#160;</a></span>SendUDPData()</h2>
+<a id="a358e53faea8b6a93104392928a1a8dc2" name="a358e53faea8b6a93104392928a1a8dc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a358e53faea8b6a93104392928a1a8dc2">&#9670;&#160;</a></span>SendUDPData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -289,12 +379,12 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void ServerLogic.SendUDPData </td>
           <td>(</td>
-          <td class="paramtype">IPEndPoint</td>          <td class="paramname"><span class="paramname"><em>ClientEndPoint</em></span>, </td>
+          <td class="paramtype">IPEndPoint</td>          <td class="paramname"><span class="paramname"><em>clientEndPoint</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>SendPacket</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="class_packet.html">Packet</a></td>          <td class="paramname"><span class="paramname"><em>sendPacket</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -304,10 +394,31 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sends a UDP packet to the specified client endpoint. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00223">223</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  224</span>    {</div>
+<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  226</span>        {</div>
+<div class="line"><span class="lineno">  227</span>            <span class="keywordflow">if</span> (clientEndPoint != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  228</span>            {</div>
+<div class="line"><span class="lineno">  229</span>                <a class="code hl_variable" href="#a29a4ce2b86ff0190a23617d0c211f616">udpListener</a>.BeginSend(sendPacket.<a class="code hl_function" href="class_packet.html#a3adf900e0869f7d54aaf275db531d637">ConvertToArray</a>(), sendPacket.<a class="code hl_function" href="class_packet.html#a4350f8d19ce8152d7024104ad81cf6d6">DataLength</a>(), clientEndPoint, <span class="keyword">null</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  230</span>            }</div>
+<div class="line"><span class="lineno">  231</span>        }</div>
+<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><span class="lineno">  233</span>        {</div>
+<div class="line"><span class="lineno">  234</span>            <a class="code hl_function" href="#a045177f43322c52b3a47ad89439f87c9">ConsoleLog</a>($<span class="stringliteral">&quot;Error sending via UDP {ex}&quot;</span>);</div>
+<div class="line"><span class="lineno">  235</span>        }</div>
+<div class="line"><span class="lineno">  236</span>    }</div>
+<div class="ttc" id="aclass_packet_html_a3adf900e0869f7d54aaf275db531d637"><div class="ttname"><a href="class_packet.html#a3adf900e0869f7d54aaf275db531d637">Packet.ConvertToArray</a></div><div class="ttdeci">byte[] ConvertToArray()</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00287">Packet.cs:287</a></div></div>
+<div class="ttc" id="aclass_packet_html_a4350f8d19ce8152d7024104ad81cf6d6"><div class="ttname"><a href="class_packet.html#a4350f8d19ce8152d7024104ad81cf6d6">Packet.DataLength</a></div><div class="ttdeci">int DataLength()</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00300">Packet.cs:300</a></div></div>
+<div class="ttc" id="aclass_server_logic_html_a045177f43322c52b3a47ad89439f87c9"><div class="ttname"><a href="#a045177f43322c52b3a47ad89439f87c9">ServerLogic.ConsoleLog</a></div><div class="ttdeci">static void ConsoleLog(string message)</div><div class="ttdoc">Logs a message to the console with a newline.</div><div class="ttdef"><b>Definition</b> <a href="_server_logic_8cs_source.html#l00250">ServerLogic.cs:250</a></div></div>
+<div class="ttc" id="aclass_server_logic_html_a29a4ce2b86ff0190a23617d0c211f616"><div class="ttname"><a href="#a29a4ce2b86ff0190a23617d0c211f616">ServerLogic.udpListener</a></div><div class="ttdeci">static UdpClient udpListener</div><div class="ttdoc">UDP listener for handling incoming UDP packets.</div><div class="ttdef"><b>Definition</b> <a href="_server_logic_8cs_source.html#l00033">ServerLogic.cs:33</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a8f50df24389a51f09650ffffada82ecd" name="a8f50df24389a51f09650ffffada82ecd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f50df24389a51f09650ffffada82ecd">&#9670;&#160;</a></span>StartServer()</h2>
+<a id="a0d73ce79e8026b698c44119cd6ee5a7d" name="a0d73ce79e8026b698c44119cd6ee5a7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d73ce79e8026b698c44119cd6ee5a7d">&#9670;&#160;</a></span>StartServer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -318,7 +429,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void ServerLogic.StartServer </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>maxCCU</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>CCU</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -343,6 +454,55 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initializes and starts the server, including TCP/UDP listeners and packet handlers. </p>
+<p>Ability to use tunelling alternative to webserver (for example playit.gg service)</p>
+
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00050">50</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        <a class="code hl_variable" href="#acdb357ce61331fe2ef641699adafac3c">DefaultSettings</a> = defaultSettings;</div>
+<div class="line"><span class="lineno">   53</span>        <a class="code hl_variable" href="#a38a8b39866a879badfa0a5c84d27d4b6">ServerSettings</a> = serverSettings;</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#acdb357ce61331fe2ef641699adafac3c">DefaultSettings</a>.useTLS == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   58</span>            {</div>
+<div class="line"><span class="lineno">   59</span>                <a class="code hl_variable" href="#ae9f1d3d25d0e17cfa6a8ec5c3aea1d6c">serverCertificate</a> = <span class="keyword">new</span> X509Certificate2(<a class="code hl_variable" href="#acdb357ce61331fe2ef641699adafac3c">DefaultSettings</a>.certificatePath, <a class="code hl_variable" href="#acdb357ce61331fe2ef641699adafac3c">DefaultSettings</a>.certificatePassword);</div>
+<div class="line"><span class="lineno">   60</span>                Debug.Log($<span class="stringliteral">&quot;Certificate loaded successfully&quot;</span>);</div>
+<div class="line"><span class="lineno">   61</span>                Console.WriteLine($<span class="stringliteral">&quot;Certificate loaded successfully&quot;</span>);</div>
+<div class="line"><span class="lineno">   62</span>            }</div>
+<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><span class="lineno">   64</span>            {</div>
+<div class="line"><span class="lineno">   65</span>                Debug.LogError($<span class="stringliteral">&quot;Problem with certificate: {ex.Message}&quot;</span>);</div>
+<div class="line"><span class="lineno">   66</span>                Console.WriteLine($<span class="stringliteral">&quot;Problem with certificate: {ex.Message}&quot;</span>);</div>
+<div class="line"><span class="lineno">   67</span>            }</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_function" href="#a045177f43322c52b3a47ad89439f87c9">ConsoleLog</a>(<span class="stringliteral">&quot;Starting Server&quot;</span>);</div>
+<div class="line"><span class="lineno">   71</span>        <a class="code hl_variable" href="#a237034469e3c5c53597310f5034159c9">listeningPort</a> = port;</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (defaultSettings.<a class="code hl_variable" href="class_default_network_settings.html#aac940d1be4e2b24d8043554d3746ec69">useTunneling</a> == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>            <a class="code hl_variable" href="#a237034469e3c5c53597310f5034159c9">listeningPort</a> = defaultSettings.<a class="code hl_variable" href="class_default_network_settings.html#a7dfcc1b3b05af2cd9e3a061d89a8edfa">TunnelPort</a>;</div>
+<div class="line"><span class="lineno">   78</span>        }</div>
+<div class="line"><span class="lineno">   79</span>        <a class="code hl_variable" href="#af6eaa1b688bc52485fcd9c2fe5601b39">maxCCU</a> = CCU;</div>
+<div class="line"><span class="lineno">   80</span>        <a class="code hl_function" href="#a5134b62bf16a90fa9e6ea569885ec1ba">InitializeClientsList</a>();</div>
+<div class="line"><span class="lineno">   81</span>        <a class="code hl_variable" href="#a481259898bb2ffcba46beccda118bcb7">tcpListener</a> = <span class="keyword">new</span> TcpListener(IPAddress.Any, <a class="code hl_variable" href="#a237034469e3c5c53597310f5034159c9">listeningPort</a>); </div>
+<div class="line"><span class="lineno">   82</span>        <a class="code hl_variable" href="#a481259898bb2ffcba46beccda118bcb7">tcpListener</a>.Start(); </div>
+<div class="line"><span class="lineno">   83</span>        <a class="code hl_variable" href="#a481259898bb2ffcba46beccda118bcb7">tcpListener</a>.BeginAcceptTcpClient(<span class="keyword">new</span> AsyncCallback(<a class="code hl_function" href="#a509307f7e12f9a31a750af0c87324396">TcpConnectCallback</a>), <span class="keyword">null</span>); </div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>        <a class="code hl_variable" href="#a29a4ce2b86ff0190a23617d0c211f616">udpListener</a> = <span class="keyword">new</span> UdpClient(<a class="code hl_variable" href="#a237034469e3c5c53597310f5034159c9">listeningPort</a>);</div>
+<div class="line"><span class="lineno">   86</span>        <a class="code hl_variable" href="#a29a4ce2b86ff0190a23617d0c211f616">udpListener</a>.BeginReceive(<a class="code hl_function" href="#aeee6660dda42cd2e6b7242a58ade03a8">UdpReceiveCallback</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>        <a class="code hl_function" href="#a045177f43322c52b3a47ad89439f87c9">ConsoleLog</a>($<span class="stringliteral">&quot;Server started on Port {listeningPort}&quot;</span>);</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
+<div class="ttc" id="aclass_default_network_settings_html_a7dfcc1b3b05af2cd9e3a061d89a8edfa"><div class="ttname"><a href="class_default_network_settings.html#a7dfcc1b3b05af2cd9e3a061d89a8edfa">DefaultNetworkSettings.TunnelPort</a></div><div class="ttdeci">int TunnelPort</div><div class="ttdef"><b>Definition</b> <a href="_default_network_settings_8cs_source.html#l00018">DefaultNetworkSettings.cs:18</a></div></div>
+<div class="ttc" id="aclass_default_network_settings_html_aac940d1be4e2b24d8043554d3746ec69"><div class="ttname"><a href="class_default_network_settings.html#aac940d1be4e2b24d8043554d3746ec69">DefaultNetworkSettings.useTunneling</a></div><div class="ttdeci">bool useTunneling</div><div class="ttdef"><b>Definition</b> <a href="_default_network_settings_8cs_source.html#l00017">DefaultNetworkSettings.cs:17</a></div></div>
+<div class="ttc" id="aclass_server_logic_html_a237034469e3c5c53597310f5034159c9"><div class="ttname"><a href="#a237034469e3c5c53597310f5034159c9">ServerLogic.listeningPort</a></div><div class="ttdeci">static int listeningPort</div><div class="ttdoc">Port number the server listens on for incoming connections.</div><div class="ttdef"><b>Definition</b> <a href="_server_logic_8cs_source.html#l00025">ServerLogic.cs:25</a></div></div>
+<div class="ttc" id="aclass_server_logic_html_a481259898bb2ffcba46beccda118bcb7"><div class="ttname"><a href="#a481259898bb2ffcba46beccda118bcb7">ServerLogic.tcpListener</a></div><div class="ttdeci">static TcpListener tcpListener</div><div class="ttdoc">TCP listener for handling incoming TCP connections.</div><div class="ttdef"><b>Definition</b> <a href="_server_logic_8cs_source.html#l00029">ServerLogic.cs:29</a></div></div>
+<div class="ttc" id="aclass_server_logic_html_a509307f7e12f9a31a750af0c87324396"><div class="ttname"><a href="#a509307f7e12f9a31a750af0c87324396">ServerLogic.TcpConnectCallback</a></div><div class="ttdeci">static void TcpConnectCallback(IAsyncResult result)</div><div class="ttdoc">Callback for handling new TCP client connections asynchronously. Assigns the client to the first avai...</div><div class="ttdef"><b>Definition</b> <a href="_server_logic_8cs_source.html#l00171">ServerLogic.cs:171</a></div></div>
+<div class="ttc" id="aclass_server_logic_html_a5134b62bf16a90fa9e6ea569885ec1ba"><div class="ttname"><a href="#a5134b62bf16a90fa9e6ea569885ec1ba">ServerLogic.InitializeClientsList</a></div><div class="ttdeci">static void InitializeClientsList()</div><div class="ttdoc">Initializes the client list.</div><div class="ttdef"><b>Definition</b> <a href="_server_logic_8cs_source.html#l00104">ServerLogic.cs:104</a></div></div>
+<div class="ttc" id="aclass_server_logic_html_ae9f1d3d25d0e17cfa6a8ec5c3aea1d6c"><div class="ttname"><a href="#ae9f1d3d25d0e17cfa6a8ec5c3aea1d6c">ServerLogic.serverCertificate</a></div><div class="ttdeci">static X509Certificate2 serverCertificate</div><div class="ttdoc">TLS certificate used for secure communication, if enabled.</div><div class="ttdef"><b>Definition</b> <a href="_server_logic_8cs_source.html#l00037">ServerLogic.cs:37</a></div></div>
+<div class="ttc" id="aclass_server_logic_html_aeee6660dda42cd2e6b7242a58ade03a8"><div class="ttname"><a href="#aeee6660dda42cd2e6b7242a58ade03a8">ServerLogic.UdpReceiveCallback</a></div><div class="ttdeci">static void UdpReceiveCallback(IAsyncResult result)</div><div class="ttdoc">Callback for processing incoming UDP data packets from clients.</div><div class="ttdef"><b>Definition</b> <a href="_server_logic_8cs_source.html#l00191">ServerLogic.cs:191</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2525c29a2111592edd22f9c902969710" name="a2525c29a2111592edd22f9c902969710"></a>
@@ -368,10 +528,19 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Stops the server and closes all TCP and UDP connections. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00094">94</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>    {</div>
+<div class="line"><span class="lineno">   96</span>        <a class="code hl_variable" href="#a481259898bb2ffcba46beccda118bcb7">tcpListener</a>.Stop();</div>
+<div class="line"><span class="lineno">   97</span>        <a class="code hl_variable" href="#a29a4ce2b86ff0190a23617d0c211f616">udpListener</a>.Close();</div>
+<div class="line"><span class="lineno">   98</span>        <a class="code hl_function" href="#a045177f43322c52b3a47ad89439f87c9">ConsoleLog</a>(<span class="stringliteral">&quot;TCP and UDP sockets closed, server is down&quot;</span>);</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a082a06c71e22f21e740ed552add14476" name="a082a06c71e22f21e740ed552add14476"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a082a06c71e22f21e740ed552add14476">&#9670;&#160;</a></span>TcpConnectCallback()</h2>
+<a id="a509307f7e12f9a31a750af0c87324396" name="a509307f7e12f9a31a750af0c87324396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a509307f7e12f9a31a750af0c87324396">&#9670;&#160;</a></span>TcpConnectCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -382,7 +551,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void ServerLogic.TcpConnectCallback </td>
           <td>(</td>
-          <td class="paramtype">IAsyncResult</td>          <td class="paramname"><span class="paramname"><em>Result</em></span></td><td>)</td>
+          <td class="paramtype">IAsyncResult</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -393,10 +562,29 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Callback for handling new TCP client connections asynchronously. Assigns the client to the first available slot. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00171">171</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  172</span>    {</div>
+<div class="line"><span class="lineno">  173</span>        TcpClient Client = <a class="code hl_variable" href="#a481259898bb2ffcba46beccda118bcb7">tcpListener</a>.EndAcceptTcpClient(result);</div>
+<div class="line"><span class="lineno">  174</span>       <a class="code hl_variable" href="#a481259898bb2ffcba46beccda118bcb7">tcpListener</a>.BeginAcceptTcpClient(<span class="keyword">new</span> AsyncCallback(<a class="code hl_function" href="#a509307f7e12f9a31a750af0c87324396">TcpConnectCallback</a>), <span class="keyword">null</span>); </div>
+<div class="line"><span class="lineno">  175</span>        <a class="code hl_function" href="#a045177f43322c52b3a47ad89439f87c9">ConsoleLog</a>($<span class="stringliteral">&quot;Client on {Client.Client.RemoteEndPoint} is connecting&quot;</span>);</div>
+<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= <a class="code hl_variable" href="#af6eaa1b688bc52485fcd9c2fe5601b39">maxCCU</a>; i++)</div>
+<div class="line"><span class="lineno">  177</span>        {</div>
+<div class="line"><span class="lineno">  178</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a38062c87fc2a238a14c3ba9c07ede0aa">clientsList</a>[i].tcp.Socket == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  179</span>            {</div>
+<div class="line"><span class="lineno">  180</span>                <a class="code hl_variable" href="#a38062c87fc2a238a14c3ba9c07ede0aa">clientsList</a>[i].tcp.Connect(Client);</div>
+<div class="line"><span class="lineno">  181</span>                <a class="code hl_function" href="#a045177f43322c52b3a47ad89439f87c9">ConsoleLog</a>($<span class="stringliteral">&quot;Client {clientsList[i].tcp.Socket.Client.RemoteEndPoint} has connected&quot;</span>);            </div>
+<div class="line"><span class="lineno">  182</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  183</span>            }</div>
+<div class="line"><span class="lineno">  184</span>        }</div>
+<div class="line"><span class="lineno">  185</span>        <a class="code hl_function" href="#a045177f43322c52b3a47ad89439f87c9">ConsoleLog</a>(<span class="stringliteral">&quot;Max server CCU exceeded!&quot;</span>);</div>
+<div class="line"><span class="lineno">  186</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="aa78a417e7c04c343281b6e42fa6976ed" name="aa78a417e7c04c343281b6e42fa6976ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa78a417e7c04c343281b6e42fa6976ed">&#9670;&#160;</a></span>UdpReceiveCallback()</h2>
+<a id="aeee6660dda42cd2e6b7242a58ade03a8" name="aeee6660dda42cd2e6b7242a58ade03a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeee6660dda42cd2e6b7242a58ade03a8">&#9670;&#160;</a></span>UdpReceiveCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -407,7 +595,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void ServerLogic.UdpReceiveCallback </td>
           <td>(</td>
-          <td class="paramtype">IAsyncResult</td>          <td class="paramname"><span class="paramname"><em>Result</em></span></td><td>)</td>
+          <td class="paramtype">IAsyncResult</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -418,6 +606,39 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Callback for processing incoming UDP data packets from clients. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00191">191</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  192</span>    {</div>
+<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  194</span>        {</div>
+<div class="line"><span class="lineno">  195</span>            IPEndPoint clientEndPoint = <span class="keyword">new</span> IPEndPoint(IPAddress.Any, 0);</div>
+<div class="line"><span class="lineno">  196</span>            <span class="keywordtype">byte</span>[] data = <a class="code hl_variable" href="#a29a4ce2b86ff0190a23617d0c211f616">udpListener</a>.EndReceive(result, ref clientEndPoint);</div>
+<div class="line"><span class="lineno">  197</span>            <a class="code hl_variable" href="#a29a4ce2b86ff0190a23617d0c211f616">udpListener</a>.BeginReceive(<a class="code hl_function" href="#aeee6660dda42cd2e6b7242a58ade03a8">UdpReceiveCallback</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  198</span>            <span class="keywordflow">if</span> (data.Length &lt; 4)</div>
+<div class="line"><span class="lineno">  199</span>            {</div>
+<div class="line"><span class="lineno">  200</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  201</span>            }</div>
+<div class="line"><span class="lineno">  202</span>            Packet packet = <span class="keyword">new</span> Packet(data);</div>
+<div class="line"><span class="lineno">  203</span>            <span class="keywordtype">int</span> clientId = packet.<a class="code hl_function" href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">ReadInt</a>();</div>
+<div class="line"><span class="lineno">  204</span>            <span class="keywordflow">if</span> (clientId == 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  205</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a38062c87fc2a238a14c3ba9c07ede0aa">clientsList</a>[clientId].udp.EndPoint == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  206</span>            {</div>
+<div class="line"><span class="lineno">  207</span>                <a class="code hl_variable" href="#a38062c87fc2a238a14c3ba9c07ede0aa">clientsList</a>[clientId].udp.ConnectUDP(clientEndPoint);</div>
+<div class="line"><span class="lineno">  208</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  209</span>            }</div>
+<div class="line"><span class="lineno">  210</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a38062c87fc2a238a14c3ba9c07ede0aa">clientsList</a>[clientId].udp.EndPoint.ToString() == clientEndPoint.ToString())</div>
+<div class="line"><span class="lineno">  211</span>            {</div>
+<div class="line"><span class="lineno">  212</span>                <a class="code hl_variable" href="#a38062c87fc2a238a14c3ba9c07ede0aa">clientsList</a>[clientId].udp.UdpDataHandler(packet);</div>
+<div class="line"><span class="lineno">  213</span>            }</div>
+<div class="line"><span class="lineno">  214</span>        }</div>
+<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><span class="lineno">  216</span>        {</div>
+<div class="line"><span class="lineno">  217</span>            <a class="code hl_function" href="#a045177f43322c52b3a47ad89439f87c9">ConsoleLog</a>($<span class="stringliteral">&quot;Error receiving UDP {ex}&quot;</span>);</div>
+<div class="line"><span class="lineno">  218</span>        }</div>
+<div class="line"><span class="lineno">  219</span>    }</div>
+<div class="ttc" id="aclass_packet_html_a822c0ba0dce983b19af0adf3b2fc1b9e"><div class="ttname"><a href="class_packet.html#a822c0ba0dce983b19af0adf3b2fc1b9e">Packet.ReadInt</a></div><div class="ttdeci">int ReadInt(bool changeReadPosition=true)</div><div class="ttdoc">Read int data.</div><div class="ttdef"><b>Definition</b> <a href="_packet_8cs_source.html#l00080">Packet.cs:80</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -441,6 +662,10 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>A dictionary holding all connected clients, indexed by their client ID. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00017">17</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
+
 </div>
 </div>
 <a id="acdb357ce61331fe2ef641699adafac3c" name="acdb357ce61331fe2ef641699adafac3c"></a>
@@ -463,10 +688,14 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Default network configuration settings for the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00041">41</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
+
 </div>
 </div>
-<a id="a39a9554a1df8e6e8621689902789f882" name="a39a9554a1df8e6e8621689902789f882"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39a9554a1df8e6e8621689902789f882">&#9670;&#160;</a></span>MainTcpListener</h2>
+<a id="a237034469e3c5c53597310f5034159c9" name="a237034469e3c5c53597310f5034159c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a237034469e3c5c53597310f5034159c9">&#9670;&#160;</a></span>listeningPort</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -475,51 +704,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">TcpListener ServerLogic.MainTcpListener</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac6621e09945d5255ee141e4cac724b8b" name="ac6621e09945d5255ee141e4cac724b8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6621e09945d5255ee141e4cac724b8b">&#9670;&#160;</a></span>MainUdpListener</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">UdpClient ServerLogic.MainUdpListener</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a29986f17d0dc8d65c53949edbd2a192e" name="a29986f17d0dc8d65c53949edbd2a192e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29986f17d0dc8d65c53949edbd2a192e">&#9670;&#160;</a></span>packetHandlers</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Dictionary&lt;int, <a class="el" href="#a6f5665ff16369adecda5ad38a3a76293">PacketHandler</a>&gt; ServerLogic.packetHandlers</td>
+          <td class="memname">int ServerLogic.listeningPort</td>
         </tr>
       </table>
   </td>
@@ -529,10 +714,14 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Port number the server listens on for incoming connections. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00025">25</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
+
 </div>
 </div>
-<a id="a7d5f83869ab8ebde6f822658fa1c14e6" name="a7d5f83869ab8ebde6f822658fa1c14e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d5f83869ab8ebde6f822658fa1c14e6">&#9670;&#160;</a></span>ServerCertificate</h2>
+<a id="af6eaa1b688bc52485fcd9c2fe5601b39" name="af6eaa1b688bc52485fcd9c2fe5601b39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6eaa1b688bc52485fcd9c2fe5601b39">&#9670;&#160;</a></span>maxCCU</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -541,7 +730,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">X509Certificate2 ServerLogic.ServerCertificate</td>
+          <td class="memname">int ServerLogic.maxCCU</td>
         </tr>
       </table>
   </td>
@@ -550,6 +739,36 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Maximum number of concurrent users allowed on the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00021">21</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae9f1d3d25d0e17cfa6a8ec5c3aea1d6c" name="ae9f1d3d25d0e17cfa6a8ec5c3aea1d6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9f1d3d25d0e17cfa6a8ec5c3aea1d6c">&#9670;&#160;</a></span>serverCertificate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">X509Certificate2 ServerLogic.serverCertificate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>TLS certificate used for secure communication, if enabled. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00037">37</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
 
 </div>
 </div>
@@ -573,11 +792,14 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Advanced server-side settings used during initialization. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00045">45</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
+
 </div>
 </div>
-<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Property Documentation</h2>
-<a id="a4a15c087bdae99c34edda71df8b84dfc" name="a4a15c087bdae99c34edda71df8b84dfc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a15c087bdae99c34edda71df8b84dfc">&#9670;&#160;</a></span>ListeningPort</h2>
+<a id="a481259898bb2ffcba46beccda118bcb7" name="a481259898bb2ffcba46beccda118bcb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a481259898bb2ffcba46beccda118bcb7">&#9670;&#160;</a></span>tcpListener</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -586,20 +808,24 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ServerLogic.ListeningPort</td>
+          <td class="memname">TcpListener ServerLogic.tcpListener</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel get">get</span><span class="mlabel private-set">private set</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>TCP listener for handling incoming TCP connections. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00029">29</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
+
 </div>
 </div>
-<a id="a600d45d6fc0d97fde9c63842d84cb472" name="a600d45d6fc0d97fde9c63842d84cb472"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a600d45d6fc0d97fde9c63842d84cb472">&#9670;&#160;</a></span>MaxCCU</h2>
+<a id="a29a4ce2b86ff0190a23617d0c211f616" name="a29a4ce2b86ff0190a23617d0c211f616"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29a4ce2b86ff0190a23617d0c211f616">&#9670;&#160;</a></span>udpListener</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -608,21 +834,22 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ServerLogic.MaxCCU</td>
+          <td class="memname">UdpClient ServerLogic.udpListener</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel get">get</span><span class="mlabel private-set">private set</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>UDP listener for handling incoming UDP packets. </p>
+
+<p class="definition">Definition at line <a class="el" href="_server_logic_8cs_source.html#l00033">33</a> of file <a class="el" href="_server_logic_8cs_source.html">ServerLogic.cs</a>.</p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/NetworkLibrary/ServerStuff/ServerScripts/Code/<a class="el" href="_server_logic_8cs.html">ServerLogic.cs</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

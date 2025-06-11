@@ -8,15 +8,13 @@ var searchData=
   ['getdefaultsettings_5',['GetDefaultSettings',['../class_client.html#ac6db4ebee35cde768bc72fa72ac9857e',1,'Client']]],
   ['gethmac_6',['GetHmac',['../class_packet.html#a5353c75f453f9e021f2f0b9e105903a9',1,'Packet']]],
   ['gethmackey_7',['GetHmacKey',['../class_client.html#aea47d7c648a4365da5818d1f7df76e47',1,'Client']]],
-  ['getid_8',['GetId',['../class_network_user.html#adf7cb2406dd6be492ab18509bb309961',1,'NetworkUser']]],
+  ['getid_8',['GetId',['../class_client.html#adad7913402acd7e9edf78f5c64b041a4',1,'Client.GetId()'],['../class_network_user.html#adf7cb2406dd6be492ab18509bb309961',1,'NetworkUser.GetId()']]],
   ['getjitter_9',['GetJitter',['../class_network_monitor.html#ad09a19a9ccbd6b1bdb7acee5675161b0',1,'NetworkMonitor']]],
   ['getlosspercent_10',['GetLossPercent',['../class_network_monitor.html#ac03e9bd86989a9cd59d51b169798b8c2',1,'NetworkMonitor']]],
-  ['getmid_11',['GetMID',['../class_client.html#a926a2e79f79fe0231a51988756cfedde',1,'Client']]],
-  ['getonlineclients_12',['GetOnlineClients',['../class_server_logic.html#aa2747bf9cf0ee07d6a89cd7163e6d746',1,'ServerLogic']]],
-  ['getserversettings_13',['GetServerSettings',['../class_server_logic.html#af01b939411efbb7218ba2e9e827e4848',1,'ServerLogic']]],
-  ['getsettings_14',['GetSettings',['../class_server_logic.html#a3c624e300ba966476e0282247171599f',1,'ServerLogic']]],
-  ['gettoken_15',['GetToken',['../class_client.html#a900ad6ec9923c8688efef085e792c5f8',1,'Client.GetToken()'],['../class_server_side_client.html#a5d816bb7d9df40fa66f0dbf74c802512',1,'ServerSideClient.GetToken()']]],
-  ['getuserbyid_16',['GetUserById',['../class_network_manager.html#a45216d93e4db8f98bb7e4ac3c14d929d',1,'NetworkManager']]],
-  ['getuserbyname_17',['GetUserByName',['../class_network_manager.html#a02cfc0d15dbe9051478b51fc4764c254',1,'NetworkManager']]],
-  ['getusername_18',['GetUsername',['../class_client.html#af37eeda044394ff9ba3755ca8bc79e1a',1,'Client.GetUsername()'],['../class_network_user.html#a45c068416a588086af7bb85b84b071b3',1,'NetworkUser.GetUsername()']]]
+  ['getserversettings_11',['GetServerSettings',['../class_server_logic.html#af01b939411efbb7218ba2e9e827e4848',1,'ServerLogic']]],
+  ['getsettings_12',['GetSettings',['../class_server_logic.html#a3c624e300ba966476e0282247171599f',1,'ServerLogic']]],
+  ['gettoken_13',['GetToken',['../class_client.html#a900ad6ec9923c8688efef085e792c5f8',1,'Client.GetToken()'],['../class_server_side_client.html#a5d816bb7d9df40fa66f0dbf74c802512',1,'ServerSideClient.GetToken()']]],
+  ['getuserbyid_14',['GetUserById',['../class_network_manager.html#a45216d93e4db8f98bb7e4ac3c14d929d',1,'NetworkManager']]],
+  ['getuserbyname_15',['GetUserByName',['../class_network_manager.html#a02cfc0d15dbe9051478b51fc4764c254',1,'NetworkManager']]],
+  ['getusername_16',['GetUsername',['../class_client.html#af37eeda044394ff9ba3755ca8bc79e1a',1,'Client.GetUsername()'],['../class_network_user.html#a45c068416a588086af7bb85b84b071b3',1,'NetworkUser.GetUsername()']]]
 ];

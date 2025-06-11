@@ -1,16 +1,16 @@
 var searchData=
 [
-  ['lastjitter_0',['lastJitter',['../class_network_monitor.html#a7d9cde8ff40b72f8cc7901464ec610b4',1,'NetworkMonitor']]],
-  ['lastlosspercent_1',['lastLossPercent',['../class_network_monitor.html#ad15d644485175e17bde5b80cc0edda5c',1,'NetworkMonitor']]],
-  ['lastposition_2',['lastPosition',['../class_network_transform.html#a559733114a519f70666ee9bc45f68898',1,'NetworkTransform']]],
-  ['lastrotation_3',['lastRotation',['../class_network_transform.html#adfe45e17f552da9a30df233200923265',1,'NetworkTransform']]],
-  ['latency_4',['Latency',['../class_client_receive_handler.html#a880b04f7544c29ffb95b46b5afb82d8a',1,'ClientReceiveHandler.Latency()'],['../class_packet.html#af5da800782dec1cfe8f3b8dcf7b0b0d7a26ae7bdd1d6fb8c4886e6fde8d12601c',1,'Packet.Latency']]],
-  ['latencymeassure_5',['latencyMeassure',['../class_client.html#a862178b1d4f4f236016354574f9b13be',1,'Client']]],
-  ['latencyrequestreceived_6',['LatencyRequestReceived',['../class_server_receive_handler.html#a8d42bb63086fc8d42544441cbd415b09',1,'ServerReceiveHandler']]],
-  ['latencysamples_7',['latencySamples',['../class_network_monitor.html#abe9ea1b47cb7d7ad0901e8b0ebde3d9b',1,'NetworkMonitor']]],
-  ['latencytouser_8',['LatencyToUser',['../class_server_send_handler.html#acb0bc7ae68091c440e365ed175fd493e',1,'ServerSendHandler']]],
-  ['listcanvas_9',['ListCanvas',['../class_network_online_list.html#a5b041435a2cf9b4bf060d6b2c8f08b80',1,'NetworkOnlineList']]],
-  ['listcontent_10',['ListContent',['../class_network_online_list.html#ad192cd8650863c9992740f906d82bfa1',1,'NetworkOnlineList']]],
-  ['listeningport_11',['ListeningPort',['../class_server_logic.html#a4a15c087bdae99c34edda71df8b84dfc',1,'ServerLogic']]],
-  ['listentry_12',['ListEntry',['../class_network_online_list.html#a42b2cd3485a1c74ef5f674cc48919cf8',1,'NetworkOnlineList']]]
+  ['mainthreadtasks_0',['mainThreadTasks',['../class_threads_controller.html#a6faae1f171300cf1998091445ee398c0',1,'ThreadsController']]],
+  ['maxccu_1',['maxCCU',['../class_server_settings.html#a2081c4fd666e80d3ab027b7901995770',1,'ServerSettings.maxCCU'],['../class_server_logic.html#af6eaa1b688bc52485fcd9c2fe5601b39',1,'ServerLogic.maxCCU']]],
+  ['meassureanswer_2',['MeassureAnswer',['../class_client.html#a804f36910abca6782d410b386d118f45',1,'Client']]],
+  ['meassurerequest_3',['MeassureRequest',['../class_client.html#a6f5d9487be831b82301c183ec2670c2f',1,'Client.MeassureRequest()'],['../class_client_send_handler.html#a729419dfed9b00e83671e4068dd756c3',1,'ClientSendHandler.MeassureRequest()'],['../class_packet.html#ab51148f7134cedf405521073cae0cb09ae74a2c38fc2b06413b7415c8fc59b843',1,'Packet.MeassureRequest']]],
+  ['message_4',['Message',['../class_packet.html#af5da800782dec1cfe8f3b8dcf7b0b0d7a4c2a8fe7eaf24721cc7a9f0175115bd4',1,'Packet']]],
+  ['messageall_5',['MessageAll',['../class_packet.html#af5da800782dec1cfe8f3b8dcf7b0b0d7adbcbae06544d0948f8bede9ec0f6df34',1,'Packet']]],
+  ['messagetoallrequest_6',['MessageToAllRequest',['../class_client.html#a823f35d413ef54e21c0c5d874586b543',1,'Client.MessageToAllRequest()'],['../class_client_send_handler.html#a169c52826597ff19cec5d8cb89a9bf76',1,'ClientSendHandler.MessageToAllRequest()'],['../class_packet.html#ab51148f7134cedf405521073cae0cb09a110d209eb4c9e0bc1d6076728b8f7d5e',1,'Packet.MessageToAllRequest']]],
+  ['messagetoallrequestreceived_7',['MessageToAllRequestReceived',['../class_server_receive_handler.html#af42009b8a06ec81fc7c912f827820254',1,'ServerReceiveHandler']]],
+  ['messagetouserrequest_8',['MessageToUserRequest',['../class_client.html#a81b4c970682c127a56ecda44970d1542',1,'Client.MessageToUserRequest()'],['../class_client_send_handler.html#ada9da58d4843ea7dba7f51a2c5c92f9b',1,'ClientSendHandler.MessageToUserRequest()'],['../class_packet.html#ab51148f7134cedf405521073cae0cb09ae4ea4c13740ba0d254be25beba060d8d',1,'Packet.MessageToUserRequest']]],
+  ['messagetouserrequestreceived_9',['MessageToUserRequestReceived',['../class_server_receive_handler.html#a0010c3677a80a7493b249e713f41b97c',1,'ServerReceiveHandler']]],
+  ['monitortext1_10',['MonitorText1',['../class_network_monitor.html#a6a9c3cdf324df421fb3ca7b30296d85f',1,'NetworkMonitor']]],
+  ['monitortext2_11',['MonitorText2',['../class_network_monitor.html#a68103136d6e66d9cabd7d892cb3ac936',1,'NetworkMonitor']]],
+  ['monitortext3_12',['MonitorText3',['../class_network_monitor.html#aed84712cbacc8ece9e41ca4bee53ff82',1,'NetworkMonitor']]]
 ];

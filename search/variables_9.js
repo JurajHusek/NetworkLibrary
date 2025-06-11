@@ -1,12 +1,8 @@
 var searchData=
 [
-  ['lastjitter_0',['lastJitter',['../class_network_monitor.html#a7d9cde8ff40b72f8cc7901464ec610b4',1,'NetworkMonitor']]],
-  ['lastlosspercent_1',['lastLossPercent',['../class_network_monitor.html#ad15d644485175e17bde5b80cc0edda5c',1,'NetworkMonitor']]],
-  ['lastposition_2',['lastPosition',['../class_network_transform.html#a559733114a519f70666ee9bc45f68898',1,'NetworkTransform']]],
-  ['lastrotation_3',['lastRotation',['../class_network_transform.html#adfe45e17f552da9a30df233200923265',1,'NetworkTransform']]],
-  ['latencymeassure_4',['latencyMeassure',['../class_client.html#a862178b1d4f4f236016354574f9b13be',1,'Client']]],
-  ['latencysamples_5',['latencySamples',['../class_network_monitor.html#abe9ea1b47cb7d7ad0901e8b0ebde3d9b',1,'NetworkMonitor']]],
-  ['listcanvas_6',['ListCanvas',['../class_network_online_list.html#a5b041435a2cf9b4bf060d6b2c8f08b80',1,'NetworkOnlineList']]],
-  ['listcontent_7',['ListContent',['../class_network_online_list.html#ad192cd8650863c9992740f906d82bfa1',1,'NetworkOnlineList']]],
-  ['listentry_8',['ListEntry',['../class_network_online_list.html#a42b2cd3485a1c74ef5f674cc48919cf8',1,'NetworkOnlineList']]]
+  ['mainthreadtasks_0',['mainThreadTasks',['../class_threads_controller.html#a6faae1f171300cf1998091445ee398c0',1,'ThreadsController']]],
+  ['maxccu_1',['maxCCU',['../class_server_settings.html#a2081c4fd666e80d3ab027b7901995770',1,'ServerSettings.maxCCU'],['../class_server_logic.html#af6eaa1b688bc52485fcd9c2fe5601b39',1,'ServerLogic.maxCCU']]],
+  ['monitortext1_2',['MonitorText1',['../class_network_monitor.html#a6a9c3cdf324df421fb3ca7b30296d85f',1,'NetworkMonitor']]],
+  ['monitortext2_3',['MonitorText2',['../class_network_monitor.html#a68103136d6e66d9cabd7d892cb3ac936',1,'NetworkMonitor']]],
+  ['monitortext3_4',['MonitorText3',['../class_network_monitor.html#aed84712cbacc8ece9e41ca4bee53ff82',1,'NetworkMonitor']]]
 ];

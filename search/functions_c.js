@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['packet_0',['Packet',['../class_packet.html#a281651350a412374f055e1f80efd2891',1,'Packet.Packet()'],['../class_packet.html#a7c09410d03e1aaa3d00fc0a102ba8f9e',1,'Packet.Packet(int PacketId)'],['../class_packet.html#ab06ee2c451ef1f217cb7977fa8f66afc',1,'Packet.Packet(byte[] Data)']]],
-  ['packetcontroller_1',['PacketController',['../class_client.html#a043418424768b59437af25dd49b84c09',1,'Client']]],
-  ['packethandler_2',['PacketHandler',['../class_server_logic.html#a6f5665ff16369adecda5ad38a3a76293',1,'ServerLogic']]],
-  ['pingroutine_3',['PingRoutine',['../class_network_monitor.html#ac81725c313cebfa1b688415685d7a9dd',1,'NetworkMonitor']]]
+  ['packet_0',['Packet',['../class_packet.html#a281651350a412374f055e1f80efd2891',1,'Packet.Packet()'],['../class_packet.html#a0b79b0939614e28650c1a39999143f62',1,'Packet.Packet(int packetId)'],['../class_packet.html#a567eb98ab3c0791d8da2104ca752b68a',1,'Packet.Packet(byte[] data)']]],
+  ['packetaction_1',['PacketAction',['../class_client.html#a98eeb732c160e101b19e567fe4eb0489',1,'Client.PacketAction()'],['../class_server_logic.html#adda2c12e48af28c4588de1d9388d04f1',1,'ServerLogic.PacketAction()']]],
+  ['pingcoroutine_2',['PingCoroutine',['../class_network_monitor.html#a5e192db9b5772c1a08b8e01a98d801fa',1,'NetworkMonitor']]]
 ];
